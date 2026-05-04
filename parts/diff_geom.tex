@@ -7,10 +7,10 @@
 Recall that by the Rank Theorem~\ref{Rank thm}, all submersions, when restricted to sufficiently small neighborhoods in the domain, look like projections in a direct product. Fiber bundles are a natural special case of this, where the submersion looks like a projection ``locally in the target'', i.e., is a locally trivial map. 
 
 \begin{defn}[Topological fiber bundle]\index{Fiber bundle!topological}
-    A topological \gls{fb} is continuous locally trivial map $\pi:E\to B$. The local trivializations $\varphi_\alpha:\pi^{-1}(U_\alpha)\to U_\alpha\times F$ are called \emph{bundle chart maps}. The set of those $b\in B$ for which the \emph{fiber} $\pi^{-1}(b)$ is homeomorphic to a fixed space $F$ is open and closed in $B$. Therefore, it usually suffices to fix the homeomorphism type of the fibers. If all fibers are homeomorphic to $F$, we call $F$ the \emph{typical, or model, fiber}.
+    A topological \gls{fb} is continuous locally trivial map $\pi:E\to B$. The local trivializations $\varphi_\alpha:\pi^{-1}(U_\alpha)\to U_\alpha\times F$ are called \emph{bundle chart maps}. The set of those $b\in B$ for which the \emph{fiber} $\pi^{-1}(b)$ is homeomorphic to a fixed space $F$ is open and closed in $B$. Therefore, it usually suffices to fix the homeomorphism type of the fibers. If all fibers are homeomorphic to $F$, we call $F$ the \emph{typical}, or \emph{model, fiber}.
 \end{defn}
 
-From this definition it is clear that topological covering maps are exactly the topological \gls{fb} with discrete fibers. Also by Theorem~\ref{thm local fibration}, every \gls{fb} is a fibration, which we state as a Corollary. 
+From this definition it is clear that topological covering maps are exactly the topological \glspl{fb} with discrete fibers. Also by Theorem~\ref{thm local fibration}, every \gls{fb} is a fibration, which we state as a corollary. 
 
 \begin{cor}[{{\cite[Cor.~3.2.5]{RS2}}}]
     Topological \glspl{fb} are Serre fibrations.
@@ -22,7 +22,7 @@ This implies that all of our topological results for Serre fibrations will also 
     Topological \glspl{fb} over paracompact Hausdorff base spaces are Hurewicz fibrations.
 \end{cor}
 
-This will property will obviously survive in the smooth category since all manifolds are paracompact.
+This property will obviously survive in the smooth category since all manifolds are paracompact.
 
 \begin{defn}[Smooth fiber bundle]\index{Fiber bundle!smooth}
     A map $\pi\in C^\infty(E,M)$ is called a smooth \gls{fb} if it is a smooth submersion and for any $p\in M$ there is an open neighborhood $U_p$ and a diffeomorphism $\chi_p:\pi^{-1}(U_p)\to U_p\times \pi^{-1}(p)$ (recall that $\pi^{-1}(p)$ is a smooth manifold for submersions) such that the following triangle commutes:
@@ -36,7 +36,7 @@ This will property will obviously survive in the smooth category since all manif
     \]
     It is called a \emph{trivial bundle}\index{Trivial bundle} if $U$ can be taken to be all of $M$, i.e., the total space decomposes into a product $E\cong M\times \pi^{-1}(p)$. The maps $\chi_p$ are called \emph{local trivializations}.\index{Trivialization}
     
-    Finally, a \gls{fb} can be restricted to an open subset $U\subset M$ by defining $\restr{E}{U}$ as $\pi^{-1}(U)\overset{\pi|_{\pi^{-1}(U)}}{\longrightarrow}M$.
+    Finally, a \gls{fb} can be restricted to an open subset $U\subset M$ by defining $\restr{E}{U}$ as the restricted projection map $\pi|_{\pi^{-1}(U)}:\pi^{-1}(U)\to M$.
 \end{defn}
 
 \begin{xca}
@@ -81,7 +81,7 @@ The following fundamental theorem gives us a useful sufficient condition for a m
 
 
 \begin{example}[Qubit/Bloch sphere/Hopf fibration]\index{Qubit}\index{Bloch sphere}\index{Hopf fibration}\label{Hopf bundle}
-    A qubit is a two-level system described by a pair of complex numbers $(z_1,z_2)\in\mathbb{C}^2$ such that $|z_1|^2+|z_2|^2=1$. The set of such points is the unit sphere $\bbS^3$ in $\mathbb{C}^2\cong\bbR^4$. However, points differing only by a phase correspond to the same physical state: $(\rme^{\rmi\theta}z_1,\rme^{\rmi\theta}z_2)\sim(z_1,z_2)$. It turns out that these equivalence classes are in one-to-one correspondence with points of a two-sphere $\bbS^2$, because the quotient map can be given by
+    In quantum mechanics, a qubit is a two-level system described by a pair of complex numbers $(z_1,z_2)\in\mathbb{C}^2$ such that $|z_1|^2+|z_2|^2=1$. The set of such points is the unit sphere $\bbS^3$ in $\mathbb{C}^2\cong\bbR^4$. However, points differing only by a phase correspond to the same physical state: $(\rme^{\rmi\theta}z_1,\rme^{\rmi\theta}z_2)\sim(z_1,z_2)$. It turns out that these equivalence classes are in one-to-one correspondence with points of a two-sphere $\bbS^2$, because the quotient map can be given by
     \[\pi(z_1,z_2)=(\underbrace{2z_1\wb{z}_2}_{\in \mathbb{D}\subset\mathbb{C}},\underbrace{|z_1|^2-|z_2|^2}_{\in [-1,1]})\in \bbS^2\subset\bbR^3\cong \mathbb{C}\times\bbR.\]
     This is obviously a smooth and surjective map, and since the sphere $\bbS^3$ is compact, it is proper. It is also easy to check that its differential is everywhere surjective, therefore, by Ehresmann's theorem $\pi$ is a \gls{fb} with typical fiber $\bbS^1$ (space of phases). This fibration, often written as $\bbS^3\overset{\bbS^1}{\to}\bbS^2$, is called the Hopf fibration, or the Hopf bundle. Since $\bbS^3$ with one point excluded is homeomorphic to $\bbR^3$, the Hopf fibration is often visualized as a fibration of the 3D space by circles plus one straight line (circle of infinite radius). Any two circles in this fibration happen to be linked with each other, see Fig. \ref{Fig.Hopf}.
     
@@ -436,13 +436,13 @@ Now let us try to use this transformation rule for transition functions to ``sim
 
 
 \begin{example}[Line bundles above $\bbS^1$]\label{line bundles over S1}
-    We can use the idea of a bundle atlas and Theorem~\ref{bundle isomorphism thm} to classify all line bundles above the circle up to isomorphisms. It suffices to pick one covering of the circle, so we will pick a covering by the three circular arcs $U_1=(\epsilon,4\pi/3-\epsilon)$, $U_2=(2\pi/3+\epsilon,2\pi-\epsilon)$, and $U_3=(4\pi/3+\epsilon,8\pi/3-\epsilon)$. The transition functions in a line bundle take values in the group $G$ of diffeomorphisms of $\bbR $. Each such diffeomorphism is a smooth function $f:\bbR \to\bbR $ such that $f'$ is never zero. Now, clearly $G$ consists of two path-connected components, one of diffeomorphisms that preserve the orientation, i.e., $f'(x)>0$ for all $x$, and others that reverse it, $f'(x)<0$. We say that these diffeomorphisms have one of two possible \emph{parities}. Let $g_+(x)=\id_{\bbR }(x)=x$ and $g_-(x)=-x$, so that $g_+$ is the identity element of $\Diff(\bbR )$ and $g_-$ is an orientation-reversing involution.
+    We can use the idea of a bundle atlas and Theorem~\ref{bundle isomorphism thm} to classify all line bundles above the circle up to isomorphisms. It suffices to pick one covering of the circle, so we will pick a covering by the three circular arcs $U_1=(\epsilon,4\pi/3-\epsilon)$, $U_2=(2\pi/3+\epsilon,2\pi-\epsilon)$, and $U_3=(4\pi/3+\epsilon,8\pi/3-\epsilon)$. The transition functions in a line bundle take values in the group $G$ of diffeomorphisms of $\bbR $. Each such diffeomorphism is a smooth function $f:\bbR \to\bbR $ such that the derivative $f'$ is never zero. Now, clearly $G$ consists of two path-connected components, one of diffeomorphisms that preserve the orientation, i.e., $f'(x)>0$ for all $x$, and others that reverse it, $f'(x)<0$. We say that these diffeomorphisms have one of two possible \emph{parities}. Let $g_+(x)=\id_{\bbR }(x)=x$ and $g_-(x)=-x$, so that $g_+$ is the identity element of $\Diff(\bbR )$ and $g_-$ is an orientation-reversing involution.
 
     There are three transition functions, $t_{12}$, $t_{23}$, and $t_{31}$. Any three $G$-valued functions $\lambda_1,\lambda_2,\lambda_3$ provide an isomorphic line bundle. Choose $\lambda_1\equiv g_+$. Furthermore, $t_{12}:U_{12}\to G$ can be extended to a continuous function $\lambda_2: U_2\to G$, $\restr{\lambda_2}{U_{12}}=t_{12}$. Then $t_{12}'=\lambda_1 t_{12}\lambda_2^{-1}\equiv g_+$. By continuity, all values of $\lambda_2$ have the same parity.  Now, we let $\lambda_3$ be a continuous extension to $U_3$ of the function $\lambda_2 t_{23}:U_{23}\to G$. Then $t_{23}'=\lambda_2 t_{23} \lambda_3^{-1}\equiv g_+$. Finally, $t_{31}'=\lambda_3 t_{31} \lambda_1=\lambda_3 t_{31}$.  The parity of the values of $t_{31}'$ by construction is the product of the parities of $t_{12}$, $t_{23}$, and $t_{31}$.
 
     The values of $\lambda_3$ are already uniquely fixed up to the point $2\pi-\epsilon=-\epsilon$. Due to the path-connectedness of the two components of $G$, $\lambda_3$ can be deformed on $U_3\setminus U_{23}=(-\epsilon,2\pi/3-\epsilon)$ so that it remains smooth and $\restr{\lambda_3}{(\epsilon,2\pi/3-\epsilon)}=g_\pm t_{31}^{-1}$, which leads to $t_{31}'\equiv g_\pm$.
 
-    This means that any line bundle above $\bbS^1$ is isomorphic to one of two bundles, whose transition functions are either all identities, or one of them is a reflection $x\mapsto -x$.  In other words, any line bundle over $\bbS^1$ can be reduced to the structure group $O(1)=\bbZ_2$. The former bundle is trivial, and the latter bundle is homeomorphic to the M\"obius band. There are only two isomorphism classes of line bundles above $\bbS^1$.
+    This means that any line bundle above $\bbS^1$ is isomorphic to one of two bundles, whose transition functions are either all identities, or one of them is a reflection $x\mapsto -x$.  In other words, any line bundle over $\bbS^1$ can be reduced to the structure group $\Or_1=\bbZ_2$. The former bundle is trivial, and the latter bundle is homeomorphic to the M\"obius band. There are only two isomorphism classes of line bundles above $\bbS^1$.
 \end{example}
 
 \begin{xca}\label{Rk-bundles above circle}

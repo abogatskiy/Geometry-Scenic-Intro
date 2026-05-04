@@ -575,7 +575,9 @@ Thus, principal connections are Ehresmann connections and define global parallel
     \end{enumerate}
 \end{proof}
 
-
+\begin{rem}
+    It is hard to miss the fact that the expression in \eqref{eq 1.4.9 RS2 structural} is exactly the same as in the Maurer-Cartan equation. The connection between them will be intuitively explained by Cartan geometry in Chapter~\ref{ch: cartan geom}, even though the above result is, strictly speaking, more general. The upshot will be that the principal bundle in Cartan geometry can be locally identified with a Lie group in a way analogous to Klein geometry, and the connection form on it can be seen as a deformation of the Maurer-Cartan form.
+\end{rem}
 
 Now let us look at local representations of connections. Let $s_\alpha\in\Gamma^\infty(\restr{P}{U_\alpha})$ be a local section defining  a local trivialization of $P$. The local representatives of $\omega$ and $\Omega^\omega$ are defined by
 \[\scrA_\alpha\coloneqq s_\alpha^\ast\omega,\quad \scrF_\alpha\coloneqq s_\alpha^\ast \Omega^\omega.\]
@@ -633,7 +635,8 @@ The following is immediate from $s_\alpha\cdot t_{\alpha\beta}=s_\beta$  or $\wt
         \item     In physics, this transformation law is often written as 
         \[\scrA\mapsto g^{-1}\scrA g+g^{-1}\dd g,\]
         where $g(m)$ is the matrix-valued transition function (\emph{passive local gauge transformation}). Meanwhile local curvature transforms by simple conjugation.     
-        \item If the structure group is abelian, then all local representatives of $\Omega^\omega$ agree with each other, thus defining a \emph{global} curvature form $\bbF\in\Omega^1(M;\frakg)$ on $M$. This is why, for example, in electrostatics, which is a $\U_1$-gauge theory, the field strength $\scrF$ ($\frac{\rmi e}{\hbar c}$ times the magnetic field 2-form) is defined globally. The Gauss curvature of Riemannian surfaces is well-defined for the same reason.
+        \item If the structure group is abelian, then all local representatives of $\Omega^\omega$ agree with each other, thus defining a \emph{global} curvature form $\bbF\in\Omega^1(M;\frakg)$ on $M$. This is why, for example, in electrostatics, which is a $\U_1$-gauge theory, the field strength $\scrF$ ($\frac{\rmi e}{\hbar c}$ times the magnetic field 2-form) is defined globally.
+        \item There is another mechanism by which curvature forms may be globally pulled back to the base, namely when the principal bundle in question is \emph{natural}, i.e., a subbundle of some frame bundle, thus defining a Cartan geometry. As we will see later, the existence of the soldering isomorphism in such geometries allows one to identify certain equivariant forms on the bundle with forms on the base manifold (by identifying the space in which the form takes values, e.g., a Lie algebra, with the fiber of some tensor bundle).
     \end{enumerate}
 \end{rem}
  
@@ -2049,11 +2052,11 @@ To summarize, we have the following.
 
 \section{Affine connections}
 
-Up till now, we have been studying connections on arbitrary bundles, and the properties of connections were essentially unrelated to the base manifold $M$. In this \sect\ we consider connections on $\T M$ (and more generally on tensor and jet bundles over $M$), which will allow us to connect certain properties of such connections to intrinsic structures on $M$ itself.
+Up till now, we have been studying connections on arbitrary bundles, and the properties of connections were essentially unrelated to the base manifold $M$. In this \sect\ we consider connections on $\T M$ (and more generally on tensor and other natural bundles over $M$), which will allow us to connect certain properties of such connections to intrinsic structures on $M$ itself.
 
 Since the association functor is an equivalence of categories, connections on arbitrary bundles induce principal connections on corresponding principal bundles (provided the structure group is finite-dimensional and the group action on the typical fiber is at least infinitesimally faithful). This is especially easy to see in the case of \glspl{vb}. Recall that a local frame on a vector bundle of rank $k$ consists of $k$ linearly independent local sections. This is in fact equivalent to the definition of a local frame as a local section of $\Fr(E)$: every such section induces a local trivialization of $E$, and picking a basis $\{\bf{e}_i\}_{i=1}^k$ for the typical fiber, the preimages of these basis vectors under this local trivialization are $k$ linearly independent local sections of $E$. The explicit formula was given in \eqref{eq 1.5.5 RS2}.
 
-Now, since a linear connection on $E$ amounts to a specification of parallel sections, we can define the corresponding principal connection on the frame bundle $\Fr(E)$ by declaring a local frame (local section of $\Fr(E)$) to be parallel iff it consists of $k$ parallel sections. In particular, linear connections on the tangent bundle $\T M$ are in one-to-one correspondence with principal connections on the frame bundle $\Fr(M)$. The latter connections are briefly referred to as \emph{linear, or affine, connections on $M$}. We will use the word \emph{affine} to indicate the focus on the tangent bundle (and other tensor bundles) of the base manifold, but its meaning will become much more precise in the context of Cartan connections.
+Now, since a linear connection on $E$ amounts to a specification of parallel sections, we can define the corresponding principal connection on the frame bundle $\Fr(E)$ by declaring a local frame (local section of $\Fr(E)$) to be parallel iff it consists of $k$ parallel sections. In particular, linear connections on the tangent bundle $\T M$ are in one-to-one correspondence with principal connections on the frame bundle $\Fr(M)$. The latter connections are briefly referred to as \emph{linear}, or \emph{affine, connections on $M$}. We will use the word \emph{affine} to indicate the focus on the tangent bundle (and other natural bundles) of the base manifold, but its meaning will become much more precise in the context of Cartan connections.
 
 Let $M$ be and $n$-dimensional manifold and let $\Fr(\T M)$ be its frame bundle. Recall that a linear frame at $m\in M$ is an ordered basis $u=(u_1,\ldots,u_n)$ in $\T_m M$ and that $\pi:\Fr(\T M)\to M$, $\pi(u)=m$, is a principal $\GL_n(\bbR)$-bundle. The free right action of $\GL_n(\bbR)$ on $\Fr(\T M)$ is given by
 \[\Phi:\Fr(\T M)\times \GL_n(\bbR)\to \Fr(\T M),\quad (u,g)\mapsto ug=(u_ig^i_1,\ldots,u_ig^i_n).\]
@@ -2062,7 +2065,7 @@ In the sequel, the defining representation of $\GL_n(\bbR)$ on $\bbR^n$ will be 
 
 Unlike general \glspl{pfb}, the frame bundle of $M$ is naturally associated with the tangent bundle $\T M$, i.e., there is a natural isomorphism between $\T M$ and  $\Fr(\T M)\times^{\GL_n(\bbR)}\bbR^n$, given by
 \[\vartheta^{-1}:\Fr(\T M) \times^{\GL_n(\bbR)} \bbR^n\to \T M,\quad \vartheta^{-1}([(u,\bf{x})])\coloneqq x^iu_i,\label{eq 2.1.2 RS2}\]
-where $x^i$ are the components of $\bf{x}\in\bbR^n$ in the standard basis $\{\bf{e}_i\}$ of $\bbR^n$. It is easy to see that $\vartheta^{-1}$ is an isomorphism, and via dualization and tensor products it produces corresponding isomorphisms for all tensor bundles: $\T^k_l M\cong \Fr(\T M)\times^{\GL_n(\bbR)}\T^k_l\bbR^n$. The presence of the isomorphism $\vartheta$ allows us to identify each frame $u\in \Fr(\T M)$ with the isomorphism that computes the coordinates of a given tangent vector in $\T M$ in the frame $u$:
+where $x^i$ are the components of $\bf{x}\in\bbR^n$ in the standard basis $\{\bf{e}_i\}$ of $\bbR^n$. It is easy to see that $\vartheta^{-1}$ is an isomorphism, and via dualization and tensor products it produces corresponding isomorphisms for all tensor bundles: $\bbT^k_l M\cong \Fr(\T M)\times^{\GL_n(\bbR)}\bbT^k_l\bbR^n$. The presence of the isomorphism $\vartheta$ allows us to identify each frame $u\in \Fr(\T M)$ with the isomorphism that computes the coordinates of a given tangent vector in $\T M$ in the frame $u$:
 \[\iota_u^\vartheta\coloneqq \vartheta^{-1}\circ\iota_u:\bbR^n\to \T_{\pi(u)}M,\quad \bf{x}\mapsto x^i u_i.\]
 Note that, by definition of the frame bundle, each isomorphism $\bbR^n\to \T_mM$ determines a unique frame $u\in (\Fr(\T M))_m$, which is why the map $\iota_u^\vartheta$ is often identified in literature with the frame $u$ itself. We stick to this more explicit notation for clarity.
 
@@ -2177,7 +2180,7 @@ Once again, we shall assume that a connection has been chosen and write $\nabla$
     \begin{enumerate}
         \item By \eqref{eq 1.5.3 RS2}, the formula for $\nabla$ can be rewritten as $(\nabla_X Y)(m)=\iota_u^\vartheta(X_u^h(\widetilde{\vartheta\circ Y}))$, where $X^h$ is the horizontal lift of $X$ to $\Fr(\T M)$. Thus, using $\theta_u(Y^\ast)=(\iota_u^\vartheta)^{-1}\circ\pi_\ast(Y^\ast)=(\iota_u^\vartheta)^{-1}(Y_m)=(\widetilde{\vartheta\circ Y})_u$, we obtain 
         \[(\nabla_X Y)_m=\iota_u^\vartheta(X_u^h(\theta(Y^\ast))).\label{eq 2.1.31 RS2}\]
-        \item Clearly $\nabla_X$ has all the properties listed in Proposition~\ref{prop 1.5.8 RS2}. Moreover, it induces covariant derivatives on all tensor bundles $\T^k_l M$. A general formula is easily derived from \eqref{eq 1.4.2 RS2} by taking $\sigma$ for the tensor product representation of $k$ copies of $\sigma_n^0$ and $l$ copies of its dual.
+        \item Clearly $\nabla_X$ has all the properties listed in Proposition~\ref{prop 1.5.8 RS2}. Moreover, it induces covariant derivatives on all tensor bundles $\bbT^k_l M$. A general formula is easily derived from \eqref{eq 1.4.2 RS2} by taking $\sigma$ for the tensor product representation of $k$ copies of $\sigma_n^0$ and $l$ copies of its dual.
     \end{enumerate}
 \end{rem}
 
@@ -2262,12 +2265,12 @@ Finally, $\nabla$ induces parallel transports on all tensor bundles $\bbT^r_s M$
     Explaining the meaning of torsion is especially easy on Lie groups due to the presence of canonical flat $(\pm)$-connections whose torsion is $\sfT(A_\rmL,B_\rmL)=\pm [A,B]_\rmL$. Suppose $\gamma:I\to G$ is a smooth path. Then $t\mapsto \dot\gamma(t)$ is a smooth path in $\T G$. We can use left translations to turn this into a path in $\T_e G=\frakg$, namely the logarithmic derivative of $\gamma$:
     \[\delta \gamma(t)=\rmL_{\gamma(t)\ast}^{-1}\dot\gamma(t)\quad \in \frakg.\]
     Note that left translations coincide with parallel transport under the $(-)$-connection, so $\rmL_{\gamma(t)\ast}^{-1}=\left(\tra^{(-)}_{\gamma}(t)\right)^{-1}$. Now we can integrate $\delta\gamma(t)$ to form another path $\wt\gamma:I\to \T_e G$,
-    \[\wt\gamma^-(t)=\iint_0^t \delta\gamma(s)\dd s \quad \in \frakg.\]
+    \[\wt\gamma^-(t)=\int_0^t \delta\gamma(s)\dd s \quad \in \frakg.\]
     (In the language of \S\ref{sec: existence of homs}, $\wt\gamma$ is the development along $\gamma$ of the tautological $1$-form on $M=\frakg$ given at each $A\in\frakg$ by the identity map $\id_{\frakg}:\frakg\cong \T_A\frakg\to \frakg$.) The natural question now is what $\wt\gamma^-(1)$ is. Suppose $\gamma$ is a loop. Since we can also write $\delta\gamma(t)=\theta_G(\dot\gamma(t))$, we have
     \[\wt\gamma^-(1)=\int_0^1 \theta_G(\dot\gamma(s))\dd s=\oint_\gamma \theta_G.\]
     Now suppose $\gamma$ is nullhomotopic and $S$ is a 2-dimensional submanifold of $G$ such that $\partial S=\im(\gamma)$. Then, using the Stokes' theorem and the Maurer-Cartan equation, we have
     \[\wt\gamma^-(1)=-\frac12\int_S [\theta_G,\theta_G]=\int_S \theta_G\circ \sfT^-.\]
-    This formula is also true for $\sfT^+$ if $\wt\gamma^+$ is defined using right translations. Here, $\theta_G$ merely acts so that the values of the integrand belong to one vector space ($\frakg$). In local coordinates, this integral is proportional to the value of $\sfT^-$ at the identity times the area of $S$. This result, in fact, holds for arbitrary affine connections (although in general there is no analog of $\theta_G$ that can transport all values of $\sfT$ to one point, so the general formula can only be written in local coordinates). Therefore, torsion can be interpreted as the ``displacement of the origin'' of a tangent space as it is being \emph{rolled without slipping}\index{Rolling without slipping} along an infinitesimal loop (this is easier to imagine as $M$ rolling on $\bbR^n$ so that the point of contact follows $\gamma$). For this reason the soldering form $\theta$ is also sometimes called the \emph{displacement form}.\index{Displacement form} This interpretation will be clarified and generalized in Cartan geometry. We return to these connections in Example~\ref{ex connections on G, part 5}.
+    This formula is also true for $\sfT^+$ if $\wt\gamma^+$ is defined using right translations. Here, $\theta_G$ merely acts so that the values of the integrand belong to one vector space, $\frakg$. In local coordinates, this integral is proportional to the value of $\sfT^-$ at the identity times the area of $S$ in the limit of small $\gamma$ and $S$. This result, in fact, holds for arbitrary affine connections (although in general there is no analog of $\theta_G$ that can transport all values of $\sfT$ to one point, so the general formula can only be written in local coordinates). Therefore, torsion can be interpreted as the ``displacement of the origin'' of a tangent space as it is being \emph{rolled without slipping}\index{Rolling without slipping} along an infinitesimal loop (this is easier to imagine as $M$ rolling on $\bbR^n$ so that the point of contact follows $\gamma$). For this reason the soldering form $\theta$ is also sometimes called the \emph{displacement form}.\index{Displacement form} This interpretation will be clarified and generalized in Cartan geometry, where rolling coincides with parallel transport. We return to these connections in Example~\ref{ex connections on G, part 5}.
 \end{example}
 
 
@@ -2442,7 +2445,7 @@ We say that an affine connection $\calH M$ on $M$ is complete if every geodesic 
 \end{proof}
 
 \begin{rem}
-    This statement should not be confused with the existence of Levi-Civita connections. So far we have not imposed any compatibility constraints on the connections. In the presence of such constraints torsion-free connections may not exist at all. In the context of metric connections we will derive the existence of a unique torsion-free metric connection from general theory of $G$-structures in the next \sect.
+    This statement should not be confused with the existence of Levi-Civita connections. So far we have not imposed any compatibility constraints on the connections. In the presence of such constraints torsion-free connections may not exist at all. In the context of metric connections we will derive the existence of a unique torsion-free metric connection from the general theory of $G$-structures in \S\ref{sec: connections on G-structures}.
 \end{rem}
 
 
@@ -3280,7 +3283,7 @@ If we want to study left-invariant connections on a Lie group $G$, then we take 
     Left-invariant affine connections on a Lie group $G$ are in bijective correspondence with arbitrary bilinear maps $\nu:\frakg\otimes\frakg\to \frakg$.
 \end{cor}
 
-In practice, of course, we are usually more interested in bi-invariant connections on $G$, if they exist. A bi-invariant connection is the same as a connection invariant under the action of $G\times G$ on $G$ via $((g_1,g_2),g)\mapsto g_1gg_2^{-1}$. This means that we are viewing $G$ as the homogeneous space $(G\times G)\slash G$ w.r.t.\ the action $g\cdot (g_1,g_2)\coloneqq (g_1g,g_2g)$. The corresponding subgroup $\frakh\subset\frakg\times\frakg$ consists of elements of the form $(A,A)$, $A\in\frakg$. If we pick the obvious reductive complement $\frakm=\{(A,-A)\mid A\in\frakg\}$, then both $\frakh$ and $\frakm$ are isomorphic to $\frakg$ as $H=G$-modules. We immediately get the following classification of bi-invariant connections on $G$.
+In practice, of course, we are usually more interested in bi-invariant connections on $G$, if they exist. A bi-invariant connection is the same as a connection invariant under the action of $G\times G$ on $G$ via $((g_1,g_2),g)\mapsto g_1gg_2^{-1}$. This means that we are viewing $G$ as the homogeneous space $(G\times G)\slash G$ w.r.t.\ the action $g\cdot (g_1,g_2)\coloneqq (g_1g,g_2g)$. The corresponding subalgebra $\frakh\subset\frakg\times\frakg$ consists of elements of the form $(A,A)$, $A\in\frakg$. If we pick the obvious reductive complement $\frakm=\{(A,-A)\mid A\in\frakg\}$, then both $\frakh$ and $\frakm$ are isomorphic to $\frakg$ as $H$-modules, where $H\cong G$ is the ``diagonal'' subgroup of $G\times G$ corresponding to $\frakh$. We immediately get the following classification of bi-invariant connections on $G$.
 
 \begin{cor}
     The set of bi-invariant affine connections on a connected Lie group $G$ is in bijective correspondence with the space $\Hom_G(\frakg\otimes\frakg,\frakg)$ of bilinear maps $\nu:\frakg\otimes\frakg\to \frakg$ such that 
@@ -3758,7 +3761,7 @@ Since the homogeneous model $(G,H)$ will usually be fixed, we will often abbrevi
 \begin{rem}\label{rem 1.5.2 Cap}
     \begin{enumerate}
         \item Part (2) of this proposition shows that the homogeneous Cartan geometry $(G,H)$ is a geometric structure which has precisely $G$ as its automorphism group.
-        \item While the proof of the Liouville Theorem of part (3) is very simple, this is a rather impressive general result. It becomes particularly powerful for Cartan geometries determined by some underlying structure. A simple example is the Euclidean space. In this case the Cartan geometry is determined by the Riemannian structure, and we obtain the result that any isometry between open subsets of Euclidean space is the restriction of a unique Euclidean motion. The classical Liouville Theorem~\ref{thm Liouville conformal} is the version of this result for the conformal sphere. Of course, the hard part of deducing this from the proposition above is in showing that conformal structures are equivalent to a Cartan geometry, which we shall do below.
+        \item While the proof of the Liouville Theorem of part (3) is very simple, this is a rather impressive general result. It becomes particularly powerful for Cartan geometries determined by some underlying structure. A simple example is the Euclidean space. In this case the Cartan geometry is determined by the Riemannian structure, and we obtain the result that any isometry between open subsets of Euclidean space is the restriction of a unique Euclidean motion. The classical Liouville Theorem~\ref{thm Liouville conformal} is the version of this result for the conformal sphere. Of course, the hard part of deducing this from the proposition above is in showing that conformal structures (defined as an equivalence class of Riemannian metrics differing only by a conformal factor) are equivalent to conformal Cartan geometries.
         
         \item Parts (1) and (3) of the proposition can be used to obtain an alternative description of locally flat Cartan geometries of type $(G,H)$. If $P\to M$ is such a geometry, we can use part (1) to obtain an open covering $\{U_\alpha\}$ of $M$ and isomorphisms from $\restr{P}{U_\alpha}$ onto restrictions of $G\to G\slash H$. The base maps of these isomorphisms are maps $\varphi_\alpha:U_\alpha\to G\slash H$ that are diffeomorphisms onto their images. Viewing $\{(U_\alpha,\varphi_\alpha)\}$ as an atlas, the transition maps are the restrictions of left actions $\wh{\rmL}_g$ of $G$ by part (3) of Proposition~\ref{prop 1.5.2 Cap}:
         \[\varphi_{\beta\alpha}=\wh{\rmL}_{g_{\beta\alpha}},\quad g_{\beta\alpha}\in G.\]
@@ -3817,7 +3820,7 @@ The first immediate consequence is that for any Cartan geometry $(P\to M,G,H,\Ph
 Conversely, every bundle reduction $P$ of $\wt P$ to $H$ turns any principal connection $\wt\eta$ that satisfies the Cartan condition into a Cartan connection on $P$. Note that the Cartan condition is equivalent to $\calH_p \wt{P}\cap \T_p P=\ker(\wt\eta_p)\cap \T_pP=0$. Since $\dim \calH_p \wt{P}=\dim M=\dim G-\dim H$, $\dim P=\dim G$ and $\dim \wt{P}=2\dim G-\dim H$, this actually means that we have a complementary (transversal) decomposition 
 \[\calH_p \wt{P}\dotplus \T_p P=\T_p\wt{P}.\] Thus we have a natural bijection 
 \begin{center}
-    $\{$Principal connections on $\wt{P}$  transversal to $P\}\cong \{$ Cartan connections on $P\}$.
+    $\{$Principal connections on $\wt{P}$  transversal to $P\}\cong \{$Cartan connections on $P\}$.
 \end{center}
 This leads to the following alternative definition of Cartan geometries, describing them as a special class of principal connections.
 
@@ -4241,8 +4244,8 @@ Since $\eta:\T P\to P\times\frakg$ is an isomorphism and $\calT M= (P\times \fra
 Lastly, let us consider the special case of reductive geometries. Suppose we have a decomposition of $H$-modules $\frakg=\frakh\oplus\frakm$. Then any $\frakg$-valued form decomposes into two components. In particular, writing $\eta=\eta_\frakh+\eta_\frakm$ we can immediately observe that $\eta_\frakh$ satisfies all of the properties of a principal $H$-connection on $P$. 
 
 \begin{defn}[Principal connection of a reductive geometry]
-    On a reductive Cartan geometry $(P\to M,\eta)$ with reductive decomposition $\frakg=\frakh\oplus\frakm$, the corresponding  principal connection form is 
-    \[\omega^\frakm\coloneqq \eta_\frakh\in\Omega^1(P;\frakh)^\Ad.\]
+    On a reductive Cartan geometry $(P\to M,\eta)$ with reductive decomposition $\frakg=\frakh\oplus\frakm$, the corresponding principal connection form is 
+    \[\omega^\frakm\coloneqq \eta_\frakh\quad \in\Omega^1(P;\frakh)^\Ad.\]
     The corresponding horizontal distribution is $\calH^\frakm P=\ker\omega^\frakm=\ker\eta_\frakh=\eta^{-1}(\frakm)$.
 \end{defn}
 
@@ -4311,7 +4314,7 @@ Now take our curve $\gamma$ in $M$ and choose a point $p\in P_m$ and consider th
     \[\alpha(t_0)=\wt{\iota}(\iota_e(\wt{\gamma}(t_0))\cdot g(t_0),g(t_0)^{-1}\cdot [e])=\wt{\iota}(\iota_e(\wt{\gamma}(t_0)),[e])=o(\gamma(t_0)).\]
     Reading this backwards in time, we see that $\tra_{\gamma_{t_0}}(o(\gamma(t)),s)=\alpha(t_0-s)$ for all $s$ such that $t_0-s\in J$. In particular, $\dev_\gamma(t_0)=\alpha(0)=\wt{\iota}(\iota_e(\wt{\gamma}(0)),g(t_0)^{-1}\cdot [e])$. Putting $p=\wt{\gamma}(0)$, we get $\dev_\gamma(t)=\iota(p,g(t)^{-1}\cdot [e])$ as required.
 
-    Conversely, assume that $\dev_\gamma(t)=\iota(p,g(t)^{-1}\cdot [e])$ holds near $t=0$. Define the smooth $\frakg$-valued function $\phi(t)=\coloneqq -\Ad_{g(t)}\delta g(t)$, where $\delta$ is the left logarithmic derivative. Now $\eta(\dot{\tilde{\gamma}})=\phi(t)$ is a time-dependent first-order ODE on $P$, so locally around $t=0$ we find a unique solution $\wt{\gamma}$ such that $\wt{\gamma}(0)=p$. Now consider $\wt{\eta}(\partial_t(\iota_e(\wt{\gamma}(t))\cdot g(t)))$. As in the proof of Proposition~\ref{prop 1.5.3 RS2} we see that this is given by 
+    Conversely, assume that $\dev_\gamma(t)=\iota(p,g(t)^{-1}\cdot [e])$ holds near $t=0$. Define the smooth $\frakg$-valued function $\phi(t)\coloneqq -\Ad_{g(t)}\delta g(t)$, where $\delta$ is the left logarithmic derivative. Now $\eta(\dot{\tilde{\gamma}})=\phi(t)$ is a time-dependent first-order ODE on $P$, so locally around $t=0$ we find a unique solution $\wt{\gamma}$ such that $\wt{\gamma}(0)=p$. Now consider $\wt{\eta}(\partial_t(\iota_e(\wt{\gamma}(t))\cdot g(t)))$. As in the proof of Proposition~\ref{prop 1.5.3 RS2} we see that this is given by 
     \[\wt{\eta}\left(\Phi_{g(t)\ast }(\iota_e)_\ast \dot{\tilde{\gamma}}(t)+(\delta g(t))_\ast\right)=\Ad_{g(t)}^{-1}(\eta(\dot{\tilde{\gamma}}(t)))+\delta g(t),\]
     which vanishes by construction. Hence, locally around $t=0$, we have constructed a horizontal lift of $\gamma$ as required.
 
@@ -4596,10 +4599,10 @@ Note that this is much like what we did with locally Klein structures in Lemma~\
 For the rest of this \sect, we discuss an infinitesimal (in fact first-order) analog of a Klein geometry which will serve as a useful alternative source of models of Cartan geometries that allows for a more flexible set of morphisms. Recall that the definition of a Cartan connection, in fact, requires only the pair $(\frakg,H)$, and is agnostic about the Lie group $G$. Thus, the following definition is valid.
 
 \begin{defn}[Infinitesimal model]
-    An infinitesimal model of for Cartan geometries is a pair $(\frakg,H)$, where $H$ is a Lie group with Lie algebra $\frakh$ and $\frakg$ is a Lie algebra which is also an $H$-module containing $\frakh$ such that $H$ acts by Lie algebra automorphisms extending its adjoint action on $\frakh$. 
+    An infinitesimal model of for Cartan geometries is a pair $(\frakg,H)$, where $H$ is a Lie group with Lie algebra $\frakh$ and $\frakg$ is a Lie algebra which is also an $H$-module containing $\frakh$ such that $H$ acts by Lie algebra automorphisms extending its adjoint action on $\frakh$. Even more generally, $\frakg$ doesn't have to be a Lie algebra, but can merely be an $H$-module as above.
 \end{defn}
 
-The definition of a \emph{Cartan geometry infinitesimally modeled on $(\frakg,H)$} is exactly the same as the original definition of a Cartan geometry, except with the group $G$ forgotten.
+The definition of a \emph{Cartan geometry infinitesimally modeled on $(\frakg,H)$} is exactly the same as the original definition of a Cartan geometry, except with the group $G$ forgotten. This brings the concept closer to what we saw in Cartan's equivalence method, where the Cartan connection is just an $H$-equivariant coframe on $P$, and so its values lie only in some abstract $H$-module.
 
 \begin{xca}
     Find an infinitesimal model $(\frakg,H)$ which is \emph{not} the infinitesimal model of any Klein geometry $(G,H)$.
@@ -6463,7 +6466,7 @@ Viewing formula (4) as a differential equation defining infinitesimal automorphi
     $\aut(P,\eta)$ is isomorphic to the space of smooth sections of $\calT M$ that are parallel for the linear connection $\wh\nabla$.
 \end{cor}
 
-This provides an alternative proof for the fact that any infinitesimal automorphism is determined by its value at a single point, which implies the bound on the dimension of the automorphism group. This lemma also describes the Lie algebra structure on $\aut(P,\eta)$, which is by definition induced by the Lie bracket of vector fields on $P$ and thus be the Lie bracket of adjoint tractors. Indeed, using (2) and (3) we see that for $s,t\in\aut(P,\eta)<\Gamma^\infty(\calT M)$ we have $[s,t]=\scrK(s,t)-\{s,t\}$. Notice that $\varPi(s)(p)=0$ exactly means that the corresponding vector field $X$ is vertical at $p$, so the underlying point $m\in M$ is a fixed point of the base map of the infinitesimal automorphism. If one of the two infinitesimal automorphisms involved has this property, then the bracket is simply the negative of the algebraic bracket on $\calT M$, while in general one gets a curvature correction.
+This provides an alternative proof for the fact that any infinitesimal automorphism is determined by its value at a single point, which implies the bound on the dimension of the automorphism group. This lemma also describes the Lie algebra structure on $\aut(P,\eta)$, which is by definition induced by the Lie bracket of vector fields on $P$ and thus by the Lie bracket of adjoint tractors. Indeed, using (2) and (3) we see that for $s,t\in\aut(P,\eta)<\Gamma^\infty(\calT M)$ we have $[s,t]=\scrK(s,t)-\{s,t\}$. Notice that $\varPi(s)(p)=0$ exactly means that the corresponding vector field $X$ is vertical at $p$, so the underlying point $m\in M$ is a fixed point of the base map of the infinitesimal automorphism. If one of the two infinitesimal automorphisms involved has this property, then the bracket is simply the negative of the algebraic bracket on $\calT M$, while in general one gets a curvature correction.
 
 
 
