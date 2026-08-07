@@ -2509,7 +2509,7 @@ For example, if $r=0$, then simply by rectifying any vector field $X\in\calY$, s
     If $E\to M$ has rank $k$ and $\dim M=n$, then the dimension of the space $\rmJ^r M$ is 
     \[\dim \rmJ^r E=n+k\binom{n+r}{r}.\]
     In particular, the number of coordinates for derivatives of order exactly $r$ is 
-    \[k^{(r)}\coloneqq \dim \rmJ^r E-\dim \rmJ^{r-1}=k\binom{n+r-1}{r}.\]
+    \[k^{(r)}\coloneqq \dim \rmJ^r E-\dim \rmJ^{r-1}E=k\binom{n+r-1}{r}.\]
     Given a group $G$ acting on these jets, the number of functionally independent differential invariants of order $r$ is then equal to the dimension of the orbit space:
     \[i_r=\dim\rmJ^r E-(\dim G-\dim G_{p_0}),\]
     where $G_{p_0}$ is the stabilizer of a generic point (that is, a lowest-dimensional stabilizer). An equivalent formula is 
@@ -6777,7 +6777,7 @@ So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canon
     is called the \emph{Young symmetrizer}. In short, first it symmetrizes over the indices in each row of the tableau, and then anti-symmetrizes over the indices in each column starting with the last. Crucially, these operations do not commute.
 
     It turns out that the space 
-    \[\rmS_{T_\lambda}V=S_{T_\lambda}\left(V^{\otimes d}\right)\] 
+    \[\rmS_{T_\lambda}V\coloneqq S_{T_\lambda}\left(V^{\otimes d}\right)\] 
     is an irreducible $\GL(V)$-submodule. Different Young tableau from the same partition give rise to isomorphic submodules, and the isomorphism class is denoted $\rmS_\lambda V$. We also define $\rmS_\varnothing V\coloneqq \bbR$.
 \end{rem}
 
@@ -7046,7 +7046,7 @@ No further reductions are possible via the method outlined above. Instead, one m
 
 
 This \chap\ wraps up the first side of Cartan geometry which we have already partially explored in the last two \chap s, namely as a study of geometric structures described by systems of PDEs.
-Much like in the Frobenius Theorem, which is the basic special case, the goal is to reduce the problem of the existence of solutions to a certain problem of linear algebra on the $C^\infty(M)$-module of differential forms on $M$. Since linear algebra on ring modules is exactly what homological algebra studies, it should not come as a surprise that this \chap\ will also see our first serious encounter with cohomology (we already got a glimps of it in the preceding \sect).
+Much like in the Frobenius Theorem, which is the basic special case, the goal is to reduce the problem of the existence of solutions to a certain problem of linear algebra on the $C^\infty(M)$-module of differential forms on $M$. Since linear algebra on ring modules is exactly what homological algebra studies, it should not come as a surprise that this \chap\ will also see our first serious encounter with cohomology (we already got a glimpse of it in the preceding \sect).
 
 Why, one might ask, would we be interested in existence results for solutions of PDEs when doing geometry? There are two principal ways of encountering PDEs in geometry: either as describing a particular class of geometric structures, or as describing the equivalence of two geometric structures. The main question that Cartan's theory answers for a given PDE is \emph{which initial value problems for it are well-posed}. And two solutions of an equation with the same initial data must coincide (at least locally). Thus, Cartan's analysis of PDEs will allow us to ``distill'' very general geometric structures down to a minimal set of quantities (initial data or differential invariants) that suffice to describe them.
 
@@ -7263,7 +7263,7 @@ Crucially, for the Cauchy-Kovalevskaya Theorem to be applicable, the first-order
 \begin{example}[Self-dual equations]\label{ex self-dual equations}
     A more interesting problem is to consider the so-called self-dual equations in $4$ dimensions. Recall the Hodge star operator $\star:\Omega^p(\bbR^n)\to \Omega^{n-p}(\bbR^n)$, which is defined by 
     \[\alpha\wedge(\star \beta)=\<\alpha,\beta\>\dd x^1\wedge\cdots\wedge\dd x^n,\]
-    where $\<\alpha,\beta\>$ is the Euclidean inner product extended to differential forms (so all the standard basis elements $\dd x^{i_1}\wedge\cdots\dd x^{i_p}$, $1\leq i_1<i_2<\cdots<i_p\leq n$, of the same degree are orthonormal, and those of differing degrees are orthogonal). It satisfies 
+    where $\<\alpha,\beta\>$ is the Euclidean inner product extended to differential forms (so all the standard basis elements $\dd x^{i_1}\wedge\cdots\wedge\dd x^{i_p}$, $1\leq i_1<i_2<\cdots<i_p\leq n$, of the same degree are orthonormal, and those of differing degrees are orthogonal). It satisfies 
     \[{\star}{\star}\alpha=(-1)^{p(n-p)}\alpha,\quad \alpha\in\Omega^p(\bbR^n).\]
     In particular, when $n=4$ and $p=2$, the $2$-forms can be split into \emph{self-dual} forms that satisfy $\star\alpha=\alpha$ and \emph{anti-self-dual} forms that satisfy $\star\alpha=-\alpha$. These two spaces are denoted $\Omega^2_\pm(\bbR^4)$, respectively. For example, every $\phi\in\Omega^2_+(\bbR^4)$ is of the form 
     \begin{multline}
@@ -7315,10 +7315,10 @@ The Cauchy-Kovalevskaya Theorem states that analytic solutions exist if we can r
 
 Any linear differential operator 
 \[P=\sum_{|\bm{\alpha}|\leq m}c_{\bm{\alpha}}(\bf{x})\partial^{\bm{\alpha}}\]
-can be viewed as a polynomial $P=P(\bf{x},\partial)$ in the operators $\partial_{x^i}$ with coefficients that are functions of $\bf{x}$. Note that, when acting on sufficiently smooth functions, partial derivatives commute, so $\partial^{\bm{\alpha}}$ can be interpreted as a section of a symmetric power of the tangent bundle. More generally, differential operators can act on sections of arbitrary \glspl{vb}. This motivates the following definition 
+can be viewed as a polynomial $P=P(\bf{x},\partial)$ in the operators $\partial_{x^i}$ with coefficients that are functions of $\bf{x}$. Note that, when acting on sufficiently smooth functions, partial derivatives commute, so $\partial^{\bm{\alpha}}$ can be interpreted as a (local) section of a symmetric power of the tangent bundle. More generally, differential operators can act on sections of arbitrary \glspl{vb}. This motivates the following definition 
 
 \begin{defn}[Filtered algebra]\index{Filtered algebra}
-    A filtration on an algebra $A$ with an increasing (not necessarily strictly) sequence of subspaces 
+    A filtration on an algebra $A$ is an (not necessarily strictly) increasing sequence of subspaces 
     \[\{0\}\subset A_0\subset A_1\subset A_2\cdots \]
     such that $A=\bigcup_{i=0}^\infty A_i$ and which is compatible with the multiplication in the sense that $A_i\cdot A_j\subset A_{ij}$.
 \end{defn}
@@ -7613,7 +7613,7 @@ The problem of specifying initial data for nonlinear equations is much more comp
 We can finally give a coordinate-free formulation of the Cauchy-Kovalevskaya Theorem.
 
 \begin{thm}[Cauchy-Kovalevskaya]\index{Theorem!Cauchy-Kovalevskaya}
-    Consider an initial value problem for a determined system of PDEs with noncharacteristic initial data specified along an embedded hypersurface, all real analytic. Then there is an analytic solution to the problem in some open neighborhood of the initial hypersurface, and any two such solutions agree in any connected open set on which both are defined.
+    Consider an initial value problem for a determined system of PDEs with noncharacteristic initial data specified along an embedded hypersurface, all real analytic. Then there is an analytic solution to the problem in some open neighborhood of the initial hypersurface, and any two such solutions agree in any connected open neighborhood of the initial hypersurface on which both are defined.
 \end{thm}
 \begin{proof}
     If we can prove uniqueness of local solutions near local patches of the initial hypersurface, and then we can glue them together to get a unique ``global'' solution. Thus it suffices to prove the result locally. By an analytic change of variables, arrange that our hypersurface  is $t=0$ in some $(t,\bf{x})$ variables. By the \gls{immt}, if we have a smooth map $\bf{F}(t,\bf{x},\bf{u},\bf{p},\bf{q})$ (where $\bf{p},\bf{q}$ correspond to $\bf{u}_t,\bf{u}_{\bf x}$), we are able to locally smoothly solve $\bf{F}=0$ for a variable $\bf{p}$ as a function of the other variables iff $\bf{F}_{\bf{p}}$ is a matrix of full rank. In other words, we can rewrite the PDE $\bf{F}=0$ in the Cauchy-Kovalevskaya form, i.e., solve for $\bf{u}_t$ as a function of the other variables, iff $\bf{F}_{\bf{u}_t}$ is a matrix of full rank, i.e., exactly when the hypersurface $t=0$ is not characteristic for the linearization of the equation. The classical Cauchy-Kovalevskaya Theorem now yields a unique local analytic solution.
@@ -7683,7 +7683,7 @@ The rest of this \chap\ will be devoted to developing the geometric methods nece
 \section{Cauchy characteristics}
 
 
-We now switch from PDEs to the more general context of \glspl{eds}, which are defined as differential ideals in the algebra of differential forms $\Omega^{\smbullet}(M)$ (cf.~\S\ref{sec: frobenius ii}). Integral manifolds were defined as submanifolds of $M$ on which the pullbacks of all of the forms of the ideal vanish. The Frobenius Theorem, as discussed in \S\ref{sec: frobenius i} and \S\ref{sec: frobenius ii}, shows that a completely integrable system takes a very simple form upon a proper choice of local coordinates (in which the leaves of the foliation are slices). Given any \gls{eds}, one can ask the question whether there is a coordinate system in which the system is generated by forms in a smaller number of these coordinates. This is answered by the Cauchy characteristics. Its algebraic basis is the \emph{retraction theorem}, which we do not cover here.
+We now switch from PDEs to the more general context of \glspl{eds}, which are defined as differential ideals in the algebra of differential forms $\Omega^{\smbullet}(M)$ (cf.~\S\ref{sec: frobenius ii}). Integral manifolds were defined as submanifolds of $M$ on which the pullbacks of all of the forms of the ideal vanish. The Frobenius Theorem, as discussed in \S\ref{sec: frobenius i} and \S\ref{sec: frobenius ii}, shows that a completely integrable system takes a very simple form upon a proper choice of local coordinates (in which the leaves of the foliation are slices). Given any \gls{eds}, one can ask the question whether there is a coordinate system in which the system is generated by forms in a smaller number of these coordinates. This is answered by the Cauchy characteristics. The algebraic basis is the \emph{retraction theorem}, which we do not cover here.
 
 First we introduce the more general concept of infinitesimal symmetries of an \gls{eds}.
 
