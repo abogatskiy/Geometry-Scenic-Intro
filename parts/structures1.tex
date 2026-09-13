@@ -1490,7 +1490,7 @@ With the preceding \sect s serving as inspiration, we will now put the study of 
 
 Recall that an $r$-jet $\rmj^r_m f$ of a smooth map $f:M\to M'$ at point $m\in M$ is simply the equivalence class of all maps $M\to M'$ whose order $\leq r$ terms of the Taylor series  at $m$ coincide with those of $f$ in any local coordinates around $m$ and $f(m)$. The jet space $\rmJ^r(M,M')$ is the set of all such jets at all points of $m$. For example, $\rmJ^0(M,M')=M\times M'$. If we have a set of local coordinates $\bf{x}=(x^1,\ldots,x^n)$ on $M$ and $\bf{u}=(u^1,\ldots,u^{n'})$ on $M'$, then, much like in the definition of tensor bundles, we can obtain \emph{canonical coordinates} $p^j_I$ on the jet space by 
 \[p^j_I\left(\rmj^r_mf\right)\coloneqq \partial^I_{\bf{x}}f^j(\bf{x})=\frac{\partial^{|I|}f^j}{(\partial x^1)^{i_1}\cdots(\partial x^n)^{i_n}}(\bf{x}),\quad j=1,\ldots,n',\quad |I|\leq r,\] 
-where $I=(i_1,\ldots,i_n)$, $|I|=i_1+\cdots+i_n$, and $f^j(\bf{x})=u^j(f(\bf{x}^{-1}(\bf{x})))$ is a component of a local representative of $f$. In particular, when $|I|=0$, we get $p^j=u^j$. These coordinates have smooth transition functions and thus turn $\rmJ^r(M,M')$ into a smooth manifold. By counting the coordinates, we find 
+where $I=(i_1,\ldots,i_n)$, $|I|=i_1+\cdots+i_n$, and $f^j(\bf{x})=u^j(f(\bf{x}^{-1}(\bf{x})))$ is a component of a local representative of $f$. In particular, when $|I|=0$, we get $p^j_{(0,\ldots,0)}=u^j$. These coordinates have smooth transition functions and thus turn $\rmJ^r(M,M')$ into a smooth manifold. By counting the coordinates, we find 
 \[\dim \rmJ^r (M,M')=n+n'\sum_{i=0}^r\binom{n+i-1}{n-1}=n+n'\binom{n+r}{r}.\]
 There is a set of natural projections $\pi^r_{s}:\rmJ^r(M,M')\to \rmJ^s(M,M')$ for $r>s$ which simply keep only the first $s$ monomials, $|I|\leq s$. From the construction of the canonical coordinates it is clear that these projections are locally trivial submersions, and thus \glspl{vb}.
 
@@ -2551,7 +2551,7 @@ We also call the action \emph{effectively free} if $G\slash G_E$ acts freely, so
 If $G$ does not act effectively, then we can replace it by the effectively acting quotient group $G\slash G_E$ without any appreciable loss of generality. Therefore, to avoid unnecessary computations, we can always assume that the action of $G$ is locally effective, and so the stable orbit dimension is $s=\dim G$.
 
 \begin{cor}[{\cite[Cor.~5.14]{OlverEquiv}}]\label{cor 5.14 OlverEquiv}
-    If $G$ acts (locally) effectively on an open subset $U\subset E$, then $G$ acts (locally) freely on the open subset $\calV^{r'}\subset \rmJ^{r'}$ where the prolonged group orbits achieve the stable orbit dimension $\dim G$.
+    If $G$ acts (locally) effectively on an open subset $U\subset E$, then $G$ acts (locally) freely on the open subset $\calV^{r'}\subset \rmJ^{r'}E$ where the prolonged group orbits achieve the stable orbit dimension $\dim G$.
 \end{cor}
 
 To summarize, in practice, we will assume local effectiveness and restrict ourselves to the space spanned by generic orbits, and then \emph{the action of any finite-dimensional Lie (pseudo)group will necessarily become locally free after a finite number of prolongations}. A complete set of differential invariants at or above the order of stabilization is then given by any choice of local coordinates on any slice of the prolonged action. The special cases of singular (non-generic) orbits have to be treated by more refined methods that we will not discuss here but will be superseded by the regularized method of moving coframes in the next \chap.
@@ -3022,7 +3022,7 @@ The remainder of this \chap\ is optional. These \sect s address the formalism of
 \begin{defn}[Lagrangian system]
     A Lagrangian system is a pair $(E\overset{\pi}{\to}M,\calL)$, where $E\overset{\pi}{\to}M$ is a smooth \gls{fb} over an $n$-dimensional manifold $M$ and $\calL$ is a semibasic $n$-form on the $r$-th jet space $\rmJ^r E$, called a \emph{Lagrangian density}.
 
-    Let $\varOmega\subset M$ be an open subset with smooth boundary $\partial\varOmega$. By an $r$-th order variational problem on $\varOmega$ we mean the problem of finding sections $s\in\Gamma^r(E)$ that are critical points of the \emph{action functional} 
+    Let $\varOmega\subset M$ be an open subset with smooth boundary $\partial\varOmega$. By an $r$-th order variational problem on $\varOmega$ we mean the problem of finding sections $s\in\Gamma(E)$ that are critical points of the \emph{action functional} 
     \[\calS[s]=\calS_\varOmega[s]\coloneqq \int_\varOmega \left(\rmj^r s\right)^\ast\calL.\label{eq:7.1:OlverEquiv}\]
 \end{defn}
 
@@ -3033,14 +3033,14 @@ The precise space of functions (sections) upon which the functional $\calS$ is t
 \begin{defn}[Euler operator]
     The differential operator $\sfE=(\tuple{\sfE_1,\ldots,\sfE_k})$, whose components are 
     \[\sfE_j=\sum_{J}(-D)_J\frac{\partial}{\partial p^j_J},\quad j=1,\ldots,k,\]
-    is called the Euler operator. The (infinite) sum is over all multi-indices $J=(\tuple{j_1,\ldots,j_n})$, and $(-D)_J=(-1)^{|I|}D_1^{j_1}\cdots D_{n}^{j_n}$ denotes the corresponding signed higher-order total derivative. The Euler operator acts on functions on $\rmJ^r E$ and produces vertical vector fields on $\rmJ^r E$.
+    is called the Euler operator. The (infinite) sum is over all multi-indices $J=(\tuple{j_1,\ldots,j_n})$, and $(-D)_J=(-1)^{|J|}D_1^{j_1}\cdots D_{n}^{j_n}$ denotes the corresponding signed higher-order total derivative. The Euler operator acts on functions on $\rmJ^r E$ and produces vertical vector fields on $\rmJ^r E$.
 \end{defn}
 
 As defined, this operator clearly depends on the choice of coordinates. The intrinsic (coordinate-invariant) content of the Euler operator will be clarified over the course of the proof of Theorem~\ref{thm 7.11 OlverEquiv}. Note that, as with the total derivatives themselves, despite containing infinitely many terms, the Euler operator applied to any given function of finite order requires only finitely many terms to be computed.
 
 \begin{thm}[{{\cite[Thm.~7.2]{OlverEquiv}}}]\label{thm 7.2 OlverEquiv}
     The smooth extrema of the action functional $\calS$ with Lagrangian $L(\bf{x},\bf{u}^{(r)})$ must satisfy the \emph{Euler-Lagrange equations} \index{Equation!Euler-Lagrange}
-    \[\sfE^jL=\sum_{|J|\leq r}\frac{\partial L}{\partial p^j_J}=0,\quad j=1,\ldots,r.\]
+    \[\sfE_jL=\sum_{|J|\leq r}(-D)_J\frac{\partial L}{\partial p^j_J}=0,\quad j=1,\ldots,r.\]
 \end{thm}
 \begin{proof}
     In general, a one-parameter family of functions $\bf{u}(\bf{x},\epsilon)$ is called a family of variations of a fixed function $\bf{u}(\bf{x})=\bf{u}(\bf{x},0)$ provided that, outside of a compact subset $K\subset \varOmega$, the functions coincide: $\bf{u}(\bf{x},\epsilon)=\bf{u}(\bf{x})$ for all $\bf{x}\in \varOmega\setminus K$. Therefore, if $\bf u$ is, say, a minimum of the functional with some boundary conditions, then, for any family of variations $\bf{u}(\bf{x},\epsilon)$, the scalar function $h(\epsilon)=\calS[\bf{u}(\bf{x},\epsilon)]$, must have a minium at $\epsilon=0$, and so, by elementary calculus, satisfies $\dot h(0)=0$. In view of our smoothness assumptions, we can interchange the integration and differentiation to evaluate this derivative:
@@ -3101,9 +3101,9 @@ Of particular interest are the \emph{null Lagrangians}, which, by definition, ar
 
 \begin{example}[{{\cite[Example~7.5]{OlverEquiv}}}]
     In the scalar case, every null Lagrangian is a total derivative, 
-    \[L\left(\bf{x},\bf{u}^{(r)}\right)=D_xP\left(\bf{x},\bf{u}^{(r-1)}\right)=p_n\frac{\partial P}{\partial p_{r-1}}+\wt L\left(\bf{x},\bf{u}^{(r-1)}\right),\]
+    \[L\left(\bf{x},\bf{u}^{(r)}\right)=D_xP\left(\bf{x},\bf{u}^{(r-1)}\right)=p_r\frac{\partial P}{\partial p_{r-1}}+\wt L\left(\bf{x},\bf{u}^{(r-1)}\right),\]
     and hence an affine function of the top derivative $p_r$. This is no longer the case for several independent variables; for example, the Hessian covariant 
-    \[H=p_{xx}p_{yy}-u^2_{xy}=D_x(p_xp_{yy})-D_y(p_xp_{xy})\]
+    \[H=p_{xx}p_{yy}-p^2_{xy}=D_x(p_xp_{yy})-D_y(p_xp_{xy})\]
     is a divergence, and hence a null Lagrangian, even though it is quadratic in the top order derivatives. In fact, it can be shown that any null Lagrangian is a ``total Jacobian polynomial'' function of the top order jet variables.
 \end{example}
 
@@ -3281,7 +3281,7 @@ The converse to this is not necessarily true: for example, one can always add a 
 \begin{example}
     Let $\wb L(\wb x,\wb u,\wb p)$ and $L(x,u,p)$ be two first-order scalar Lagrangians. Under a point transformation $\wb x=\chi(x,u)$, $\wb u=\psi(x,u)$, the divergence-equivalence condition \eqref{eq:7.27:OlverEquiv} takes the explicit form 
     \[\wb L(\wb x,\wb u,\wb p)D_x\chi=L(x,u,p)+D_x A,\]
-    where $D_xA=A_x+pA_u$ is the total derivative (divergence) of $A$. Note that, in the case of point transformations, the function $A$ cannot depend on the derivative coordinate $p$ since otherwise the transformed Lagrangian would be of second order. However, if we are considering contact transformations, so $\wb x=\chi(x,u,p)$ depends on $p$ also, we can allows $A(x,u,p)$ to also depend on $p$ and thereby eliminate the second-order term $q\chi_p\wb L$, so as to map the first-order Lagrangian $\wb L$ to a divergence-equivalent first-order Lagrangian $L$. In fact, we will later prove that any two nondegenerate first-order Lagrangians are locally divergence-equivalent under a contact transformation.
+    where $D_xA=A_x+pA_u$ is the total derivative (divergence) of $A$. Note that, in the case of point transformations, the function $A$ cannot depend on the derivative coordinate $p$ since otherwise the transformed Lagrangian would be of second order. However, if we are considering contact transformations, so $\wb x=\chi(x,u,p)$ depends on $p$ also, we can choose an $A(x,u,p)$ that depends on $p$ in such a way as to eliminate the second-order term $q\chi_p\wb L$, and thus to map the first-order Lagrangian $\wb L$ to a divergence-equivalent first-order Lagrangian $L$. In fact, we will later prove that any two nondegenerate first-order Lagrangians are locally divergence-equivalent under a contact transformation.
 \end{example}
 
 \begin{xca}[{{\cite[Exercise~7.19]{OlverEquiv}}}]
@@ -3295,7 +3295,7 @@ The converse to this is not necessarily true: for example, one can always add a 
 Maps that preserve variational problems serve to define variational symmetries. The precise definition is as follows.
 
 \begin{defn}[Variational symmetry]
-    A point or contact transformation $g$ is called a variational symmetry of the functional \eqref{eq:7.1:OlverEquiv} iff the transformed functional agrees with the original one, which means that for every smooth function $g$ defined on a domain $\varOmega$, with transformed counterpart $\wb f=g\cdot f$ defined on $\wb\varOmega$, we have 
+    A point or contact transformation $g$ is called a variational symmetry of the functional \eqref{eq:7.1:OlverEquiv} iff the transformed functional agrees with the original one, which means that for every smooth function $f$ defined on a domain $\varOmega$, with transformed counterpart $\wb f=g\cdot f$ defined on $\wb\varOmega$, we have 
     \[\int_\varOmega L\left(\bf{x},f^{(r)}(\bf{x})\right)\sfv_{\bf x}=\int_{\wb\varOmega}L\left(\bar{\bf x},\wb f^{(r)}\left(\bar{\bf x}\right)\right)\sfv_{\bar{\bf x}}.\label{eq:7.30:OlverEquiv}\]
 \end{defn}
 
