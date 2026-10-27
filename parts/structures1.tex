@@ -4067,7 +4067,7 @@ Note that the first condition boils down to the statement that the two classifyi
     If $F^\ast\wb\varTheta=\varTheta$ is an equivalence of extended coframes, and $\varOmega=\varPhi(\varTheta)$ and $\wb\varOmega=\varPhi(\wb \varTheta)$ are invariantly related coframes with the same functions $\varPhi=(\varphi,a)$, then the equivalence $F^\ast \wb\varOmega=\varOmega$ also holds.
 \end{prop}
 
-The proof is immediate. The usefulness of invariantly related coframes is utterly practical: since we have some freedom in picking the matrix-valued function $a$, in any given equivalence problem we may be able to choose it in a way that simplifies the problem (e.g. that the coframe takes values only in some subspace of $\bbR^n$), eventually bringing it to some ``canonical'' form. The procedure for picking a convenient $a$ is called \emph{normalization} and we will encounter it in several forms in this text. As the most trivial example, it allows us to always assume (at least locally) that the functions occurring in our extended coframe are functionally independent, and in particular, $l\leq n$. For example, we can use those corresponding to a consistent choice of local coordinates on the classifying manifold.
+The proof is immediate. The usefulness of invariantly related coframes is utterly practical: since we have some freedom in picking the matrix-valued function $a$, in any given equivalence problem we may be able to choose it in a way that simplifies the problem (e.g.\ so that the coframe takes values only in some subspace of $\bbR^n$), hopefully bringing it to some ``canonical'' form. The art of picking a convenient $a$ is called \emph{normalization} and we will encounter it in several forms in this text. As a most trivial example, it allows us to always assume (at least locally) that the functions occurring in our extended coframe are functionally independent, and in particular, $l\leq n$. For example, we can use those corresponding to a consistent choice of local coordinates on the classifying manifold.
 
 \begin{cor}[{\cite[Cor.~5.8]{OlverCo2}}]\label{cor 5.8 OlverCo2}
     Invariantly related extended coframes have the same symmetry group.
@@ -4127,7 +4127,7 @@ The fundamental equivalence and symmetry theorems for coframes can now be adapte
 
 
 
-\section{Method of moving (co)frames I}
+\section{Method of moving (co)frames I: the transitive case}
 
 
 \begin{intu*}
@@ -4138,7 +4138,9 @@ The fundamental equivalence and symmetry theorems for coframes can now be adapte
     While equivalence problems are the raison d'\^etre of the method, its usefulness extends far beyond. Moving frames are a general tool for conducting all sorts of basic geometric computations, as will be copiously demonstrated in \Chap~\ref{chap curves and surfaces}.\footnote{Actually, in the study of surfaces we will mostly be using the intimately related ``Cartan equivalence method'', but the same results can be obtained directly via moving frames.} The main drawback of the historic version of the method is that it is somewhat ad hoc and sometimes runs into difficulties that have to be resolved on a case-by-case basis. Therefore, this \sect\ is largely devoid of theoretical results, and instead introduces the method by way of numerous examples. A more theoretically palatable version of the method, along with the full solution of the equivalence problem for submanifolds, will be presented in the \sect s starting with \S\ref{sec: moving coframes via reg}.
 \end{intu*}
 
-In our approach to the theory and practical implementation of the method of moving frames, the left-invariant Maurer-Cartan forms on a finite-dimensional Lie group play an essential role. We have previously presented one way of easily computing them using the matrix representation $\theta_G=g^{-1}\dd g$. 
+As noted above, this section is a brief run through the whole method, so do not be deterred by the fact that some of the concepts here are not precisely defined. The formal version will be presented in the next section. 
+
+First, a small computational prelude. In our approach to the theory and practical implementation of the method of moving frames, the left-invariant Maurer-Cartan forms on a finite-dimensional Lie group play an essential role. We have previously presented one way of easily computing them using the matrix representation $\theta_G=g^{-1}\dd g$. 
 
 \begin{example}
     For $G=\GL_2(\bbR)$ parametrized as 
@@ -4163,7 +4165,7 @@ Next, set $\dd \bar{\bf x}=0$ and solve for the $\dd x^k$:
 or, in full detail,
 \[-\dd x^k=\sum_{j=1}^d F_j^k(m,g)\dd g^j,\quad k=1,\ldots,n.\]
 Then, for each $k$ and fixed $m_0\in M$, the $1$-form 
-\[\theta_0=\sum_{j=1}^d F^k_j(m_0,g)\dd g^j,\]
+\[\theta^k_0=\sum_{j=1}^d F^k_j(m_0,g)\dd g^j,\]
 is a left-invariant form on $G$. Alternatively, if one expands the right hand side of \eqref{eq 3.7 OlverCo} in a power series (or Fourier series, etc.) in $\bf{x}$,
 \[\sum_{j=1}^d F^k_j(m,g)\dd g^j=\sum_{I}\bf{x}^I \theta_I,\]
 then each coefficient $\theta_I$ also forms a left-invariant form on $G$. In particular, when $G$ acts locally effectively, the resulting collection of $1$-forms spans the space of left-invariant forms. It only remains to pick a basis in this space to recover the components of the Maurer-Cartan form.
@@ -4194,7 +4196,9 @@ of the Lie algebra $\frakg_M$ of the kernel $G_M=\{g\in G\mid g\cdot m=m\;\text{
 
 \PRLsep
 
-Now we begin the development of the moving coframe method. Throughout this \sect, assume that $G$ is a $d$-dimensional Lie group that acts \emph{locally effectively and transitively} on an $n$-dimensional manifold $M$. We begin by choosing a basepoint $m_0\in M$.
+Now we begin the development of the moving coframe method. Throughout this \sect, assume that $G$ is a $d$-dimensional Lie group that acts \emph{locally effectively and transitively} on an $n$-dimensional manifold $M$. We begin by choosing a basepoint $m_0\in M$. 
+
+The basic idea will be to reduce the equivalence problem for submanifolds of $M$ under the $G$-action to an equivalence problem for coframes, albeit possibly on a different manifold. The only ``canonical'' set of differential forms associated with a $G$-action are the Maurer-Cartan forms on $G$. To turn them into a set of $1$-forms on something like $M$ we will need a $G$-valued function along which we can perform a pullback. Since we would like the resulting $1$-forms to be $G$-invariant (so that their equivalence problem is related to the original equivalence problem for submanifolds), this function needs to be $G$-invariant in some sense. The natural thing to attempt is to look for a function $\rho:M\to G$ which computes the ``tratio'' of the current point $m$ to a basepoint $m_0$, so that the $G$-action leaves the ratio invariant. The following definition is the closest one can get to this.
 
 \begin{defn}[Compatible lift, moving frame]\index{Moving frame}\index{Compatible lift}
     Let $G\acts M$ be a locally effective and locally transitive action, where $\dim M=n$, and $\dim G=d$ (so $d\geq n$). A local smooth function $\rho:M\supset U\to G$ is called a \emph{compatible lift} with basepoint $m_0$ if it satisfies 
@@ -4202,19 +4206,19 @@ Now we begin the development of the moving coframe method. Throughout this \sect
     In order to compute the most general compatible lift, we must solve this system of $n$ equations for $n$ of the group parameters in terms of the $n$-dimensional point $m\in M$ and the remaining $d-n=\dim G-\dim M$ group parameters, which we denote collectively by $h$. This leads to a general formula $g=\rho_0(m,h)$ for the solution to the compatibility equations \eqref{eq 4.1 OlverCo}. Thus, by solving \eqref{eq 4.1 OlverCo}, we have effectively ``normalized'' $n$ of the original group parameters.  Since our considerations are always local, in practice, we only need to solve the equations near $m_0$. In accordance with Cartan's terminology, we call the general compatible lift $\rho_0(m,h)$ the \emph{moving frame of order zero} for the given transformation group. 
 \end{defn}
 
-If $\iota:X\to M$ is a parametrized submanifold $N=\iota(X)$, then one can view the composition $\rho_0(\iota(x),h)$ as a restriction of the order zero moving frame to $N$, where the unnormalized parameters $h$ determine the degree of indeterminacy of the moving frame on $N$. In geometrical situations, such restrictions can be identified with the classical moving frames. In this context, a moving frame can be defined alternatively as a $G$-valued function on $X$ that factors through an equivariant $G$-valued function on $M$.
+When one speaks of moving frames in the context of submanifolds of $M$, one means nothing but a restriction of a moving frame on $M$ to the submanifold. If $\iota:X\to M$ is a parametrized submanifold $N=\iota(X)$, then one can view the composition $\rho_0(\iota(x),h)$ as a restriction of the order zero moving frame to $N$, where the unnormalized parameters $h$ determine the degree of indeterminacy of the moving frame on $N$. In geometrical situations, such restrictions can be identified with the classical moving frames. In this context, a moving frame can be defined alternatively as a $G$-valued function on $X$ that factors through an equivariant $G$-valued function on $M$.
 
-Note that when $G$ acts transitively, we can locally identify $M$ with (subsets of) $G\slash H$, where $H$ is the stabilizer of the basepoint. Therefore, a compatible lift is merely a local section of the canonical principal $H$-bundle $G\to G\slash H$.
+The leftover group parameters $h$ are given a very clear interpretation if we choose them to parametrize the stabilizer $H$ (which is always possible in some neighborhood of $m_0$). Note that when $G$ acts transitively, we can locally identify $M$ with (subsets of) $G\slash H$, where $H$ is the stabilizer of the basepoint. Therefore, a compatible lift is merely a local section of the canonical principal $H$-bundle $G\to G\slash H$.
 
 \begin{prop}\label{prop 4.3 OlverCo}
     Assuming a locally effective action $G\acts M$, two maps $\rho,\wh\rho:M\to G$ are compatible lifts with the same basepoint iff they satisfy 
-    \[\wh\rho(m)=\rho(m)\cdot \chi(m),\]
+    \[\wh\rho(m)=\rho(m)\cdot h(m),\]
     where $h:M\to H=G_{m_0}$ is an arbitrary map to the stabilizer subgroup of $m_0$.
 \end{prop}
 
-The order zero moving frame $\rho_0(m,h)$ which is the general solution to the lift equations \eqref{eq 4.1 OlverCo}, defines a map from the \emph{$0$-th order frame bundle} $P_0=M\times H\cong (G\slash H)\times H$, with coordinates $(m,h)$, to the group $G$, which is, in fact, a local diffeomorphism $\rho_0:P_0\to G$. There is an induced action of $G$ on the moving frame bundle $P_0$ that makes $\rho_0$ into a $G$-equivariant map: 
+As a consequence, it is \emph{not} in general true that compatible lifts $\rho$ are $G$-equivariant in any sense -- the presence of $h(m)$ interferes. However, moving frames \emph{can} be seen as equivariant. The order zero moving frame $\rho_0(m,h)$ which is the general solution to the lift equations \eqref{eq 4.1 OlverCo}, defines a map from the \emph{$0$-th order frame bundle} $P_0=M\times H\cong (G\slash H)\times H$ (the isomorphism is local in $M$), with coordinates $(m,h)$, to the group $G$, which is, in fact, a local diffeomorphism $\rho_0:P_0\to G$. There is an induced action of $G$ on the moving frame bundle $P_0$ that makes $\rho_0$ into a $G$-equivariant map: 
 \[\rho_0(g\cdot (m,h))=g\cdot \rho_0(m,h).\]
-Thus, the action on the unnormalized group parameters $h$ can be explicitly determined by multiplying the moving frame on the left by the group element. The action of $G$ on $P_0$ projects to the original action of $G$ on $M$, so that $g\cdot (m,h)=(g\cdot m,\chi(g,m,h))$ for $g\in G$. In other words, we have constructed a homogeneous $H$-bundle over $G\slash H$. As we will see next, it also carries a $\frakg$-valued differential form that turns it into a true locally Klein geometry.
+This equivariance property is trivially equivalent to \eqref{eq 4.1 OlverCo}, which can be seen by acting with both sides on $m_0$. Thus, the action on the unnormalized group parameters $h$ can be explicitly determined by multiplying the moving frame on the left by the group element. The action of $G$ on $P_0$ projects to the original action of $G$ on $M$, so that $g\cdot (m,h)=(g\cdot m,\chi(g,m,h))$ for $g\in G$. In other words, we have constructed a homogeneous $H$-bundle over $G\slash H$. As we will see next, it also carries a $\frakg$-valued differential form that turns it into a true locally Klein geometry.
 
 \begin{example}[{\cite[Example~4.2]{OlverCo}}]
     Consider the planar action \eqref{eq 3.10 OlverCo} of $\GL_2(\bbR)$. It is transitive on $E=\bbR^2\setminus\{u=0\}$. Choose the basepoint $m_0=(0,1)$. Since $g\cdot m_0=(\beta/\delta,1/\delta)$, any compatible lift $g=\rho(x,u)$ must satisfy $\beta/\delta=x$, $1/\delta=u$, and hence the solution to \eqref{eq 4.1 OlverCo} is 
@@ -4254,7 +4258,7 @@ Thus, the action on the unnormalized group parameters $h$ can be explicitly dete
     Note that the $(x,u)$ transformations coincide with the original action \eqref{eq 3.10 OlverCo}, as they should.
 \end{example}
 
-The next step is to characterize the group transformations by a collection of differential forms. In the finite-dimensional situation that we are currently considering, these will be obtained by pulling back the left-invariant Maurer-Cartan forms $\bm\theta_G$ on $G$ to the order zero moving frame bundle $P_0$ using the compatible lift. The resulting one-forms 
+The next step is to characterize the group transformations by a collection of differential forms (the precise meaning of the term ``characterize'' will be specified by the next theorem). In the finite-dimensional situation that we are currently considering, these will be obtained by pulling back the left-invariant Maurer-Cartan forms $\bm\theta_G$ on $G$ to the order zero moving frame bundle $P_0$ using the compatible lift. The resulting one-forms 
 \[\bm\theta_0\coloneqq (\rho_0)^\ast\bm\theta_G\]
 will provide an invariant coframe on $P_0$, which we name the \emph{moving coframe of order zero}. The moving coframe forms $\bm\theta_0$ clearly satisfy the same Maurer-Cartan equations as $\bm\theta_G$, producing a locally Klein geometry. The following is then an immediate consequence of Proposition~\ref{prop 1.5.2 Cap 2}.
 
@@ -4262,12 +4266,14 @@ will provide an invariant coframe on $P_0$, which we name the \emph{moving cofra
     The order zero moving coframe completely characterizes the group transformations on the bundle $P_0$: a map $F:P_0\to P_0$ satisfies $F^\ast \bm\theta_0=\bm\theta_0$ iff it coincides with the action of a group element $g\in G$: $F(m,h)=g\cdot (m,h)$
 \end{thm}
 
+One can start to see how this eventually allows us to reduce the submanifold equivalence problem to one for extended coframes (the pullback of $\bm\theta_0$ to the submanifold), which we have already ``solved''. The invariants of the extended coframe then become geometric quantities that specify the exact shape of the submanifold inside $M$ up the the action of $G$.
+
 \begin{example}
     Continuing the above example, we substitute \eqref{eq 4.3 OlverCo} characterizing our compatible lift \eqref{eq 4.4 OlverCo} into the Maurer-Cartan forms \eqref{eq 3.4 OlverCo}. The result is the order zero moving coframe on $P_0=M\times H$:
     \[
         \begin{aligned}
             \theta_0^1&=\frac{\dd\alpha-x\dd\gamma}{\alpha-\gamma x},& \theta_0^2&=\frac{\dd x}{u(\alpha-\gamma x)},\\
-            \theta_0^3&=\frac{u(\alpha\dd\gamma-\gamma\dd\alpha)}{\alpha-\gamma x},& \theta_0^2&=-\frac{\gamma\dd x}{\alpha-\gamma x}-\frac{\dd u}{u}.
+            \theta_0^3&=\frac{u(\alpha\dd\gamma-\gamma\dd\alpha)}{\alpha-\gamma x},& \theta_0^4&=-\frac{\gamma\dd x}{\alpha-\gamma x}-\frac{\dd u}{u}.
         \end{aligned}\label{eq 4.8 OlverCo}
     \]
     The skeptical reader can explicitly check that these four $1$-forms really do completely characterize the group action \eqref{eq 4.7 OlverCo}, as stated in the above theorem.
@@ -4282,13 +4288,13 @@ will provide an invariant coframe on $P_0$, which we name the \emph{moving cofra
 
 \PRLsep
 
-We will now consider a more complicated problem where the order zero frame bundle will not suffice, and a procedure called \emph{prolongation} will be required. Recall that the semibasic component of a differential form defined on a jet space is generally a differential form on the \emph{next} jet space.
+Even in the above example, it is clear that the order zero frame bundle does not suffice if we are to solve the submanifold equivalence problem, because it is unclear what values to assign to the remaining group parameters $\alpha$ and $\gamma$ (or, in other words, how to lift submanifolds of $M$ to submanifolds of $P_0$). If we somehow managed to replace $M$ with a higher-dimensional manifold, we would be able to normalize away more, and eventually all, of the group parameters. Given our experience from the previous chapter, the natural thing to do is to replace $M$ with a jet space of submanifolds of $M$, via a procedure called \emph{prolongation}. We will formalize all of this later, but for now we simply demonstrate the method by continuing the same example. Recall that the semibasic component of a differential form defined on a jet space is generally a differential form on the \emph{next} jet space.
 
 \begin{example}
-    Consider a curve $C\subset E=\bbR^2\setminus\{u=0\}$ in the $(x,u)$-plane. For simplicity, we shall assume that the curve coincides with the graph of a function $u=u(x)$. We restrict the moving coframe forms to the curve, which amounts to replacing the differential $\dd u$ by $u_x\dd x$. If we interpret the derivative $u_x$ as a coordinate on the jet space $\rmJ^1\coloneqq \rmJ^1 E\cong\bbR^3$ of curves in $E$, then the restriction of a differential form to the curve can be reinterpreted as the natural projection of $\dd u$ on $\rmJ^1$ to its semibasic component, using the canonical decomposition of differential forms on jet bundles into semibasic and contact components. Indeed, the vertical component of the form $\dd u$ is the contact form $\dd u-u_x\dd x$. Therefore, the restricted (or semibasic) moving coframe forms on $C\times H$ are given by 
+    We again build on the last example. Consider a curve $C\subset E=\bbR^2\setminus\{u=0\}$ in the $(x,u)$-plane. For simplicity, we shall assume that the curve coincides with the graph of a function $u=u(x)$. We restrict the moving coframe forms to the curve, which amounts to replacing the differential $\dd u$ by $u_x\dd x$. If we interpret the derivative $u_x$ as a coordinate on the jet space $\rmJ^1\coloneqq \rmJ^1 E\cong\bbR^3$ of curves in $E$, then the restriction of a differential form to the curve can be reinterpreted as the natural projection of $\dd u$ on $\rmJ^1$ to its semibasic component, using the canonical decomposition of differential forms on jet bundles into semibasic and contact components. Indeed, the vertical component of the form $\dd u$ is the contact form $\dd u-u_x\dd x$. Therefore, the restricted (or semibasic) moving coframe forms on $C\times H$ are given by 
     \[\begin{aligned}
         \eta^1&=\frac{\dd\alpha-x\dd\gamma}{\alpha-\gamma x},& \eta^2&=\frac{\dd x}{u(\alpha-\gamma x)},\\
-        \eta^3&=\frac{u(\alpha\dd\gamma-\gamma\dd\alpha)}{\alpha-\gamma x},& \eta^2&=\frac{\gamma(xu_x-u)-\alpha u_x}{u(\alpha-\gamma x)}\dd x,
+        \eta^3&=\frac{u(\alpha\dd\gamma-\gamma\dd\alpha)}{\alpha-\gamma x},& \eta^4&=\frac{\gamma(xu_x-u)-\alpha u_x}{u(\alpha-\gamma x)}\dd x,
     \end{aligned} \label{eq 4.9 OlverCo}\]
     which now depend on first-order derivatives. The next step is to look for invariant combinations of coordinates and group parameters. Each such invariant combination will either provide us with a basic differential invariant for the problem, or, in the case that it explicitly depends on the remaining group parameters, a `lifted invariant' which can be normalized and thereby eliminate one of the remaining group parameters, as discussed below. Specifically, in the present example, a function $J(\alpha,\gamma,x,u,u_x)$ will be a \emph{lifted invariant} provided it is unaffected by the group action:
     \[J(\wb\alpha,\wb\gamma,\wb x,\wb u,\wb u_{\wb x})=J(\alpha,\gamma,x,u,u_x),\label{eq 4.10 OlverCo}\]
@@ -4396,7 +4402,7 @@ Note that we do not need the explicit isotropy groups for the transformation gro
 
 
 
-\section{Method of moving (co)frames II}
+\section{Method of moving (co)frames II: the general case}
 
 
 The instructive example we have considered above was conveniently chosen so that the actions of $G$ as well as its prolongations are all transitive, so that after two prolongations the jet space has the same number of dimensions as $G$, and specifying a moving coframe on it determines a local diffeomorphism to $G$. The next task is to extend the method to \emph{intransitive} actions. We still assume that $\dim G=d$ and $G$ acts effectively and regularly, which implies that its orbits, which we take to have dimension $s$, form a foliation of $M$. We choose a local \emph{slice} $\varSigma\subset M$ of this foliation, i.e., a submanifold of dimension $n-s$ intersecting the orbits transversally, and introduce a \emph{compatible lift} $\rho:M\to G$ by requiring that, for each $m$ near $\varSigma$, the lift $\rho$ satisfies 
@@ -5621,7 +5627,7 @@ The coefficient $I^\alpha_{K+1_i}$ is the normalized differential invariant of o
 
 
 We now restrict the coframes to a regular submanifold $S=i(X)$. Let 
-\[\varUpsilon^{(r)}=\{\bm\omega,\rmJ^r\}=\left(\rmj^r i\right)^\ast \varDelta^{(r)}\] 
+\[\varUpsilon^{(r)}=\{\bm\omega,J^{(r)}\}=\left(\rmj^r i\right)^\ast \varDelta^{(r)}\] 
 denote the restriction of the differential invariant coframe to $S$. Transversality implies that $\bm\omega=\left(\rmj^r i\right)^\ast\bm\theta$ will form a coframe on the parameter space $X$, while $J^{(r)}=\left(\rmj^r i\right)^\ast I^{(r)}$ corresponds to the pullback of the $r$-th order normalized differential invariants to $X$.
 
 \begin{prop}[{\cite[Prop.~14.3]{OlverCo2}}]\label{prop 14.3 OlverCo2}
@@ -6775,7 +6781,7 @@ So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canon
 
 \begin{rem}[Young symmetrizer]\index{Young tableau}\index{Young symmerizer}
     To better understand the Bianchi identity, we will need the concept of the \emph{Young symmetrizer}. First, let $\lambda=(d_1,\ldots,d_k)$ be a partition of an integer $d$, so $d_1\geq \cdots\geq d_k\geq 1$ and $d=d_1+\cdots+d_k$. A \emph{Young tableau without repetitions} $T_\lambda$ is a collection of $d$ aligned boxes, with $d_j$ boxes in the $j$-th row, and each box is filled with a distrinct integer from $\{1,\ldots,d\}$. For example, some Young tableau associated with $\lambda=(3,2)$ are 
-    \[\young(531,24)\quad \young(123,45)\quad \young(125,34).\]
+    \[\ytableaushort{531,24}\quad \ytableaushort{123,45}\quad \ytableaushort{125,34}.\]
     To a Young tableau of size $d$, associate a $\GL(V)$-submodule of $V^{\otimes d}$ as follows. Let $\Sym_j:V^{\otimes d}\to V^{\otimes d}$ denote the symmetrization of the slots corresponding to the entries of the $j$-th row of a Young tableau $T_\lambda$ and let $\Alt_k$ denote the anti-symmetrization of the slots corresponding to the entries of the $k$-th column. The map 
     \[S_{T_\lambda}\coloneqq \Alt_1\circ \cdots\circ \Alt_{d_1}\circ \Sym_1\circ\cdots\circ \Sym_k:\quad V^{\otimes d}\to V^{\otimes d}\]
     is called the \emph{Young symmetrizer}. In short, first it symmetrizes over the indices in each row of the tableau, and then anti-symmetrizes over the indices in each column starting with the last. Crucially, these operations do not commute.
@@ -6786,12 +6792,12 @@ So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canon
 \end{rem}
 
 \begin{example}
-    If $T_\lambda=\young(13,2)$, then 
+    If $T_\lambda=\mbox{\ytableaushort{13,2}}$, then
     \begin{multline}
         S_{T_\lambda}(u\otimes v\otimes w)=\Alt_{12}\frac12[u\otimes v\otimes w+w\otimes v\otimes u]=\\
         =\frac14(u\otimes v\otimes w+w\otimes v\otimes u-v\otimes u\otimes w-v\otimes w\otimes u).
     \end{multline}
-    If $T_\lambda=\young(12,3)$, then $S_{T_\lambda}(u\otimes v\otimes w)=\frac14(u\otimes v\otimes w+v\otimes u\otimes w-w\otimes v\otimes u-w\otimes u\otimes v)$.
+    If $T_\lambda=\mbox{\ytableaushort{12,3}}$, then $S_{T_\lambda}(u\otimes v\otimes w)=\frac14(u\otimes v\otimes w+v\otimes u\otimes w-w\otimes v\otimes u-w\otimes u\otimes v)$.
 \end{example}
 
 \begin{example}
@@ -6799,7 +6805,7 @@ So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canon
     \[\dd \omega^{\text{LC}}+\omega^{\text{LC}}\wedge \omega^{\text{LC}}=[\rho]\circ\theta\wedge\theta.\] 
     (Similarity with the Maurer-Cartan equation is not accidental, as we will see in \Chap~\ref{ch: cartan geom}.) This curvature is intrinsic to the Riemannian structure and typically not zero. Indeed, the curvature module is not trivial: since $\frakso_n^{(1)}=0$, we immediately see that 
     \[\rmH^{1,2}(\frakg)=\ker\delta_2=\left(\frakg\otimes \bigwedge\nolimits^2 V^\ast\right)\cap \left(V\otimes 
-    \rmS_{\mbox{\scriptsize\young(21,3)}}
+    \rmS_{\scalebox{0.7}{\ytableaushort{21,3}}}
     V^\ast\right),\]
     and one can show that every point in this space can be attained by Riemannian curvatures. The fact that curvature takes values in the space described by this Young symmetrizer is the algebraic Bianchi identity, whereas $\delta_2\circ\rho=0$ is the differential Bianchi identity.\footnote{The differential Bianchi identity can also be restated as the condition that the covariant derivative of curvature take values in a certain Young symmetrizer.}
 
