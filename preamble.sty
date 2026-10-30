@@ -48,6 +48,14 @@
    
 \usepackage[stable,bottom]{footmisc}
 \interfootnotelinepenalty=10000
+% keep footnotes in one piece when possible: also forbid page breaks after
+% displays inside footnotes, and let footnotes take up to half a page
+\makeatletter
+\AtBeginDocument{%
+  \dimen\footins=0.5\textheight
+  \let\orig@makefntext\@makefntext
+  \long\def\@makefntext{\postdisplaypenalty\@M\orig@makefntext}}
+\makeatother
 \makeindex
 \usepackage[footnotesize]{caption}
 \captionsetup{width=0.8\textwidth}
@@ -701,14 +709,24 @@
 % big slash with two arguments
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
 
+% cyclic and alternating sum symbols: a \circlearrowright scaled relative to the
+% current font and math style (so they also work in footnotes and subscripts),
+% with an inner symbol centered on it
+\makeatletter
+% #1: math style, #2: inner symbol, #3: scale of the inner symbol,
+% #4: downward shift of the inner symbol as a fraction of its total height
+\newcommand{\circsum@}[4]{%
+  \setbox\z@\hbox{\scalebox{#3}{$\m@th#1#2$}}%
+  \vcenter{\hbox{\ooalign{%
+    $\m@th#1\vcenter{\hbox{\scalebox{1.44}{$\m@th#1\circlearrowright$}}}$\cr
+    \hfil\lower#4\dimexpr\ht\z@+\dp\z@\relax\hbox{$\m@th#1\vcenter{\box\z@}$}\hfil\cr}}}}
+\newcommand{\cyclic@}[2]{\circsum@{#1}{+}{1}{0}}
+\newcommand{\acyclic@}[2]{\circsum@{#1}{\pm}{.8}{.13}}
 % cyclic sum symbol
-\def\cyclic{\mathop{\kern0.9ex{{+}
-\kern-2.2ex\raise-.55ex\hbox{\Large\hbox
-{$\circlearrowright$}}}}\limits}
+\def\cyclic{\mathop{\mathpalette\cyclic@\relax}\limits}
 % alternating sum symbol
-\def\acyclic{\mathop{\kern0.9ex{{\pm}
-\kern-2.25ex\raise-.7ex\hbox{\Large\hbox
-{$\circlearrowright$}}}}\limits}
+\def\acyclic{\mathop{\mathpalette\acyclic@\relax}\limits}
+\makeatother
 
 \usepackage{xparse}
 \DeclareDocumentCommand{\restr}{m m o}  

@@ -6041,13 +6041,14 @@ where $s:\bbR^n\to M$ is a local diffeomorphism with $s(0)=m$ (recall the defini
     The map $\vartheta^{-1}$ is given by $[(p',X)]\mapsto \iota_{p'}(X)$, which is well-defined because $[(p'\cdot g,g^{-1}\cdot X)]$ leads to the same result due to the equivariance property of $\iota$. It is clearly an isomorphism.
 \end{proof}
 
-Since the representation of $\GL_n^{r+1}(\bbR)$ on $L^{-1}\slash L^r$ is faithful, this immediately implies that the $(r+1)$-st frame bundle of $M$ is also the regular frame bundle of the $r$-th order frame bundle of $M$:
+Since the representation of $\GL_n^{r+1}(\bbR)$ on $L^{-1}\slash L^r$ is faithful, this immediately implies that the $(r+1)$-st frame bundle of $M$ is a subbundle of the regular frame bundle of the $r$-th order frame bundle of $M$:
 \begin{cor}
-    There is a natural isomorphism 
-    \[\Fr(\T \Fr^r(M))\cong \Fr^{r+1}(M).\]
+    The map $p'\mapsto\iota_{p'}$ is a natural embedding 
+    \[\Fr^{r+1}(M)\hookrightarrow\Fr(\T \Fr^r(M)),\]
+    which is a reduction of the structure group $\GL(L^{-1}\slash L^r)$ to $\GL_n^{r+1}(\bbR)$.
 \end{cor}
 
-In other words, \emph{tangent frames on the $r$-th order frame bundle are $(r+1)$-st order frames on $M$}. This makes it possible to consider the natural bundle $\pi^r_{r-1}:\Fr^r(M)\to \Fr^{r-1}(M)$ as a principal $N^r$-bundle, where $N^r=\GL^r_n(\bbR)\slash \GL^{r-1}_n(\bbR)$ is the kernel of the natural homomorphism $\GL^r_n(\bbR)\to \GL^{r-1}_n(\bbR)$ which projects $r$-jets to $(r-1)$-jets. Every $G$-structure of order $r$ thus has a related sequence of first-order $G$-structures
+In other words, \emph{$(r+1)$-st order frames on $M$ are special tangent frames on the $r$-th order frame bundle}. This makes it possible to consider the natural bundle $\pi^r_{r-1}:\Fr^r(M)\to \Fr^{r-1}(M)$ as a principal $N^r$-bundle, where $N^r=\GL^r_n(\bbR)\slash \GL^{r-1}_n(\bbR)$ is the kernel of the natural homomorphism $\GL^r_n(\bbR)\to \GL^{r-1}_n(\bbR)$ which projects $r$-jets to $(r-1)$-jets. Every $G$-structure of order $r$ thus has a related sequence of first-order $G$-structures
 \[P=P_r\to P_{r-1}\to P_{r-2}\to \cdots \to P_0=M,\]
 where $P_{i-1}=\pi^i_{i-1}(P_i)\subset \Fr^{i-1}(M)$. Consequently, the study of $G$-structures of higher order reduces to the study of first-order $G$-structures.
 
@@ -6354,7 +6355,7 @@ We have thus assigned a tensor $c_{\calH}\in \Hom\left(V\wedge V,V\right)$ to ea
 Next, since only $\calH$-invariant quantities can be relevant to our problem, we need to examine how $c_{\calH}$ depends on $\calH$. This will allow us to produce a function on $P$ instead of $\rmJ^1 P$.
 
 
-\begin{prop}[{\cite[p.~317]{Sternberg}}]
+\begin{prop}[{\cite[p.~317]{Sternberg}}]\label{prop torsion change}
     Let $P\to M$ be a first-order $G$-structure with corresponding Lie algebra $\frakg<\End(V)$ and the function $\calH\mapsto c_{\calH}$ as above. Define the antisymmetrization operator $\delta$, called the \emph{Spencer differential},\index{Operator!Spencer} as follows:
     \[\delta:\Lin(V,\frakg)\to \Hom(V\wedge V,V),\quad \delta(f)(u\wedge v)=f(u)\cdot v-f(v)\cdot u,\]
     where $\cdot$ is the standard matrix action. Then, for any two horizontal spaces $\calH_1$ and $\calH_2$ at $p\in P$, we have 
@@ -6554,7 +6555,7 @@ Indeed, in the context of equivalence problems, affine connections, despite not 
 \section{Cartan's equivalence method}\label{sec: cartan equiv method}
 
 
-Let us return to the general equivalence problem for $G$-structures. Theorem~\ref{thm vii.2.1 Sternberg} asserts that if we want to find an isomorphism between two $G$-structures $P$ and $\wb P$, then we must \emph{at least} be able to find a map $F_\ast:P\to \wb P$ such that $F^\ast [\wb c]=[c]$. In general, this kind of problem is very difficult. The one easy case is where one of the functions is constant. Then the other structure function must also be equal to the same constant. 
+Let us return to the general equivalence problem for $G$-structures. Proposition~\ref{thm vii.2.1 Sternberg} asserts that if we want to find an isomorphism between two $G$-structures $P$ and $\wb P$, then we must \emph{at least} be able to find a map $F_\ast:P\to \wb P$ such that $F^\ast [\wb c]=[c]$. In general, this kind of problem is very difficult. The one easy case is where one of the functions is constant. Then the other structure function must also be equal to the same constant. 
 
 \begin{cor}[{\cite[Cor.~VII.2.1]{Sternberg}}]\label{cor vii.2.1 Sternberg}
     Let $P$ be a $G$-structure with a constant structure function. Any $G$-structure locally equivalent to $P$ must have the same constant as its structure function.
@@ -6562,7 +6563,7 @@ Let us return to the general equivalence problem for $G$-structures. Theorem~\re
 
 In general, we have to resort to the method of classifying spaces, as in \S\ref{sec: equiv of coframes}, to establish equivalence. In any case, the first-order structure function typically does not suffice. We continue by constructing the second-order structure function.
 
-Recall that the affine bundle $\pi^1_0:\rmJ^1 \Fr(\T M)\to \Fr(\T M)$ can be identified with a subbundle of the second frame bundle $\Fr(\T \Fr(M))\cong\Fr^2(M)$, and thus can be interpreted as a $\Hom(V,\frakgl(V))$-structure on the manifold $\Fr(M)$, where we view the vector group $\Hom(V,\frakgl(V))<\GL(V\oplus\frakgl(V))$ (where $V\oplus\frakgl(V)$ serves as the model tangent space of $\Fr(M)$) as the subgroup formed by the ``vertical shifts''
+Recall that the affine bundle $\pi^1_0:\rmJ^1 \Fr(\T M)\to \Fr(\T M)$ can be identified with a subbundle of the frame bundle $\Fr(\T \Fr(M))$ of $\Fr(M)$ (containing the second-order frame bundle $\Fr^2(M)$ as the subbundle of torsion-free horizontal spaces), and thus can be interpreted as a $\Hom(V,\frakgl(V))$-structure on the manifold $\Fr(M)$, where we view the vector group $\Hom(V,\frakgl(V))<\GL(V\oplus\frakgl(V))$ (where $V\oplus\frakgl(V)$ serves as the model tangent space of $\Fr(M)$) as the subgroup formed by the ``vertical shifts''
 \[(v,A)\mapsto (v,A+\omega(v)),\quad \omega\in \Hom(V,\frakgl(V)).\]
 
 Thus, by the same argument, any first-order $G$-structure $P\subset \Fr(M)$ on $M$ also gives rise to an interpretation of the affine bundle $\pi^1_0:\rmJ^1 P\to P$ as a $\Hom(V,\frakg)$-structure on $P$.
@@ -6578,7 +6579,7 @@ Thus, by the same argument, any first-order $G$-structure $P\subset \Fr(M)$ on $
     It follows that $X$ is an infinitesimal automorphism iff 
     \[\left[\frac{\partial X^i}{\partial x^j}\right]_{i,j=1,\ldots,n}\in\frakg <\frakgl_n(\bbR),\]
     i.e., iff the Jacobi matrix of the flow of $X$ at every point belongs to $G$. Let us assume now that the lifted flow fixes the basepoint $(0,e)\in \bbR^n\times\GL_n(\bbR)$. The lifted vector field $\wt X$ vanishes at this point. If we now prolong to the jet bundle $\rmJ^1 P$, we obtain a flow which is generated by the vector field 
-    \[\rmj^1\wt X=\frac{\partial X^i}{\partial x^{j_1}\partial x^{j_2}}\frac{\partial}{\partial p^i_{j_1,j_2}}\eqqcolon \wt X^i_{j_1,j_2}\frac{\partial}{\partial p^i_{j_1,j_2}},\]
+    \[\rmj^1\wt X=\frac{\partial^2 X^i}{\partial x^{j_1}\partial x^{j_2}}\frac{\partial}{\partial p^i_{j_1,j_2}}\eqqcolon \wt X^i_{j_1,j_2}\frac{\partial}{\partial p^i_{j_1,j_2}},\]
     where $(x^i,p^i_j,p^i_{j_1,j_2})$ are the canonical coordinates on the jet bundle. Note that the components $\wt X^i_{j_1,j_2}$ satisfy 
     \[\left[\wt X^i_{j_1,j_2}\right]_{i,j_1=1,\ldots,n}\in\frakg<\frakgl_n(\bbR),\quad j_2=1,\ldots,n,\]
     and are symmetric in the lower indices $j_1,j_2$. We conclude that:
@@ -6595,7 +6596,7 @@ The above example motivates the following definition.
     Let $\frakg<\frakgl(V)$ be a matrix Lie algebra (here, $V$ is a finite-dimensional vector space). The first prolongation of $\frakg$ is the subspace $\frakg^{(1)}<\Hom(V,\frakg)$ defined by
     \[\frakg^{(1)}\coloneqq \ker\delta=\{\omega\in\Hom(V,\frakg):\omega(u)v=\omega(v)u\;\text{ for all }u,v\in V\}.\]
     It is a Lie algebra by virtue of the faithful matrix representation 
-    \[\frakg^{(1)}\acts(V\oplus\frakg): \quad \omega^1\cdot (v,A)\coloneqq (0,\omega(v)),\quad \omega\in \frakg^{(1)}<\Hom(V,\frakg),\]
+    \[\frakg^{(1)}\acts(V\oplus\frakg): \quad \omega\cdot (v,A)\coloneqq (0,\omega(v)),\quad \omega\in \frakg^{(1)}<\Hom(V,\frakg),\]
     which can also be written as a block matrix 
     \[\begin{pmatrix}
         0 & 0 \\
@@ -6603,7 +6604,7 @@ The above example motivates the following definition.
     \end{pmatrix}\in\End(V\oplus \frakg).\label{eq g(1) action}\]
     This identifies $\frakg^{(1)}$ with a Lie subalgebra of $\frakgl(V\oplus\frakg)$, allowing us to iterate the definition. The $r$-th prolongation of $\frakg$ is the subspace 
     \[\frakg^{(r)}<\Hom(V\oplus\frakg\oplus\cdots\oplus \frakg^{(r-2)},\frakg^{(r-1)}),\] defined inductively by 
-    \[\frakg^{(k)}=\left(\frakg^{(r-1)}\right)^{(1)}, \quad\quad \frakg^{(-1)}\coloneqq V,\;\frakg^{(0)}\coloneqq \frakg.\]
+    \[\frakg^{(r)}=\left(\frakg^{(r-1)}\right)^{(1)}, \quad\quad \frakg^{(-1)}\coloneqq V,\;\frakg^{(0)}\coloneqq \frakg.\]
     A Lie algebra $\frakg$ is said to be of \emph{finite type $r\geq 1$} if  $\frakg^{(r-1)}\neq 0$ and $\frakg^{(r)}=0$.
 \end{defn}
 
@@ -6618,7 +6619,7 @@ In addition, without explaining the notation for now, we name the important spac
 which lets us rewrite the kernel-cokernel sequence \eqref{eq spencer kernel-cokernel seq} as 
 \[0\to \frakg^{(1)}\to \Hom(V,\frakg)\overset{\delta}{\to}\Hom(V\wedge V,V)\to \rmH^{0,2}(\frakg)\to 0. \]
 
-\begin{example}[$\frakso_n^{(1)}$ and $\rmH^{(0,2)}(\frakso_n)$]\label{ex so(n) prolongation}
+\begin{example}[$\frakso_n^{(1)}$ and $\rmH^{0,2}(\frakso_n)$]\label{ex so(n) prolongation}
     Consider $G=\SO_n<\GL_n(\bbR)$, which is the setting of Riemannian geometry. Since such a structure is equivalent to a Riemannian metric $\sfg$ on $M$, which is modeled on a fixed inner product on $V$, we can use this inner product to identify $V$ with $V^\ast$. Under this identification, the algebra $\frakso_n$ becomes the space $\bigwedge\nolimits^2 V$ of $2$-forms. Now, $\frakso_n^{(1)}=\left(\bigwedge\nolimits^2 V^\ast\otimes V^\ast\right)\cap \left(V^\ast\otimes \bigodot^2 V^\ast\right)$. An element $A_{ijk}\dd x^i\otimes \dd x^j\otimes \dd x^k$ of this space is antisymmetric in the first two indices and symmetric in the last two, so
     \[A_{ijk}=-A_{jik}=-A_{jki}=A_{kji}=A_{kij}=-A_{ikj}=-A_{ijk}.\]
     Thus, $\frakso_n^{(1)}=0$. 
@@ -6633,19 +6634,19 @@ which lets us rewrite the kernel-cokernel sequence \eqref{eq spencer kernel-coke
     \[\<Au,v\>+\<u,Av\> = \lambda_A \<u,v\>,\]
     where $\<\,,\,\>$ is a fixed inner product on $V$ and $\lambda_A\in\bbR$ (depending linearly on $A$). Let $\omega\in \frakco_n^{(1)}<\Hom(V,\frakg)$ and consider the $1$-form 
     \[\alpha_\omega \in V^\ast:\quad \alpha_\omega(u)=\lambda_{\omega(u)}.\]
-    The map $\omega\mapsto \alpha_\omega$ is clearly injective: if $\omega$ is in its kernel, then $\omega\in\frakso_n^{(1)}$, which vanishes by the preceding example. Let us show that it is also surjective. To this effect, observe that $\<\,,\,\>$ induces an isomorphism of $V$ onto $V^\ast$. Thus, $u\in V$ is mapped to $u^\flat\in  V^\ast$ defined by $u^\flat(v)=\<u,v\>$. If we replace $\<\,,\,\>$ by $\lambda\<\,,\,\>$, then under the new isomorphism $u$ gets sent to $\lambda u^\flat$. In particular, the isomorphism of $\phi:V\otimes V^\ast\to V^\ast\otimes V$ induced by $\<\,,\,\>$ is independent of the scalar $\lambda$, i.e., is an invariant of $\frakco(V)$. Let us denote this isomorphism by $\phi$. For any $\alpha\in V^\ast$ let $\gamma(\alpha)\in \Hom(V,\Hom(V,V))$ be defined by 
+    The map $\omega\mapsto \alpha_\omega$ is clearly injective: if $\omega$ is in its kernel, then $\omega\in\frakso_n^{(1)}$, which vanishes by the preceding example. Let us show that it is also surjective. To this effect, observe that $\<\,,\,\>$ induces an isomorphism of $V$ onto $V^\ast$. Thus, $u\in V$ is mapped to $u^\flat\in  V^\ast$ defined by $u^\flat(v)=\<u,v\>$. If we replace $\<\,,\,\>$ by $\lambda\<\,,\,\>$, then under the new isomorphism $u$ gets sent to $\lambda u^\flat$. In particular, the isomorphism $\phi:V^\ast\otimes V\to V\otimes V^\ast$, $\alpha\otimes u\mapsto \alpha^\sharp\otimes u^\flat$, induced by $\<\,,\,\>$ is independent of the scalar $\lambda$, i.e., is an invariant of $\frakco(V)$ (here, $\alpha^\sharp\in V$ is defined by $(\alpha^\sharp)^\flat=\alpha$). For any $\alpha\in V^\ast$ let $\gamma(\alpha)\in \Hom(V,\Hom(V,V))$ be defined by 
     \[\gamma(\alpha)(v)=v\otimes \alpha-\phi(\alpha\otimes v)+\alpha(v)\id_V.\]
-    We claim that $\gamma(\alpha)\in\frakso(V)^{(1)}$. In fact, 
-    \[\gamma(\alpha)(v_1)\cdot v_2 = \alpha(v_1)v_2 + \alpha(v_2)v_1-\<v_1,v_2\>u\]
+    We claim that $\gamma(\alpha)\in\frakco(V)^{(1)}$. In fact, 
+    \[\gamma(\alpha)(v_1)\cdot v_2 = \alpha(v_1)v_2 + \alpha(v_2)v_1-\<v_1,v_2\>\alpha^\sharp\]
     is clearly symmetric in $v_1,v_2$. Furthermore, 
     \[\<\gamma(\alpha)(v_1)v_2,v_3\>+\<v_2,\gamma(\alpha)(v_1)v_3\>=2\alpha(v_1)\<v_2,v_3\>.\]
-    This proves that $\gamma(\alpha)\in\frakco(V)^{(1)}$, and it is also easy to check that it is the inverse of $\omega\mapsto \alpha_\omega$. We conclude that $\frakco(V)^{(1)}\cong V^\ast$.
+    This proves that $\gamma(\alpha)\in\frakco(V)^{(1)}$ with $\alpha_{\gamma(\alpha)}=2\alpha$, and it is also easy to check that $\alpha\mapsto\frac12\gamma(\alpha)$ is the inverse of $\omega\mapsto \alpha_\omega$. We conclude that $\frakco(V)^{(1)}\cong V^\ast$.
 \end{example}
 
 \begin{defn}[Prolongation of a Lie group]\index{Prolongation!of Lie groups}
     Let $G<\GL(V)$ be a matrix Lie group. The first prolongation of $G$ is the subgroup $G^{(1)}<\GL(V\oplus\frakg)$ consisting of transformations of the form 
     \[(v,A)\mapsto (v,A+\omega(v)),\quad \omega\in\frakg^{(1)}.\]
-    Similarly, the $r$-th prolongation of $G$ is the subgroup $G^{(r)}<\GL(V\oplus \frakg\oplus \frakg^{(1)}\oplus\cdots\oplus \frakg^{(r)})$ defined inductively by 
+    Similarly, the $r$-th prolongation of $G$ is the subgroup $G^{(r)}<\GL(V\oplus \frakg\oplus \frakg^{(1)}\oplus\cdots\oplus \frakg^{(r-1)})$ defined inductively by 
     \[G^{(r)}\coloneqq \left(G^{(r-1)}\right)^{(1)}.\]
 \end{defn}
 
@@ -6663,7 +6664,7 @@ Note that all prolongations $G^{(r)}$ are abelian groups. Now, for each $G$-stru
 \end{prop}
 
 The $G^{(1)}$-structure $P^{(1)}\to P$ is called the \emph{first prolongation} of $P$. Of course, working inductively, one defines the $r$-th prolongation:\index{Prolongation!of $G$-structures}
-\[P^{(r)}\coloneqq \left(P^{(r-1)}\right)^{(1)}<\rmJ^r P<\Fr^r(M),\]
+\[P^{(r)}\coloneqq \left(P^{(r-1)}\right)^{(1)}<\rmJ^1 P^{(r-1)},\]
 which is a $G^{(r)}$-structure on the manifold $P^{(r-1)}$. The relevance of the prolongation to the equivalence problem is explained by the following basic result.
 
 \begin{thm}[{\cite[Prop.~2.12]{Fernandes},\cite[Thm.~VII.3.2]{Sternberg}}]\label{thm 2.12 Fernandes}
@@ -6688,15 +6689,15 @@ The function $c^{(1)}$ always contains certain components that carry no informat
     \item The first component of $c_{p''}^{(1)}$ further decomposes into a $V$-valued and a $\frakg$-valued component, the first one being the (lift of the) first-order structure function of $P$:
     \[u\wedge v\mapsto c_{p'}(u,v)\oplus\rho_{p''}(u,v),\quad \rho_{p''}\in\Hom(V\wedge V,\frakg).\]
     \item The $\Hom\left(V\otimes\frakg,V\oplus\frakg\right)$ component of $c_{p''}^{(1)}$ is similarly decomposed into a $V$-valued and a $\frakg$-valued component:
-    \[(u,A)\mapsto -A\cdot u\oplus S_{p''}(A,u),\quad S_{p''}\in\Hom(\frakg\otimes V,\frakg).\]
+    \[(A,u)\mapsto -A\cdot u\oplus S_{p''}(A,u),\quad S_{p''}\in\Hom(\frakg\otimes V,\frakg).\]
     The first term is fixed because $\theta$ is equivariant, $\Lie_{A_\ast}\theta=-A\cdot\theta$, cf.~\eqref{eq vii.2.5 Sternberg}.
     \item The last component of $c_{p''}^{(1)}$ must be purely $\frakg$-valued and is simply the Lie bracket:
     \[A\wedge B\mapsto -[A,B],\]
-    corresponding to the Lie bracket of Killing vector fields: $[A_\ast,B_\ast]=-[A,B]_\ast$.
+    corresponding to the Lie bracket of Killing vector fields of the right principal action: $[A_\ast,B_\ast]=[A,B]_\ast$, cf.\ Proposition~\ref{prop 6.2.2 RS1}.
 \end{enumerate}
 Thus, in total, we have 
 \begin{multline}
-    c_{p''}^{(1)}(u,A,v,B)=\left(c_{p'}(u,v)-A\cdot u+B\cdot v\right)\oplus\\\oplus\left(\rho_{p''}(u,v)+S_{p''}(A,u)-S_{p''}(B,v)-[A,B]\right).
+    c_{p''}^{(1)}(u,A,v,B)=\left(c_{p'}(u,v)-A\cdot v+B\cdot u\right)\oplus\\\oplus\left(\rho_{p''}(u,v)+S_{p''}(A,v)-S_{p''}(B,u)-[A,B]\right).
 \end{multline}
 Thus, only $\rho_{p''}$ and $S_{p''}$ contain any new (second-order) differential invariants. 
 
@@ -6717,11 +6718,11 @@ Thus, only $\rho_{p''}$ and $S_{p''}$ contain any new (second-order) differentia
 
     Finally, the entire coframe $(\theta,\omega)$ on $P$ can be put together into a single $V\rtimes\frakg$-valued $1$-form 
     \[\eta\coloneqq \theta+\omega\quad \in\Omega^1(P;V\rtimes\frakg),\]
-    which is non-degenerate, $G$-equivariant, and prolongs the natural vertical parallelism $\calV P\to \frakg$. Such a $1$-form is called a \emph{Cartan connection} of type $(G\ltimes V,G)$.\index{Connection!Cartan}
+    which is non-degenerate, $G$-equivariant (provided $C$ is chosen $G$-invariant, see Remark~\ref{rem choice of normalization} below), and prolongs the natural vertical parallelism $\calV P\to \frakg$. Such a $1$-form is called a \emph{Cartan connection} of type $(G\ltimes V,G)$.\index{Connection!Cartan}
 \end{rem}
 
 \begin{rem}[Soldering form on $P^{(1)}$]\label{rem soldering on P(1)}
-    If $\frakg^{(1)}\neq 0$, then we have to find a larger coframe on the space $P^{(1)}$. Luckily, there exists a canonical soldering form on the principal bundle $P^{(1)}\to M$. This is not surprising since it is a subbundle of the second-order frame bundle $\Fr^2(\T M)\cong \Fr(\T \Fr(M))$, which carries a $V\oplus\frakgl(V)$-valued soldering form by Corollary~\ref{cor T of Frame bundles} with $r=1$. Its restriction to $P^{(1)}$ produces the needed $V\oplus\frakg$-valued soldering form. Let us give an explicit description here. 
+    If $\frakg^{(1)}\neq 0$, then we have to find a larger coframe on the space $P^{(1)}$. Luckily, there exists a canonical soldering form on the principal bundle $P^{(1)}\to M$. This is not surprising since it is a subbundle of the frame bundle $\Fr(\T \Fr(M))$ of $\Fr(M)$, which, like any frame bundle, carries a tautological $V\oplus\frakgl(V)$-valued soldering form, $X\mapsto (p')^{-1}(\pi_\ast X)$ at a frame $p':V\oplus\frakgl(V)\to\T_p\Fr(M)$. Its restriction to $P^{(1)}$ produces the needed $V\oplus\frakg$-valued soldering form. Let us give an explicit description here. 
 
     Let $p'=\calH_p\in P^{(1)}$ be a horizontal space at $p\in P$ and let $\calV^{p'}:\T_p P\to \calV_p P$ denote the natural projection onto the vertical component associated with the decomposition $\T_p P=\calH_p\oplus\calV_p P$. Then there is a well-defined $\pi^1_0$-horizontal, equivariant $1$-form $\omega^1\in\Omega^1(P^{(1)},\frakg)^G$, uniquely determined by
     \[\omega^1(X)_\ast(p)=\calV^{p'}\circ (\pi^1_0)_\ast (X),\quad X\in \T_{p'}P^{(1)},\]
@@ -6763,7 +6764,7 @@ By the above remark, there is already a canonical $V\oplus\frakg$-valued solderi
 
     \emph{Lifted coframe.} Choose a local coframe $\bm\theta=(\vartheta^1,\vartheta^2)$ adapted to the structure, i.e., $\vartheta^2=\alpha$ and $\vartheta^1(X)=1$ (so $\vartheta^1$ is unique up to adding multiples of $\alpha$), and write its structure equations as 
     \[\dd\vartheta^1=A\,\vartheta^1\wedge\vartheta^2,\qquad \dd\vartheta^2=B\,\vartheta^1\wedge\vartheta^2.\]
-    The lifted coframe on $U\times G$ is $\theta^1=\vartheta^1+t\vartheta^2$, $\theta^2=\vartheta^2$, where $t$ is the fiber coordinate, i.e., the point of $U\times G$ is $(m,h_t)$ (we reserve $\tau$ for the group elements $h_\tau$ acting on the fibers), and $\theta^1\wedge\theta^2=\vartheta^1\wedge\vartheta^2$. As in Example~\ref{ex ode fiber-preserving}, we expand $\dd g\,g^{-1}=N\,\dd t$, so that 
+    The lifted coframe on $U\times G$ is $\theta^1=\vartheta^1+t\vartheta^2$, $\theta^2=\vartheta^2$, where $t$ is the fiber coordinate, i.e., the point of $U\times G$ is $(m,h_t)$ (we reserve $\tau$ for the group elements $h_\tau$ acting on the fibers), and $\theta^1\wedge\theta^2=\vartheta^1\wedge\vartheta^2$. Following the convention of \cite{OlverEquiv} (see also Example~\ref{ex ode fiber-preserving} below), we expand $\dd g\,g^{-1}=N\,\dd t$, so that 
     \[\dd\theta^1=\dd t\wedge\theta^2+(A+tB)\,\theta^1\wedge\theta^2,\qquad \dd\theta^2=B\,\theta^1\wedge\theta^2.\]
     Pseudo-connections correspond to the $1$-forms $\pi=\dd t+a\theta^1+b\theta^2$ with arbitrary functions $a,b$ on $U\times G$, and in terms of $\pi$, 
     \[\dd\theta^1=\pi\wedge\theta^2+(A+tB-a)\,\theta^1\wedge\theta^2,\qquad \dd\theta^2=B\,\theta^1\wedge\theta^2,\]
@@ -6789,9 +6790,9 @@ Thus, whenever possible, it is natural to work with equivariant pseudo-connectio
 \begin{rem}\label{rem equivalence reduction}
     Even with a $G$-invariant choice of $C$, the normalized torsion $c_0=s\circ[c]$ is generally not constant, since $[c]$ varies along the fibers of $P$ (via $\sigma_g^{-1}$) as well as along $M$. Comparing two $G$-structures is simplest when the torsion can be normalized to a constant, which is a matter of reducing the structure group, as in Remark~\ref{rem lifted coframe in coords}. When this is not possible, one has to resort to using the general classifying manifold method from earlier in this \chap. The following explains how one can reduce the structure group in some special cases.
 
-    Consider $\rmH^{(0,2)}(\frakg)$ as a $G$-representation and let $H<G$ be a Lie subgroup. Then $\rmH^{(0,2)}(\frakg)^H$ is the set of $H$-invariant elements and $\rmH^{(0,2)}(\frakg)_H$ the subset of isotropy type $H$ (cf.\ Definition~\ref{def isotropy type}). A submanifold $S\emb\rmH^{(0,2)}(\frakg)_H$ is called a \emph{slice} if for all $v\in S$ the orbit $G\cdot v$ intersects $S$ transversely and only at $v$. A $G$-structure is of \emph{type} $S$ if its intrinsic torsion $[c]$ takes values in $S$. These conditions are sufficient for $P_H\coloneqq [c]^{-1}(S)\subset P$ to be a smooth subbundle on which $H$ acts freely and transitively on the fibers. Thus, we can reduce our problem to equivalence of $H$-structures, i.e., there is a one-to-one correspondence between $G$-structures of type $S$ and $H$-structures $P_H$. 
+    Consider $\rmH^{0,2}(\frakg)$ as a $G$-representation and let $H<G$ be a Lie subgroup. Then $\rmH^{0,2}(\frakg)^H$ is the set of $H$-invariant elements and $\rmH^{0,2}(\frakg)_H$ the subset of isotropy type $H$ (cf.\ Definition~\ref{def isotropy type}). A submanifold $S\emb\rmH^{0,2}(\frakg)_H$ is called a \emph{slice} if for all $v\in S$ the orbit $G\cdot v$ intersects $S$ transversely and only at $v$. A $G$-structure is of \emph{type} $S$ if its intrinsic torsion $[c]$ takes values in $G\cdot S$ (recall that $[c]$ is $G$-equivariant, so it cannot take values in $S$ itself unless $H=G$). These conditions are sufficient for $P_H\coloneqq [c]^{-1}(S)\subset P$ to be a smooth subbundle on which $H$ acts freely and transitively on the fibers. Thus, we can reduce our problem to equivalence of $H$-structures, i.e., there is a one-to-one correspondence between $G$-structures of type $S$ and $H$-structures $P_H$. 
     
-    Note that if $[c]$ is $G$-invariant, then we have $H=G$ and there is no reduction, so we are back to the basic case discussed above. Besides, in this case the problem is already completely reduced to comparing a few constants, so one can hardly expect any further simplification. If our intrinsic torsion does not take values in any single slice of any single isotropy type, then this sort of reduction is impossible, and we have to solve the equivalence problem for the structure function head on (which is difficult since it is a system of PDEs).
+    Note that if $[c]$ is $G$-invariant, then we have $H=G$ and there is no reduction, so we are back to the basic case discussed above. Besides, in this case $[c]$ is already a collection of invariant functions on $M$, so a reduction of the structure group has nothing left to accomplish. If our intrinsic torsion does not take values in any single slice of any single isotropy type, then this sort of reduction is impossible, and we have to solve the equivalence problem for the structure function head on (which is difficult since it is a system of PDEs).
 \end{rem}
 
 In summary, the only intrinsic second-order structure function for a $G$-structure is $[\rho]$. Let us take a closer look at the space it takes values in:
@@ -6801,10 +6802,10 @@ We can simplify the denominator. Recall that $\frakg^{(1)}$ is viewed as a subal
 The numerator $\Hom(V\wedge V,\frakg)$ corresponds effectively to setting all $\frakg$-arguments of the structure functions to zero. Thus, the quotient by $\Hom(\frakg,\frakg^{(1)})$ doesn't change the result, and we can replace the denominator with $\delta\left(\Hom(V,\frakg^{(1)})\right)$. 
 
 Furthermore, the numerator is still larger than it has to be. First note that the Spencer differential on $P^{(1)}$, which naively acts as $\delta:\frakg^{(1)}\otimes (V\oplus\frakg)^\ast\to (V\oplus\frakg)\otimes \bigwedge\nolimits^2 (V\oplus\frakg)^\ast$, produces the component $\rho$ only when the $\frakg$-arguments are set to $0$ and the corresponding component in the target space is selected. This motivates us to define a more restricted Spencer differential 
-\[\delta_1:\frakg^{(1)}\otimes V^\ast\to \frakg\otimes \bigwedge\nolimits^2 V^\ast,\]
-so we have 
-\[\rho=\delta_1\circ \omega_1,\]
-where now $\omega_1\in\Omega^1(P^{(1)},\frakg^{(1)})\cong \Hom_{G^{(1)}}(P^{(1)},\frakg^{(1)}\otimes(V+\frakg)^\ast)$ is any pseudo-connection on the $G^{(1)}$-bundle $P^{(1)}\to P$ (here, the action of $G^{(1)}$ on $\frakg^{(1)}$ is trivial). Again, we implicitly restrict $\omega_1$ only to the $\pi$-horizontal subspace tangent to $P$ determined by the point $p'$ of $P^{(1)}$, so that its $\frakg$-component vanishes (as established above, that component measures $G$-equivariance of $\omega_1$), and $\delta_1$ can be applied to the remaining component.
+\[\delta_1:\frakg^{(1)}\otimes V^\ast\to \frakg\otimes \bigwedge\nolimits^2 V^\ast,\quad \delta_1(\phi)(u,v)=\phi(u)(v)-\phi(v)(u).\]
+Proposition~\ref{prop torsion change}, applied to the $G^{(1)}$-structure $P^{(1)}\to P$, shows that for any two horizontal subspaces $p''_1,p''_2$ at the same point $p'\in P^{(1)}$,
+\[\rho_{p''_2}-\rho_{p''_1}=-\delta_1\left(f_{p''_1,p''_2}|_V\right),\]
+where $f_{p''_1,p''_2}\in\Hom(V\oplus\frakg,\frakg^{(1)})$ is the difference of the two horizontal subspaces. Only its restriction to $V$ contributes to the $\Hom(V\wedge V,\frakg)$-component, because $\frakg^{(1)}$ acts on $V\oplus\frakg$ by $\omega\cdot(v,A)=(0,\omega(v))$. In other words, $\rho$ depends on the choice of $p''$ in an affine way, and $\delta_1$ is the linear part of this dependence, exactly as $\delta$ is for the torsion. Note that $\rho$ itself is generally \emph{not} in the image of $\delta_1$, otherwise the intrinsic curvature would always vanish.
 
 Now consider the second-order version of the original $\delta$,
 \[\delta_2:\frakg\otimes \bigwedge\nolimits^2 V^\ast\to V\otimes \bigwedge\nolimits^3 V^\ast,\]
@@ -6818,32 +6819,35 @@ which antisymmetrizes over the three $V^\ast$ components. Note that the domain o
     \[\delta_1(\phi)(u,v)=\phi(u)(v)-\phi(v)(u)\quad \in\frakg.\]
     Secondly, we compute $\delta_2(\delta_1(\phi))$:
     \[\delta_2(\delta_1(\phi))(u,v,w)=\acyclic_{u,v,w}\left(\phi(u)(v)-\phi(v)(u)\right)\cdot w\quad \in V,\]
-    where $\acyclic_{u,v,w}$ denotes the alternating sum over all $6$ permutations of the arguments. We can always perform a cyclic permutation in any of the terms within the alternating sum:
-    \[\delta_2(\delta_1(\phi))(u,v,w)=\acyclic_{u,v,w}\left(\phi(u)(v)\cdot w-\phi(u)(v)\cdot w\right),\]
-    and the summand vanishes by definition of $\frakg^{(1)}$, since $\phi(u)\in\frakg^{(1)}$.
+    where $\acyclic_{u,v,w}$ denotes the alternating sum over all $6$ permutations of the arguments. Since $\phi(u)\in\frakg^{(1)}$, the term $\phi(u)(v)\cdot w$ is symmetric in $v,w$, so its alternation over $u,v,w$ vanishes, and the same holds for $\phi(v)(u)\cdot w$, which is symmetric in $u,w$.
 \end{proof}
 
 \begin{cor}[Bianchi identity]\index{Formula!Bianchi identity}
-    $\delta_2\circ\rho=0$.
+    The function $\delta_2\circ\rho$ does not depend on the choice of $p''$. If $c_0=0$, then $\delta_2\circ\rho=0$.
 \end{cor}
+\begin{proof}
+    The first statement follows from the lemma and the transformation rule for $\rho$. For the second, if $c_0=0$, then $\dd\theta=-\omega\wedge\theta$ on horizontal vectors, and the horizontal part of $0=\dd^2\theta$ is exactly $-\delta_2\circ\rho$ applied to $\theta\wedge\theta\wedge\theta$.\footnote{More generally, for a principal connection with torsion, $\dd^2\theta=0$ yields the \emph{first Bianchi identity with torsion}: in terms of the torsion $T$ and curvature $R$ of the corresponding covariant derivative $\nabla$ (see \Chap~\ref{ch: connections}),
+    \[\cyclic_{u,v,w}R(u,v)w=\cyclic_{u,v,w}\left[(\nabla_uT)(v,w)+T(T(u,v),w)\right],\]
+    where $\cyclic$ denotes the cyclic sum. Thus, $\delta_2\circ\rho$ is determined by $c_0$ and its first derivatives. For example, on $\bbR^4$ with the flat metric and a nonzero $4$-form $\psi$, let $\nabla=D+K$, where $D$ is the flat connection (componentwise differentiation of vector fields) and $\<K_x(v)w,z\>=\psi(x,v,w,z)$. Since $\psi$ is antisymmetric in $w,z$, each $K_x(v)$ is skew-adjoint, i.e., $K$ is $\frakso_4$-valued, so $\nabla$ is metric. It has $T=0$ but $\nabla T\neq 0$ at $x=0$, and there $\<R(u,v)w,z\>=2\psi(u,v,w,z)$, so $\delta_2\circ\rho\neq 0$.}
+\end{proof}
 
-Thus, $\rho$ always takes values in $\ker\delta_2$, i.e., is symmetric w.r.t.\ exchanges of two arguments, and antisymmetrized over another pair (note that this does \emph{not} produce a tensor antisymmetric in the latter pair -- that would be zero). This is true regardless of any conditions on the pseudo-connection such as equivariance or being torsion-free. As a result, we can treat $[\rho]$ as taking values in the ``curvature module'' $\rmH^{1,2}(\frakg)$:
+Thus, if $c_0=0$, then $\rho$ takes values in $\ker\delta_2$, i.e., is symmetric w.r.t.\ exchanges of two arguments, and antisymmetrized over another pair (note that this does \emph{not} produce a tensor antisymmetric in the latter pair -- that would be zero). This holds regardless of whether the pseudo-connection is equivariant. In general, $\delta_2\circ\rho$ is determined by $c_0$ and its first derivatives, so $[\rho]$ takes values in a translate of the ``curvature module'' $\rmH^{1,2}(\frakg)$ fixed by the lower-order data, and in $\rmH^{1,2}(\frakg)$ itself if $c_0=0$:
 \[[\rho]:P^{(1)}\to \rmH^{1,2}(\frakg)\coloneqq \frac{\ker\left(\delta_2:\frakg\otimes \bigwedge\nolimits^2 V^\ast\to V\otimes\bigwedge\nolimits^3 V^\ast\right)}{\im\left(\delta_1:\frakg^{(1)}\otimes V^\ast\to \frakg\otimes\bigwedge^2 V^\ast\right)}.\]
 This quantity is called the \emph{intrinsic curvature of the $G$-structure} $P$. As explained in Remark~\ref{rem choice of normalization}, it is intrinsic relative to the chosen complement $C$, and it is $G$-equivariant if $C$ is $G$-invariant.
 
 Note that $\frakg^{(1)}$ parametrizes the (fiber of the) space of fixed-torsion deformations of a pseudo-connection. Thus, $[\rho]$ is the offset from the origin of the space of curvatures of all pseudo-connections with fixed torsion $c_0$. We can now see what happens if $\frakg^{(2)}=0$.
 
 \begin{rem}[$G$-structures of type $2$]
-    Now suppose $G$ is of finite type $2$, i.e., $\frakg^{(2)}=0$. In this case the projection $\pi^2_1:P^{(2)}\to P^{(1)}$ is a diffeomorphism, and $P^{(2)}$ is an $\{e\}$-structure (coframe) on $P^{(1)}$. Part of this coframe is the canonical $V\oplus\frakg$-valued soldering form $\theta^1$ from Remark~\ref{rem soldering on P(1)}. The remaining $\frakg^{(1)}$-valued part defines a pseudo-connection $\omega_1$ on the $G^{(1)}$-bundle $P^{(1)}\to P$. Rearranging the components, these can also be thought of as the pair $((\pi^1_0)^\ast\theta,\omega^2)$, where $\theta$ is the original $V$-valued soldering form and $\omega^2$ is a $\frakg\oplus\frakg^{(1)}$-valued pseudo-connection on the principal $G\ltimes G^{(1)}$-bundle $P^{(1)}\to M$. Note that the latter is generally not a principal connection because it is not necessarily $G^{(1)}$-equivariant. However, since both $P^{(2)}$ and $\theta$ are $G$-equivariant separately (the former by proper choice of complements and the latter by definition), so is $\omega^2$. The $\frakg$-component of $\omega^2$ is exactly the $1$-form $\omega^1$ from Remark~\ref{rem soldering on P(1)}. The resulting composit $1$-form 
+    Now suppose $G$ is of finite type $2$, i.e., $\frakg^{(2)}=0$. In this case the projection $\pi^2_1:P^{(2)}\to P^{(1)}$ is a diffeomorphism, and $P^{(2)}$ is an $\{e\}$-structure (coframe) on $P^{(1)}$. Part of this coframe is the canonical $V\oplus\frakg$-valued soldering form $\theta^1$ from Remark~\ref{rem soldering on P(1)}. The remaining $\frakg^{(1)}$-valued part defines a pseudo-connection $\omega_1$ on the $G^{(1)}$-bundle $P^{(1)}\to P$. Rearranging the components, these can also be thought of as the pair $((\pi^1_0)^\ast\theta,\omega^2)$, where $\theta$ is the original $V$-valued soldering form and $\omega^2$ is a $\frakg\oplus\frakg^{(1)}$-valued pseudo-connection on the principal $G\ltimes G^{(1)}$-bundle $P^{(1)}\to M$. Note that the latter is generally not a principal connection because it is not necessarily $G^{(1)}$-equivariant. However, since both $P^{(2)}$ and $\theta$ are $G$-equivariant separately (the former by proper choice of complements and the latter by definition), so is $\omega^2$. The $\frakg$-component of $\omega^2$ is exactly the $1$-form $\omega^1$ from Remark~\ref{rem soldering on P(1)}. The resulting composite $1$-form 
     \[\eta^1\coloneqq \theta^1+\omega_1=(\pi^1_0)^\ast\theta+\omega^2=(\pi^1_0)^\ast\theta+\omega^1+\omega_1 \quad \in\Omega^1(P^{(1)};V\oplus\frakg\oplus\frakg^{(1)})\]
     is non-degenerate, $G$-equivariant, and extends the canonical vertical parallelism $\calV P^{(1)}\to \frakg\ltimes\frakg^{(1)}$ of $P^{(1)}\to M$. Such a form is known as a Cartan connection of type $((G\ltimes G^{(1)})\ltimes V,G\ltimes G^{(1)})$.
 \end{rem}
 
-So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canonical $G$-equivariant coframe on $P^{(1)}$, with the only parameter being the value of the structure function $\rho$ (or $c^{(1)}$) that is used to define $P^{(2)}$. If, in addition, $\rmH^{1,2}(\frakg)=0$, then this coframe is uniquely characterized by the vanishing of curvature, $\rho=0$. Note that if $\frakg^{(1)}=0$, then this kind of connection is \emph{not} guaranteed to exist because the domain of $\delta_1$ is empty, so there is no freedom to vary the curvature. Moreover, $\frakg^{(1)}=0$ already guarantees a canonical coframe on $P$, so its curvature is the intrinsic curvature of the $G$-structure.
+So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canonical $G$-equivariant coframe on $P^{(1)}$, with the only parameter being the value of the structure function $\rho$ (or $c^{(1)}$) that is used to define $P^{(2)}$. If, in addition, $\rmH^{1,2}(\frakg)=0$, then this coframe is uniquely characterized by the vanishing of curvature, $\rho=0$. Note that if $\frakg^{(1)}=0$, then this kind of connection is \emph{not} guaranteed to exist because the domain of $\delta_1$ is zero, so there is no freedom to vary the curvature. Moreover, $\frakg^{(1)}=0$ already guarantees a canonical coframe on $P$, so its curvature is the intrinsic curvature of the $G$-structure.
 
 
-\begin{rem}[Young symmetrizer]\index{Young tableau}\index{Young symmerizer}
-    To better understand the Bianchi identity, we will need the concept of the \emph{Young symmetrizer}. First, let $\lambda=(d_1,\ldots,d_k)$ be a partition of an integer $d$, so $d_1\geq \cdots\geq d_k\geq 1$ and $d=d_1+\cdots+d_k$. A \emph{Young tableau without repetitions} $T_\lambda$ is a collection of $d$ aligned boxes, with $d_j$ boxes in the $j$-th row, and each box is filled with a distrinct integer from $\{1,\ldots,d\}$. For example, some Young tableau associated with $\lambda=(3,2)$ are 
+\begin{rem}[Young symmetrizer]\index{Young tableau}\index{Young symmetrizer}
+    To better understand the Bianchi identity, we will need the concept of the \emph{Young symmetrizer}. First, let $\lambda=(d_1,\ldots,d_k)$ be a partition of an integer $d$, so $d_1\geq \cdots\geq d_k\geq 1$ and $d=d_1+\cdots+d_k$. A \emph{Young tableau without repetitions} $T_\lambda$ is a collection of $d$ aligned boxes, with $d_j$ boxes in the $j$-th row, and each box is filled with a distinct integer from $\{1,\ldots,d\}$. For example, some Young tableaux associated with $\lambda=(3,2)$ are 
     \[\ytableaushort{531,24}\quad \ytableaushort{123,45}\quad \ytableaushort{125,34}.\]
     To a Young tableau of size $d$, associate a $\GL(V)$-submodule of $V^{\otimes d}$ as follows. Let $\Sym_j:V^{\otimes d}\to V^{\otimes d}$ denote the symmetrization of the slots corresponding to the entries of the $j$-th row of a Young tableau $T_\lambda$ and let $\Alt_k$ denote the anti-symmetrization of the slots corresponding to the entries of the $k$-th column. The map 
     \[S_{T_\lambda}\coloneqq \Alt_1\circ \cdots\circ \Alt_{d_1}\circ \Sym_1\circ\cdots\circ \Sym_k:\quad V^{\otimes d}\to V^{\otimes d}\]
@@ -6851,7 +6855,7 @@ So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canon
 
     It turns out that the space 
     \[\rmS_{T_\lambda}V\coloneqq S_{T_\lambda}\left(V^{\otimes d}\right)\] 
-    is an irreducible $\GL(V)$-submodule. Different Young tableau from the same partition give rise to isomorphic submodules, and the isomorphism class is denoted $\rmS_\lambda V$. We also define $\rmS_\varnothing V\coloneqq \bbR$.
+    is an irreducible $\GL(V)$-submodule. Different Young tableaux from the same partition give rise to isomorphic submodules, and the isomorphism class is denoted $\rmS_\lambda V$. We also define $\rmS_\varnothing V\coloneqq \bbR$.
 \end{rem}
 
 \begin{example}
@@ -6870,23 +6874,23 @@ So, if $\frakg^{(1)}\neq 0$ but $\frakg^{(2)}=0$, then $P^{(2)}$ defines a canon
     \[\rmH^{1,2}(\frakg)=\ker\delta_2=\left(\frakg\otimes \bigwedge\nolimits^2 V^\ast\right)\cap \left(V\otimes 
     \rmS_{\scalebox{0.7}{\ytableaushort{21,3}}}
     V^\ast\right),\]
-    and one can show that every point in this space can be attained by Riemannian curvatures. The fact that curvature takes values in the space described by this Young symmetrizer is the algebraic Bianchi identity, whereas $\delta_2\circ\rho=0$ is the differential Bianchi identity.\footnote{The differential Bianchi identity can also be restated as the condition that the covariant derivative of curvature take values in a certain Young symmetrizer.}
+    and one can show that every point in this space can be attained by Riemannian curvatures. The fact that curvature takes values in the space described by this Young symmetrizer, i.e., $\delta_2\circ\rho=0$, is the algebraic (first) Bianchi identity, whereas the differential (second) Bianchi identity only appears at the next order, from the structure equations for $\dd\rho$.\footnote{The differential Bianchi identity can also be restated as the condition that the covariant derivative of curvature take values in a certain Young symmetrizer.}
 
-    For integrability of a Riemannian structure, it is necessary that $[\rho]=0$ (since $[c]=0$ already, this is called ``$2$-flatness''). What's more unusual about Riemannian structures is that it is also sufficient: a $2$-flat Riemannian sructure is integrable, i.e., locally isomorphic to its Euclidean model. Fundamentally, this follows from the fact that a $2$-flat Riemannian structure with its Levi-Civita connection constitutes a flat Cartan geometry, and flat Cartan geometries (which we previously called ``locally Klein geometries'') are locally isomorphic to their Klein models.
+    For integrability of a Riemannian structure, it is necessary that $[\rho]=0$ (since $[c]=0$ already, this is called ``$2$-flatness''). What's more unusual about Riemannian structures is that it is also sufficient: a $2$-flat Riemannian structure is integrable, i.e., locally isomorphic to its Euclidean model. Fundamentally, this follows from the fact that a $2$-flat Riemannian structure with its Levi-Civita connection constitutes a flat Cartan geometry, and flat Cartan geometries (which we previously called ``locally Klein geometries'') are locally isomorphic to their Klein models.
 \end{example}
 
 We can now outline Cartan's algorithm for the equivalence of $G$-structures beyond the first two orders.
 
 \begin{enumerate}
-    \item Start with a $G$-structure $P\to M$. The first-order structure function $[c]$ takes values in $\rmH^{(0,2)}(\frakg)$. If $\frakg^{(1)}=0$, then for each given value of torsion $c_0\in [c]$ there is a unique $G$-equivariant, $V\oplus\frakg$-valued coframe on $P$. The equivalence problem for $G$-structures is reduced to the intrinsic torsion $c_0$ (or $[c]$) being the same, plus equivalence of these coframes. 
-    \item For integrability, it is necessary that $[c]=0$. In particular, if $\rmH^{(0,2)}(\frakg)=0$, this holds automatically for all $G$-structures. To simplify the equivalence problem, one should attempt to ``normalize'' the torsion $c_0$ to ideally be a constant, or at least to take only values that are stabilized by some subgroup $H<G$, to which one can then reduce as in Remark~\ref{rem equivalence reduction}. If this can't be done, one has to use the general method of comparing classifying manifolds.
-    \item If $\frakg^{(1)}\neq 0$, we use the value $c_0$ to prolong to a $G^{(1)}$-structure $P^{(1)}\to P$ defined as the set of horizontal subspaces on which the structure function is $c_0$, and restart the algorithm from step $1$, but now for this $G^{(1)}$-structure. Its structure function $[\rho]$ (second-order for $P$) takes values in $\rmH^{(1,2)}(\frakg)$. 
+    \item Start with a $G$-structure $P\to M$. The first-order structure function $[c]$ takes values in $\rmH^{0,2}(\frakg)$. If $\frakg^{(1)}=0$, then for each given value of torsion $c_0\in [c]$ there is a unique $V\oplus\frakg$-valued coframe on $P$ (which is $G$-equivariant if $C$ is $G$-invariant). The equivalence problem for $G$-structures is reduced to the intrinsic torsion $[c]$ (or its normalization $c_0$) being the same, plus equivalence of these coframes. 
+    \item For integrability, it is necessary that $[c]=0$. In particular, if $\rmH^{0,2}(\frakg)=0$, this holds automatically for all $G$-structures. To simplify the equivalence problem, one should attempt to ``normalize'' the torsion $c_0$ to ideally be a constant, or at least to take only values that are stabilized by some subgroup $H<G$, to which one can then reduce as in Remark~\ref{rem equivalence reduction}. If this can't be done, one has to use the general method of comparing classifying manifolds.
+    \item If $\frakg^{(1)}\neq 0$, we use the value $c_0$ to prolong to a $G^{(1)}$-structure $P^{(1)}\to P$ defined as the set of horizontal subspaces on which the structure function is $c_0$, and restart the algorithm from step $1$, but now for this $G^{(1)}$-structure. Its structure function $[\rho]$ (second-order for $P$) takes values in $\rmH^{1,2}(\frakg)$. 
 \end{enumerate}
 
-The algorithm terminates if $\frakg^{(r)}=0$ for some $r$, producing a $G^\infty$-bundle $P^{(r-1)}\to M$, where $G^\infty=G\ltimes G^{(1)}\ltimes\cdots\ltimes G^{(r-1)}$ is the ``total prolongation'' of $G$ and also the group of automorphisms of the standard flat $G$-structure $V\times G$. This $G^\infty$-bundle carries a canonical soldering form $\theta^{r-1}$ that takes values in $V\oplus\frakg\oplus\cdots\oplus\frakg^{(r-2)}$, and a canonical principal $\frakg^{(r-1)}$-valued connection form $\omega_{r-1}$ (by virtue of $P^{(r)}$ defining an $\{e\}$-structure on $P^{(r-1)}$), which together comprise a $G$-equivariant coframe $\eta=(\theta^{r-1},\omega_{r-1})$, known as a Cartan geometry of type $(G^\infty\ltimes V,G^\infty)$.  The ``total structure function'', which is simply the structure function of this coframe with $P$-independent components stripped away, takes values in $\rmH^{(0,2)}(\frakg)\oplus \rmH^{(1,2)}(\frakg)\oplus\cdots\oplus \rmH^{(r,2)}$. The equivalence of $G$-structures is reduced to the equivalence of these coframes, which can be analyzed as in \S\ref{sec: equiv of coframes}. In particular, equivalence is easy to check by comparing the structure functions if all of them are constant, i.e., if the coframe has rank $0$, otherwise we need to compute enough coframe derivatives of the structure functions and compare the classifying manifolds. For integrability, the total structure function has to vanish. The vanishing of some Spencer cohomologies of $\frakg$ may reduce the number of integrability conditions.
+The algorithm terminates if $\frakg^{(r)}=0$ for some $r$, producing a $G^\infty$-bundle $P^{(r-1)}\to M$, where $G^\infty=G\ltimes G^{(1)}\ltimes\cdots\ltimes G^{(r-1)}$ is the ``total prolongation'' of $G$ and also the isotropy group at the origin of the automorphism group $G^\infty\ltimes V$ of the standard flat $G$-structure $V\times G$ (for finite type, an automorphism fixing $0$ is determined by its $r$-jet there, and these jets form $G^\infty$). This $G^\infty$-bundle carries a canonical soldering form $\theta^{r-1}$ that takes values in $V\oplus\frakg\oplus\cdots\oplus\frakg^{(r-2)}$, and a canonical principal $\frakg^{(r-1)}$-valued connection form $\omega_{r-1}$ (by virtue of $P^{(r)}$ defining an $\{e\}$-structure on $P^{(r-1)}$), which together comprise a $G$-equivariant coframe $\eta=(\theta^{r-1},\omega_{r-1})$, known as a Cartan geometry of type $(G^\infty\ltimes V,G^\infty)$.  The ``total structure function'', which is simply the structure function of this coframe with $P$-independent components stripped away, takes values in $\rmH^{0,2}(\frakg)\oplus \rmH^{1,2}(\frakg)\oplus\cdots\oplus \rmH^{r,2}(\frakg)$. The equivalence of $G$-structures is reduced to the equivalence of these coframes, which can be analyzed as in \S\ref{sec: equiv of coframes}. In particular, equivalence is easy to check by comparing the structure functions if all of them are constant, i.e., if the coframe has rank $0$, otherwise we need to compute enough coframe derivatives of the structure functions and compare the classifying manifolds. For integrability, the total structure function has to vanish. The vanishing of some Spencer cohomologies of $\frakg$ may reduce the number of integrability conditions.
 
 \begin{rem}
-    Proposition~\ref{thm 2.12 Fernandes} reduces equivalence of $G$-structures to the equivalence of their prolongations $P^{(r-1)}$ as $G^{(r-1)}$-structures. This might make it seem like only the last, $\rmH^{r,2}(\frakg)$-valued structure function plays a role in equivalence. However, recall that due to how the prolongations are constructed, the values of the structure functions at orders $<r$ are fixed beforehand ($c_0,\rho_0$, etc.). And $c_0,\rho_0$, etc., are themselves representatives of intrinsic structure functions, so the very ability to choose them equal to the same constant for two different $G$-structures is not guaranteed, and is a large part of equivalence. Being able to pick a constant $G$-invariant value is an especially strong case of ``normalizing torsion away'', which was described more generally in \ref{rem equivalence reduction}. This procedure corresponds to the normalization of differential invariants in the method of moving frames. Thus, the better way to think of the structure functions is as above: all of them together comprise the first-order structure function of the final canonical coframe.
+    Theorem~\ref{thm 2.12 Fernandes} reduces equivalence of $G$-structures to the equivalence of their prolongations $P^{(r-1)}$ as $G^{(r-1)}$-structures. This might make it seem like only the last, $\rmH^{r,2}(\frakg)$-valued structure function plays a role in equivalence. However, recall that due to how the prolongations are constructed, the values of the structure functions at orders $<r$ are fixed beforehand ($c_0,\rho_0$, etc.). And $c_0,\rho_0$, etc., are themselves representatives of intrinsic structure functions, so the very ability to choose them equal to the same constant for two different $G$-structures is not guaranteed, and is a large part of equivalence. Being able to pick a constant $G$-invariant value is an especially strong case of ``normalizing torsion away'', which was described more generally in Remark~\ref{rem equivalence reduction}. This procedure corresponds to the normalization of differential invariants in the method of moving frames. Thus, the better way to think of the structure functions is as above: all of them together comprise the first-order structure function of the final canonical coframe.
 \end{rem}
 
 \begin{rem}
@@ -6918,14 +6922,14 @@ In particular, the solution to the integrability problem for $G$-structures of f
     This theorem still holds under far more general conditions than just finite type. For example, Singer and Sternberg proved it for $G$ completely reducible, and for \emph{any} $G$ assuming $P$ is real-analytic, see \cite{Singer1965}. It is conjectured to hold for all $G$ and all $P$.
 \end{rem}
 
-In other words, \emph{for an integrable $G$-structure, its total prolongation $P^{(\infty)}$ with its $\{e\}$-structure is locally isomorphic to the Lie group $G^{\infty}$, thus constituting a locally Klein geometry}. This is a striking extension of the statement that any manifold is the space of a Klein geometry for its own diffeomorphism group $\Diff(M)$, combined with our observation that $\Diff(M)$ is almost the same thing as $\Fr^\infty(M)$.
+In other words, \emph{for an integrable $G$-structure, its total prolongation $P^{(\infty)}$ with its $\{e\}$-structure is locally isomorphic to the Lie group $G^{\infty}\ltimes V$, thus constituting a locally Klein geometry}. This is a striking extension of the statement that any manifold is the space of a Klein geometry for its own diffeomorphism group $\Diff(M)$, combined with our observation that $\Diff(M)$ is almost the same thing as $\Fr^\infty(M)$.
 
 \begin{example}[$\frakco_n^{(2)}$]
     Let us continue Example~\ref{ex co(1)} and compute $\frakco(V)^{(2)}$. For any four vectors $u,v,x,y\in V$ and any $T\in\frakco(V)^{(1)}<\Hom(V\odot V,\frakco(V))$, we have 
     \[\<T(u,v)x,y\>+\<x,T(u,v)y\> = \lambda_T(u,v)\<x,y\>,\]
-    where $\lambda_T\in V^\ast\odot V^\ast$ is a symmetric bilinear form in $u,v$ depending on $T$. If $\lambda_T=0$ vanishes then $T\in\frakso(V)^{(2)}=0$, and hence must vanish. Since $\lambda_T$ is symmetric, to show that a given $\lambda_T$ vanishes it suffices to show that $\lambda_T(u,v)$ vanishes identically. Let us choose $u\perp v$. Then 
+    where $\lambda_T\in V^\ast\odot V^\ast$ is a symmetric bilinear form in $u,v$ depending on $T$. If $\lambda_T=0$, then $T\in\frakso(V)^{(2)}=0$. Since $\lambda_T$ is symmetric, to show that a given $\lambda_T$ vanishes it suffices to show that $\lambda_T(u,u)$ vanishes for all $u$. Let us choose $u\perp v$. Then 
     \begin{multline}
-        \lambda_T(u,u)\<v,v\>=2\<T(u,u)v,v\>=2\<T_{u,v}u,v\> =\\ =-2\<T(u,v)v,u\> =-2\<T(v,v)u,u\> =-\lambda_T(v,v)\<u,u\>.
+        \lambda_T(u,u)\<v,v\>=2\<T(u,u)v,v\>=2\<T(u,v)u,v\> =\\ =-2\<T(u,v)v,u\> =-2\<T(v,v)u,u\> =-\lambda_T(v,v)\<u,u\>.
     \end{multline}
     Thus, for every pair of orthogonal vectors we have $\lambda_T(u,u)\<v,v\> =-\lambda_{T}(v,v)\<u,u\>$. If $\dim V\geq 3$, this obviously implies $\lambda_T\equiv 0$. Thus, we have proved that $\frakco(V)^{(2)}=0$ if $\dim V\geq 3$, and the total prolongation reads $\frakco(V)^\infty=\frakco(V)\oplus V^\ast$. Thus, the automorphism algebra of a flat conformal geometry is $V\oplus\frakco(V)\oplus V^\ast$, known as the M\"obius algebra, which can be identified with the Lie algebra of the group of conformal transformations of the sphere $\rmS^{\dim V}$.
 
@@ -6933,7 +6937,7 @@ In other words, \emph{for an integrable $G$-structure, its total prolongation $P
 \end{example}
 
 \begin{example}
-    Other examples of algebras of infinite type include $\fraksl(V)$ and $\fraksp(V)$. In fact, $\fraksp(V)^{(r)}=\bigodot^{r+1}(V^\ast)$, see \cite{Singer1965}. This explains some formal similarities between conformal and projective geometries, and also the infinite dimensionality of the space of symplectomorphisms on symplectic manifolds.
+    Other examples of algebras of infinite type include $\fraksl(V)$ and $\fraksp(V)$. In fact, $\fraksp(V)^{(r)}=\bigodot^{r+2}(V^\ast)$, see \cite{Singer1965}. This explains some formal similarities between conformal and projective geometries, and also the infinite dimensionality of the space of symplectomorphisms on symplectic manifolds.
 \end{example}
 
 \begin{rem}
@@ -6973,8 +6977,8 @@ In other words, \emph{for an integrable $G$-structure, its total prolongation $P
     \[i_X\Omega=\vartheta^1(X)\,\alpha-\alpha(X)\,\vartheta^1=\alpha.\]
     Conversely, any nonvanishing vector field $X$ and area form $\Omega$ define a shear structure via $\alpha\coloneqq i_X\Omega$. Thus, \emph{shear structures on surfaces are the same thing as vector fields together with an area form}, i.e., autonomous dynamical systems with one degree of freedom together with a ``Liouville measure'' on their phase space, and equivalences are changes of variables preserving both (but not allowing reparametrizations of time). Since $\Lie_X$ commutes with $i_X$, 
     \[\Lie_X\alpha=i_X\Lie_X\Omega=(\operatorname{div}_\Omega X)\,\alpha,\qquad\text{so}\qquad B=\operatorname{div}_\Omega X,\]
-    and, equivalently, $\dd\alpha=\dd i_X\Omega=\Lie_X\Omega=B\,\Omega$. Thus, the intrinsic torsion is the rate of contraction of phase space volume along the flow.
-    \begin{itemize}
+    and, equivalently, $\dd\alpha=\dd i_X\Omega=\Lie_X\Omega=B\,\Omega$. Thus, the intrinsic torsion is the rate of expansion (or, if $B<0$, contraction) of phase space volume along the flow.
+aga    \begin{itemize}
         \item If $B=0$, then $\alpha$ is closed, so locally $\alpha=i_X\Omega=\dd H$, i.e., $X$ is the Hamiltonian vector field of $H$ w.r.t.\ the symplectic form $\Omega$. The condition $\alpha(X)=0$ becomes the conservation of energy, $X(H)=0$, and $\Lie_X\Omega=0$ is Liouville's theorem. The normal form $X=\partial_x$, $\alpha=\dd y$, $\Omega=\dd x\wedge\dd y$ consists of canonical coordinates $(x,y)=(t,E)$, where $t$ is time along the flow and $E$ is the energy. The symmetries $(x,y)\mapsto(x+h(y),y+\const)$ are generated by the Hamiltonian flows of functions $F(H)$ (since $X_{F(H)}=F'(H)X_H$, they shift time by $F'(E)$ on each energy level) and by shifts of the zero of energy. Global invariants such as the periods $T(E)$ of closed orbits are, of course, not seen by the local equivalence problem.
         \item In general, since $X$ has local first integrals $H$ (away from its zeros), we can write $\alpha=\lambda\,\dd H$, so $\lambda$ is an integrating factor for $\alpha$, and $B=X(\log\lambda)$. Replacing $H$ with another first integral $F(H)$ changes $\lambda$ by the factor $1/F'(H)$, which is constant along the flow, so $B$ measures the failure of the integrating factor to be conserved.
         \item If $B$ is a nonzero constant, the flow contracts (or expands) phase space at a constant rate. For example, a linearly damped mechanical system $\dot q=p/m$, $\dot p=-V'(q)-\gamma p$ has $\operatorname{div}X=-\gamma$ w.r.t.\ $\Omega=\dd q\wedge\dd p$. Hence, by Case~3 of Example~\ref{ex shear structures II}, all such systems with the same damping coefficient $\gamma$ are locally equivalent, regardless of the potential $V$, with normal form $X=\partial_x$, $\Omega=e^{-\gamma x}\dd x\wedge\dd y$. Note that $e^{\gamma x}\Omega$ is preserved by the flow, but since $x$ is a time function along the flow, this rescaling is time-dependent. This is the classical Caldirola-Kanai trick of describing damped systems by time-dependent Hamiltonians.
