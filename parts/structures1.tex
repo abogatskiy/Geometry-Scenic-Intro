@@ -4399,8 +4399,8 @@ Let us finish by summarizing the basic method of moving coframes in a form which
 Note that we do not need the explicit isotropy groups for the transformation group actions, nor do we need compute explicit formulas for the prolonged group action in order to successfully apply the method.
 
 
-\begin{rem}
-    The proposed method of moving coframes has the same basic structure as the Cartan equivalence method (which deals with equivalence problems for $G$-structures and will be covered in \ref{sec: cartan equiv method}), in that one deals with a system of differential forms depending on arbitrary parameters, and seeks to normalize all the parameters by a suitable collection of lifted invariants. One can, indeed, view the two methods as particular cases of a completely general equivalence procedure. However, it is worth pointing out a few of the differences between the two. First, the Cartan method only deals with lifted coframes, whose constituents are linearly independent differential forms, whereas the differential forms occurring in the moving coframe method are linearly dependent. The invariant combinations (lifted invariants) used to normalize the parameters are found via linear dependencies in the moving coframe method, whereas they arise as unabsorbed torsion coefficients in the differentials of the lifted coframe forms in the Cartan equivalence method. In the moving coframe method, the differentials of the moving coframe one-forms satisfy the Maurer-Cartan structure equations, and hence do not provide any non-constant invariants. Finally, and perhaps most significantly, the group parameters $\bf g$ only occur algebraically in the lifted coframe elements in the Cartan equivalence method, whereas in the moving frame problems their differentials $\dd g$ occur as well, since they appear in the Maurer-Cartan forms. One can, of course, imagine solving hybrid equivalence problems, in which aspects of both problems occur during the normalization procedure, although we are not currently aware of any interesting examples where these occur naturally.
+\begin{rem}\label{rem moving coframes vs cartan}
+    The proposed method of moving coframes has the same basic structure as the Cartan equivalence method (which deals with equivalence problems for $G$-structures and will be covered in \S\ref{sec: cartan equiv method}; see especially Remark~\ref{rem lifted coframe in coords}), in that one deals with a system of differential forms depending on arbitrary parameters, and seeks to normalize all the parameters by a suitable collection of lifted invariants. One can, indeed, view the two methods as particular cases of a completely general equivalence procedure. However, it is worth pointing out a few of the differences between the two. First, the Cartan method only deals with lifted coframes, whose constituents are linearly independent differential forms, whereas the differential forms occurring in the moving coframe method are linearly dependent. The invariant combinations (lifted invariants) used to normalize the parameters are found via linear dependencies in the moving coframe method, whereas they arise as unabsorbed torsion coefficients in the differentials of the lifted coframe forms in the Cartan equivalence method. In the moving coframe method, the differentials of the moving coframe one-forms satisfy the Maurer-Cartan structure equations, and hence do not provide any non-constant invariants. Finally, and perhaps most significantly, the group parameters $\bf g$ only occur algebraically in the lifted coframe elements in the Cartan equivalence method, whereas in the moving frame problems their differentials $\dd g$ occur as well, since they appear in the Maurer-Cartan forms. One can, of course, imagine solving hybrid equivalence problems, in which aspects of both problems occur during the normalization procedure, although we are not currently aware of any interesting examples where these occur naturally.
 \end{rem}
 
 
@@ -6135,9 +6135,9 @@ where we think of $g(m)$ as an $n\times n$ matrix-valued function acting on the 
     Two first-order $G$-structures $(P\to M,\theta)$, $(P'\to M',\theta')$ are locally equivalent iff some local coframes $\bm\theta$, $\bar{\bm\theta}$ on $U\subset M$ and $\wb U\subset \wb M$, respectively, defined as the local representatives \eqref{eq 1780135} of their soldering forms, are $G$-equivalent, i.e., there exists a diffeomorphism $F:U\to \wb U$ and a smooth function $g:U\to G$ such that $(F^\ast \bar{\bm\theta})_m=\sigma^0_{g(m)}\circ \bm\theta_m$ for all $m\in U$.
 \end{cor}
 
-\begin{rem}
+\begin{rem}\label{rem soldering on UxG}
     The local coframe on $U\subset M$ representing the soldering form can be used to recover the full soldering form over the domain of the coframe with the help of the local trivialization $\chi^{-1}(m,g)=\Phi_g(s(m))$:
-    \[\theta_{\chi^{-1}(m,g)}=\sigma^0_g\circ \pi^\ast\bm\theta_m.\]
+    \[\theta_{\chi^{-1}(m,g)}=\sigma^0_{g^{-1}}\circ \pi^\ast\bm\theta_m.\]
     This is usually used to ``lift'' $G$-equivalence problems for coframes to the manifold $U\times G$.
 \end{rem}
 
@@ -6170,7 +6170,7 @@ The following several examples display the surprisingly wide range of equivalenc
     The isometric equivalence problem can be relaxed to give the \emph{conformal equivalence} problem, where $F^\ast\wb\sfg=\lambda^2\sfg$ for some function $\lambda\neq 0$. In terms of the coframe, $F^\ast\bar{\bm{\theta}}=g(m)\cdot \bm\theta$, where $g$ takes values in the conformal orthogonal group $\CO_n=\{\lambda R\mid R\in\Or_n,\lambda\in\bbR^\times\}\cong \Or_n\times \bbR^\times$.
 \end{example}
 
-\begin{example}[Equivalence of differential equations {{\cite[Example~9.3]{OlverEquiv}}}]
+\begin{example}[Equivalence of differential equations {{\cite[Example~9.3]{OlverEquiv}}}]\label{ex 9.3 OlverEquiv}
     The general equivalence problem is to determine when two given differential equations can be mapped to each other by a suitable change of variables (most generally, a contact transformation). Such problems were the focus of much research in the 19-th century and again in the late 20-th century. Here we show how to formulate the simples such equivalence problem, that of a scalar second-order ODE, in the language of differential forms. (In fact, the simples problem would be a scalar first-order ODE, but, as we know, all first-order equations, a.k.a.\ vector fields, are equivalent away from singularities, so that problem is essentially trivial.) Consider a general smooth scalar second-order ODE 
     \[u_{xx}=Q(x,u,u_x).\label{eq 9.5 OlverEquiv}\]
     There are a number of possible classes of admissible changes of variables, and each class will lead to a different equivalence problem. Here we explain how to set up the three most basic of these problems -- equivalence under fiber-preserving, point, and contact transformations. The first step is to notice that, once the transformation of the independent and dependent variable is specified, the derivative variables $p=u_x$, $q=u_{xx}$, etc., must transform according to the associated prolonged transformation. The prolonged maps are contact transformations on the jet spaces $\rmJ^r(\bbR,\bbR)$, $r\geq 1$, and hence map contact forms to contact forms. In particular, the first-order contact forms must agree up to multiple,
@@ -6192,7 +6192,7 @@ The following several examples display the surprisingly wide range of equivalenc
     Most strikingly, these contact conditions are already in the form of a $G$-equivalence problem on $\rmJ^1(\bbR,\bbR)\cong\bbR^3$ for the coframe 
     \[\theta^1=\dd u-p\dd x,\quad \theta^2=\dd p-Q(x,u,p)\dd x,\quad \theta^3=\dd x.\]
     The equivalence conditions \eqref{eq 9.6 OlverEquiv}, \eqref{eq 9.8 OlverEquiv}, and \eqref{eq 9.11 OlverEquiv} can be rewritten (again omitting the pullback) as 
-    \[\wb\theta^1=a_1\theta^1,\quad \wb\theta^2=a_2\theta^1+a_3\theta^2,\quad \wb\theta^3=a_4\theta^1+a_5\theta^2+a_h\theta^3,\label{eq 9.22 OlverEquiv}\]
+    \[\wb\theta^1=a_1\theta^1,\quad \wb\theta^2=a_2\theta^1+a_3\theta^2,\quad \wb\theta^3=a_4\theta^1+a_5\theta^2+a_6\theta^3,\label{eq 9.22 OlverEquiv}\]
     for suitable functions $a_i(x,u,p)$, $i=1,\ldots,6$. The equations \eqref{eq 9.22 OlverEquiv} have the required form \eqref{eq G-equivalence problem}, namely 
     \[\begin{pmatrix}
         \wb\theta^1\\\wb\theta^2\\\wb\theta^3
@@ -6205,7 +6205,7 @@ The following several examples display the surprisingly wide range of equivalenc
     \begin{pmatrix}
         \theta^1\\\theta^2\\\theta^3
     \end{pmatrix},\]
-    where the structure group is the $6$-dimensional lower triangular matrix group $G_c$ consisting of matrices of the above form with $a_1a_3a_6\neq 0$. For equivalence of second-order ODEs under point transformations, condition \eqref{eq 9.10 OlverEquiv} replaces \eqref{eq 9.11 OlverEquiv}, and so $\wb\theta^3=a_4\theta^1+a_6\theta^3$. The structure group reduces to the subgroup $G_p< G_c$ obtained by setting $a_5=0$. For fiber-preserving equivalence, we use \eqref{eq 9.9 OlverEquiv} instead, and the structure group is the $4$-dimensional subgroup $G_f<G_c$ obtained by setting $a_4=a_5=0$.
+    where the structure group is the $6$-dimensional lower triangular matrix group $G_c$ consisting of matrices of the above form with $a_1a_3a_6\neq 0$. For equivalence of second-order ODEs under point transformations, condition \eqref{eq 9.10 OlverEquiv} replaces \eqref{eq 9.11 OlverEquiv}, and so $\wb\theta^3=a_4\theta^1+a_6\theta^3$. The structure group reduces to the subgroup $G_p< G_c$ obtained by setting $a_5=0$. For fiber-preserving equivalence, we use \eqref{eq 9.9 OlverEquiv} instead, and the structure group is the $4$-dimensional subgroup $G_f<G_c$ obtained by setting $a_4=a_5=0$. The fiber-preserving problem will be solved completely in Example~\ref{ex ode fiber-preserving}.
 \end{example}
 
 
@@ -6425,7 +6425,7 @@ we can form an \emph{invariant} function $[c]:P\to \coker\delta$.
             \node at ({3/7 + 0.3},{-6/7 - 0.1}) {$c_0$};
         \end{tikzpicture} 
     \end{center}
-    \caption{The values of the (representative of the) structure function $c$ inside $\Hom(V\wedge V,V)$ span an affine subspace modeled on $\im\delta$, and any complement $C$ is (non-canonically) isomorphic to $\coker\delta$. A choice of $C$ is equivalent to a choice of a $c_0\in \im c$. Conversely, if $C$ is chosen, $c_0$ can be identified with the equivalence class $[c]=\im c=c+\im \delta$. \label{fig: imc in hom(vv,v)}}
+    \caption{The values of the (representative of the) structure function $c$ inside $\Hom(V\wedge V,V)$ span an affine subspace modeled on $\im\delta$, and any complement $C$ is (non-canonically) isomorphic to $\coker\delta$. A choice of $C$ determines a representative $\{c_0\}=C\cap\im c$ of the equivalence class $[c]=\im c=c+\im \delta$, and, once $C$ is fixed, $c_0$ can be identified with $[c]$. The converse is false: $c_0$ does not determine $C$, and if $[c]=0$, then $c_0=0$ for every choice of $C$. \label{fig: imc in hom(vv,v)}}
 \end{figure}
            
 \begin{rem}
@@ -6444,7 +6444,26 @@ The reader can also easily check that the space $\im\delta$ is a $G$-invariant s
 \[[c](p\cdot g)=\sigma_g^{-1}[c](p).\]
 
 \begin{rem}
-    Recall that equivariant functions on a principal bundle correspond to sections of the associated bundle. In this case, since $V$ is the model tangent space of $M$, the associated bundle with fiber $\Hom(V\wedge V,V)$ is literally the bundle of $\T M$-valued $2$-forms on $M$. Thus, $c$ can be identified with a tensor field of type $(1,2)$ on $M$, called the \emph{torsion tensor}, and upon a choice of complement $C\cong \coker\delta$, the part $c_0$ of this tensor belonging to $C$ is the \emph{intrinsic torsion tensor}. One has to be careful, however, to always specify the choice of $C$ because, depending on that choice, $c_0$ can be any point of $\im c$.
+    Recall that equivariant functions on a principal bundle correspond to sections of the associated bundle. In this case, since $V$ is the model tangent space of $M$, the associated bundle with fiber $\Hom(V\wedge V,V)$ is literally the bundle of $\T M$-valued $2$-forms on $M$. Thus, $c$ can be identified with a tensor field of type $(1,2)$ on $M$, called the \emph{torsion tensor}, and upon a choice of complement $C\cong \coker\delta$, the part $c_0$ of this tensor belonging to $C$ is the \emph{intrinsic torsion tensor}. One has to be careful, however, to always specify the choice of $C$ because, depending on that choice, $c_0$ can be any point of $\im c$ (unless $[c]=0$, in which case $c_0=0$ for every $C$).
+\end{rem}
+
+\begin{rem}[Lifted coframes, absorption, and normalization in coordinates]\label{rem lifted coframe in coords}\index{Lifted coframe}\index{Torsion!Absorption of}
+    The above constructions are intrinsic, but somewhat removed from the way equivalence problems are solved in practice, e.g., in \cite{OlverEquiv}. Let us translate them into explicit formulas. Work in a local trivialization $U\times G$, where $G<\GL_n(\bbR)$ is a matrix group, and let $\bm\theta=(\vartheta^1,\ldots,\vartheta^n)$ be the local coframe on $U$ representing the soldering form as in \eqref{eq 1780135}, with structure equations \eqref{eq structure eq for coframes}
+    \[\dd\vartheta^i=\sum_{j<k}T^i_{jk}(m)\,\vartheta^j\wedge\vartheta^k.\]
+    By Remark~\ref{rem soldering on UxG}, the soldering form on $U\times G$ is $\theta=g^{-1}\cdot\bm\theta$. It is customary to parametrize the fibers by $g^{-1}$ instead, i.e., to use the local trivialization $(m,g)\mapsto\Phi_{g^{-1}}(s(m))$, in which the principal action becomes $\Phi_h:(m,g)\mapsto(m,h^{-1}g)$ and the soldering form becomes the \emph{lifted coframe} $\theta=g\cdot\bm\theta$, i.e., $\theta^i=\sum_j g^i_j\vartheta^j$, where $g=(g^i_j)$ are the group parameters (we omit the pullback by the projection $U\times G\to U$). Differentiating, we find
+    \[\dd\theta^i=\sum_j \dd g^i_j\wedge\vartheta^j+\sum_l g^i_l\,\dd\vartheta^l=\sum_j (\dd g\, g^{-1})^i_j\wedge\theta^j+\sum_{j<k}\gamma^i_{jk}(m,g)\,\theta^j\wedge\theta^k,\]
+    where the \emph{lifted torsion} is given by
+    \[\gamma^i_{jk}(m,g)=\sum_{l,r,s} g^i_l\, T^l_{rs}(m)\,(g^{-1})^r_j(g^{-1})^s_k,\quad\text{i.e.,}\quad \gamma(m,g)=\sigma_g \circ T(m).\]
+    Now choose a basis $A_1,\ldots,A_r$ of $\frakg$ and expand the right-invariant Maurer-Cartan form of $G$ as $-\dd g\,g^{-1}=\sum_\kappa A_\kappa\pi^\kappa$. The structure equations of the lifted coframe then take the form
+    \[\dd\theta^i=-\sum_{\kappa,j}(A_\kappa)^i_j\,\pi^\kappa\wedge\theta^j+\sum_{j<k}\gamma^i_{jk}(m,g)\,\theta^j\wedge\theta^k,\label{eq lifted structure eqs}\]
+    in which the coefficients of the $\pi^\kappa$ are constants determined by the inclusion $\frakg<\frakgl_n(\bbR)$, and all of the dependence on the particular $G$-structure is concentrated in $\gamma$. In the language used above, $\omega_0\coloneqq-\dd g\,g^{-1}=\sum_\kappa A_\kappa\pi^\kappa$ is the pseudo-connection whose horizontal spaces are tangent to the slices $U\times\{g\}$, \eqref{eq lifted structure eqs} reads $\dd\theta=-\omega_0\wedge\theta+\gamma\circ\theta\wedge\theta$, and $\gamma=c_{\ker\omega_0}$. Three features of these equations are worth pointing out.
+    \begin{enumerate}
+        \item The group parameters enter the torsion $\gamma$ only \emph{algebraically}, through the linear action $\sigma_g$; their differentials $\dd g$ appear only via the $\pi^\kappa$. This is one of the main features distinguishing Cartan's method from the method of moving coframes, cf.\ Remark~\ref{rem moving coframes vs cartan}.
+        \item \emph{Absorption.} Only the restrictions of the $\pi^\kappa$ to the fibers of $U\times G$ are canonical, so we are free to replace them by $\wt\pi^\kappa=\pi^\kappa+\sum_l z^\kappa_l\theta^l$ for arbitrary functions $z^\kappa_l$ on $U\times G$. Equivalently, we replace $\omega_0$ with another pseudo-connection $\omega=\omega_0+z(\theta)$, where $z=\sum_{\kappa,l}z^\kappa_l A_\kappa\otimes e^l:U\times G\to\Hom(V,\frakg)$. Substituting $\pi^\kappa=\wt\pi^\kappa-\sum_l z^\kappa_l\theta^l$ into \eqref{eq lifted structure eqs}, we find that the structure equations retain their form, but the coefficient of $\theta^j\wedge\theta^k$ changes by
+        \[\left(z(e_j)\cdot e_k-z(e_k)\cdot e_j\right)^i=\delta(z)^i_{jk},\]
+        so that $\gamma\mapsto\gamma+\delta(z)$, in agreement with the Proposition above (with $f=-z$). Torsion components that can be eliminated in this way are called \emph{absorbable}, and the remaining ones, i.e., the class $[\gamma]\in\coker\delta$, are exactly the intrinsic torsion $[c]$. In practice, one fixes a complement $C$ to $\im\delta$ and uses $z$ to make the torsion $C$-valued.
+        \item \emph{Normalization.} Since $[\gamma](m,g)=\sigma_g\circ T(m)$, the intrinsic torsion coefficients are \emph{lifted invariants}: functions of both $m$ and $g$. Those that are independent of $g$ are genuine invariant functions on $M$. If some of them do depend on $g$, one can set them equal to convenient constants and solve for some of the group parameters as functions of $m$ and the remaining parameters. This is the coordinate version of the reduction of Remark~\ref{rem equivalence reduction} to the stabilizer $H<G$ of the chosen constant values, after which the procedure is repeated for the resulting $H$-structure. If the structure group is eventually reduced to $\{e\}$, then $\theta$ becomes an invariant coframe on $M$, and we are back to \S\ref{sec: equiv of coframes}. If, instead, no further normalization is possible while $G\neq\{e\}$, one has to prolong, as described in \S\ref{sec: cartan equiv method}.
+    \end{enumerate}
 \end{rem}
 
 Finally, since the structure function is clearly a natural (intrinsic) quantity of the $G$-structure, equivalent $G$-structures have equivalent structure functions.
@@ -6713,24 +6732,62 @@ Thus, only $\rho_{p''}$ and $S_{p''}$ contain any new (second-order) differentia
 
 By the above remark, there is already a canonical $V\oplus\frakg$-valued soldering form on $P^{(1)}$. Thus, to complete it to a coframe, we only need to find a canonical $\frakg^{(1)}$-valued form, i.e., a canonical pseudo-connection on the principal $G^{(1)}$-bundle $P^{(1)}\to P$. Clearly, just like in Remark~\ref{rem g-structures of type 1}, the vanishing of $\frakg^{(2)}$ will suffice for this, otherwise we prolong to $P^{(2)}$ and repeat.
 
-\begin{rem}
-    In addition to quotienting out the freedom in the choice of pseudo-connection, we need to make sure that our choice of $C$ is not affecting the structure functions. The set of possible choices of $C$ is another affine space (this time modeled on $\Hom(\coker\delta,\Hom(V\wedge V,V))$). In fact, we can choose a different $C$ for every point $p\in P$, so really this describes a section of another affine bundle over $P$. Recall that a choice of $C$ is equivalent to a choice of a value of torsion $c_0\in \im c$. Thus, for each ``field of $C$'', the definition $P^{(1)}_p=c^{-1}(C_p)$ (the preimage is now taken fiberwise) describes $P^{(1)}$ as \emph{the bundle of pseudo-connections whose torsion is exactly $c_0$}. We should thus be \emph{simultaneously} quotienting out two sections of affine bundles over $P$, namely, $\omega$ and $c_0$. 
+\begin{rem}[Choice of normalization]\label{rem choice of normalization}
+    The construction of $P^{(1)}$ depends on the choice of the complement $C$, and we need to make sure that this choice does not affect the solution of the equivalence problem. A complement $C$ to $\im\delta$ is the same thing as a linear splitting $s:\coker\delta\to\Hom(V\wedge V,V)$ of the projection $\pr$ in \eqref{eq spencer kernel-cokernel seq} (namely, the one with image $C$), so the set of all complements is an affine space modeled on $\Hom(\coker\delta,\im\delta)$. In terms of $s$, we have $P^{(1)}_p=c^{-1}(c_0(p))$, where 
+    \[c_0\coloneqq s\circ[c]:P\to\Hom(V\wedge V,V),\]
+    so $P^{(1)}$ is \emph{the bundle of pseudo-connections whose torsion is exactly $c_0$}. Note that $C$ determines $c_0$, but not conversely; in particular, $c_0=0$ wherever $[c]=0$, regardless of the choice of $C$.
 
-    First, $c$ obviously doesn't depend on $c_0$. The second-order function $\rho$ does depend on $c_0$, but $[\rho]$ doesn't because it is already an equivalence class over \emph{all} pseudo-connections, not only those with torsion $c_0$. The only part that may genuinely depend on $c_0$ is $S$. Even here, however, the solution is trivial: it is \emph{always possible} to choose $c_0$ so that it is a $G$-equivariant function on $P$. And if $c_0$ is $G$-equivariant, then $P^{(1)}$ is a $G$-invariant subset of $\rmJ^1 P$, and thus $\omega$ can also be chosen so that it is equivariant, $\Phi_g^\ast \omega=\Ad_g^{-1}\omega$, in which case $S=0$. Hence, \emph{the intrinsic $\omega$- and $c_0$-independent part of $S$ is zero}. In particular, any ``canonical'' pseudo-connection on any $G$-structure of type $1$ has to be equivariant. (We will see below that the same applies to all $G$-structures.) 
+    \emph{Naturality.} Since $s$ is fixed and $[c]$ is preserved by equivalences (Proposition~\ref{thm vii.2.1 Sternberg}), so is $c_0$: $c_0=\wb c_0\circ F_\ast$ for any equivalence $F$. Consequently, the prolongation of $F_\ast$ maps $P^{(1)}$ onto $\wb P^{(1)}$, which is exactly what is needed in Theorem~\ref{thm 2.12 Fernandes}, provided the same $C$ is used for both $G$-structures. Moreover, different choices of $C$ lead to equivalent prolonged problems. Indeed, let $s,s'$ be the splittings corresponding to two complements $C,C'$, and fix a linear right inverse $\delta^+:\im\delta\to\Hom(V,\frakg)$ of $\delta$. Then the function 
+    \[f\coloneqq\delta^+\circ(s'-s)\circ[c]:P\to\Hom(V,\frakg)\]
+    is again preserved by equivalences. Replacing each horizontal space $\calH\in P^{(1)}_p$ with the horizontal space $\calH'$ such that $f_{\calH,\calH'}=-f(p)$ changes its torsion by $\delta(f(p))=(s'-s)([c](p))$, so this map sends $P^{(1)}_C$ onto $P^{(1)}_{C'}$, and it commutes with all prolonged equivalences. Thus, the higher structure functions computed using $C$ and $C'$ are functions of each other, and the solution of the equivalence problem does not depend on $C$. However, individual structure functions, such as the second-order structure function $[\rho]$ defined below, \emph{do} depend on $C$, and are intrinsic only relative to a fixed choice of $C$. For instance, for $G=\U_n$ (almost Hermitian structures) we have $\frakg^{(1)}<\frakso_{2n}^{(1)}=0$, so for each $C$ there is a unique $\U_n$-connection with torsion $c_0$, and its curvature is $[\rho]$. On a Hermitian manifold, the Chern and Bismut connections are two such connections with differently normalized torsion, and their curvatures differ.
+
+    \emph{Equivariance.} By the equivariance of $[c]$, the function $c_0=s\circ[c]$ is $G$-equivariant, $c_0(p\cdot g)=\sigma_g^{-1}\circ c_0(p)$, for all $G$-structures iff $s$ is $G$-equivariant, i.e., iff $C$ is a $G$-invariant subspace, so that $\Hom(V\wedge V,V)=\im\delta\oplus C$ is a direct sum of $G$-representations. Such a $C$ exists whenever the representation $\sigma$ is completely reducible, i.e., when $G\subset\GL(V)$ is reductive as a linear group\footnote{A linear group $G\subset\GL(V)$ is \emph{reductive}\index{Reductive group} if every $G$-invariant subspace of $V$ has a $G$-invariant complement, i.e., if $V$ is a completely reducible $G$-module. For example, $\GL_n(\bbR)$ and every compact subgroup of it are reductive: the orthogonal complement of an invariant subspace w.r.t.\ a $G$-invariant inner product is invariant. In contrast, the unipotent group (cf.\ Remark~\ref{rem nilpotent Lie alg}) $\Big\{\begin{psmallmatrix}1&\tau\\0&1\end{psmallmatrix}\Big\}\subset\GL_2(\bbR)$ preserves the line $\bbR e_1$, but no complement to it. Note that reductivity is a property of the embedding $G\subset\GL(V)$, not of the abstract group: the same group $\bbR$ embedded as $\tau\mapsto\diag(\rme^\tau,1)$ is reductive.} (e.g., compact or semisimple, or $\Or_n$, $\CO_n$, $\Sp_{2n}(\bbR)$, $\U_n$, etc.), since then all tensor representations are completely reducible as well, but not in general. If $C$ is $G$-invariant, then $P^{(1)}$ is a $G$-invariant subset of $\rmJ^1 P$, and $P^{(1)}\slash G\to M$ is an affine bundle, which admits local sections (and global ones by a partition of unity argument). These are exactly the $G$-equivariant sections of $P^{(1)}\to P$, i.e., pseudo-connections $\omega$ with torsion $c_0$ satisfying $\Phi_g^\ast\omega=\Ad_g^{-1}\omega$, and for them $S=0$. In other words, $S$ carries no intrinsic information: it only records the failure of our choices to be equivariant. In particular, for $G$-structures of type $1$, the unique pseudo-connection with torsion $c_0$ is automatically equivariant.
+
+    If no $G$-invariant complement exists, one can still use any fixed $C$, since Theorem~\ref{thm 2.12 Fernandes} treats $P^{(1)}\to P$ as a $G^{(1)}$-structure on the manifold $P$ and makes no use of the $G$-action. The price is that $P^{(1)}$ is not $G$-invariant, equivariant pseudo-connections with torsion $c_0$ need not exist, the $S$-terms remain in the structure equations (as functions determined by $[c]$ and $C$, so they carry no new information), and the resulting canonical coframe is not a Cartan connection in the sense of Remark~\ref{rem g-structures of type 1}. Cartan's method in coordinates (Remark~\ref{rem lifted coframe in coords}) never needs equivariance, since it only uses the final result as a coframe, which is why this issue rarely comes up in practice. Finally, linearity of $s$ is not essential: any fixed (possibly nonlinear) section $\varPhi:\coker\delta\to\Hom(V\wedge V,V)$ of $\pr$ gives a natural normalization $c_0=\varPhi\circ[c]$. A $G$-equivariant $\varPhi$ exists over an orbit $G\cdot x\subset\coker\delta$ iff the stabilizer $G_x$ has a fixed point in the affine space $\pr^{-1}(x)$, which is guaranteed, e.g., if $G_x$ is compact.
 \end{rem}
 
-This explains why equivariant pseudo-connections are such a fundamental object of study in differential geometry (see \Chap~\ref{ch: connections}), and they have a special name.
+\begin{example}[Shear structures: no natural equivariant normalization]\label{ex shear structures I}
+    Let $\dim M=2$, $V=\bbR^2$, and let $G<\GL_2(\bbR)$ be the $1$-dimensional group of shears
+    \[G=\left\{h_\tau=\begin{pmatrix}
+        1 & \tau\\
+        0 & 1
+    \end{pmatrix}\;\middle|\;\tau\in\bbR\right\},\qquad \frakg=\bbR N,\quad N=\begin{pmatrix}
+        0 & 1\\
+        0 & 0
+    \end{pmatrix}.\]
+    Since $h_\tau e_1=e_1$ and $e^2\circ h_\tau^{-1}=e^2$, every frame $p:V\to\T_m M$ in a $G$-structure $P$ determines the same vector $X_m=p(e_1)$ and the same covector $\alpha_m=e^2\circ p^{-1}$. Conversely, given a nonvanishing vector field $X$ and a nonvanishing $1$-form $\alpha$ with $\alpha(X)=0$, the frames $p$ with $p(e_1)=X$ and $e^2\circ p^{-1}=\alpha$ form a $G$-structure. Thus, a \emph{shear structure} on a surface is the same thing as a pair $(X,\alpha)$ with $\alpha(X)=0$.
+
+    \emph{Spencer data.} Write $f\in\Hom(V,\frakg)$ as $f(e_j)=a_jN$. Since $Ne_1=0$ and $Ne_2=e_1$,
+    \[\delta(f)(e_1,e_2)=f(e_1)\cdot e_2-f(e_2)\cdot e_1=a_1e_1,\]
+    so $\frakg^{(1)}=\ker\delta\cong\bbR$ (parametrized by $a_2$) and $\im\delta=\bbR e_1$ under the identification $\Hom(V\wedge V,V)\cong V$, $\beta\mapsto\beta(e_1,e_2)$, which is $G$-equivariant because $\det h_\tau=1$. The quotient $\coker\delta\cong V\slash\bbR e_1$ is $1$-dimensional, and $G$ acts on it trivially. However, the only $G$-invariant line in $V$ is $\bbR e_1=\im\delta$ itself, so \emph{there is no $G$-invariant complement $C$}. (Although $G\cong\bbR$ is abelian, it is embedded in $\GL_2(\bbR)$ as a unipotent subgroup, so it is not reductive as a linear group: the representation $\sigma$ is not completely reducible.)
+
+    \emph{Lifted coframe.} Choose a local coframe $\bm\theta=(\vartheta^1,\vartheta^2)$ adapted to the structure, i.e., $\vartheta^2=\alpha$ and $\vartheta^1(X)=1$ (so $\vartheta^1$ is unique up to adding multiples of $\alpha$), and write its structure equations as 
+    \[\dd\vartheta^1=A\,\vartheta^1\wedge\vartheta^2,\qquad \dd\vartheta^2=B\,\vartheta^1\wedge\vartheta^2.\]
+    The lifted coframe on $U\times G$ is $\theta^1=\vartheta^1+t\vartheta^2$, $\theta^2=\vartheta^2$, where $t$ is the fiber coordinate, i.e., the point of $U\times G$ is $(m,h_t)$ (we reserve $\tau$ for the group elements $h_\tau$ acting on the fibers), and $\theta^1\wedge\theta^2=\vartheta^1\wedge\vartheta^2$. As in Example~\ref{ex ode fiber-preserving}, we expand $\dd g\,g^{-1}=N\,\dd t$, so that 
+    \[\dd\theta^1=\dd t\wedge\theta^2+(A+tB)\,\theta^1\wedge\theta^2,\qquad \dd\theta^2=B\,\theta^1\wedge\theta^2.\]
+    Pseudo-connections correspond to the $1$-forms $\pi=\dd t+a\theta^1+b\theta^2$ with arbitrary functions $a,b$ on $U\times G$, and in terms of $\pi$, 
+    \[\dd\theta^1=\pi\wedge\theta^2+(A+tB-a)\,\theta^1\wedge\theta^2,\qquad \dd\theta^2=B\,\theta^1\wedge\theta^2,\]
+    so the torsion of $\pi$ is $(A+tB-a)e_1+Be_2$. The $e_1$-component can be absorbed, in agreement with $\im\delta=\bbR e_1$, whereas $[c]=B$ is the intrinsic torsion. It is invariant, since $G$ acts trivially on $\coker\delta$, and it has a simple meaning: $\dd\alpha=B\,\vartheta^1\wedge\vartheta^2$, and by Cartan's formula 
+    \[\Lie_X\alpha=i_X\dd\alpha=B\alpha.\]
+    Thus, $B$ measures the rate at which the flow of $X$ rescales $\alpha$, and $B=0$ iff $\alpha$ is closed.
+
+    \emph{Natural normalization.} Take the coordinate complement $C=\bbR e_2$, i.e., absorb all of the absorbable torsion, $a=A+tB$. Then $c_0=Be_2$, and $P^{(1)}$ consists of the forms 
+    \[\pi=\dd t+(A+tB)\,\theta^1+r\,\theta^2,\quad r\in\bbR,\]
+    the free parameter $r$ reflecting $\frakg^{(1)}\cong\bbR$. This normalization is natural, but it is not equivariant when $B\neq 0$, because $h_\tau e_2=e_2+\tau e_1$. Concretely, the principal action is $t\mapsto t-\tau$, and since $G$ is abelian, a pseudo-connection is equivariant iff it is invariant under these translations. Expanding in the coframe on $U$,
+    \[\pi=\dd t+(A+tB)\,\vartheta^1+\big((A+tB)t+r\big)\,\vartheta^2,\]
+    and the coefficient $A+tB$ of $\vartheta^1$ depends on $t$, whatever $r$ is. Thus, \emph{if $B\neq 0$, then no equivariant pseudo-connection has torsion $c_0$}.
+
+    Equivariant pseudo-connections do exist: $\pi=\dd t+a(m)\vartheta^1+b(m)\vartheta^2$ with $a,b$ functions on $U$, and their torsion is $(A-a+tB)e_1+Be_2$. Its $e_1$-component varies linearly along the fibers, exactly as equivariance requires. For instance, $a=A$ gives the equivariant normalization $c_0=B\,(te_1+e_2)$. But this normalization is not natural, since it depends on the choice of $\vartheta^1$: replacing $\vartheta^1$ with $\vartheta^1+u\alpha$ shifts the fiber coordinate $t$ by $-u$. Indeed, no normalization can be both natural and equivariant: by Remark~\ref{rem choice of normalization}, this would require the stabilizer $G$ of $[c]=B[e_2]$ to fix a point of the affine line $\pr^{-1}(B[e_2])=\{Be_2+\lambda e_1\mid\lambda\in\bbR\}$, but $h_\tau$ acts on it by $\lambda\mapsto\lambda+\tau B$, which has no fixed points for $B\neq 0$. We will see in Example~\ref{ex shear structures II} that this causes no problems in solving the equivalence problem.
+\end{example}
+
+Thus, whenever possible, it is natural to work with equivariant pseudo-connections. This explains why they are such a fundamental object of study in differential geometry (see \Chap~\ref{ch: connections}), and they have a special name.
 
 \begin{defn}[Principal connection]\index{Connection!Principal}
     A pseudo-connection $\omega\in \Omega^1(P;\frakg)$ on a principal $G$-bundle $P\to M$ is called a principal connection if it is equivariant, $\Phi_g^\ast \omega=\Ad_g^{-1}\omega$, thus defining a $G$-invariant horizontal distribution $\calH P$.
 \end{defn}
 
-\begin{rem}
-    In practice, there is often no reason to vary $C$ from point to point. Usually it is possible to choose a $G$-invariant $C$, so that $\Hom(V\wedge V,V)=\im\delta\oplus C$ is a direct sum of $G$-representations. Then $P^{(1)}$ is the bundle of pseudo-connections with constant torsion $c_0$. Obviously, this is also the most convenient choice from the point of view of the equivalence problem. The construction that follows will produce a canonical coframe on $P^{(1)}$ for \emph{any} choice of $c_0$, and Theorem~\ref{thm 2.12 Fernandes} then reduces the original equivalence problem to equivalence of $G^{(1)}$-structures \emph{regardless} of what $c_0$ is. Thus, the dependence on $C$ is not a serious issue, and having made some choice of $G$-invariant $C$, one need not worry about it again, and one can safely disregard $S$ in the analysis. However, in the cases when this is not possible, the next remark is of value.
-\end{rem}
-
 \begin{rem}\label{rem equivalence reduction}
-    For $C$ to be $G$-invariant, $c_0$ itself must be a $G$-invariant element in $\Hom(V\wedge V,V)$, and similarly for its equivalence class $[c_0]$ in $\rmH^{(0,2)}(\frakg)$. However, the existence of such an element is not guaranteed. In such cases where arranging constant torsion is not possible, one has to resort to using the general classifying manifold method from earlier in this \chap. The following explains how one can nevertheless simplify the problem in some special cases where it is possible to reduce the structure group.
+    Even with a $G$-invariant choice of $C$, the normalized torsion $c_0=s\circ[c]$ is generally not constant, since $[c]$ varies along the fibers of $P$ (via $\sigma_g^{-1}$) as well as along $M$. Comparing two $G$-structures is simplest when the torsion can be normalized to a constant, which is a matter of reducing the structure group, as in Remark~\ref{rem lifted coframe in coords}. When this is not possible, one has to resort to using the general classifying manifold method from earlier in this \chap. The following explains how one can reduce the structure group in some special cases.
 
     Consider $\rmH^{(0,2)}(\frakg)$ as a $G$-representation and let $H<G$ be a Lie subgroup. Then $\rmH^{(0,2)}(\frakg)^H$ is the set of $H$-invariant elements and $\rmH^{(0,2)}(\frakg)_H$ the subset of isotropy type $H$ (cf.\ Definition~\ref{def isotropy type}). A submanifold $S\emb\rmH^{(0,2)}(\frakg)_H$ is called a \emph{slice} if for all $v\in S$ the orbit $G\cdot v$ intersects $S$ transversely and only at $v$. A $G$-structure is of \emph{type} $S$ if its intrinsic torsion $[c]$ takes values in $S$. These conditions are sufficient for $P_H\coloneqq [c]^{-1}(S)\subset P$ to be a smooth subbundle on which $H$ acts freely and transitively on the fibers. Thus, we can reduce our problem to equivalence of $H$-structures, i.e., there is a one-to-one correspondence between $G$-structures of type $S$ and $H$-structures $P_H$. 
     
@@ -6771,10 +6828,10 @@ which antisymmetrizes over the three $V^\ast$ components. Note that the domain o
 \end{cor}
 
 Thus, $\rho$ always takes values in $\ker\delta_2$, i.e., is symmetric w.r.t.\ exchanges of two arguments, and antisymmetrized over another pair (note that this does \emph{not} produce a tensor antisymmetric in the latter pair -- that would be zero). This is true regardless of any conditions on the pseudo-connection such as equivariance or being torsion-free. As a result, we can treat $[\rho]$ as taking values in the ``curvature module'' $\rmH^{1,2}(\frakg)$:
-\[[\rho]:P^{(1)}\to \rmH^{1,2}(\frakg)\coloneqq \frac{\ker\left(\delta_2:\frakg\otimes \bigwedge\nolimits^2 V^\ast\to V\otimes\bigwedge\nolimits^3 V^\ast\right)}{\im\left(\delta_1:\frakg^{(1)}\otimes V^\ast\to \frakg\otimes\bigwedge V^\ast\right)}.\]
-This quantity (which is also $G$-equivariant by the same argument about the dependence on $c_0$ in the definition of $P^{(1)}$), is called the \emph{intrinsic curvature of the $G$-structure} $P$.
+\[[\rho]:P^{(1)}\to \rmH^{1,2}(\frakg)\coloneqq \frac{\ker\left(\delta_2:\frakg\otimes \bigwedge\nolimits^2 V^\ast\to V\otimes\bigwedge\nolimits^3 V^\ast\right)}{\im\left(\delta_1:\frakg^{(1)}\otimes V^\ast\to \frakg\otimes\bigwedge^2 V^\ast\right)}.\]
+This quantity is called the \emph{intrinsic curvature of the $G$-structure} $P$. As explained in Remark~\ref{rem choice of normalization}, it is intrinsic relative to the chosen complement $C$, and it is $G$-equivariant if $C$ is $G$-invariant.
 
-Note that $\frakg^{(1)}$ parametrizes the (fiber of the) space of fixed-torsion deformations of a pseudo-connection. Thus, $[\rho]$ is the offset from the origin of the space of curvatures of all pseudo-connections with fixed torsion $c_0$. By the same argument as for $[S]$, upon quotienting out the additional dependence on the representative $c_0$ this quantity is automatically $G$-equivariant. We can now see what happens if $\frakg^{(2)}=0$.
+Note that $\frakg^{(1)}$ parametrizes the (fiber of the) space of fixed-torsion deformations of a pseudo-connection. Thus, $[\rho]$ is the offset from the origin of the space of curvatures of all pseudo-connections with fixed torsion $c_0$. We can now see what happens if $\frakg^{(2)}=0$.
 
 \begin{rem}[$G$-structures of type $2$]
     Now suppose $G$ is of finite type $2$, i.e., $\frakg^{(2)}=0$. In this case the projection $\pi^2_1:P^{(2)}\to P^{(1)}$ is a diffeomorphism, and $P^{(2)}$ is an $\{e\}$-structure (coframe) on $P^{(1)}$. Part of this coframe is the canonical $V\oplus\frakg$-valued soldering form $\theta^1$ from Remark~\ref{rem soldering on P(1)}. The remaining $\frakg^{(1)}$-valued part defines a pseudo-connection $\omega_1$ on the $G^{(1)}$-bundle $P^{(1)}\to P$. Rearranging the components, these can also be thought of as the pair $((\pi^1_0)^\ast\theta,\omega^2)$, where $\theta$ is the original $V$-valued soldering form and $\omega^2$ is a $\frakg\oplus\frakg^{(1)}$-valued pseudo-connection on the principal $G\ltimes G^{(1)}$-bundle $P^{(1)}\to M$. Note that the latter is generally not a principal connection because it is not necessarily $G^{(1)}$-equivariant. However, since both $P^{(2)}$ and $\theta$ are $G$-equivariant separately (the former by proper choice of complements and the latter by definition), so is $\omega^2$. The $\frakg$-component of $\omega^2$ is exactly the $1$-form $\omega^1$ from Remark~\ref{rem soldering on P(1)}. The resulting composit $1$-form 
@@ -6882,6 +6939,130 @@ In other words, \emph{for an integrable $G$-structure, its total prolongation $P
 \begin{rem}
     Many important equivalence problems combine equivalence of submanifolds with equivalence of $G$-structures. Namely, let $P\to M$ be a $G$-structure and let $i,\wb i:X\to M$ be two  submanifolds $i(X)=S$, $\wb i(X)=\wb S$. Then we may study the equivalence of $S$ and $\wb S$ under the automorphism group of $P$. The above procedure produces a canonical coframe on $P^{(\infty)}$, which is invariant under (prolonged) automorphisms of $P$. Next, one constructs a moving frame $\rho:\rmJ^q\to G^\infty$, which can be reinterpreted as a local section $\rho:S\to P^{(\infty)}$. Pulling the canonical coframe back along $\rho\circ \rmj^q i:X\to P^{(\infty)}$ produces an extended coframe that characterizes the submanifold via Theorem~\ref{thm 14.9 OlverCo2}. We do not detail this method here, but it will be abundantly illustrated in \Chap~\ref{chap curves and surfaces}. 
 \end{rem}
+
+\begin{example}[\ref{ex shear structures I} continued]\label{ex shear structures II}
+    Let us now solve the equivalence problem for the shear structures $(X,\alpha)$ of Example~\ref{ex shear structures I}, keeping its notation. After absorption with the natural normalization $C=\bbR e_2$, the structure equations of the lifted coframe are 
+    \[\dd\theta^1=\pi\wedge\theta^2,\qquad \dd\theta^2=B\,\theta^1\wedge\theta^2,\qquad \pi=\dd t+(A+tB)\,\theta^1+r\,\theta^2.\]
+    The intrinsic torsion is the invariant function $B$, given by $\Lie_X\alpha=B\alpha$. It does not depend on $t$, so it cannot be used to normalize the group parameter. However, its differential is also invariant, and expanding it in the lifted coframe produces a lifted invariant:
+    \[\dd B=B_1\vartheta^1+B_2\vartheta^2=B_1\,\theta^1+(B_2-tB_1)\,\theta^2,\qquad B_1=X(B).\]
+    This leads to three cases (on open sets where the relevant quantities have constant rank).
+
+    \emph{Case 1: $X(B)\neq 0$.} We normalize the coefficient of $\theta^2$ to $0$ by setting $t=B_2/B_1$. This reduces the structure group to $\{e\}$, and the resulting invariant coframe is 
+    \[\theta^1=\vartheta^1+\frac{B_2}{B_1}\vartheta^2=\frac{\dd B}{X(B)},\qquad \theta^2=\alpha.\]
+    In hindsight, this is obvious: $\alpha$ and $\dd B$ are invariantly attached to the structure, and they are linearly independent iff $\dd B(X)\neq 0$. The equivalence problem is thus reduced to that of the coframe $(\dd B/X(B),\alpha)$, which can be solved as in \S\ref{sec: equiv of coframes}. Since $B$ is a nonconstant invariant, the coframe has rank at least $1$, so the symmetry group of such a structure has dimension at most $1$.
+
+    \emph{Case 2: $X(B)=0$, but $\dd B\neq 0$.} Now $\dd B=\mu\alpha$, where $\mu=B_2$ is another invariant function. Applying $\Lie_X$ to this identity and using $\Lie_X\dd B=\dd(X(B))=0$ and $\Lie_X\alpha=B\alpha$, we find $X(\mu)\alpha+\mu B\alpha=0$, i.e., 
+    \[X(\mu)=-B\mu\neq 0\]
+    (note that $\mu\neq 0$ since $\dd B\neq 0$, and $B\neq 0$ since $B$ is nonconstant, after shrinking $U$ if necessary). Thus, $\mu$ plays the role of $B$ in Case~1, and we obtain the invariant coframe $(\dd\mu/X(\mu),\alpha)$. Again, the symmetry group has dimension at most $1$.
+
+    \emph{Case 3: $B$ is constant.} Now there are no nonconstant invariants at this order, the group parameter $t$ cannot be normalized, and since $\frakg^{(1)}\neq 0$, we have to prolong. The prolonged lifted coframe $(\theta^1,\theta^2,\pi)$ lives on $U\times G$, with structure group $G^{(1)}\cong\bbR$ acting by $\pi\mapsto\pi+r\theta^2$. A short computation shows that, after absorption, 
+    \[\dd\pi=\lambda\wedge\theta^2+B\,\pi\wedge\theta^1,\]
+    where $\lambda=\dd r+\cdots$ is the modified Maurer-Cartan form of $G^{(1)}$, which is again determined only up to adding a multiple of $\theta^2$. The only intrinsic torsion is the constant $B$, so $r$ cannot be normalized either, and the same pattern repeats at every order. This reflects the fact that $\frakg$ is of infinite type: one checks that $\frakg^{(k)}=\bbR\,(e^2)^{k+1}\otimes e_1\neq 0$ for all $k\geq 1$. Thus, the symmetry pseudogroup is infinite-dimensional.
+
+    In this case, we can find all structures and their symmetries explicitly. Straightening out $X$, we may assume $X=\partial_x$ in local coordinates $(x,y)$. Then $\alpha(X)=0$ implies $\alpha=b(x,y)\dd y$, and $\Lie_X\alpha=b_x\dd y=B\alpha$ implies $b=e^{Bx}c(y)$. Replacing $y$ with a primitive of $c(y)$, we arrive at the normal form 
+    \[X=\partial_x,\qquad \alpha=e^{Bx}\dd y.\]
+    Therefore, any two shear structures with the same constant value of $B$ are locally equivalent. The local diffeomorphisms preserving $X=\partial_x$ are of the form $(x,y)\mapsto(x+h(y),g(y))$, and such a map preserves $e^{Bx}\dd y$ iff $e^{Bh(y)}g'(y)=1$. Hence, for $B\neq 0$ the symmetries are 
+    \[(x,y)\mapsto\left(x-\tfrac{1}{B}\log g'(y),\,g(y)\right),\quad g'>0,\]
+    while for $B=0$ they are $(x,y)\mapsto(x+h(y),y+\const)$. In both cases, the symmetry pseudogroup depends on one arbitrary function of one variable.
+
+    In summary, the lack of a natural equivariant normalization noted in Example~\ref{ex shear structures I} did not prevent us from solving the problem. When $B$ is not constant, the structure group is reduced to $\{e\}$ by normalization, and the question of equivariance disappears. When $B$ is constant, the structures are locally homogeneous, but their symmetry pseudogroups are infinite-dimensional, so they cannot be described by a finite-dimensional Cartan geometry in the first place. The same dichotomy between normalization and infinite type is typical of structure groups that are not completely reducible.
+\end{example}
+
+\begin{rem}[Physical interpretation of shear structures]\label{rem shear physics}
+    Since $\det h_\tau=1$, a shear structure carries an invariant area form $\Omega\coloneqq\vartheta^1\wedge\alpha=\theta^1\wedge\theta^2$, which is well-defined because $\vartheta^1$ is unique up to adding multiples of $\alpha$. Moreover, 
+    \[i_X\Omega=\vartheta^1(X)\,\alpha-\alpha(X)\,\vartheta^1=\alpha.\]
+    Conversely, any nonvanishing vector field $X$ and area form $\Omega$ define a shear structure via $\alpha\coloneqq i_X\Omega$. Thus, \emph{shear structures on surfaces are the same thing as vector fields together with an area form}, i.e., autonomous dynamical systems with one degree of freedom together with a ``Liouville measure'' on their phase space, and equivalences are changes of variables preserving both (but not allowing reparametrizations of time). Since $\Lie_X$ commutes with $i_X$, 
+    \[\Lie_X\alpha=i_X\Lie_X\Omega=(\operatorname{div}_\Omega X)\,\alpha,\qquad\text{so}\qquad B=\operatorname{div}_\Omega X,\]
+    and, equivalently, $\dd\alpha=\dd i_X\Omega=\Lie_X\Omega=B\,\Omega$. Thus, the intrinsic torsion is the rate of contraction of phase space volume along the flow.
+    \begin{itemize}
+        \item If $B=0$, then $\alpha$ is closed, so locally $\alpha=i_X\Omega=\dd H$, i.e., $X$ is the Hamiltonian vector field of $H$ w.r.t.\ the symplectic form $\Omega$. The condition $\alpha(X)=0$ becomes the conservation of energy, $X(H)=0$, and $\Lie_X\Omega=0$ is Liouville's theorem. The normal form $X=\partial_x$, $\alpha=\dd y$, $\Omega=\dd x\wedge\dd y$ consists of canonical coordinates $(x,y)=(t,E)$, where $t$ is time along the flow and $E$ is the energy. The symmetries $(x,y)\mapsto(x+h(y),y+\const)$ are generated by the Hamiltonian flows of functions $F(H)$ (since $X_{F(H)}=F'(H)X_H$, they shift time by $F'(E)$ on each energy level) and by shifts of the zero of energy. Global invariants such as the periods $T(E)$ of closed orbits are, of course, not seen by the local equivalence problem.
+        \item In general, since $X$ has local first integrals $H$ (away from its zeros), we can write $\alpha=\lambda\,\dd H$, so $\lambda$ is an integrating factor for $\alpha$, and $B=X(\log\lambda)$. Replacing $H$ with another first integral $F(H)$ changes $\lambda$ by the factor $1/F'(H)$, which is constant along the flow, so $B$ measures the failure of the integrating factor to be conserved.
+        \item If $B$ is a nonzero constant, the flow contracts (or expands) phase space at a constant rate. For example, a linearly damped mechanical system $\dot q=p/m$, $\dot p=-V'(q)-\gamma p$ has $\operatorname{div}X=-\gamma$ w.r.t.\ $\Omega=\dd q\wedge\dd p$. Hence, by Case~3 of Example~\ref{ex shear structures II}, all such systems with the same damping coefficient $\gamma$ are locally equivalent, regardless of the potential $V$, with normal form $X=\partial_x$, $\Omega=e^{-\gamma x}\dd x\wedge\dd y$. Note that $e^{\gamma x}\Omega$ is preserved by the flow, but since $x$ is a time function along the flow, this rescaling is time-dependent. This is the classical Caldirola-Kanai trick of describing damped systems by time-dependent Hamiltonians.
+        \item If $B$ is not constant, the invariant coframes $(\dd B/X(B),\alpha)$ and $(\dd\mu/X(\mu),\alpha)$ of Cases~1 and~2 are built from the rate of contraction of phase space and its rate of change along the flow, and such systems have at most one-dimensional symmetry groups.
+    \end{itemize}
+    Finally, note that the condition $\alpha(X)=0$ by itself carries no information, since every nonvanishing vector field on a surface has local first integrals. If we enlarged $G$ to the group of all invertible upper triangular matrices, a $G$-structure would only encode the foliation by the orbits of $X$, and all such structures would be locally equivalent. The entire content of the equivalence problem comes from the area form $\Omega$, i.e., from the condition $\det G=1$.
+\end{rem}
+
+\begin{example}[Second-order ODEs under fiber-preserving transformations {{\cite[Examples~11.1, 11.3, Thm.~12.14]{OlverEquiv}}}]\label{ex ode fiber-preserving}
+    Let us now carry out Cartan's method for the fiber-preserving equivalence problem for second-order ODEs $u_{xx}=Q(x,u,u_x)$, formulated in Example~\ref{ex 9.3 OlverEquiv}. We use the notation of Remark~\ref{rem lifted coframe in coords}. The base coframe on $\rmJ^1(\bbR,\bbR)\cong\bbR^3$ with coordinates $(x,u,p)$ is 
+    \[\vartheta^1=\dd u-p\dd x,\quad \vartheta^2=\dd p-Q(x,u,p)\dd x,\quad \vartheta^3=\dd x,\]
+    and since $\dd u=\vartheta^1+p\dd x$ and $\dd p=\vartheta^2+Q\dd x$, its structure equations are 
+    \[\dd\vartheta^1=-\vartheta^2\wedge\vartheta^3,\quad \dd\vartheta^2=-(Q_u\vartheta^1+Q_p\vartheta^2)\wedge\vartheta^3,\quad \dd\vartheta^3=0.\]
+    The structure group $G_f$ consists of the matrices $g$ below, and the lifted coframe $\theta=g\cdot\bm\theta$, where $\bm\theta=(\vartheta^1,\vartheta^2,\vartheta^3)$, on $\rmJ^1\times G_f$ is
+    \[g=\begin{pmatrix}
+        a_1 & 0 & 0\\
+        a_2 & a_3 & 0\\
+        0 & 0 & a_6
+    \end{pmatrix},\qquad 
+    \theta^1=a_1\vartheta^1,\quad \theta^2=a_2\vartheta^1+a_3\vartheta^2,\quad \theta^3=a_6\vartheta^3.\]
+    Following \cite{OlverEquiv}, we expand $+\dd g\,g^{-1}$ (rather than $-\dd g\,g^{-1}$) in Maurer-Cartan forms, so that the structure equations take the form $\dd\theta=\pi\wedge\theta+\text{torsion}$.
+
+    \emph{First loop.} We have 
+    \[\dd\theta^1=\dd a_1\wedge\vartheta^1+a_1\dd\vartheta^1=\alpha^1\wedge\theta^1+\frac{a_2}{a_3a_6}\theta^1\wedge\theta^3-\frac{a_1}{a_3a_6}\theta^2\wedge\theta^3,\quad \alpha^1=\frac{\dd a_1}{a_1}.\]
+    The first row of every matrix in $\frakg_f$ has the form $(\ast,0,0)$, so $\delta(z)^1_{23}=z(e_2)^1_3-z(e_3)^1_2=0$ for every $z\in\Hom(V,\frakg_f)$. Therefore, the coefficient $-a_1/(a_3a_6)$ is intrinsic torsion. The $\theta^1\wedge\theta^3$ term can be absorbed into $\alpha^1$, and one checks that all of the torsion in $\dd\theta^2$ and $\dd\theta^3$ is absorbable as well. Thus, $-a_1/(a_3a_6)$ is the only intrinsic torsion coefficient, and we normalize it to $-1$ by setting $a_3=a_1/a_6$. This reduces $G_f$ to the $3$-dimensional stabilizer $\wh G_f<G_f$ of this value, as in Remark~\ref{rem equivalence reduction}. (The normalization merely encodes the prolongation formula for the transformation of the derivative coordinate $p$, which we could have imposed from the start.)
+
+    \emph{Second loop.} The reduced lifted coframe on the $6$-dimensional manifold $\rmJ^1\times\wh G_f$ is 
+    \[\theta^1=a_1\vartheta^1,\quad \theta^2=a_2\vartheta^1+\frac{a_1}{a_6}\vartheta^2,\quad \theta^3=a_6\vartheta^3,\]
+    and the Maurer-Cartan forms of $\wh G_f$ are 
+    \[\dd g\,g^{-1}=\begin{pmatrix}
+        \alpha^1 & 0 & 0\\
+        \alpha^2 & \alpha^1-\alpha^6 & 0\\
+        0 & 0 & \alpha^6
+    \end{pmatrix},\quad 
+    \alpha^1=\frac{\dd a_1}{a_1},\quad \alpha^6=\frac{\dd a_6}{a_6},\quad \alpha^2=\frac{\dd a_2}{a_1}-\frac{a_2}{a_1}(\alpha^1-\alpha^6).\]
+    Recomputing the structure equations and absorbing all the absorbable torsion yields 
+    \[\dd\theta^1=\pi^1\wedge\theta^1-\theta^2\wedge\theta^3,\quad \dd\theta^2=\pi^2\wedge\theta^1+(\pi^1-\pi^6)\wedge\theta^2,\quad \dd\theta^3=\pi^6\wedge\theta^3,\label{eq ode fp structure eqs}\]
+    where 
+    \[\pi^1=\varpi^1+r\theta^1,\quad \pi^2=\varpi^2+s\theta^1+r\theta^2,\quad \pi^6=\varpi^6,\]
+    $r,s$ are arbitrary, and 
+    \[\varpi^1=\alpha^1-\frac{a_2}{a_1}\theta^3,\quad 
+    \varpi^2=\alpha^2+\left(\frac{Q_u}{a_6^2}-\frac{a_2Q_p}{a_1a_6}-\frac{a_2^2}{a_1^2}\right)\theta^3,\quad 
+    \varpi^6=\alpha^6-\left(\frac{Q_p}{a_6}+\frac{2a_2}{a_1}\right)\theta^3.\]
+    The only remaining torsion is the constant $-\theta^2\wedge\theta^3$, so there is nothing left to normalize. The two-parameter freedom $(r,s)$ in the absorption is exactly the first prolongation $\wh\frakg_f^{(1)}=\ker\delta$: writing 
+    \[z(e_j)=\begin{pmatrix}
+        x_j & 0 & 0\\
+        y_j & x_j-w_j & 0\\
+        0 & 0 & w_j
+    \end{pmatrix}\in\wh\frakg_f,\quad j=1,2,3,\]
+    the conditions $z(e_j)\cdot e_k=z(e_k)\cdot e_j$ reduce to $x_2=x_3=y_3=w_1=w_2=w_3=0$ and $y_2=x_1$, so $\wh\frakg_f^{(1)}\cong\bbR^2$ is parametrized by $r=x_1$ and $s=y_1$. (In \cite{OlverEquiv}, $\dim\frakg^{(1)}$ is called the \emph{degree of indeterminacy}.) Since $\wh\frakg_f^{(1)}\neq 0$ and no further normalization is possible, we have to prolong.
+
+    \emph{Prolongation.} The forms $\theta^1,\theta^2,\theta^3,\pi^1,\pi^2,\pi^6$ constitute a lifted coframe for a $G^{(1)}$-structure on $M^{(1)}\coloneqq\rmJ^1\times\wh G_f$, where the structure group is the abelian group 
+    \[G^{(1)}=\left\{\begin{pmatrix}
+        \rmI & 0\\
+        R & \rmI
+    \end{pmatrix}\;\middle|\; R=\begin{pmatrix}
+        r & 0 & 0\\
+        s & r & 0\\
+        0 & 0 & 0
+    \end{pmatrix}\right\}.\]
+    This is the bundle $P^{(1)}$ of pseudo-connections with the torsion fixed by \eqref{eq ode fp structure eqs}. The structure equations for $\theta^1,\theta^2,\theta^3$ are still \eqref{eq ode fp structure eqs}, so intrinsic torsion can only appear in the differentials of the $\pi$'s. After absorption, these are 
+    \[\begin{aligned}
+        \dd\pi^1&=\lambda\wedge\theta^1-\pi^2\wedge\theta^3,\\
+        \dd\pi^2&=\mu\wedge\theta^1+\lambda\wedge\theta^2-A\,\theta^2\wedge\theta^3+\pi^2\wedge\pi^6,\\
+        \dd\pi^6&=A\,\theta^1\wedge\theta^3+B\,\theta^2\wedge\theta^3-2\pi^2\wedge\theta^3,
+    \end{aligned}\]
+    where $\lambda,\mu$ are the (modified) Maurer-Cartan forms of $G^{(1)}$, and the intrinsic torsion coefficients are 
+    \[A=2s+\frac{a_2a_6Q_{pp}-a_1Q_{pu}}{a_1^2a_6},\qquad B=2r-\frac{Q_{pp}}{a_1}.\]
+    Both can be normalized to $0$ by setting 
+    \[r=\frac{Q_{pp}}{2a_1},\qquad s=\frac{a_1Q_{pu}-a_2a_6Q_{pp}}{2a_1^2a_6},\]
+    which reduces $G^{(1)}$ to $\{e\}$. The result is a canonical coframe $(\theta^1,\theta^2,\theta^3,\pi^1,\pi^2,\pi^6)$ on the $6$-dimensional manifold $M^{(1)}$, i.e., a Cartan geometry, with structure equations \eqref{eq ode fp structure eqs} and 
+    \[\begin{aligned}
+        \dd\pi^1&=-J_1\,\theta^1\wedge\theta^2+J_2\,\theta^1\wedge\theta^3-\pi^2\wedge\theta^3,\\
+        \dd\pi^2&=J_3\,\theta^1\wedge\theta^3+J_2\,\theta^2\wedge\theta^3+\pi^2\wedge\pi^6,\\
+        \dd\pi^6&=-2\pi^2\wedge\theta^3.
+    \end{aligned}\]
+    The structure functions are 
+    \[\begin{aligned}
+        J_1&=\frac{a_6}{2a_1^2}Q_{ppp},\qquad
+        J_2=\frac{1}{2a_1a_6}\left(Q_{pu}-\wh D_xQ_{pp}\right),\\
+        J_3&=\frac{1}{2a_1a_6^2}\left(2Q_{uu}+Q_pQ_{pu}-\wh D_xQ_{pu}-Q_uQ_{pp}\right)-\frac{a_2}{a_1}J_2,
+    \end{aligned}\]
+    where $\wh D_x=\partial_x+p\partial_u+Q\partial_p$ is the total derivative restricted to solutions of the ODE.
+
+    The equivalence problem is now reduced to the equivalence of coframes on $M^{(1)}$, as in \S\ref{sec: equiv of coframes}. In particular, if $J_1=J_2=J_3=0$, the structure functions are constant, the structure equations are the Maurer-Cartan equations of a $6$-dimensional Lie group, and by Corollary~\ref{thm 14.18 OlverEquiv} all such ODEs are locally equivalent. Since $Q=0$ has $J_1=J_2=J_3=0$, we have proved the following linearization theorem: $u_{xx}=Q(x,u,u_x)$ can be mapped to $u_{xx}=0$ by a fiber-preserving transformation iff it admits a $6$-dimensional group of fiber-preserving symmetries iff 
+    \[Q_{ppp}=0,\quad \wh D_xQ_{pp}=Q_{pu},\quad \wh D_xQ_{pu}+Q_uQ_{pp}=Q_pQ_{pu}+2Q_{uu}.\]
+    The first condition implies that only equations quadratic in $u_x$ can be linearized in this way. If the invariants $J_i$ do not all vanish, one continues to normalize. For instance, if $J_1J_2\neq 0$, one can set $J_1=J_2=1$, $J_3=0$ and solve for $a_1,a_2,a_6$, which yields an invariant coframe on $\rmJ^1$ itself. In all cases, the problem reduces to an invariant coframe on $\rmJ^1$ or on $M^{(1)}$, and it follows that the fiber-preserving symmetry group of a second-order ODE has dimension $0$, $1$, $2$, $3$, or $6$.
+\end{example}
 
 
 
