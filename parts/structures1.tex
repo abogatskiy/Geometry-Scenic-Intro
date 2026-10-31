@@ -5176,7 +5176,7 @@ There are two types of syzygies, the first arising from the commutation rules fo
 
 \section{Equivalence of submanifolds I}
 
-We now apply our general results to the equivalence problem for submanifolds under a \emph{freely} acting transformation group. (Non-free actions require prolongation, which we will address separately below.) Given submanifolds $S,\wb S\subset M$, we want to know whether or not they are \emph{congruent} under a group of transformations, meaning that $g\cdot S=\wb S$ for some $g\in G$. In this section, we shall only consider the local problem, so that the cogruence is only required to hold in a neighborhood of a point. Global questions can be handled by continuation processes (e.g., analytic continuation).
+We now apply our general results to the equivalence problem for submanifolds under a \emph{freely} acting transformation group. (Non-free actions require prolongation, which we will address separately below.) Given submanifolds $S,\wb S\subset M$, we want to know whether or not they are \emph{congruent} under a group of transformations, meaning that $g\cdot S=\wb S$ for some $g\in G$. In this section, we shall only consider the local problem, so that the congruence is only required to hold in a neighborhood of a point. Global questions can be handled by continuation processes (e.g., analytic continuation).
 
 \begin{defn}[Congruence of submanifolds]
     Let $S=i(X)$ and $\wb S=\wb i(\wb X)$ be two embedded $p$-dimensional submanifolds of an $n$-dimensional manifold $M$ parametrized by maps $i:X\to M$ and $\wb i:\wb X\to M$. Let there be a smooth Lie group action $G\acts M$. The two submanifolds are called \emph{(locally) congruent} under $G$ if there exists a group element $g\in G$ and a (local) diffeomorphism $\psi:X\supset U\to \wb U\subset\wb X$ such that 
@@ -5190,11 +5190,11 @@ In the case when $G$ acts freely, the solution to the congruence problem follows
     Let $G\acts M$ be a free, regular Lie group action. Let $\varTheta=(\bm\theta,\bm I)$ be a $G$-coframe on $M$. Then two embedded $p$-dimensional submanifolds $S=i(X)$ and $\wb S=\wb i(\wb X)$ are locally congruent under $G$ iff the pulled back extended coframes $\varOmega=(\bm\omega,\bm J)=i^\ast\varTheta$ on $X$ and $\wb\varOmega=(\bar{\bm\omega},\bar{\bm J})=\wb i^\ast\wb \varTheta$ on $\wb X$ are locally equivalent. 
 \end{thm}
 \begin{proof}
-    The moving coframe $\varTheta$ is determined by the pullback of the Maurer-Cartan coframe on $G$ along the corresponding moving frame $\rho$. By Theorem~\ref{thm 6.1 Sharpe fundamental local}, the $G$-valued maps $\rho\circ i$ and $\rho\circ\wb i$ are completely characterized, up to congruence in $G$, by their logarithmic derivatives $\bm\theta=(\rho\circ i)^\ast\bm\theta_G$, resp.\ $\bar{\bm\theta}=(\wb\rho\circ \wb i)^\ast\bm\theta_G$, which are equivalent to the $G$-coframes $\varOmega$, resp.\ $\wb\varOmega$, described in the statement. Congruence of $\rho\circ i$ and $\rho\circ\wb i$ in $G$ is equivalent to congruence of $i$ and $\wb i$ in $M$, so the congruence problem is reduced to the equivalence problem for extended coframes.
+    The moving coframe $\varTheta$ is determined by the pullback of the Maurer-Cartan coframe on $G$ along the corresponding moving frame $\rho$. By Theorem~\ref{thm 6.1 Sharpe fundamental local}, the $G$-valued maps $\rho\circ i$ and $\rho\circ\wb i$ are completely characterized, up to congruence in $G$, by their logarithmic derivatives $\bm\theta=(\rho\circ i)^\ast\bm\theta_G$, resp.\ $\bar{\bm\theta}=(\rho\circ \wb i)^\ast\bm\theta_G$, which are equivalent to the $G$-coframes $\varOmega$, resp.\ $\wb\varOmega$, described in the statement. Congruence of $\rho\circ i$ and $\rho\circ\wb i$ in $G$ is equivalent to congruence of $i$ and $\wb i$ in $M$, so the congruence problem is reduced to the equivalence problem for extended coframes.
 \end{proof}
 
 The diffeomorphism $\psi:X\to \wb X$ determining the reparametrization part in the correspondence must satisfy $\psi^\ast\wb{\varOmega}=\varOmega$. In other words, in terms of the defining coframe and invariants, 
-\[(\wb i\circ\psi)^\ast\bar{\bm\theta}=\bm\theta,\quad (\wb i\circ\psi)^\ast\bar{\bm I}=i^\ast\bm I.\label{eq 7.2 OlverCo2}\]
+\[(\wb i\circ\psi)^\ast\bm\theta=i^\ast\bm\theta,\quad (\wb i\circ\psi)^\ast\bm I=i^\ast\bm I.\label{eq 7.2 OlverCo2}\]
 
 \begin{rem}
     For the fixed parameter equivalence problem, we do not allow the reparametrization map $\psi$ in the equivalence condition \eqref{eq 7.1 OlverCo2}, which thus reduces to $\wb i(x)=g\cdot i(x)$, $x\in X$. The solution to this problem again follows from Theorem~\ref{thm 7.2 OlverCo2}: the pulled back $G$-coframes must now be identical: $\wb \varOmega=\varOmega$.
@@ -5216,7 +5216,7 @@ We will examine the role of independence conditions in detail in the next \chap.
 
 On a transverse submanifold, $\bm\omega=i^\ast\tilde{\bm\theta}$ forms a coframe on the parameter space $X$. Therefore, we can write the remaining pulled back $1$-forms as linear combinations of them:
 \[\omega^k=\sum_{j=1}^p K^k_j(x)\omega^j,\quad k=p+1,\ldots,n.\]
-The coefficients $K=(K^k_j)$ provide additional invariants for the overdetermined system $\varOmega$. Replacing the extra $1$-forms by these invariants reduces $\varOmega$ to an invariantly related extended coframe $\varUpsilon=\{\bm\omega,J,K\}$ on $X$, having the same symmetry and equivalence properties as $\varOmega$ does. We shall call $\varUpsilon$ the \emph{restricted} $G$-coframe on the submanifold $S$. If $\wb S$ is also transverse, we can similarly construct the extended coframe $\wb \varUpsilon=\{\bar{\bm\omega},\wb J,\wb K\}$ on $\wb X$ using the \emph{same} choice of coframe basis $\bar{\bm\omega}=\wb i^\ast\bm \omega$ relative to the given $G$-coframe.
+The coefficients $K=(K^k_j)$ provide additional invariants for the overdetermined system $\varOmega$. Replacing the extra $1$-forms by these invariants reduces $\varOmega$ to an invariantly related extended coframe $\varUpsilon=\{\bm\omega,J,K\}$ on $X$, having the same symmetry and equivalence properties as $\varOmega$ does. We shall call $\varUpsilon$ the \emph{restricted} $G$-coframe on the submanifold $S$. If $\wb S$ is also transverse, we can similarly construct the extended coframe $\wb \varUpsilon=\{\bar{\bm\omega},\wb J,\wb K\}$ on $\wb X$ using the \emph{same} choice of coframe basis $\bar{\bm\omega}=\wb i^\ast\tilde{\bm \theta}$ relative to the given $G$-coframe.
 
 
 \begin{lem}\label{lem 7.5 OlverCo2}
@@ -5251,13 +5251,13 @@ In particular, $S$ has maximal symmetry iff it has rank $0$, meaning that all th
     Consider the abelian Lie group $G=\bbR^3$ acting by translation on $M=\bbR^3$. A $G$-coframe is given by the coordinate $1$-forms $\varTheta=(\dd x,\dd y,\dd u)$. The surface $S=\{x^2+2yu= 0\mid y\neq 0\}$ satisfies the transversality condition $\restr{\dd x\wedge \dd y}{S}\neq 0$. Parametrizing $S$ by $i:(x,y)\mapsto (x,y,-\frac12 x^2/y)$, we see that the restricted $1$-forms $\varOmega=i^\ast\varTheta$ satisfy the linear relation $\dd u=-(x/y)\dd x+\frac12(x/y)^2\dd y$, leading to the functionally dependent invariants $-x/y$ and $x^2/(2y^2)$. Therefore, the restricted coframe on $S$ is 
     \[\varUpsilon=\left\{\dd x,\dd y,-\frac{x}{y},\frac{x^2}{2 y^2}\right\}.\]
 
-    However, $\varUpsilon$ is not involutive since $\dd(x/y)=y^{-1}\dd x-xy^{-2}\dd y$. so that the derived coframe\footnote{Actually, since the second invariant $x^2/(2y^2)$ is a function of the first, its derived invariants are derived, as their functional dependencies are automatically determined.}
+    However, $\varUpsilon$ is not involutive since $\dd(x/y)=y^{-1}\dd x-xy^{-2}\dd y$, so that the derived coframe\footnote{Actually, since the second invariant $x^2/(2y^2)$ is a function of the first, its derived invariants are redundant, as their functional dependencies are automatically determined.}
     \[\varUpsilon^{(1)}=\left\{\dd x,\dd y,-\frac{x}{y},\frac{x^2}{2y^2},-\frac{1}{y},\frac{x}{y^2},\frac{x}{y^2},-\frac{x^2}{y^3}\right\}\]
     is involutive. Therefore, $S$ is a surface of rank $2$ and order $1$, and hence admits at most a discrete translation symmetry group; in fact, the isotropy group of $S$ is trivial. The classifying manifold is the surface parametrized by the twelve invariants in 
     \[\varUpsilon^{(2)}=\left\{\dd x,\dd y,-\frac{x}{y},\frac{x^2}{2y^2},-\frac{1}{y},\frac{x}{y^2},\frac{x}{y^2},-\frac{x^2}{y^3},0,\frac{1}{y^2},-\frac{2x}{y^3},\frac{1}{y^2},-\frac{2x}{y^3},\frac{3x^2}{y^4}\right\},\]
     so that 
     \[\scrC(S)=\left\{(a_1,\ldots,a_{12})\in \bbR^{12}\middle| \begin{smallmatrix}
-        a_2=\frac12a_1^2,a_4=a_5=-a_1a_3,a_6=a_1^2a_3,a_7=0,\\
+        a_2=\frac12a_1^2,a_4=a_5=a_1a_3,a_6=a_1^2a_3,a_7=0,\\
         a_8=a_{10}=a_3^2,a_9=a_{11}=2a_1a_3^2,a_{12}=3a_1^2a_3^2
     \end{smallmatrix}\right\}.\]
 
@@ -5271,17 +5271,17 @@ We now discuss the role of the regularized action in the equivalence problem for
 The bundle $G\times X$ is the pullback under $i$ of $G\times M$. On $P$, we consider the $G$-coframe $\varTheta=(\bm \theta_G,\dd \mu,\mu)$. As a direct consequence of Theorem~\ref{thm 7.2 OlverCo2}, we obtain the following result.
 
 \begin{prop}\label{prop 7.10 OlverCo2}
-    Let $G\acts M$ be an arbitrary action. Two embedded submanifolds $S_G$ and $\wb S_G$ parametrized by maps $i_G:G\times X\to G\times M$, and $\wb i_G:G\times \wb X\to G\times M$ are locally $G$-congruent iff the pulled back extended coframes $\varOmega=(\bm\omega,\bm J)=i^\ast\varTheta$ on $X$ and $\wb\varOmega=(\bar{\bm \omega},\bar{\bm J})=\wb i^\ast\wb\varTheta$ are locally equivalent.
+    Let $G\acts M$ be an arbitrary action. Two embedded submanifolds $S_G$ and $\wb S_G$ parametrized by maps $i_G:G\times X\to G\times M$, and $\wb i_G:G\times \wb X\to G\times M$ are locally $G$-congruent iff the pulled back extended coframes $\varOmega=(\bm\omega,\bm J)=i_G^\ast\varTheta$ on $G\times X$ and $\wb\varOmega=(\bar{\bm \omega},\bar{\bm J})=\wb i_G^\ast\varTheta$ on $G\times\wb X$ are locally equivalent.
 \end{prop}
 
-Suppose that $S=i(X)$ satisfies the transversality condition specified by $\tilde{\bm \theta}$. Then $S_G=i_G(X)$ satisfies the transversality condition defined by $(\pi_M)^\ast\tilde{\bm\theta}\cup \bm\theta_G$. It is clear that we can construct a coframe $\wt\varOmega$ invariantly related to $\varTheta$ such that the $1$-forms $\omega^1,\ldots,\omega^p\in \wt\varOmega$ generate $(\pi_M)^\ast \tilde{\bm\theta}$. Following the procedure above Lemma~\ref{lem 7.5 OlverCo2}, we have the restricted $G$-coframe $\varUpsilon$ on $G\times X$, where $\bm\omega=(\omega^1,\ldots,\omega^p,\theta^1_G,\ldots,\theta^d_G)$ such that $\omega^1,\ldots,\omega^p$ annihilate the tangent spaces to the fibers of $\pi:G\times X\to X$. Denoting by similar barred expressions using the map $\wb i_G:G\times\wb X\to G\times M$, the equivalence theorem takes the following form.
+Suppose that $S=i(X)$ satisfies the transversality condition specified by $\tilde{\bm \theta}$. Then $S_G=i_G(G\times X)$ satisfies the transversality condition defined by $(\pi_M)^\ast\tilde{\bm\theta}\cup \bm\theta_G$. It is clear that we can construct a coframe $\wt\varOmega$ invariantly related to $\varTheta$ such that the $1$-forms $\omega^1,\ldots,\omega^p\in \wt\varOmega$ generate $(\pi_M)^\ast \tilde{\bm\theta}$. Following the procedure above Lemma~\ref{lem 7.5 OlverCo2}, we have the restricted $G$-coframe $\varUpsilon$ on $G\times X$, where $\bm\omega=(\omega^1,\ldots,\omega^p,\theta^1_G,\ldots,\theta^d_G)$ such that $\omega^1,\ldots,\omega^p$ annihilate the tangent spaces to the fibers of $\pi:G\times X\to X$. Denoting by similar barred expressions using the map $\wb i_G:G\times\wb X\to G\times M$, the equivalence theorem takes the following form.
 
 \begin{prop}\label{prop 7.11 OlverCo2}
-    Let $G\acts M$ be an arbitrary action. Two embedded submanifolds $i:X\to M$ and $\wb i:\wb X\to M$ which satisfy the transversality condition $\tilde{\bm\omega}$ are $G$-congruent iff the extended coframes $\varUpsilon$ on $G\times X$ and $\wb\varUpsilon$ on $G\times \wb X$ are equivalent.
+    Let $G\acts M$ be an arbitrary action. Two embedded submanifolds $i:X\to M$ and $\wb i:\wb X\to M$ which satisfy the transversality condition $\tilde{\bm\theta}$ are $G$-congruent iff the extended coframes $\varUpsilon$ on $G\times X$ and $\wb\varUpsilon$ on $G\times \wb X$ are equivalent.
 \end{prop}
 \begin{proof}
-    First suppose $X$ and $\wb X$ are equivalent. Thus, $\wb i=g\cdot (u\circ \psi^{-1})$, where $g\in G$ and $\psi:X\to \wb X$. Define the diffeomorphism $\varPsi:G\times X\to G\times\wb X$ by 
-    \[\varPsi(h,x)\coloneqq (g\cdot h,\psi(x)),\quad h\in G,\;x\in X.\label{eq 7.4 OlverCo2}.\]
+    First suppose $S$ and $\wb S$ are congruent. Thus, $\wb i=g\cdot (i\circ \psi^{-1})$, where $g\in G$ and $\psi:X\to \wb X$. Define the diffeomorphism $\varPsi:G\times X\to G\times\wb X$ by 
+    \[\varPsi(h,x)\coloneqq (hg^{-1},\psi(x)),\quad h\in G,\;x\in X.\label{eq 7.4 OlverCo2}\]
     Clearly, $\wb i_G\circ \varPsi=\wt \rmR_g\circ i_G$, where $\wt\rmR_g$ is the right regularized action \eqref{eq 3.2 OlverCo2} of $G$. Then 
     \[(\wb i_G\circ\varPsi)^\ast\bm\theta_G=(\wt\rmR_g\circ i_G)^\ast\bm\theta_G=i_G^\ast\bm\theta_G,\quad (\wb i_G\circ\varPsi)^\ast\mu=(\wt\rmR_g\circ i_G)^\ast\mu=i_G^\ast\mu.\]
     Conversely, if there exists such a $\varPsi$, then Proposition~\ref{prop 7.10 OlverCo2} implies that $\wb i_G\circ\varPsi=\wt\rmR_g\circ i_G$ for some $g\in G$. In order to finish the proof, we need to check that $\varPsi$ splits as in \eqref{eq 7.4 OlverCo2}. The conditions on $\varPsi$ in the theorem then imply $\varPsi^\ast\bar{\bm\theta}_G=\bm\theta_G$ and $\varPsi^\ast \bar{\bm\omega}=\bm\omega$, and hence $\varPsi$ has the form in \eqref{eq 7.4 OlverCo2}.
@@ -5300,7 +5300,7 @@ The proof is similar to that of Proposition~\ref{prop 7.11 OlverCo2}.
 \begin{rem}
     \begin{enumerate}
         \item If the function $L$ defining the invariant submanifold $\scrL_c$ is of rank $d=\dim G$ in the vertical direction for the projection $\pi_M:G\times M\to M$, then Proposition~\ref{prop 7.12 OlverCo2} is resolved by Theorem~\ref{thm 7.7 OlverCo2}.
-        \item The transformations in $G_S$ determined symmetries of the restricted coframe on $G\times X$. However, since at least $p$ of the invariants $\bm I$ are automatically functionally independent, $\dim G_S\leq\dim G$, as it should be.
+        \item The transformations in $G_S$ determine symmetries of the restricted coframe on $G\times X$. However, since at least $p$ of the invariants $\bm I$ are automatically functionally independent, $\dim G_S\leq\dim G$, as it should be.
     \end{enumerate}
 \end{rem}
 
