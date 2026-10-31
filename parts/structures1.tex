@@ -4467,7 +4467,7 @@ Actually, the preceding computation can be slightly simplified by extending our 
 The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduction $\delta=(\alpha-u\gamma)/u_x$. Substituting into $\wh\eta_0^3$ leads to a second dependency, and the resulting normalization yields $\alpha=\gamma(u-2u_x^2/u_{xx})$. At this stage, even though we have not normalized the final parameter $\gamma$, it no longer appears in the coframe, which coincides with our earlier one, \eqref{eq 5.10 OlverCo}. It does, of course, occur in the final moving frame lift, which is obtained by multiplying the matrix $a_2$ in \eqref{eq 5.9 OlverCo} by $\gamma$. However, $\gamma$ plays no other role in the problem, and merely reflects a final indeterminacy stemming from the ineffectiveness of the group action. The main point in this solution method is that one does not have to explicitly implement an effective action, as was done in the original lift \eqref{eq 5.5 OlverCo}, in order to solve the problem. Indeed, in more complicated examples, it may be relatively straightforward to write down the compatible lift for an ineffective group action, whereas doing the same for the effectively acting quotient group $G\slash G_M$ may be considerably more complicated.
 
 \begin{example}
-    Consider the elementary similarity group $G=\bbR^+\ltimes\bbR^2$ acting transitively on $M=\bbR^2$ via 
+    Consider the elementary similarity group $G=\bbR_+\ltimes\bbR^2$ acting transitively on $M=\bbR^2$ via 
     \[g:\quad (x,u)\mapsto (\alpha x+a,\alpha u+b).\]
     For the basepoint $m_0=(0,0)$, the associated moving frame of order $0$ is the lift with $a=x$, $b=u$. The Maurer-Cartan forms $(\dd\alpha/\alpha,\dd a/\alpha,\dd b/\alpha)$ are pulled back to provide the order zero moving coframe, whose semibasic (or, more precisely, non-contact) components are 
     \[\eta_0^1=\frac{\dd\alpha}{\alpha},\quad\eta_0^2=\frac{\dd x}{\alpha},\quad \eta_0^3=\frac{u_x\dd x}{\alpha}.\]
@@ -5523,7 +5523,7 @@ In terms of the invariant local coordinates $\mu^{(r)}=\left(y,v^{(r)}\right)\in
 In the second formula, $l=\max(r,|K|)$. As above, some of these may be constant and/or functionally dependent due to normalization. However,  \eqref{eq 11.7 OlverCo2} do include a complete system of differential invariants, meaning that, provided $k\geq r$, any other $k$-th order differential invariant can be locally expressed as a function of the $J^i$ and $I^\alpha_K$ for $|K|\leq k$.
 
 \begin{example}
-    Consider the elementary similarity group $G=\bbR^+\ltimes \bbR^2$ acting on $M=\bbR^2$ via 
+    Consider the elementary similarity group $G=\bbR_+\ltimes \bbR^2$ acting on $M=\bbR^2$ via 
     \[(x,u)\mapsto (\alpha x+a,\alpha^3 u+b).\label{eq 11.8 OlverCo2}\]
     If we choose $y=\alpha x+a$ as the lifted independent variable, then $\eta=\dd_M y=\alpha\dd x$ is the corresponding semibasic invariant form, with invariant differential operator $\calE=D_y=\alpha^{-1}D_x$. Successively applying $\calE$ to the dependent order zero lifted invariant $v$ produces the complete system of higher-order lifted invariants: $v_r=\calE^r v=\alpha^{3-r}u_r$, where $u_r=D_x^ru$ and $r\geq 1$. Therefore, on $P^{(4)}$, say, the lifted invariants $\mu^{(4)}$ are 
     \[y=\alpha x+a,v=\alpha^3u+b,v_y=\alpha^2u_x,v_{yy}=\alpha u_{xx},v_{yyy}=u_{xxx},v_{yyyy}=\alpha^{-1}u_{xxxx}.\]
@@ -6139,15 +6139,15 @@ We have thus succeeded in reformulating the equivalence problem for $G$-structur
 Since we are mostly interested in local equivalence problems, it is useful to look at the meaning of Proposition~\ref{prop 1.1.2.2 BryantEquiv} in local trivializations. Suppose $s$ and $\wb s$ are local sections of $P$ and $\wb P$, respectively. Due to the reproducing property of the soldering forms, these sections can be identified with the pullbacks $s^\ast\theta$ and $\wb s^\ast\wb\theta$, respectively. Because $\theta$ and $\wb\theta$ vanish only in vertical directions, these pullbacks define local coframes on $M$ and $\wb M$, respectively:
 \[\bm\theta\coloneqq s^\ast\theta,\quad \bar{\bm\theta}\coloneqq \wb s^\ast \wb\theta.\label{eq 1780135}\]
 For the two $G$-structures to be equivalent, we need to find a local diffeomorphism $F$ of the bases whose prolongation maps $s$ to \emph{some} section of $\wb P$ -- not necessarily $\wb s$. But any two local sections of $\wb P$ differ by the application of a $G$-valued function $g$ via the principal action, in particular:
-\[F^{(1)}\circ s(m)=\Phi_{g(m)}^{-1}\circ \wb s(m).\]
+\[F^{(1)}\circ s(m)=\Phi_{g(m)}^{-1}\circ \wb s(F(m)).\]
 Pulling back the original equivalence condition $\theta=\left(F^{(1)}\right)^\ast\wb\theta$ by $s$, we find 
-\[s^\ast \theta=s^\ast \left(F^{(1)}\right)^\ast\wb\theta=\left(F^{(1)}\circ s\right)^\ast\wb\theta=\wb s^\ast \circ \Phi_{g^{-1}}^\ast \wb\theta=\sigma^0_{g}\circ \wb s^\ast \wb\theta.\]
-Thus, in terms of the above coframes, this equivalence condition translates to 
+\[s^\ast \theta=s^\ast \left(F^{(1)}\right)^\ast\wb\theta=\left(F^{(1)}\circ s\right)^\ast\wb\theta=F^\ast\wb s^\ast \Phi_{g^{-1}}^\ast \wb\theta=\sigma^0_{g}\circ F^\ast\wb s^\ast \wb\theta.\]
+Thus, in terms of the above coframes (and after replacing $g$ by $g^{-1}$), this equivalence condition translates to 
 \[G\text{-equivalence problem:}\quad \boxed{F^\ast \bar{\bm\theta}=g(m)\cdot \bm\theta,}\label{eq G-equivalence problem}\]
 where we think of $g(m)$ as an $n\times n$ matrix-valued function acting on the values of $\bm{\theta}$ via the standard action $\sigma^0$ of $G$ on $V$. The $G$-equivalence problem is thus a simple generalization of the original equivalence problem for coframes, where now there is an additional possibility of the appearance of an arbitrary $G$-valued function $g$.
 
 \begin{cor}
-    Two first-order $G$-structures $(P\to M,\theta)$, $(P'\to M',\theta')$ are locally equivalent iff some local coframes $\bm\theta$, $\bar{\bm\theta}$ on $U\subset M$ and $\wb U\subset \wb M$, respectively, defined as the local representatives \eqref{eq 1780135} of their soldering forms, are $G$-equivalent, i.e., there exists a diffeomorphism $F:U\to \wb U$ and a smooth function $g:U\to G$ such that $(F^\ast \bar{\bm\theta})_m=\sigma^0_{g(m)}\circ \bm\theta_m$ for all $m\in U$.
+    Two first-order $G$-structures $(P\to M,\theta)$, $(\wb P\to \wb M,\wb\theta)$ are locally equivalent iff some local coframes $\bm\theta$, $\bar{\bm\theta}$ on $U\subset M$ and $\wb U\subset \wb M$, respectively, defined as the local representatives \eqref{eq 1780135} of their soldering forms, are $G$-equivalent, i.e., there exists a diffeomorphism $F:U\to \wb U$ and a smooth function $g:U\to G$ such that $(F^\ast \bar{\bm\theta})_m=\sigma^0_{g(m)}\circ \bm\theta_m$ for all $m\in U$.
 \end{cor}
 
 \begin{rem}\label{rem soldering on UxG}
@@ -6165,9 +6165,9 @@ The following several examples display the surprisingly wide range of equivalenc
 \begin{example}[Equivalence of differential forms {{\cite[Example~9.1]{OlverEquiv}}}]\label{ex 9.1 OlverEquiv}
     The simplest possible example is the problem of equivalence for $1$-forms. Two differential forms $\omega,\wb\omega$ on manifolds $M,\wb M$, respectively, are equivalent iff there is a smooth local diffeomorphism $F:M\supset U\to \wb M$ such that $F^\ast \wb\omega=\omega$. If these are $1$-forms, this is already in the necessary form for Cartan's approach: in this case, $G=\{e\}$. 
     
-    However, if they are $2$-forms or higher, we must re-express them in terms of $1$-forms. If $\dim M=n$, then define the \emph{rank} of a $2$-form $\omega$ at $m\in M$ as the smallest integer $0\leq r\leq \frac12 n$ such that 
+    However, if they are $2$-forms or higher, we must re-express them in terms of $1$-forms. If $\dim M=n$, then define the \emph{rank} of a $2$-form $\omega$ at $m\in M$ as the integer $0\leq r\leq \frac12 n$ such that 
     \[\omega^{\wedge r}_m\neq 0,\quad \text{but}\quad \omega^{\wedge(r+1)}_m=0.\]
-    It is obvious that rank is invariant under local diffeomorphisms, in particular equivalences. To be able to solve the equivalence problem, we have to assume that this rank is constant (at least on some open set). Then we can notice that the action $A\mapsto gAg^\top $ of $\GL_n(\bbR)$ on the space of \emph{skew-symmetric} $n\times n$ matrices $A$ can be identified with its induced action on the space of $2$-forms $\bigwedge\nolimits^2\bbR^n$. A consequence of the Jordan normal form is that the orbits of this action are completely classified by the rank $r$ of the $2$-form. Hence, any $2$-form of rank $r$ can be locally brought to the canonical form 
+    It is obvious that rank is invariant under local diffeomorphisms, in particular equivalences. To be able to solve the equivalence problem, we have to assume that this rank is constant (at least on some open set). Then we can notice that the action $A\mapsto gAg^\top $ of $\GL_n(\bbR)$ on the space of \emph{skew-symmetric} $n\times n$ matrices $A$ can be identified with its induced action on the space of $2$-forms $\bigwedge\nolimits^2\bbR^n$. A consequence of the normal form for skew-symmetric bilinear forms is that the orbits of this action are completely classified by the rank $r$ of the $2$-form. Hence, any $2$-form of rank $r$ can be locally brought to the canonical form 
     \[\omega=\sum_{j=1}^r \omega^j\wedge\omega^{j+r},\]
     by some choice of a local $2r$-coframe $\omega^1,\ldots,\omega^{2r}$ on $M$. Assuming $\wb \omega$ also has rank $r$ (which it has to for there to be an equivalence), an analogous formula can be written for $\wb\omega$ in terms of a $2r$-coframe $\wb\omega^1,\ldots,\wb\omega^{2r}$ on $\wb M$. The Jacobian of any potential equivalence $F$ can be written in components w.r.t.\ these coframes (completed arbitrarily to full coframes), and the equivalence condition will reduce to the requirement that the top left $2r\times 2r$ block of $F_\ast$ belong to the symplectic group $\Sp_{2r}(\bbR)$. Therefore, the $2$-forms $\omega,\wb\omega$ are equivalent iff they have the same rank and the corresponding sets of $1$-forms obey the transformation rule 
     \[\left(F^\ast\wb\omega^i\right)(m)=\sum_{j=1}^{2r}g^i_j(m)\omega^j(m),\quad i=1,\ldots,2r,\]
@@ -6176,17 +6176,17 @@ The following several examples display the surprisingly wide range of equivalenc
 
 
 \begin{example}[Equivalence of Riemannian metrics {{\cite[Example~9.2]{OlverEquiv}}}]\index{Isometry}
-    The basic equivalence problem in Riemannian geometry asks when there is a local, metric-preserving diffeomorphism (\emph{isometry}) mapping a given Riemannian manifold $(M, \sfg)$ to a second Riemannian manifold $(\wb M,\wb\sfg)$ of the same dimension. In other words, the equivalence map $F$ must satisfy $F^\ast\wb\sfg=\sfg$. In order to recast this problem in terms of $1$-forms, we recall the algebraic canonical form for symmetric positive-definite matrices $A$, namely that they can be turned into the identity matrix by a general linear transformations $A\mapsto gAg^\top =\rmI_n$, $g\in \GL_n(\bbR)$. This allows us to introduce local coframes $\bm\theta$ on $M$ and $\wb\theta$ on $\wb M$ which diagonalize the metrics at each point:
+    The basic equivalence problem in Riemannian geometry asks when there is a local, metric-preserving diffeomorphism (\emph{isometry}) mapping a given Riemannian manifold $(M, \sfg)$ to a second Riemannian manifold $(\wb M,\wb\sfg)$ of the same dimension. In other words, the equivalence map $F$ must satisfy $F^\ast\wb\sfg=\sfg$. In order to recast this problem in terms of $1$-forms, we recall the algebraic canonical form for symmetric positive-definite matrices $A$, namely that they can be turned into the identity matrix by a general linear transformation $A\mapsto gAg^\top =\rmI_n$, $g\in \GL_n(\bbR)$. This allows us to introduce local coframes $\bm\theta$ on $M$ and $\wb\theta$ on $\wb M$ which diagonalize the metrics at each point:
     \[\sfg=\sum_{i=1}^n \theta^i\otimes\theta^i,\quad \wb\sfg=\sum_{i=1}^n\wb\theta^i\otimes\wb\theta^i.\]
     The two metrics are equivalent iff their diagonalizing coframes satisfy 
     \[F^\ast\wb\theta^i=\sum_j g^i_j(m)\theta^j,\quad i=1,\ldots,n,\]
     where, in this case, the $n\times n$ matrix $g(m)=\left(g^i_j(m)\right)$ is required to take values in the orthogonal group $\Or_n$, the stabilizer group of the algebraic canonical form. For pseudo-Riemannian metrics of signature $(p,n-p)$, the only difference is that there may be minuses in front of $n-p$ of the terms, $\sfg=\sum_i \pm \theta^i\otimes\theta^i$, and the structure group is $\Or_{p,n-p}$.
 
-    The isometric equivalence problem can be relaxed to give the \emph{conformal equivalence} problem, where $F^\ast\wb\sfg=\lambda^2\sfg$ for some function $\lambda\neq 0$. In terms of the coframe, $F^\ast\bar{\bm{\theta}}=g(m)\cdot \bm\theta$, where $g$ takes values in the conformal orthogonal group $\CO_n=\{\lambda R\mid R\in\Or_n,\lambda\in\bbR^\times\}\cong \Or_n\times \bbR^\times$.
+    The isometric equivalence problem can be relaxed to give the \emph{conformal equivalence} problem, where $F^\ast\wb\sfg=\lambda^2\sfg$ for some function $\lambda\neq 0$. In terms of the coframe, $F^\ast\bar{\bm{\theta}}=g(m)\cdot \bm\theta$, where $g$ takes values in the conformal orthogonal group $\CO_n=\{\lambda R\mid R\in\Or_n,\lambda\in\bbR^\times\}\cong \Or_n\times \bbR_+$.
 \end{example}
 
 \begin{example}[Equivalence of differential equations {{\cite[Example~9.3]{OlverEquiv}}}]\label{ex 9.3 OlverEquiv}
-    The general equivalence problem is to determine when two given differential equations can be mapped to each other by a suitable change of variables (most generally, a contact transformation). Such problems were the focus of much research in the 19-th century and again in the late 20-th century. Here we show how to formulate the simples such equivalence problem, that of a scalar second-order ODE, in the language of differential forms. (In fact, the simples problem would be a scalar first-order ODE, but, as we know, all first-order equations, a.k.a.\ vector fields, are equivalent away from singularities, so that problem is essentially trivial.) Consider a general smooth scalar second-order ODE 
+    The general equivalence problem is to determine when two given differential equations can be mapped to each other by a suitable change of variables (most generally, a contact transformation). Such problems were the focus of much research in the 19-th century and again in the late 20-th century. Here we show how to formulate the simplest such equivalence problem, that of a scalar second-order ODE, in the language of differential forms. (In fact, the simplest problem would be a scalar first-order ODE, but, as we know, all first-order equations, a.k.a.\ vector fields, are equivalent away from singularities, so that problem is essentially trivial.) Consider a general smooth scalar second-order ODE 
     \[u_{xx}=Q(x,u,u_x).\label{eq 9.5 OlverEquiv}\]
     There are a number of possible classes of admissible changes of variables, and each class will lead to a different equivalence problem. Here we explain how to set up the three most basic of these problems -- equivalence under fiber-preserving, point, and contact transformations. The first step is to notice that, once the transformation of the independent and dependent variable is specified, the derivative variables $p=u_x$, $q=u_{xx}$, etc., must transform according to the associated prolonged transformation. The prolonged maps are contact transformations on the jet spaces $\rmJ^r(\bbR,\bbR)$, $r\geq 1$, and hence map contact forms to contact forms. In particular, the first-order contact forms must agree up to multiple,
     \[\dd\wb u-\wb p\dd \wb x=\lambda(\dd u-p\dd x),\label{eq 9.6 OlverEquiv}\]
@@ -6198,7 +6198,7 @@ The following several examples display the surprisingly wide range of equivalenc
 
     In the case of either point transformations or fiber-preserving transformations, we must impose additional restrictions, again prescribed by suitable $1$-form conditions.  A fiber-preserving transformation requires that we not mix up independent and dependent variables, so $\wb x=\varphi(x)$, so 
     \[\dd\wb x=\alpha\dd x.\label{eq 9.9 OlverEquiv}\]
-    The reader can show that equations \eqref{eq 9.6 OlverEquiv}, \eqref{eq 9.8 OlverEquiv}, and \eqref{eq 9.9 OlverEquiv} implies that the two ODE are equivalent under a fiber-preserving transformation. (In particular, $\wb u=\psi(x,u)$ necessarily only depends on $x$ and $u$.) Similarly, the condition 
+    The reader can show that equations \eqref{eq 9.6 OlverEquiv}, \eqref{eq 9.8 OlverEquiv}, and \eqref{eq 9.9 OlverEquiv} imply that the two ODEs are equivalent under a fiber-preserving transformation. (In particular, $\wb u=\psi(x,u)$ necessarily only depends on $x$ and $u$.) Similarly, the condition 
     \[\dd\wb x=\alpha\dd x+\beta\dd u,\label{eq 9.10 OlverEquiv}\]
     will, in addition to \eqref{eq 9.6 OlverEquiv} and \eqref{eq 9.8 OlverEquiv}, encode equivalence of the ODEs under point transformations $\wb x=\varphi(x,u)$, $\wb u=\psi(x,u)$. Note that if we are allowing general contact transformations, then $\wb x$ can depend on all three variables $x,u,p$, hence the (vacuous) condition 
     \[\dd\wb x=\alpha\dd x+\beta\dd u+\gamma\dd p\label{eq 9.11 OlverEquiv}\]
@@ -6227,7 +6227,7 @@ The following several examples display the surprisingly wide range of equivalenc
 \begin{example}[Equivalence of variational problems]
     The basic equivalence problem in the calculus of variations is to determine when two variational problems can be transformed into each other by a suitable change of variables. Here we formulate the simplest such problem, that of a first order variational problem
     \[\calS[u]=\int L(x,u,u_x)\dd x\]
-    in one independent variable $x$, and one dependent variable, $u$. As in the equivalence problem for differential equations, we must precisey specify which change of variables, e.g., fiber-preserving, point, or contact transformations, are to be allowed. Moreover, there are several kinds of equivalence one might demand. The ``standard equivalence problem'' requires that the two functionals have the same values on functions $\calS[u]=\wb\calS[\wb u]$. The more general ``divergence equivalence problem'' only requires that the Euler-Lagrange equations match up. Both equivalence problems were discussed in the preceding \chap; let us see how to encode them in Cartan form. First, as in the preceding example, the prolonged trasnformations on $\rmJ^1$ must satisfy the basic contact condition \eqref{eq 9.6 OlverEquiv}. Second, according to \eqref{eq:7.16:OlverEquiv}, two first-order variational problems are equivalent under a point transformation iff the associated Lagrangian forms are contact-equivalent under its first prolongation, so that 
+    in one independent variable $x$, and one dependent variable, $u$. As in the equivalence problem for differential equations, we must precisely specify which changes of variables, e.g., fiber-preserving, point, or contact transformations, are to be allowed. Moreover, there are several kinds of equivalence one might demand. The ``standard equivalence problem'' requires that the two functionals have the same values on functions $\calS[u]=\wb\calS[\wb u]$. The more general ``divergence equivalence problem'' only requires that the Euler-Lagrange equations match up. Both equivalence problems were discussed in the preceding \chap; let us see how to encode them in Cartan form. First, as in the preceding example, the prolonged transformations on $\rmJ^1$ must satisfy the basic contact condition \eqref{eq 9.6 OlverEquiv}. Second, according to \eqref{eq:7.16:OlverEquiv}, two first-order variational problems are equivalent under a point transformation iff the associated Lagrangian forms are contact-equivalent under its first prolongation, so that 
     \[\wb L\dd \wb x=L\dd x+\mu(\dd u-p\dd x)=L\dd x+\mu\theta,\label{eq:9.13:OlverEquiv}\]
     for some function $\mu(x,u,p)$, where $\theta=\dd u-p\dd x$ is the contact form. The reader should verify that the two $1$-form conditions \eqref{eq 9.6 OlverEquiv}, \eqref{eq:9.13:OlverEquiv}, completely encode the standard equivalence problem for variational problems under point transformations: if $F:\rmJ^1\to \rmJ^1$ satisfies \eqref{eq 9.6 OlverEquiv} and \eqref{eq:9.13:OlverEquiv} for some choice of functions $\lambda,\mu$, then, necessarily, $F$ is a) a prolonged point transformation, which b) maps the variational problem with Lagrangian $L$ to that with Lagrangian $\wb L$. In the more restrictive fiber-preserving case, we set $\mu=0$ in \eqref{eq:9.13:OlverEquiv}, but retain \eqref{eq 9.6 OlverEquiv} as it stands. On the other hand, a contact transformation does not map a first order Lagrangian directly to another first order Lagrangian, and so this equivalence problem plays no role here. (The equivalence of higher-order Lagrangians under contact transformations is, however, of interest; see \cite[Ch.~10]{OlverEquiv}.)
 
@@ -6235,10 +6235,10 @@ The following several examples display the surprisingly wide range of equivalenc
     \[\wb L\dd \wb x=(L+D_xA)\dd x+\mu(\dd u-p\dd x)=\nu L\dd x+\mu \theta,\label{eq 9.14 OlverEquiv}\]
     where $\nu=1+(D_xA)/L$. There are two methods of encoding the transformation rules for the divergence term. The first is to extend the jet space $\rmJ^1$ by introducing an auxiliary real variable $w\in \bbR$. Any point transformation will induce a transformation of the extended space $\rmJ^1\times\bbR$, where the derivative coordinate $p$ transforms via prolongation, and the auxiliary variable obeys the transformation rule $\wb w=w+A(x,u)$. Therefore, its differential satisfies 
     \[\dd\wb w=\dd w+\dd A=\dd w+D_xA\dd x+A_u\theta=\dd w+(\nu-1)L\dd x+\rho\theta,\label{eq 9.15 OlverEquiv}\]
-    where $\nu$ is as in \eqref{eq 9.14 OlverEquiv}, and $\rho=A_u$. As above, the conditions \eqref{eq 9.6 OlverEquiv}, \eqref{eq 9.14 OlverEquiv}, \eqref{eq 9.15 OlverEquiv} serve to completely encode the divergence equivalence problem under point transformationsl furthermore, taking $\mu=0$ will restrict to fiber-preserving transformations.
+    where $\nu$ is as in \eqref{eq 9.14 OlverEquiv}, and $\rho=A_u$. As above, the conditions \eqref{eq 9.6 OlverEquiv}, \eqref{eq 9.14 OlverEquiv}, \eqref{eq 9.15 OlverEquiv} serve to completely encode the divergence equivalence problem under point transformations; furthermore, taking $\mu=0$ will restrict to fiber-preserving transformations.
 
     An alternative approach, due to Robert Bryant, is to use the invariance of the Cartan form 
-    \[\eta_L=L\dd x+\frac{\partial L}{\partial p}\theta=L\dd x+\frac{\partial L}{\partial p}\theta \label{eq 9.16 OlverEquiv}\]
+    \[\eta_L=L\dd x+\frac{\partial L}{\partial p}\theta=\left(L-p\frac{\partial L}{\partial p}\right)\dd x+\frac{\partial L}{\partial p}\dd u \label{eq 9.16 OlverEquiv}\]
     directly. According to Exercise~\ref{xca 7.40 OlverEquiv}, two first-order Lagrangians are divergence-equivalent iff their Cartan forms are equivalent up to an exact form. Locally, by the Poincar\'e Lemma~\ref{lem poincare classic}, this condition can be replaced by the equivalence of their differentials, $\dd\wb\eta_{\wb L}=\dd\eta_L$. Using \eqref{eq 9.16 OlverEquiv}, we find $\dd\eta_L=\omega_L\wedge\theta$, where 
     \[\omega_L=-(L_u-L_{px}-pL_{pu})\dd x+L_{pp}\dd p=-\wt\sfE(L)\dd x+L_{pp}\dd p,\]
     and $\wt\sfE(L)$ denotes the $\rmJ^1$ truncation of the Euler-Lagrange expression associated with $L$. As in Example~\ref{ex 9.1 OlverEquiv}, the invariance of the $2$-form $\dd\eta_L=\omega_L\wedge\theta$ can be replaced by the $1$-form conditions 
@@ -6251,13 +6251,13 @@ The following several examples display the surprisingly wide range of equivalenc
 
 Sometimes we want to restrict the class of equivalence mappings so much that the resulting conditions comprise an \emph{overdetermined} problem, in that the corresponding $1$-forms are not linearly independent. Conversely, some equivalence problems may be \emph{underdetermined}. Luckily, both cases are easy to deal with. In the underdetermined case, one can simply adjoin arbitrary $1$-forms to complete the given ones to a coframe and proceed as above. 
 
-In the overdetermined case, there exist different approaches. One simply reduces the problem to equivalence of extended coframes as it was already done \S\ref{sec: equiv of coframes}. Another method proceeds via normalization of invariants (which, as we have seen, is practically equivalent to extending the coframes with those invariants). The idea is to split the full linearly dependent set of $1$-forms into multiple potentially overlapping sets of linearly independent ones, such that each set is either a coframe or can be readily completed to one.  For simplicity, let us assume there are just two such sets. Therefore, we have a pair of coframes $\bm\theta$ and $\bm\vartheta$ on $M$, and corresponding coframes $\bar{\bm\theta}$ and $\bar{\bm\vartheta}$ on $\wb M$. We will also have two matrix subgroups $G,G'<\GL_n(\bbR)$, so that the equivalence conditions are represented by the combined coframe conditions 
+In the overdetermined case, there exist different approaches. One simply reduces the problem to equivalence of extended coframes, as was already done in \S\ref{sec: equiv of coframes}. Another method proceeds via normalization of invariants (which, as we have seen, is practically equivalent to extending the coframes with those invariants). The idea is to split the full linearly dependent set of $1$-forms into multiple potentially overlapping sets of linearly independent ones, such that each set is either a coframe or can be readily completed to one.  For simplicity, let us assume there are just two such sets. Therefore, we have a pair of coframes $\bm\theta$ and $\bm\vartheta$ on $M$, and corresponding coframes $\bar{\bm\theta}$ and $\bar{\bm\vartheta}$ on $\wb M$. We will also have two matrix subgroups $G,G'<\GL_n(\bbR)$, so that the equivalence conditions are represented by the combined coframe conditions 
 \[F^\ast\bar{\bm\theta}=g\cdot \bm\theta,\quad F^\ast\bar{\bm\vartheta}=g'\cdot \bm\vartheta,\]
 for some $F:M\to\wb M$ and $G$ and $G'$-valued functions $g,g'$ on $M$. Moreover, since both $\bm\theta$ and $\bm\vartheta$ are coframes, they are linearly related:
 \[\bar{\bm\theta}=\wb a\cdot \bar{\bm\vartheta},\quad \bm\theta=a\cdot \bm\vartheta,\]
-where $a=(a^i_j(\wb m))$ defined on $\wb M$ and $\wb a=(\wb a^i_j(m))$ defined on $M$ take values in invertible $n\times n$ matrices. Combining these two conditions, we have 
-\[\wb a F^\ast\bar{\bm\vartheta}=ga\bm\vartheta,\quad \text{hence}\quad \wb a F^\ast\bar{\bm\vartheta}=gag^{\prime-1}(h\bm\vartheta).\]
-Comparing this with the equivalence equation $F^\ast\bar{\bm\vartheta}=g' \bm\vartheta$ and using the fact that $\bm\vartheta$ is a coframe, we deduce that 
+where $a=(a^i_j(m))$ defined on $M$ and $\wb a=(\wb a^i_j(\wb m))$ defined on $\wb M$ take values in invertible $n\times n$ matrices. Combining these two conditions, we have 
+\[(\wb a\circ F) F^\ast\bar{\bm\vartheta}=ga\bm\vartheta,\quad \text{hence}\quad (\wb a\circ F)g'\bm\vartheta=ga\bm\vartheta.\]
+Using the fact that $\bm\vartheta$ is a coframe, we deduce that 
 \[\wb a(\wb m)=ga(m)g^{\prime-1}\quad \text{whenever}\quad \wb m=F(m).\]
 In other words, the matrix function $g\cdot a(m)g^{\prime-1}$ defined on $G\times G'\times M$, where $a$ expresses the linear relationship between two coframes, is invariant under equivalences of (pairs of) coframes. Thus, the entries of this matrix can be normalized as in the coframe method. Non-constant entries that do not depend on any group parameters $g,g'$ provide invariant functions for the equivalence problem and must be incorporated into the solution. Under the requisite normalizations, the two equivalence conditions will become consistent, and the overdetermined problem will reduce to an ordinary $G$-equivalence problem involving a single structure group.
 
@@ -6269,15 +6269,15 @@ In other words, the matrix function $g\cdot a(m)g^{\prime-1}$ defined on $G\time
         \dd \wb x\\ \dd \wb u
     \end{pmatrix}=
     \begin{pmatrix}
-        u & 0\\
-        0 & v
+        a & 0\\
+        0 & b
     \end{pmatrix}
     \begin{pmatrix}
         \dd x\\ \dd u
     \end{pmatrix}.
     \]
     This is an overdetermined problem in that the conditions on the Jacobian of $F$ are specified on $\dd \wb x$, $\dd\wb u$, and $\dd \wb u-\wb f\dd\wb x$, which form a linearly dependent set of $1$-forms. If we note the relation 
-    \[\dd u-\wb f\dd \wb x-\dd \wb u+\wb f\dd \wb x=0,\]
+    \[(\dd \wb u-\wb f\dd \wb x)-\dd \wb u+\wb f\dd \wb x=0,\]
     and if we change the forms by defining 
     \[\wb\theta^1=\wb{f}\dd\wb x,\quad \wb\theta^2=\dd \wb u,\quad \wb\theta^3=\dd\wb u-\wb f\dd\wb x,\]
     then we have a constant coefficient relation 
@@ -6285,12 +6285,12 @@ In other words, the matrix function $g\cdot a(m)g^{\prime-1}$ defined on $G\time
     If we make the analogous choice of coframe in the original coordinates, then an equivalence $F$ will satisfy 
     \[F^\ast \begin{pmatrix}
         \wb\theta^1\\\wb\theta^2\\\wb\theta^3
-    \end{pmatrix}
+    \end{pmatrix}=
     \begin{pmatrix}
         \alpha & 0 & 0\\
         0 & \beta  & 0\\
         0 & 0 & \gamma
-    \end{pmatrix}=
+    \end{pmatrix}
     \begin{pmatrix}
         \theta^1\\\theta^2\\\theta^3
     \end{pmatrix},
@@ -6300,8 +6300,8 @@ In other words, the matrix function $g\cdot a(m)g^{\prime-1}$ defined on $G\time
     and 
     \[\theta^1-\theta^2+\theta^3=0.\]
     As a result, 
-    \[(\alpha-\beta)\theta^2-(\gamma-\alpha)\theta^3=0,\]
-    and we see that as long as $\wb f\neq 0$, it necessarily follows that 
+    \[(\alpha-\beta)\theta^2+(\gamma-\alpha)\theta^3=0,\]
+    and we see that as long as $f\neq 0$, it necessarily follows that 
     \[\alpha=\beta,\quad \gamma=\alpha,\]
     and an equivalence satisfies 
     \[F^\ast\begin{pmatrix}
