@@ -4989,7 +4989,7 @@ where $I^k(\bm z)$ is the $k$-th component of $\bm I(\bm z)=\rho(\bm z)\cdot\bm 
 \section{Jets of submanifolds}
 
 
-In preparation for the solution of the equivalence problem for submanifolds, we need to better understand the geometry of jet spaces of submanifolds and group actions on them. A lot of this is a straightfoward generalization of the geometry of bundles of jets of sections, since any submanifold can be locally identified with a section of some trivial bundle.
+In preparation for the solution of the equivalence problem for submanifolds, we need to better understand the geometry of jet spaces of submanifolds and group actions on them. A lot of this is a straightforward generalization of the geometry of bundles of jets of sections, since any submanifold can be locally identified with a section of some trivial bundle.
 
 Given a manifold $M$, let $\rmJ^r$ denote the jet space $\rmJ^r_0(\bbR^p,M)^{\mathrm{imm}}$ of jets at the origin of immersions $i:\bbR^p=X\to M$ for some fixed dimension $p\leq n=\dim M$. This space is called the \emph{$r$-th order jet space of $p$-dimensional submanifolds of $M$}, or the \emph{space of $r$-jets of $p$-submanifolds of $M$}. Locally this space is diffeomorphic to the space of jets of sections of some bundle of the form $M\to \bbR^p$, so the following definitions are natural analogs of their counterparts in \S\ref{sec: jets and cartan distr}.
 
@@ -4998,11 +4998,11 @@ We introduce local coordinates $\bf{z}=(\bf x,\bf u)$ on $M$, considering the fi
 \begin{defn}[Contact bundle]
     A differential form $\theta$ on the jet space $\rmJ^r=\rmJ^r(\bbR^p,M)$ is called a contact form if it is annihilated by all $r$-jets of submanifolds, so $(\rmj^r_0 i)^\ast\theta=0$ for any immersion $i:\bbR^p\to M$.
 
-    The subbundle of $\T^\ast\rmJ^r$ spanned by contact $1$-forms is called the $r$-th order \emph{contact bundle}, denoted $\Contact^{(r)}$. The infinite contact bundle $\Contact^{(\infty)}\subset\T^\ast\rmJ^\infty$ is a a corank $p$ subbundle of $\T^\ast\rmJ^\infty$.
+    The subbundle of $\T^\ast\rmJ^r$ spanned by contact $1$-forms is called the $r$-th order \emph{contact bundle}, denoted $\Contact^{(r)}$. The infinite contact bundle $\Contact^{(\infty)}\subset\T^\ast\rmJ^\infty$ is a corank $p$ subbundle of $\T^\ast\rmJ^\infty$.
 \end{defn}
 
-As always, in the canonical jet coordinates $(\bf{x},\bf{u}^{(\infty)})$ induced by local coordinates $(\bf{x},\bf{u})$ on $X\times M$, the basic contact forms are 
-\[\theta_J^\alpha=\dd u^\alpha_J-\sum_{i=1}^p u^\alpha_{J,i}\dd x^i,\quad \alpha=1,\ldots,q,\quad |J|\geq 0.\]
+As always, in the canonical jet coordinates $(\bf{x},\bf{u}^{(\infty)})$ induced by local coordinates $(\bf{x},\bf{u})$ on $M$, the basic contact forms are 
+\[\theta_J^\alpha=\dd u^\alpha_J-\sum_{i=1}^p u^\alpha_{J,i}\dd x^i,\quad \alpha=1,\ldots,s,\quad |J|\geq 0.\]
 Combining the semibasic coordinate one-forms $\dd x^i$ with the basic contact forms $\theta^\alpha_J$ produces the local coordinate coframe $\{\dd x^i,\theta^\alpha_J\}_{i,\alpha,J}$ on $\rmJ^\infty$. Therefore, choosing local coordinates on $M$ induces a splitting $\T^\ast\rmJ^\infty=\calH\oplus\Contact^{(\infty)}$ of the cotangent bundle into \emph{semibasic} and contact or \emph{vertical} subbundles, with $\calH$ spanned by the horizontal $1$-forms $\dd x^i$. Let $\calH:\T^\ast\rmJ^\infty \to\calH$ and $\calV:\T^\ast\rmJ^\infty\to \Contact^{(\infty)}$ be the induced projections, so that any $1$-form $\omega=\omega_M+\vartheta$ splits into uniquely defined semibasic and contact components, where 
 \[\omega_M= \calH\circ \omega=\sum_{i=1}^p P_i\left(\bf{x},\bf{u}^{(\infty)}\right)\dd x^i,\quad \vartheta=\calV\circ \omega=\sum_{\alpha,J}Q_J^\alpha\left(\bf{x},\bf{u}^{(\infty)}\right)\theta^\alpha_J,\]
 cf.\ Remark~\ref{rem semibasic and contact forms}. If $\omega$ is a $1$-form on $\rmJ^r$ then, typically, its semibasic component $\omega_M$ is a $1$-form on $\rmJ^{r+1}$.
@@ -5012,7 +5012,7 @@ The splitting of $\T^\ast\rmJ^\infty$ induces a \emph{bi-grading} of the space o
 where
 \[D_i=\frac{\partial}{\partial x^i}+\sum_{\alpha=1}^s\sum_J u^\alpha_{J+1_i}\frac{\partial}{\partial u^\alpha_J}\]
 denotes the usual total derivative w.r.t.\ $x^i$, which can be viewed as a vector field on $\rmJ^\infty E$. Similarly, the vertical differential of a function $f(\bf x,\bf u^{(r)})$ is the contact form 
-\[\dd_\calV f=\sum_{i=1}^p\sum_K \frac{\partial f}{\partial u^\alpha_K}\theta^\alpha_K.\]
+\[\dd_\calV f=\sum_{\alpha=1}^s\sum_K \frac{\partial f}{\partial u^\alpha_K}\theta^\alpha_K.\]
 
 \begin{defn}[Total differential operator]
     A total differential operator is a vector field on $\rmJ^\infty$ which lies in the annihilator of the contact bundle $\Contact^{(\infty)}$, i.e., a section of the infinite-order Cartan distribution.
@@ -5044,12 +5044,12 @@ Any transformation group $G$ acting on $M$ preserves the \emph{order of contact}
 
 We denote the prolonged group action on $\rmJ^r$ by $G^{(r)}\acts \rmJ^r$. Note that if $G$ acts globally on $M$, then its prolonged action $G^{(r)}$ is also a global transformation group on $\rmJ^r(\bbR^p,M)$, but, generally, only a local transformation group on the coordinate subbundles $\rmJ^r E$ since $G$ may not preserve transversality. Note also that B\"acklund's Theorem~\ref{thm 3.3.1 Kras} implies that contact transformations reduce to prolonged point transformation groups on $M$, or, in the codimension $1$ case $p=n-1$, prolonged first-order contact transformation groups.
 
-Let us choose a basis $\bf t_1,\ldots,\bf t_d$ for the Lie algebra $\frakg$ of nfinitesimal generators on $M$, and let $X_1^{(r)},\ldots,X_d^{(r)}$ denote the corresponding the infinitesimal generators of the prolonged group action $G^{(r)}$. In terms of local coordinates $(\bf x,\bf u^{(\infty)})$ on $\rmJ^\infty$, we obtain $X_\nu^{(r)}$ by truncating teh infinitely prolonged vector field 
-\[X_\nu^{(\infty)}=\sum_{i=1}^p a^i_\nu(\bf x,\bf u)\frac{\partial}{\partial x^i}+\sum_{\alpha=1}^s \sum_{r=|J|\geq 0} b^\alpha_{J+1_\nu}\left(\bf x,\bf u^{(r)}\right)\frac{\partial}{\partial u^\alpha_J},\quad \nu=1,\ldots,d,\]
+Let us choose a basis $\bf t_1,\ldots,\bf t_d$ for the Lie algebra $\frakg$ of infinitesimal generators on $M$, and let $X_1^{(r)},\ldots,X_d^{(r)}$ denote the corresponding infinitesimal generators of the prolonged group action $G^{(r)}$. In terms of local coordinates $(\bf x,\bf u^{(\infty)})$ on $\rmJ^\infty$, we obtain $X_\nu^{(r)}$ by truncating the infinitely prolonged vector field 
+\[X_\nu^{(\infty)}=\sum_{i=1}^p a^i_\nu(\bf x,\bf u)\frac{\partial}{\partial x^i}+\sum_{\alpha=1}^s \sum_{|J|\geq 0} b^\alpha_{\nu,J}\left(\bf x,\bf u^{(|J|)}\right)\frac{\partial}{\partial u^\alpha_J},\quad \nu=1,\ldots,d,\]
 at order $r$. The coefficients here are explicitly determined by the standard prolongation formula \eqref{eq prolongation formula}:
-\[b^\alpha_{J+1_\nu}=D_JQ^\alpha_\nu+\sum_{i=1}^p a^i_\nu u^\alpha_{J+1_i},\]
+\[b^\alpha_{\nu,J}=D_JQ^\alpha_\nu+\sum_{i=1}^p a^i_\nu u^\alpha_{J+1_i},\]
 where 
-\[Q^\alpha_\nu\left(\bf x,\bf u^{(1)}\right)=b^\alpha_\nu(\bf x,\bf u)-\sum_{i=1}^p a^i_\nu(\bf x,\bf u)u^\alpha_i\]
+\[Q^\alpha_\nu\left(\bf x,\bf u^{(1)}\right)=b^\alpha_{\nu,0}(\bf x,\bf u)-\sum_{i=1}^p a^i_\nu(\bf x,\bf u)u^\alpha_i\]
 is the \emph{generating function} of $X_\nu$.
 
 The moving frame construction can be applied to the prolonged group action $G^{(r)}$ provided it is (locally) free on $\rmJ^r$. Therefore, we need to understand the basic geometry of the prolonged action in order to understand the full range of applicability of the higher-order moving frame construction.
@@ -5058,13 +5058,13 @@ The moving frame construction can be applied to the prolonged group action $G^{(
     Given $G$ acting on $M$, we let $s_r$ denote the maximal orbit dimension of the prolonged action $G^{(r)}$ on $\rmJ^r$. The \emph{stable orbit dimension} $s_G=\max s_r$ is the maximal prolonged orbit dimension. The \emph{stabilization order} of $G$ is the minimal $r$ such that $s_r=s_G$.
 \end{defn}
 
-A fundamental Stabilization Theorem~\ref{thm 5.11 OlverEquiv Ovsiannikov} due to Ovsiannikov completely characterizes the stable orbit dimension: the action is locally effective iff the stable orbit dimension equals the dimension of the group: $s=d=\dim G$.
+A fundamental Stabilization Theorem~\ref{thm 5.11 OlverEquiv Ovsiannikov} due to Ovsiannikov completely characterizes the stable orbit dimension: the action is locally effective iff the stable orbit dimension equals the dimension of the group: $s_G=d=\dim G$.
 
 \begin{defn}
     The regular subset $\calV^r\subset\rmJ^r$ is the open subset consisting of all prolonged group orbits of dimension equal to the stable orbit dimension. The singular subset is the complement $\calS^r=\rmJ^r\setminus\calV^r$.
 \end{defn}
 
-Note that, by this definition, $\calV^r\neq 0$ and $\calS^r=\rmJ^r$ if $r\leq s_G$. If $G$ acts analytically, then $\calV^r$ is a dense open subset of $\rmJ^r$ for $r\geq s_G$. A point $\bf z^{(r)}\in\calV^r$ is called a \emph{regular jet}. The stabilization theorem, combined with Proposition~\ref{prop 2.5 OlverCo2}, immediately implies the freeness of the prolonged action on $\calV^r$.
+Note that, by this definition, $\calV^r=\varnothing$ and $\calS^r=\rmJ^r$ if $r$ is less than the stabilization order of $G$. If $G$ acts analytically, then $\calV^r$ is a dense open subset of $\rmJ^r$ for $r$ greater than or equal to the stabilization order. A point $\bf z^{(r)}\in\calV^r$ is called a \emph{regular jet}. The stabilization theorem, combined with Proposition~\ref{prop 2.5 OlverCo2}, immediately implies the freeness of the prolonged action on $\calV^r$.
 
 \begin{cor}[{\cite[Prop.~9.6]{OlverCo2}}]\label{prop 9.6 OlverCo2}
     If $G$ acts locally effectively on subsets of $M$, then $G$ acts locally freely on the regular subset $\calV^r\subset\rmJ^r$.
@@ -5075,7 +5075,7 @@ Note that, by this definition, $\calV^r\neq 0$ and $\calS^r=\rmJ^r$ if $r\leq s_
 \end{rem}
 
 \begin{rem} % OlverEquiv p200
-    Assuming $G$ acts locally effectively, if $r\geq s_G$, then $\calS^r$ is just the subset of $\rmJ^r$ where the prolonged infinitesimal generators of $G$ are linearly dependent. Therefore, once $r$ exceeds the stabilization order, the singular variety $\calS^{r+1}$ is contained in $\calS^r$ (or, more specifically, in $(\pi^{r+1}_r)^{-1}\calS^r$). In other words, if we regard $\calS^r\subset\rmJ^r$ as a system of differential equations, then, for sufficiently large $r$, the ``solution space'' to $\calS^{r+1}$  is always contained in that of $\calS^r$.
+    Assuming $G$ acts locally effectively, if $r$ is at least the stabilization order, then $\calS^r$ is just the subset of $\rmJ^r$ where the prolonged infinitesimal generators of $G$ are linearly dependent. Therefore, once $r$ exceeds the stabilization order, the singular variety $\calS^{r+1}$ is contained in $\calS^r$ (or, more specifically, in $(\pi^{r+1}_r)^{-1}\calS^r$). In other words, if we regard $\calS^r\subset\rmJ^r$ as a system of differential equations, then, for sufficiently large $r$, the ``solution space'' to $\calS^{r+1}$  is always contained in that of $\calS^r$.
 \end{rem}
 
 \begin{defn}[Regular submanifold]
@@ -5093,10 +5093,10 @@ The characterization of submanifolds that are singular to all orders is of impor
     \[X_\nu^{(d-2)}=a_\nu\frac{\partial}{\partial x}+\sum_{k=0}^{d-2}b^k_\nu \frac{\partial}{\partial u_k},\quad \nu=1,\ldots,d,\label{eq 6.60 OlverEquiv}\]
     where $u_k$ is the variable for $D_x^k u$. In the standard case, meaning that $G$ acts transitively and the orbit dimensions do not pseudo-stabilize, the stabilization order of $G$ is $d-2$, so the maximal orbit dimension is $s_{d-2}=d=\dim\rmJ^{d-2}$. In this case, the singular variety is characterized as the subset where the prolonged infinitesimal generators \eqref{eq 6.60 OlverEquiv} are linearly dependent, and hence is given by the determinantal condition \index{Lie determinant}
     \[\det\begin{pmatrix}
-        a_1 & b_1 & b_1^1 & \cdots & b^{d-1}_1\\
-        a_2 & b_2 & b_2^1 & \cdots & b^{d-1}_2\\
+        a_1 & b_1 & b_1^1 & \cdots & b^{d-2}_1\\
+        a_2 & b_2 & b_2^1 & \cdots & b^{d-2}_2\\
         \vdots & \vdots & \vdots & \ddots & \vdots\\
-        a_d & b_d & b_d^1 & \cdots & b^{d-1}_d\\
+        a_d & b_d & b_d^1 & \cdots & b^{d-2}_d\\
     \end{pmatrix}=0.\] 
     Note that this is a single ODE for $u$ as a function of $x$ and it is independent of the choice of basis of $\frakg$. Its left hand side is known as the \emph{Lie determinant} for $G$. Any invariant ODE of order $d-2$ or less must be contained in the singular variety, and hence is described by the vanishing of the Lie determinant. Moreover, as we remarked above, since all the higher-order singular subvarieties are contained therein, we conclude that \emph{all} invariant ODEs can be written either in terms of the fundamental differential invariants, or by the vanishing of the Lie determinant.
 \end{rem}
@@ -5107,7 +5107,7 @@ The characterization of submanifolds that are singular to all orders is of impor
     \[\calS^r=\left\{(x,u^{(r)})\mid u_{xx}=u_{xxx}=\cdots=u_r=0\right\},\]
     where $u_r$ is the coordinate for $\dd^r u/\dd x^r$. A curve $u=f(x)$ is totally singular at a point $(x_0,f(x_0))$ iff $f^{(r)}(x_0)=0$ for all $r\geq 2$. In particular, an analytic curve that is totally singular at a point is necessarily a straight line.
 
-    The full affine group $\Aff_2(\bbR)$ is more interesting. Here, the totally singular curves are the parabolas and straight lines. The stabilizer of a parabolar, say $u=x^2$, is the $2$-dimensional nonabelian subgroup $(x,u)\mapsto (\lambda x+\mu,\lambda^2 u+2\lambda\mu x+\mu^2)$. In this case, the singular subset of $\rmJ^r$ is also determined by the total derivatives of the Lie determinant 
+    The full affine group $\Aff_2(\bbR)$ is more interesting. Here, the totally singular curves are the parabolas and straight lines. The stabilizer of a parabola, say $u=x^2$, is the $2$-dimensional nonabelian subgroup $(x,u)\mapsto (\lambda x+\mu,\lambda^2 u+2\lambda\mu x+\mu^2)$. In this case, the singular subset of $\rmJ^r$ is also determined by the total derivatives of the Lie determinant 
     \[\calS^r=\left\{(x,u^{(r)})\middle| D_x^{r-4}\left[u_{xx}u_{xxxx}-\frac53 u_{xxx}^2\right]=0\right\}.\]
     The parabolas and straight lines form the general solution to the ODE $u_{xx}u_{xxxx}-\frac53 u_{xxx}^2=0$.
 \end{example}
@@ -5117,10 +5117,10 @@ A (scalar) \emph{differential invariant} of order $r$ is a (local) scalar differ
 functionally independent differential invariants of order $\leq r$ near any point of $\calV^r$.
 
 \begin{rem}
-    If $r\leq s_G$, then we replace $d$ in \eqref{eq 9.6 OlverCo2} by the maximal orbit dimension of $G$ on $\rmJ^r$ and restrict $\bf z^{(r)}$ to lie in the open subset of $\rmJ^r$ where the orbits of $G^{(r)}$ have the maximal dimension.
+    If $r$ is less than the stabilization order, then we replace $d$ in \eqref{eq 9.6 OlverCo2} by the maximal orbit dimension of $G$ on $\rmJ^r$ and restrict $\bf z^{(r)}$ to lie in the open subset of $\rmJ^r$ where the orbits of $G^{(r)}$ have the maximal dimension.
 \end{rem}
 
-The basic method, due to Lie and Tresse, for constructing a complete system of differential invariants is to use invariant differential operators. A total differential operator $\calD$ is said to be $G$-invariant if it commutes with the prolonged action of $G$. The most effective way to construct such operator relues on a suitably $G$-invariant basis for the semibasic $1$-forms on the jet space.
+The basic method, due to Lie and Tresse, for constructing a complete system of differential invariants is to use invariant differential operators. A total differential operator $\calD$ is said to be $G$-invariant if it commutes with the prolonged action of $G$. The most effective way to construct such operators relies on a suitably $G$-invariant basis for the semibasic $1$-forms on the jet space.
 
 \begin{defn}[Contact-invariant forms]\label{def semibasic contact inv coframe}
     A differential $1$-form $\omega$ on $\rmJ^r$ is called contact-invariant if for every $g\in G$, we have $\left(g^{(r)}\right)^\ast\omega=\omega+\theta_g$ for some contact form $\theta_g$. A \emph{semibasic contact-invariant coframe} on $\rmJ^r$ is a collection of $p$ linearly independent semibasic $1$-forms which are contact-invariant under $G^{(r)}$.
@@ -5133,7 +5133,7 @@ We shall omit the adjective ``semibasic'' when describing contact-invariant cofr
 \end{prop}
 
 Thus, if we know $p$ suitably independent differential invariants, we can construct a semibasic contact-invariant coframe. However, this approach is usually not the best method for determining such coframes. If $F(\bf x,\bf u^{(r)})$ is any differential function, we can rewrite its semibasic differential in terms of the semibasic coframe $\{\omega^j\}$ as 
-\[\dd_M F=\sum_{j=1}^p (\calD_j F)\omega^k.\label{eq 9.7 OlverCo2}\]
+\[\dd_M F=\sum_{j=1}^p (\calD_j F)\omega^j.\label{eq 9.7 OlverCo2}\]
 The resulting $G$-invariant total differential operators $\calD_j$ are the jet space counterparts of the usual coframe derivatives $\partial/\partial\omega^j$. 
 
 \begin{rem}
@@ -5148,24 +5148,24 @@ The resulting $G$-invariant total differential operators $\calD_j$ are the jet s
 Any invariant differential operator maps differential invariants to higher-order differential invariants, and thus, by iteration, produces hierarchies of differential invariants of arbitrarily large order. In this way, a complete list of differential invariants can be produced by successively differentiating a finite number of \emph{fundamental} differential invariants. We can thus rephrase our earlier statement about the existence of fundamental invariants.
 
 \begin{thm}[{\cite[Thm.~5.49]{OlverEquiv}}]\label{thm 9.13 OlverCo2}
-    Suppose $G\acts M$ is a transformation group with order of stabilization $r$. Then, in a neighborhood of any regular jet $z^{(r)}\in\calV^r$, there exists a contact-invariant coframe $(\omega^1,\ldots,\omega^p)$, and corresponding invariant differential operators $\calD_1,\ldots,\calD_p$. If $I(z^{(k)})$ is a differential invariant, then so is $\calD_J I$ for any multi-index $J$. Moreover, there exists a \emph{complete system of functionally independent fundamental differential invariants} $I_1,\ldots,I_l$, of order at most $r+1$, such that, locally, every differential invariant can be written as a function of the differentiated invariants $\calD_{j_1} \cdots\calD_{j_k} I_\nu$, $\nu=1,\ldots,l$, $k\geq 0$, $1\leq j_\nu\leq p$. 
+    Suppose $G\acts M$ is a transformation group with order of stabilization $r$. Then, in a neighborhood of any regular jet $z^{(r)}\in\calV^r$, there exists a contact-invariant coframe $(\omega^1,\ldots,\omega^p)$, and corresponding invariant differential operators $\calD_1,\ldots,\calD_p$. If $I(z^{(k)})$ is a differential invariant, then so is $\calD_J I$ for any multi-index $J$. Moreover, there exists a \emph{complete system of functionally independent fundamental differential invariants} $I_1,\ldots,I_l$, of order at most $r+1$, such that, locally, every differential invariant can be written as a function of the differentiated invariants $\calD_{j_1} \cdots\calD_{j_k} I_\nu$, $\nu=1,\ldots,l$, $k\geq 0$, $1\leq j_1,\ldots,j_k\leq p$. 
 \end{thm}
 
 The invariant differential operators coming from a general contact-invariant coframe do not necessarily commute. The commutation formulas \eqref{eq 8.10 OlverEquiv} for ordinary coframe derivatives are an immediate consequence of the closure identity $\dd^2=0$. Similarly, if $\bm\omega$ is the contact-invariant coframe, then 
 \[\dd_M\omega^k=-\sum_{i<j}A^k_{ij}\omega^i\wedge\omega^j,\quad k=1,\ldots,p,\]
 where the coefficients $A^k_{ij}=-A^k_{ji}$ are differential invariants. Thus, applying $\dd_M$ to \eqref{eq 9.7 OlverCo2} produces the commutation formulas 
-\[[\calD_i,\calD_j]=\sum_{i=1}^p A^k_{ij}\calD_k,\quad i,j=1,\ldots,p,\label{eq 9.11 OlverCo2}\]
-for the associated invariant operators. If all of the coframe forms are constructed from differential invariants, i.e., $\omega^k=\dd_M I^k$, $k=1,\ldots,p$, then $\dd_M\omega^k=0$, and hence the invariant operators all commute in this case. The commutation formula \eqref{eq 9.11 OlverCo2} implies that a complete system of higher-order differential invariants can be obtained by only including the ``ordered'' differentiated invariants $\calD_J I_\nu=\calD_1^{j_1}\cdots\calD_p^{j_p}$ corresponding to multi-indices $J=(j_1,\ldots,j_p)$ of positive degree $|J|\geq 0$. However, even with this proviso, the differentiated invariants $\calD_J I_\nu$ are not necessarily functionally independent, leading to the following definition.
+\[[\calD_i,\calD_j]=\sum_{k=1}^p A^k_{ij}\calD_k,\quad i,j=1,\ldots,p,\label{eq 9.11 OlverCo2}\]
+for the associated invariant operators. If all of the coframe forms are constructed from differential invariants, i.e., $\omega^k=\dd_M I^k$, $k=1,\ldots,p$, then $\dd_M\omega^k=0$, and hence the invariant operators all commute in this case. The commutation formula \eqref{eq 9.11 OlverCo2} implies that a complete system of higher-order differential invariants can be obtained by only including the ``ordered'' differentiated invariants $\calD_J I_\nu=\calD_1^{j_1}\cdots\calD_p^{j_p}I_\nu$ corresponding to multi-indices $J=(j_1,\ldots,j_p)$ of degree $|J|\geq 0$. However, even with this proviso, the differentiated invariants $\calD_J I_\nu$ are not necessarily functionally independent, leading to the following definition.
 
 \begin{defn}[Syzygy of differential invariants]\index{Syzygy}
-    Given a complete system of functionally independent fundamental differential invariants $I_1,\ldots,I_l$, a syzygy is a functional dependency among the differentiated invariants $D_{j_1}\cdots D_{j_k} I_\nu$: 
-    \[H(\ldots,D_{j_1}\cdots D_{j_k} I_\nu,\ldots)\equiv 0.\]
+    Given a complete system of functionally independent fundamental differential invariants $I_1,\ldots,I_l$, a syzygy is a functional dependency among the differentiated invariants $\calD_{j_1}\cdots \calD_{j_k} I_\nu$: 
+    \[H(\ldots,\calD_{j_1}\cdots \calD_{j_k} I_\nu,\ldots)\equiv 0.\]
 \end{defn}
 
 There are two types of syzygies, the first arising from the commutation rules for the invariant differential operators, and the second ``essential syzygies'' are where the function $H$ only depends on the ordered invariants $\calD_J I_\nu$. It is possible to provide a precise classification of all such syzygies, see \cite[Thm.~13.4]{OlverCo2}.
 
 \begin{example}
-    An elementary example is provided by the $3$-parameter group $(x^1,x^2,u)\mapsto (\lambda x^1+a,\lambda x^2,u+b)$ acting on $M=\bbR^3$. The $1$-forms $\omega^1=(x^2)^{-1}\dd x^1$, $\omega^2=(x^2)^{-1}\dd x^2$ form a contact-invariant coframe, with invariant differential operators $\calD_1=x^2 D_1$, $\calD_2=x^2D_2$. We note the commutation formula $[\calD_1,\calD_2]=-\calD_2$. The first-order invariants $I_1=x^2u_1$ and $I_2=x^2u_2$ form a complete set of fundamental invariants, and $I_{ijk}=D_1^jD_2^kI_i$, $i=1,2$, $j+k\geq 0$, form a complete system of differential invariants. In this case there is a single essential syzygy $\calD_2 I_1=\calD_1 I_2-I_1$, from which all higher-order syzygies are obtained by invariant differentiation.
+    An elementary example is provided by the $3$-parameter group $(x^1,x^2,u)\mapsto (\lambda x^1+a,\lambda x^2,u+b)$ acting on $M=\bbR^3$. The $1$-forms $\omega^1=(x^2)^{-1}\dd x^1$, $\omega^2=(x^2)^{-1}\dd x^2$ form a contact-invariant coframe, with invariant differential operators $\calD_1=x^2 D_1$, $\calD_2=x^2D_2$. We note the commutation formula $[\calD_1,\calD_2]=-\calD_1$. The first-order invariants $I_1=x^2u_1$ and $I_2=x^2u_2$ form a complete set of fundamental invariants, and $I_{ijk}=\calD_1^j\calD_2^kI_i$, $i=1,2$, $j+k\geq 0$, form a complete system of differential invariants. In this case there is a single essential syzygy $\calD_2 I_1=\calD_1 I_2+I_1$, from which all higher-order syzygies are obtained by invariant differentiation.
 \end{example}
 
 
