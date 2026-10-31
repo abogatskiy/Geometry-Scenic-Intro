@@ -2850,7 +2850,7 @@ This is a special instance  of a \emph{Spencer differential}, cf.~\S\ref{sec: sp
 
 \begin{example}[Pseudo-Riemannian structure]\label{ex pseudo-riemannian structure}\index{Pseudo-Riemannian structure}
     For simplicity let us denote $V=\bbR^n$. Denote the vector space of symmetric covariant tensors of second rank on $V$ by $\bigodot\nolimits^2V^\ast$. Endow $V$ with a pseudo-Euclidean metric $\eta\in \bigodot\nolimits^2V^\ast$ with signature $(k,l)$ where $n=k+l$. The defining representation of $\GL(V)$ induces a $\GL_n(\bbR)$-module structure on $\bigodot\nolimits^2 V$ given by 
-    \[\sigma:\GL(V)\to \Aut\left(\bigodot\nolimits^2 V^\ast\right),\quad \sigma(g)\coloneqq g^{-\sfT}\otimes a^{-\sfT}.\label{eq 2.2.21 RS2}\]
+    \[\sigma:\GL(V)\to \Aut\left(\bigodot\nolimits^2 V^\ast\right),\quad \sigma(g)\coloneqq g^{-\top}\otimes a^{-\top}.\label{eq 2.2.21 RS2}\]
     As we have noted before, by the Sylvester Theorem, $\GL_n(\bbR)$ acts transitively on the subspace $\bigodot\nolimits^2_{(k,l)}V^\ast\subset \bigodot\nolimits^2 V^\ast$ consisting of elements with fixed signature, and the stabilizer of $\eta$ is $\Or_{k,l}$, that is,
     \[\GL_n(\bbR)\slash \Or_{k,l}\cong \bigodot\nolimits^2_{(k,l)}V^\ast.\]
     Thus, $\Or_{k,l}$-structures are in one-to-one correspondence with pseudo-Riemannian metrics $\sfg$ on $M$ and the $\Or_{k,l}$-structure corresponding to $\sfg$ coincides with the bundle $\Fr_{\Or_{k,l}}(\T M)$ of orthonormal frames w.r.t.\ $\sfg$. If $(M,\sfg)$ is oriented, then $\Fr_{\Or_{k,l}}M$ further reduces to a principal $\SO_{k,l}$-bundle, denoted by $\Fr^+_{\Or_{k,l}}(\T M)$. 
@@ -2883,7 +2883,7 @@ This is a special instance  of a \emph{Spencer differential}, cf.~\S\ref{sec: sp
 
 \begin{example}[Conformal structure {{\cite[Example~2.2.17]{RS2}}}]\index{Conformal structure}\index{Conformal structure}
     For $n\geq 3$, consider the conformal orthogonal group \index{Conformal orthogonal group}
-    \[\CO_n\coloneqq \left\{a\in\GL_n(\bbR):a^\sfT a=c\rmI_n,\; c>0\right\}.\]
+    \[\CO_n\coloneqq \left\{a\in\GL_n(\bbR):a^\top a=c\rmI_n,\; c>0\right\}.\]
     Clearly, $\CO_n=\Or_n\times\bbR_+$. By the previous example, $\GL_n(\bbR)$ acts transitively on the space $\bigodot\nolimits^2_{k,l}V^\ast$. Thus it also acts transitively on the set of conformal equivalence classes of elements of $\bigodot\nolimits^2_{(k,l)}V^\ast$ defined by the relation $\eta\sim\eta'$ iff $\eta'=c\eta$ for some $c>0$. Clearly, the stabilizer of an element $[\eta]$ is $\CO_n$. Thus, $\CO_n$-structures are in one-to-one correspondence with conformal equivalence classes $[\sfg]$ of metrics on $M$, with the equivalence defined as follows: $\sfg'\sim\sfg$ iff $\sfg'_m=\rme^{\varphi(m)}\sfg_m$ for all $m\in M$ for some $\varphi\in C^\infty(M)$. The $\CO_n$-structure corresponding to class $[\sfg]$ is denoted by $\Fr_{\CO_n}M$ and is referred to as the bundle of conformal frames.
     Since $\CO_n=\Or_n\times\bbR_+$, the representation theory of $\CO_n$ is essentially obtained as an extension of that of $\Or_n$. The irreducible representations of $\bbR_+$ on $\bbR$ are labeled by real numbers $r\in\bbR$ and are given by 
     \[\bbR_+\times\bbR\to \bbR,\quad (t,x)\mapsto t^r x.\]
@@ -2900,7 +2900,7 @@ This is a special instance  of a \emph{Spencer differential}, cf.~\S\ref{sec: sp
     By Example~\ref{ex pseudo-riemannian structure}, pseudo-Riemannian manifolds are in one-to-one correspondence with $\Or_{k,l}$-structures. Thus, let $(M,\sfg)$ be a pseudo-Riemannian manifold and let $\Fr_{\Or_{k,l}} M$ be its $\Or_{k,l}$-structure. In terms of the corresponding equivariant map $\wt\sfg$, 
     \[\Fr_{\Or_{k,l}}M=\{u \in\Fr(\T M):\wt\sfg(u)=\eta\},\]
     where $\eta$ is the standard inner product on $\bbR^n$ with signature $(k,l)$. By Proposition~\ref{prop 2.2.3 RS2}, a linear principal connection $\omega$ on $M$ is compatible with the $\Or_{k,l}$-structure iff $\sfg$ is parallel w.r.t.\ $\omega$. An affine connection fulfilling this condition is called metric. By \eqref{eq 2.2.21 RS2}, the metricity condition $D\wt\sfg=\dd\wt\sfg+\sigma_\ast(\omega)\wt\sfg=0$ reads 
-    \[\dd\wt\sfg-\left(\omega^\sfT \otimes \rmI_n+\rmI_n\otimes \omega^\sfT \right)(\wt\sfg)=0.\label{eq 2.2.35 RS2}\]
+    \[\dd\wt\sfg-\left(\omega^\top \otimes \rmI_n+\rmI_n\otimes \omega^\top \right)(\wt\sfg)=0.\label{eq 2.2.35 RS2}\]
     More explicitly, decomposing $\omega$ w.r.t.\ the basis $\{E^j{}_i\}$ in $\frakgl_n(\bbR)$ and $\wt\sfg$ w.r.t.\ the basis in $\bigodot\nolimits^2(\bbR^n)^\ast$ induced from the standard basis of $\bbR^n$, \eqref{eq 2.2.35 RS2} takes the form 
     \[\dd \wt\sfg_{jk}-\wt\sfg_{jl}\omega^l{}_k-\wt\sfg_{kl}\omega^l{}_j=0.\]
     But, on $\Fr_{\Or_{k,l}} M$ we have $\wt\sfg_{kl}=\eta_{kl}$, and thus $\dd\wt\sfg_{kl}=0$. This shows that $\omega$ is metric iff its reduction to $\Fr_{\Or_{k,l}}M$ fulfills 
@@ -3168,7 +3168,7 @@ The most basic example of a homogeneous principal bundle is of course the bundle
 
     In particular, consider the case where $H=\Or_n$ and $\frakg\slash\frakh\cong \frakm\cong \bbR^n$ as an $H$-module, which occurs both in the case of the Riemann sphere (with $G=\Or_{n+1}$) and the Euclidean space (with $G=\SE_n$). In both cases, we not only have a $G$-invariant principal connection on $G\to G\slash H$ but it is also uniquely determined. This is due to the fact that both $\frakm\cong\bbR^n$ and $\frakh\cong \frakso_n$ are irreducible $\Or_n$-modules and thus the zero map is the only $H$-homomorphism $\frakm\to \frakh$. In the case of the Euclidean space, the complement $\frakm$ is an abelian subalgebra, so $[\frakm,\frakm]=\{0\}$ and the principal connection is flat.
 
-    On the other hand, in the case of the Riemann sphere, the decomposition $\frakg=\frakh\oplus\frakm$ is the unique $H$-invariant decomposition, and one immediately verifies that $[\frakm,\frakm]\subset\frakh$, but the bracket of two elements of $\frakm$ is nonzero in general, so we get nonzero curvature. More precisely, one easily computes that the curvature is induced by the map $\bbR^n\times\bbR^n\to \frakso_n$ defined $(\bf{x},\bf{y})\mapsto \bf{x}\bf{y}^\sfT -\bf{y}\bf{x}^\sfT $. Otherwise put, identifying $\frakso_n$ with $\bigwedge\nolimits^2\bbR^n$, the curvature is simply induced by $(\bf{x},\bf{y})\mapsto \bf{x}\wedge \bf{y}$. Notice that up to scale this is the unique invariant tensor of this type.
+    On the other hand, in the case of the Riemann sphere, the decomposition $\frakg=\frakh\oplus\frakm$ is the unique $H$-invariant decomposition, and one immediately verifies that $[\frakm,\frakm]\subset\frakh$, but the bracket of two elements of $\frakm$ is nonzero in general, so we get nonzero curvature. More precisely, one easily computes that the curvature is induced by the map $\bbR^n\times\bbR^n\to \frakso_n$ defined $(\bf{x},\bf{y})\mapsto \bf{x}\bf{y}^\top -\bf{y}\bf{x}^\top $. Otherwise put, identifying $\frakso_n$ with $\bigwedge\nolimits^2\bbR^n$, the curvature is simply induced by $(\bf{x},\bf{y})\mapsto \bf{x}\wedge \bf{y}$. Notice that up to scale this is the unique invariant tensor of this type.
  \end{example}
 
  \begin{example}[Round sphere V, \ref{ex round sphere 4} continued]\label{ex round sphere 5}
@@ -3569,7 +3569,7 @@ It remains to describe the isometric part of the stabilizer of $\<\bf{e}_1\>\in 
         0 & \eta & 0 \\
         -1 & 0 & 0
     \end{pmatrix}.\]
-    Since $g$ is an isometry and $S$ is nothing but the metric tensor written in the basis where $\bf{e}_1,\bf{e}_{p+q}$ were replaced by $\bf{e}_1\pm \bf{e}_{p+q}$, we must have $g^\sfT  Sg=S$, which forces $g$ to have the asserted form.
+    Since $g$ is an isometry and $S$ is nothing but the metric tensor written in the basis where $\bf{e}_1,\bf{e}_{p+q}$ were replaced by $\bf{e}_1\pm \bf{e}_{p+q}$, we must have $g^\top  Sg=S$, which forces $g$ to have the asserted form.
 \end{proof}
 
 Thus, $X_0^{p-1,q-1}\coloneqq X_0$ is a conformal manifold of signature $(p-1,q-1)$ obtained as the homogeneous space 
@@ -4044,7 +4044,7 @@ Now, in the special case of an \emph{effective} model $(G,H)$, the $G$-action on
         -1 & 0
     \end{pmatrix}.\]
     All of this obviously descends to $G=\SL_2(\bbR)\slash \{\pm \rmI\}$. The transpose operation on $\frakg=\fraksl_{2}(\bbR)$ is $H$-invariant, so we can $H$-equivariantly split any element $A\in\frakg$ into its symmetric and antisymmetric parts:
-    \[A=A_-+A_+,\quad A_\pm=\frac12(A\pm A^\sfT ).\]
+    \[A=A_-+A_+,\quad A_\pm=\frac12(A\pm A^\top ).\]
     This defines a reductive decomposition $\frakg=\frakh\oplus\frakm$, where $\frakh$ consists of antisymmetric traceless matrices, and $\frakm$ consists of symmetric traceless matrices. In particular, this means that the tangent spaces of $\bbC^+$ are modeled on the space of symmetric traceless matrices (as $\SO_2$-modules). Moreover, since $\frakm$ is a subalgebra, by Remark~\ref{rem torsion in reductive geom} we expect the resulting affine connection to be torsion-free.
 
     To get a principal connection on the oriented orthonormal frame bundle of $\bbC^+$, we apply to $\theta_G=g^{-1}\dd g$ the $H$-invariant projection $\pr_\frakh:\frakg\to\frakh$ w.r.t.\ the above decomposition, getting the antisymmetric part of the Maurer-Cartan form: 
@@ -4652,7 +4652,7 @@ With this, a useful notion for the next \sect is that of \emph{mutation} of Cart
     \[\frakg^\epsilon=\left\{
         \begin{pmatrix}
             A & \bf{x}\\
-            -\epsilon\bf{x}^\sfT  & 0
+            -\epsilon\bf{x}^\top  & 0
         \end{pmatrix}\middle| \bf{x}\in\bbR^n,A\in\frakh
     \right\},\quad \epsilon\in \{-1,0,1\}.\]
     These algebras are $\frakg^+=\frakso_{n+1},\frakg^0=\frakse_n,\frakg^-=\frakso_{1,n}$. The models $(\frakg^\epsilon,H)$ are all mutants of each other since we may define 
@@ -4663,7 +4663,7 @@ With this, a useful notion for the next \sect is that of \emph{mutation} of Cart
 \end{pmatrix}\mapsto 
 \begin{pmatrix}
     A & \bf{x}\\
-    -\epsilon\bf{x}^\sfT  & 0
+    -\epsilon\bf{x}^\top  & 0
 \end{pmatrix},\quad \epsilon\in\{-1,1\}.
     \]
     It is easy to check that these are mutation maps. Thus, the Klein geometries $(\SE_n,\SO_n)$, $(\SO_{n+1},\SO_n)$, and $(\SO_{1,n},\SO_n)$ are all mutants of each other (they are Euclidean geometry $\bbE^n$, spherical geometry $\bbS^n$, and hyperbolic geometry $H^n\cong\bbR^n$, respectively).
@@ -5485,7 +5485,7 @@ In Proposition~\ref{prop 1.5.2 Cap} we saw that the automorphisms of the model K
 \end{example}
 
 \begin{example}
-    Let $M=\GL_n(\bbR)\subset \bbR^{n\times n}$ carry the standard flat affine geometry pulled back from the affine space $\bbA(\bbR^{n\times n})$. The automorphism group of this geometry on $M$ is the group of affine transformations of $\bbR^{n\times n}$ preserving $M$. Clearly it includes $\GL_n(\bbR)$ acting by left translation, and also by right translation, and also the transposition map $A\mapsto A^\sfT $. Thus, $M$ is a homogeneous space under its automorphism group.
+    Let $M=\GL_n(\bbR)\subset \bbR^{n\times n}$ carry the standard flat affine geometry pulled back from the affine space $\bbA(\bbR^{n\times n})$. The automorphism group of this geometry on $M$ is the group of affine transformations of $\bbR^{n\times n}$ preserving $M$. Clearly it includes $\GL_n(\bbR)$ acting by left translation, and also by right translation, and also the transposition map $A\mapsto A^\top $. Thus, $M$ is a homogeneous space under its automorphism group.
 \end{example}
 
 \begin{xca}

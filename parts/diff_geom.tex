@@ -257,7 +257,7 @@ Note that the choice of the category $\calS$ for a given type of structure is no
         which can be identified with $A+\rmi B\in \Mat_n(\bbC)$.
         Note that each complex structure also induces an orientation because matrices $A\in \GL_n(\bbC)\subset \GL_{2n}(\bbR)$ have positive determinant over $\bbR$, namely $\det M=|\det(A+\rmi B)|^2>0$.
 
-        \item Consider standard spaces $\bbR^{2n}$ with standard symplectic forms, i.e., antisymmetric nondegenerate bilinear forms $\omega_n:\bbR^{2n}\times \bbR^{2n}\to \bbR$ whose matrix in the standard basis is $\rmJ_{n}$. Let morphisms be all linear maps and let $G=\Sp_{2n}(\bbR)$ be the group of symplectic matrices, i.e., matrices $A\in\GL_{2n}(\bbR)$ such that $A^\sfT\rmJ_{n}A=\rmJ_{n}$. Then $\calS$-fibers are symplectic vector spaces $(V,\omega)$ with all linear maps between them. This can be reduced to just the category of \emph{symplectomorphisms}, i.e., isomorphisms that preserve the symplectic structure.
+        \item Consider standard spaces $\bbR^{2n}$ with standard symplectic forms, i.e., antisymmetric nondegenerate bilinear forms $\omega_n:\bbR^{2n}\times \bbR^{2n}\to \bbR$ whose matrix in the standard basis is $\rmJ_{n}$. Let morphisms be all linear maps and let $G=\Sp_{2n}(\bbR)$ be the group of symplectic matrices, i.e., matrices $A\in\GL_{2n}(\bbR)$ such that $A^\top\rmJ_{n}A=\rmJ_{n}$. Then $\calS$-fibers are symplectic vector spaces $(V,\omega)$ with all linear maps between them. This can be reduced to just the category of \emph{symplectomorphisms}, i.e., isomorphisms that preserve the symplectic structure.
     \end{enumerate}
 \end{example}
 
@@ -298,7 +298,7 @@ Note that the choice of the category $\calS$ for a given type of structure is no
     \[\U(V,\sfh)=\Sp(V,\omega)\cap \GL(V_\bbC)=\Or(V,\sfg)\cap \GL(V_\bbC)=\Or(V,\sfg)\cap \Sp(V,\omega).\]
     In particular, for standard model spaces $(\bbR^{2n},\rmJ_{n})$ we get the \emph{``2 out of 3 property of unitary groups''}:
     \[\U_n=\Sp_n(\bbR)\cap \GL_n(\bbC)=\Or_{2n}\cap \GL_n(\bbC)=\Or_{2n}\cap \Sp_n(\bbR),\]
-    which is also obvious from the fact that any two of the defining equations $A^\sfT\sfJ A=\sfJ$, $A^{-1}\sfJ A= \sfJ$, $A^\sfT A=\rmI$, imply the third.
+    which is also obvious from the fact that any two of the defining equations $A^\top\sfJ A=\sfJ$, $A^{-1}\sfJ A= \sfJ$, $A^\top A=\rmI$, imply the third.
     Here, $\GL_n(\bbC)$ is included in $\GL_{2n}(\bbR)$ as the set of invertible matrices of the form \eqref{eq complex matrices} identified with $A+\rmi B\in \GL_n(\bbC)$.
     
     The triple $(\sfJ,\sfg,\omega)$ consisting of compatible complex, metric, and symplectic structures on $V$ can be called a \emph{linear K\"ahler structure}.\index{K\"ahler structure} As we have seen, the set of K\"ahler structure is bijective with the set of Hermitian structures, which is why in the linear case the term K\"ahler structure is redundant.
@@ -1232,7 +1232,7 @@ The following follows straightforwardly from the properties of push-forwards fro
 \begin{defn}[Cotangent bundle]\index{Cotangent bundle}
     Using the Hom-functor defined in Proposition~\ref{functors VB}, we define the cotangent bundle of a manifold $M$ by 
     \[\T^\ast M=\Hom(\T M,M\times\bbR),\]
-    where $\pr_1:M\times\bbR\to M$ is the trivial product bundle. The fiber $\T^\ast_m M$ of the cotangent bundle can be naturally identified with the dual of the corresponding fiber $\T_mM$. If $\tau_{\alpha\beta}$ are the transition functions on $\T M$, then the transition functions on $\T^\ast M$ are the inverse transposes, $\tau_{\alpha\beta}^{-\sfT}$. Elements of the cotangent bundle are called \emph{cotangent vectors}, or simply \emph{covectors} on $M$.
+    where $\pr_1:M\times\bbR\to M$ is the trivial product bundle. The fiber $\T^\ast_m M$ of the cotangent bundle can be naturally identified with the dual of the corresponding fiber $\T_mM$. If $\tau_{\alpha\beta}$ are the transition functions on $\T M$, then the transition functions on $\T^\ast M$ are the inverse transposes, $\tau_{\alpha\beta}^{-\top}$. Elements of the cotangent bundle are called \emph{cotangent vectors}, or simply \emph{covectors} on $M$.
 \end{defn}
 
 Since every function $f\in C^\infty(M)$ defines a covector field $\dd f$, we can in particular consider the differentials of the coordinate functions $x^i(m)=\varphi^i(m)$ of a chart $(U,\varphi)=(U_a,\varphi_a)$ and consider their action on a vector $X_m\in \T_m M$:
@@ -1375,16 +1375,16 @@ where we use the Einstein summation convention and $\bullet$ denotes unnamed fre
 
 \begin{defn}[Dual morphism]
     Let $h:E\to E'$ be a morphism of \glspl{vb} $E\to M$, $E'\to M'$, whose base map $\underline{h}:M\to M'$ is a diffeomorphism (in particular, it can be a morphism of vector spaces). By the transpose symbol we denote the dual morphism 
-    \[h^\sfT:E^{\prime\ast}\to E^\ast,\quad h^\sfT(\xi)(x)\coloneqq \xi(h(x)),\quad x\in m'\in M',\; E_{\underline{h}^{-1}(m')},\; \xi\in E^{\prime\ast}_{m'},\]
+    \[h^\top:E^{\prime\ast}\to E^\ast,\quad h^\top(\xi)(x)\coloneqq \xi(h(x)),\quad x\in m'\in M',\; E_{\underline{h}^{-1}(m')},\; \xi\in E^{\prime\ast}_{m'},\]
     which has the base map $\underline{h}^{-1}$.
 \end{defn}
 
 \begin{defn}[Pullback morphism]\label{def pullback morphism}
-    Like any morphism, the dual morphism $h^\sfT$ induces its own transport operator $h^\ast\coloneqq h^\sfT_\ast:\Gamma^\infty(E^{\prime\ast})\to \Gamma^\infty(E^\ast)$ via \eqref{eq def transport op}:
-    \[\left(h^\sfT_\ast \sigma\right)_m(x)=(h^\sfT\circ \sigma\circ \underline{h})_m(x)=\sigma_{\underline{h}(m)}(h(x)),\quad m\in M,\; x\in E_m.\]
+    Like any morphism, the dual morphism $h^\top$ induces its own transport operator $h^\ast\coloneqq h^\top_\ast:\Gamma^\infty(E^{\prime\ast})\to \Gamma^\infty(E^\ast)$ via \eqref{eq def transport op}:
+    \[\left(h^\top_\ast \sigma\right)_m(x)=(h^\top\circ \sigma\circ \underline{h})_m(x)=\sigma_{\underline{h}(m)}(h(x)),\quad m\in M,\; x\in E_m.\]
     But now, crucially, we notice that this formula actually does \emph{not} require $\underline{h}$ to be invertible. Thus, for \emph{any morphism} $h:E\to E'$, we define its pullback
     \[h^\ast:\Gamma^\infty(E^{\prime\ast})\to \Gamma^\infty(E^\ast),\quad \left(h^\ast \sigma\right)_m(x)\coloneqq \sigma_{\underline{h}(m)}(h(x)),\quad m\in M,\; x\in E_m.\]
-    In the special case when $\underline h$ is a diffeomorphism, we have the coincidence $h^\ast\sigma=h^\sfT\circ \sigma\circ\underline h=h_\ast^\sfT\sigma$.
+    In the special case when $\underline h$ is a diffeomorphism, we have the coincidence $h^\ast\sigma=h^\top\circ \sigma\circ\underline h=h_\ast^\top\sigma$.
 \end{defn}
 
 Now we can use the procedure in Definition \ref{functors VB} to extend the tensor functors to bundles.
@@ -1500,11 +1500,11 @@ Every tensor field $t\in \Gamma^\infty(\bbT^r_s E)$ can be decomposed over $U$ a
 where the component functions $t^{i_1,\ldots,i_r}_{j_1,\ldots,j_s}$ are defined as in \eqref{eq def components}. 
 
 Finally, every \gls{vb} isomorphism $h:E\to E'$ induces isomorphisms 
-\[\bbT^r_s h:\bbT^r_s E\to \bbT^r_s E',\quad \bbT^r_s h=h\otimes \overset{r}{\cdots}\otimes h\otimes h^{-\sfT}\otimes\overset{s}{\cdots}\otimes h^{-\sfT},\]
+\[\bbT^r_s h:\bbT^r_s E\to \bbT^r_s E',\quad \bbT^r_s h=h\otimes \overset{r}{\cdots}\otimes h\otimes h^{-\top}\otimes\overset{s}{\cdots}\otimes h^{-\top},\]
 with the same base map $\underline{h}$. As a $(r+s)$-linear mapping, $\bbT^r_s h$ takes the form 
 \begin{multline}
     \left(\bbT^r_s h \cdot t\right)(x_1,\ldots,x_s,\xi^1,\ldots,x^r)=\\
-    =t\left(h^{-1}(x_1),\ldots,h^{-1}(x_s),h^\sfT(\xi^1),\ldots,h^\sfT(\xi^r)\right)
+    =t\left(h^{-1}(x_1),\ldots,h^{-1}(x_s),h^\top(\xi^1),\ldots,h^\top(\xi^r)\right)
 \end{multline}
 for all $t\in \bbT^r_s E_m$, $x_i\in E'_{\underline{h}(m)}$, and $\xi^i\in E^{\prime\ast}_{\underline{h}(m)}$. The corresponding transport operators $\bbT^r_s h_\ast$ (see \eqref{eq def transport op}) satisfy 
 \[\bbT^r_s h_\ast(t_1\otimes t_2)=(\bbT^r_s h_\ast \cdot t_1)\otimes(\bbT^r_s h_\ast \cdot t_2)\label{eq 2.4.15 RS1}\]

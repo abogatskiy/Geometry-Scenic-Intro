@@ -155,7 +155,7 @@ The following is an elementary form of the celebrated Maurer-Cartan equation whi
 \begin{proof}
     \begin{enumerate}
         \item $\Omega^{\smbullet }(G)^G$ is closed under wedge products because wedge products are natural. It is also closed under exterior derivatives because $\dd$ commutes with pullbacks.
-        \item It suffices to consider the map $\Omega^{\smbullet }(G)^G\to\bigwedge \T^\ast_e G$, defined by $\xi\mapsto\xi_e$. This mapping is a homomorphism of algebras, which is injective by \eqref{eq 5.5.1 RS1}. To show that it is surjective, it is enough to prove that its image contains $\T^\ast_e G$. Thus, let $\eta\in \T^\ast_e G$. By fixing the second argument of the inverse left trivialization of $\T^\ast G$ ($\xi_\rmL^{-\sfT}:G\times \T_e^\ast G\to \T^\ast G$) to be $\eta$, one obtains a left-invariant 1-form $\xi$ with $\xi_e=\eta$.
+        \item It suffices to consider the map $\Omega^{\smbullet }(G)^G\to\bigwedge \T^\ast_e G$, defined by $\xi\mapsto\xi_e$. This mapping is a homomorphism of algebras, which is injective by \eqref{eq 5.5.1 RS1}. To show that it is surjective, it is enough to prove that its image contains $\T^\ast_e G$. Thus, let $\eta\in \T^\ast_e G$. By fixing the second argument of the inverse left trivialization of $\T^\ast G$ ($\xi_\rmL^{-\top}:G\times \T_e^\ast G\to \T^\ast G$) to be $\eta$, one obtains a left-invariant 1-form $\xi$ with $\xi_e=\eta$.
         \item  This is a consequence of the definition of pullback for differential forms.
     \end{enumerate}
 \end{proof}
@@ -173,8 +173,8 @@ We will thus identify left-invariant differential $r$-forms with elements of $\b
     Let $\{\bf{t}_1,\ldots,\bf{t}_n\}$ be a basis in $\frakg$, let $c^i_{jk}$  be the corresponding structure constants and let $\{\alpha^1,\ldots,\alpha^n\}$ be the dual basis in $\frakg^\ast$. Then \eqref{eq 5.5.3 RS1} is equivalent to
     \[\dd \alpha^i=-\frac 12 c^i_{jk}\alpha^j\wedge \alpha^k,\quad i=1,\ldots,n.\label{eq 5.5.4 RS1 MC in coords}\]
     This can be seen by evaluating both sides on the basis elements $\bf{t}_i$. This equation is actually another form of the Maurer-Cartan equation \index{Equation!Maurer-Cartan} \eqref{eq Maurer-Cartan left xi eta}, which we will return to in a basis-free form later in this \sect.
-    \item In terms of left-invariant 1-forms, the inverse left and right trivializations $\chi_\rmL^{-\sfT}$ and $\chi_\rmR^{-\sfT}$ of $\T^\ast G$ read
-    \[\chi_\rmL^{-\sfT}(g,\xi)=\xi_g,\quad \chi_\rmR^{-\sfT}(g,\xi)=(\Ad_{g}^\ast \xi)_g=\xi_g\circ (\Ad_g)_{\ast g}.\]
+    \item In terms of left-invariant 1-forms, the inverse left and right trivializations $\chi_\rmL^{-\top}$ and $\chi_\rmR^{-\top}$ of $\T^\ast G$ read
+    \[\chi_\rmL^{-\top}(g,\xi)=\xi_g,\quad \chi_\rmR^{-\top}(g,\xi)=(\Ad_{g}^\ast \xi)_g=\xi_g\circ (\Ad_g)_{\ast g}.\]
     Note that the 1-form $\Ad_g^\ast\xi$ need not be left-invariant.
 \end{enumerate}
 \end{rem}
@@ -2470,31 +2470,31 @@ When $k<n$, we can use the description of $\St_k(\bbR^n)$ as a coset space to in
 
 \begin{example}[Siegel upper half-space]\index{Siegel upper half-space}\index{Hyperbolic half-plane}\label{ex siegel upper half-space}
     For any integer $g\geq 1$, consider the set of symmetric complex $g\times g$ matrices with positive definite imaginary part:
-    \[\calH_g \coloneqq \{Z=X+\i Y\mid X,Y\in \Mat_g(\bbR), X=X^\sfT, Y=Y^\sfT, Y>0\}.\]
+    \[\calH_g \coloneqq \{Z=X+\i Y\mid X,Y\in \Mat_g(\bbR), X=X^\top, Y=Y^\top, Y>0\}.\]
     The symplectic group $\Sp_{2g}(\bbR)$ consists of real $2g\times 2g$ matrices of the block form 
     \[S=\begin{pmatrix}
         A & B\\
         C & D
-    \end{pmatrix}\in\Sp_{2g}(\bbR),\quad A^\sfT C,B^\sfT D\text{ symmetric}, A^\sfT D-C^\sfT B=\rmI_g,\]
+    \end{pmatrix}\in\Sp_{2g}(\bbR),\quad A^\top C,B^\top D\text{ symmetric}, A^\top D-C^\top B=\rmI_g,\]
     and acts on $\calH_g$ by \glspl{flt}:
     \[S\cdot Z\coloneqq (AZ+B)(CZ+D)^{-1}.\]
     First one checks two identities:
     \begin{align}
-        (AZ+B)^\sfT  (CZ+D)-(CZ+D)^\sfT (AZ+B)=Z-Z^\sfT &=0 \label{1y94}\\
-        (AZ+B)^\sfT  (\widebar{CZ+D})-(CZ+D)^\sfT (\widebar{AZ+B})=Z-\wb{Z}&=2\i Y.\label{13702}
+        (AZ+B)^\top  (CZ+D)-(CZ+D)^\top (AZ+B)=Z-Z^\top &=0 \label{1y94}\\
+        (AZ+B)^\top  (\widebar{CZ+D})-(CZ+D)^\top (\widebar{AZ+B})=Z-\wb{Z}&=2\i Y.\label{13702}
     \end{align}
     Consider a vector $\bf{z}\in\bbC^g$ such that $(CZ+D)\bf{z}=0$. Then 
-    \[0=\bf{z}^\sfT  (AZ+B)^\sfT (\widebar{CZ+D})\wb{\bf{z}}=\bf{z}^\sfT  (CZ+D)^\sfT (\widebar{AZ+B})\wb{\bf{z}}\]
-    and therefore $2\i \bf{z}^\sfT  Y \wb{\bf{z}}=0$. But $Y$ is positive definite, so $\bf{z}=0$. Thus $\ker(CZ+D)=\{0\}$ and the action is well-defined.
+    \[0=\bf{z}^\top  (AZ+B)^\top (\widebar{CZ+D})\wb{\bf{z}}=\bf{z}^\top  (CZ+D)^\top (\widebar{AZ+B})\wb{\bf{z}}\]
+    and therefore $2\i \bf{z}^\top  Y \wb{\bf{z}}=0$. But $Y$ is positive definite, so $\bf{z}=0$. Thus $\ker(CZ+D)=\{0\}$ and the action is well-defined.
 
     Next, we need to check that $S\cdot Z\in \calH_g$. That it is symmetric follows from \eqref{1y94} combined with the invertibility of $CZ+D$. Its imaginary part can be computed:
-    \[\Im (S\cdot Z)=((CZ+D)^\sfT )^{-1}Y(\widebar{CZ+D})^{-1},\]
-    and it is indeed positive definite if $Y$ is. Finally, we need to establish transitivity. For this one uses the Cholesky decomposition for positive definite symmetric matrices: there exists $U\in\GL_g(\bbR)$ such that $Y=U^\sfT U$, and hence $Z$ can be written as the following symplectic matrix acting on $\i \rmI_g\in \calH_g$:
-    \[Z=(\i U^\sfT +XU^{-1})U^{-1}=\begin{pmatrix}
+    \[\Im (S\cdot Z)=((CZ+D)^\top )^{-1}Y(\widebar{CZ+D})^{-1},\]
+    and it is indeed positive definite if $Y$ is. Finally, we need to establish transitivity. For this one uses the Cholesky decomposition for positive definite symmetric matrices: there exists $U\in\GL_g(\bbR)$ such that $Y=U^\top U$, and hence $Z$ can be written as the following symplectic matrix acting on $\i \rmI_g\in \calH_g$:
+    \[Z=(\i U^\top +XU^{-1})U^{-1}=\begin{pmatrix}
         \rmI_g & X\\
         0 & \rmI_g
     \end{pmatrix}\begin{pmatrix}
-        U^\sfT  & 0\\
+        U^\top  & 0\\
         0 & U^{-1}
     \end{pmatrix}\cdot(\i \rmI_g).\]
     This proves transitivity. The stabilizer of the basepoint $\i \rmI_g$ consists of symplectic matrices that satisfy $\i A+B=-C+\i D$, which is exactly the intersection of $\Sp_{2g}(\bbR)$ with $\Or_{2g}$. But this intersection is naturally identified with the unitary group $\U_g$ (the corresponding unitary matrix is $A+\i B$, cf.\ Example~\ref{ex hermitian structures}). Therefore, we have 
@@ -3364,7 +3364,7 @@ We thus have the alternative definition of the Grassmann manifolds not as homoge
    Define the square matrix $\tau=\left[\begin{smallmatrix}
        0&\rmI_k\\\rmI_{n-k}&0
    \end{smallmatrix}\right]$. 
-   Then the conjugation $A\mapsto \tau A\tau^\sfT $ on $\calO_n$ takes the subgroup $\calO_k\times\calO_{n-k}$ to $\calO_{n-k}\times\calO_{k}$ and hence induces a diffeomorphism $\Gr_k(\bbK^n)\cong \Gr_{n-k}(\bbK^n)$. Therefore, for the purposes of studying the topology of these spaces, we can always assume $n\geq 2k$.
+   Then the conjugation $A\mapsto \tau A\tau^\top $ on $\calO_n$ takes the subgroup $\calO_k\times\calO_{n-k}$ to $\calO_{n-k}\times\calO_{k}$ and hence induces a diffeomorphism $\Gr_k(\bbK^n)\cong \Gr_{n-k}(\bbK^n)$. Therefore, for the purposes of studying the topology of these spaces, we can always assume $n\geq 2k$.
 \end{rem}
 
 
@@ -3524,7 +3524,7 @@ The same homogeneous space can arise from different Lie groups $G$. Each of thes
     Consider the tautological bundle $\gamma_1(\bbR^{n+1})\to \RP^n$. Its total space can be identified with $\bbR^{n+1}\setminus\{0\}$ and the structure group is $\bbR^\times$. The standard action of $\SL_{n+1}(\bbR)$ on $\bbR^{n+1}$ restricts to an action on $\gamma_1(\bbR^{n+1})$. The resulting diffeomorphisms of $\RP^n$ are exactly the projective transformations. The stabilizer subgroup of the line through $\bf{e}_{n+1}\in\bbR^{n+1}$ is given by
     \[P=\left\{\begin{pmatrix}
         A&\bf{0}_n\\
-        \bf{x}^\sfT &\det A^{-1}\end{pmatrix}, A\in\GL_n(\bbR),\bf{x}\in\bbR^{n}\right\}.\]
+        \bf{x}^\top &\det A^{-1}\end{pmatrix}, A\in\GL_n(\bbR),\bf{x}\in\bbR^{n}\right\}.\]
     This is an example of a parabolic subgroup of the simple Lie group $\SL_{n+1}(\bbR)$. 
     The identity component $P^+$ (with $\det A>0$) is the stabilizer of the ray spanned by $\bf{e}_{n+1}$. The corresponding homogeneous space of rays in $\bbR^{n+1}$ can be identified with $\bbS^n$.
     Thus

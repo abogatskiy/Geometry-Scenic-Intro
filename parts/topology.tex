@@ -2383,10 +2383,10 @@ Show that contractible spaces are simply connected.
 
 This theorem implies that if $X$ is locally compact, then a homotopy $X\times [0,1]\to Y$ is the same thing as a path $[0,1]\to Y^X$.
 \begin{cor}[The Exponential Law {{\cite[Thm.~VII.2.5]{Bredon}}}]
-    Let $X,T$ be locally compact Hausdorff spaces, and $Y$ a Hausdorff space. Then the bijection from Theorem~\ref{compact open continuity} is a natural homeomorphism $Y^{X\times T}\cong \left(Y^X\right)^\sfT $ taking $f$ to $f^\ast$ defined as $f^\ast (t)(x)=f(x,t)=f_t(x)$.
+    Let $X,T$ be locally compact Hausdorff spaces, and $Y$ a Hausdorff space. Then the bijection from Theorem~\ref{compact open continuity} is a natural homeomorphism $Y^{X\times T}\cong \left(Y^X\right)^T$ taking $f$ to $f^\ast$ defined as $f^\ast (t)(x)=f(x,t)=f_t(x)$.
 \end{cor}
 
-Similarly, one can show that under similar conditions, one has homeomorphisms $Y^X\times W^X\cong (Y\times W)^X$ (under $f\times g$), $Y^{X\sqcup T}\cong Y^X\times Y^\sfT $ (under $f\sqcup g$), and $Z^Y\times Y^X \cong Z^X$ (under $f\circ g$). For details see \cite[\S VII.2]{Bredon}.
+Similarly, one can show that under similar conditions, one has homeomorphisms $Y^X\times W^X\cong (Y\times W)^X$ (under $f\times g$), $Y^{X\sqcup T}\cong Y^X\times Y^T$ (under $f\sqcup g$), and $Z^Y\times Y^X \cong Z^X$ (under $f\circ g$). For details see \cite[\S VII.2]{Bredon}.
 \begin{defn}[Loop space]\index{Loop space}
     The loop space of a pointed space $X$ is the space $\Omega X=X^{\bbS^1}$ that consists of loops based at $x_0$, with the compact-open topology. Its basepoint is the constant loop at $x_0$.
 \end{defn}
@@ -5689,14 +5689,14 @@ We skip the proof of this theorem since later on we will derive a much stronger 
         \item Real and complex unimodular groups
         \[\SL_n(\bbK)=\{a\in\GL_n(\bbK)\mid \det a=1\}, \bbK=\bbR,\bbC.\]
         \item The real orthogonal group
-        \[\Or_{n,m}=\{a\in\GL_{n+m}(\bbR)\mid a^\sfT  \rmI_{n,m}a=\rmI_{n,m}\}.\]
+        \[\Or_{n,m}=\{a\in\GL_{n+m}(\bbR)\mid a^\top  \rmI_{n,m}a=\rmI_{n,m}\}.\]
         In the case $m=0$ we write $\Or_n$ or $\Or_n(\bbR)$ for the group of linear isometries of the Euclidean dot product.
 
         The special orthogonal group is the subgroup of $\Or_{n,m}$ of isometries that preserve orientation, i.e., the unimodular ones
         \[\SO_{n,m}=\Or_{n,m}\cap \SL_{n+m}(\bbR).\]
         In the case $m=0$ we write $\SO_n$ or $\SO_n(\bbR)$.
         \item The complex orthogonal group
-        \[\Or_{n}(\bbC)=\{a\in\GL_{n}(\bbC)\mid a^\sfT  a=\rmI_{n}\}.\]
+        \[\Or_{n}(\bbC)=\{a\in\GL_{n}(\bbC)\mid a^\top  a=\rmI_{n}\}.\]
 
         The special complex orthogonal group is the subgroup of $\Or_{n}(\bbC)$ of unimodular isometries
         \[\SO_{n}(\bbC)=\Or_{n}(\bbC)\cap \SL_{n}(\bbC).\]
@@ -5708,7 +5708,7 @@ We skip the proof of this theorem since later on we will derive a much stronger 
         \[\SU_{n,m}=\U_{n,m}\cap \SL_{n+m}(\bbC).\]
         In the case $m=0$ we write $\SU_n$.
         \item The symplectic group is the group of isometries of the antisymmetric bilinear form $\omega(x,y)=(x,\rmJ_n y)$ on $\bbK^{2n}$,
-        \[\Sp_n(\bbK)=\{a\in\GL_{2n}(\bbK)\mid a^\sfT  \rmJ_n a=\rmJ_n\}.\]
+        \[\Sp_n(\bbK)=\{a\in\GL_{2n}(\bbK)\mid a^\top  \rmJ_n a=\rmJ_n\}.\]
         \item The quaternionic symplectic group is the group of isometries of the Hermitian form $(\wb{x},\rmI_{n,m}y)$ on $\bbH^{n+m}$,
         \[\Sp_{n,m}=\{a\in\GL_{n,m}(\bbH)\mid a^\dagger \rmI_{n,m}a=\rmI_{n,m}\}.\]
         In the case $m=0$ we write $\Sp_n$ for the group of linear isometries of the standard inner product on $\bbH^n$. Note that these groups are in fact different from their complex and real versions. The difference is explained in detail in \cite[pp.~5-6]{Sepanski}.
@@ -5831,7 +5831,7 @@ This is a special case of a very important structural theorem from Lie theory: e
 \begin{xca}
     Complex general linear, real orthogonal, unitary, and real symplectic groups are closely related in a way that is fundamental to much of differential geometry and physics. Namely, the following intersections hold (where all groups are viewed as subsets of $\GL_{2n}(\bbR)$):
     \[\U_n=\Or_{2n}\cap \Sp_{2n}(\bbR)=\Or_{2n}\cap \GL_{n}(\bbC)=\Sp_{2n}(\bbR)\cap \GL_{n}(\bbC). \]
-    In other words, the unitary group coincides with the intersection of any two out of three groups $\Or_{2n}$, $\Sp_{2n}(\bbR)$, and $\GL_{n}(\bbC)$. In differential geometry this leads to the result that having any two out of three structures -- Riemannian metric, symplectic form, or a complex structure -- naturally leads to a compatible third structure. This underlies, for instance, the definition of K\"ahler geometry. Prove the above equalities. \emph{Hint:} e.g, for the first intersection, show that if a transformation preserves the Euclidean bilinear form $\sfg(\bf x,\bf y)=\bf x^\sfT \rmI_{2n}\bf y$ and the symplectic form $\omega(\bf x,\bf y)=\bf x^\sfT \rmJ_n \bf y$, then it also preserves the form $\sfh(\bf u,\bf v)=\sfg(\bf u,\bf v)+\i\omega(\bf u,\bf v)$, which defines a Hermitian dot product if we let the first $n$ coordinates be the real parts, the last $n$ coordinates the imaginary parts, and define the structure of a complex vector space by putting $\i\bf u\coloneqq \rmJ_n \bf u$. Similar constructions also exist for the other two directions.
+    In other words, the unitary group coincides with the intersection of any two out of three groups $\Or_{2n}$, $\Sp_{2n}(\bbR)$, and $\GL_{n}(\bbC)$. In differential geometry this leads to the result that having any two out of three structures -- Riemannian metric, symplectic form, or a complex structure -- naturally leads to a compatible third structure. This underlies, for instance, the definition of K\"ahler geometry. Prove the above equalities. \emph{Hint:} e.g, for the first intersection, show that if a transformation preserves the Euclidean bilinear form $\sfg(\bf x,\bf y)=\bf x^\top \rmI_{2n}\bf y$ and the symplectic form $\omega(\bf x,\bf y)=\bf x^\top \rmJ_n \bf y$, then it also preserves the form $\sfh(\bf u,\bf v)=\sfg(\bf u,\bf v)+\i\omega(\bf u,\bf v)$, which defines a Hermitian dot product if we let the first $n$ coordinates be the real parts, the last $n$ coordinates the imaginary parts, and define the structure of a complex vector space by putting $\i\bf u\coloneqq \rmJ_n \bf u$. Similar constructions also exist for the other two directions.
 \end{xca}
 
 
@@ -5991,7 +5991,7 @@ The notions of orbits, stabilizers, transitive actions and free actions transfer
 
 % \begin{example}[Classical groups]\index{Group!classical}
 %     \begin{enumerate}[label=(\alph*)]
-%         \item $\Or_n$ is the level set $F^{-1}(\rmI_n)$ of the map $F:\GL_n(\bbR)\to \Mat_n(\bbR)$, $A\mapsto A^\sfT A$. $F$ intertwines the right action of $\GL_n(\bbR)$ on itself with its right action $B\mapsto B^\sfT AB$ on $\Mat_n(\bbR)$ (both actions are clearly smooth). Thus $\Or_n$ is a properly embedded Lie subgroup of $\GL_n(\bbR)$. It is compact because it is closed and bounded in $\Mat_n(\bbR)$: closed because it is a level set of $F$, and bounded because the matix norm of each orthogonal matrix is $\sqrt{n}$.
+%         \item $\Or_n$ is the level set $F^{-1}(\rmI_n)$ of the map $F:\GL_n(\bbR)\to \Mat_n(\bbR)$, $A\mapsto A^\top A$. $F$ intertwines the right action of $\GL_n(\bbR)$ on itself with its right action $B\mapsto B^\top AB$ on $\Mat_n(\bbR)$ (both actions are clearly smooth). Thus $\Or_n$ is a properly embedded Lie subgroup of $\GL_n(\bbR)$. It is compact because it is closed and bounded in $\Mat_n(\bbR)$: closed because it is a level set of $F$, and bounded because the matix norm of each orthogonal matrix is $\sqrt{n}$.
 %         \item $\SO_n$ is the identity component of $\Or_n$, which is also the set of orthogonal determinant that have determinant $+1$ and thus preserve spatial orientations. Therefore it is an open Lie subgroup of $\Or_n$.
 %         \item $U_n\subset \GL_n(\bbC)$ is defined similarly as the level set of $A\mapsto A^\ast A$ and is therefore a properly embedded Lie subgroup of $\GL_n(\bbC)$ of real dimension $n^2$. $\SU_n=\U_n\cap \SL_n(\bbC)$ and it is easy to check that $\SU_n$ is a properly embedded Lie subgroup of $U_n$ of real dimension $n^2-1$.
 %     \end{enumerate}
@@ -6058,9 +6058,9 @@ An important class of matrix Lie groups closely related to classical groups are 
     where the canonical action of $G$ on $\bbK^n$ is implied. (In more abstract terms, $G$ is a Lie group with a faithful linear representation.) The resulting normal subgroup $\bbK^n$ is called the \emph{group of translations}. $\bbA G$ is isomorphic to the subgroup of $\GL_{n+1}(\bbK)$ consisting of matrices of the block form
     \[\begin{bmatrix}
         g & \bf{x}\\
-        \bf{0}_n^\sfT  & 1
+        \bf{0}_n^\top  & 1
     \end{bmatrix},\quad g\in G,\; \bf{x}\in\bbK^n,\]
-    where $\bf{0}_n^\sfT $ is a row of $n$ zeros. From here, it is easy to see that the correspondence $G\mapsto \bbA G$ is a functor.
+    where $\bf{0}_n^\top $ is a row of $n$ zeros. From here, it is easy to see that the correspondence $G\mapsto \bbA G$ is a functor.
 \end{defn}
 
 \begin{example}
@@ -6725,7 +6725,7 @@ Now we are ready to classify all 3-dimensional Lie algebras. Let $s=\dim[\frakg,
 
 
 \begin{xca}
-    Show that all classical Lie algebras (that is, the algebras of matrices that preserve a non-degenerate bilinear form $\bf{B}$ in the sense that $\bf{B}A+A^\sfT \bf{B}=0$) over a field of characteristic 0 are simple with the exception of
+    Show that all classical Lie algebras (that is, the algebras of matrices that preserve a non-degenerate bilinear form $\bf{B}$ in the sense that $\bf{B}A+A^\top \bf{B}=0$) over a field of characteristic 0 are simple with the exception of
     \[\frakso_4(\bbK)\cong \fraksl_2(\bbK)\oplus\fraksl_2(\bbK).\]
 
     To prove this, first show that, for $\mathrm{char}(\bbK)\neq 2$, the smallest ideal of $\fraksl_n(\bbK)$ containing any standard unit $e_{ij}$ is $\fraksl_n(\bbK)$ itself. Furthermore, letting $\mathrm{char}(K)=p$ and assuming that $p\neq 2$ and $p$ doesn't divide $n$, use this result to show that $\fraksl_n(K)$ is simple for any $n\geq 2$. 

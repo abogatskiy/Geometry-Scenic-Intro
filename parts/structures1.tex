@@ -116,7 +116,7 @@ The following proposition characterizes the groups of automorphisms of Klein geo
 
         \item $\bbE^n\coloneqq (\SE_n,\SO_n)$ is the Euclidean geometry (``school geometry'') of orientation-preserving congruences, or rigid motions, on $\rmA(\bbR^n)$. The corresponding principal bundle $\SE_n\to \rmA(\bbR^n)$ is the bundle of orthonormal frames at every point of the Euclidean space. This definition is equivalent to adding a metric to the real affine geometry. Proposition~\ref{prop 1.5.2 Cap 1} shows that the group of automorphisms of this geometry is exactly the Euclidean group (this is, in fact, the group's classical definition).
 
-        \item Let $H$ be the subgroup $\CO_n(\bbR)\emb\GL_n^+(\bbR)$ consisting of \emph{conformal orthogonal} matrices $A$, i.e., such that $AA^\sfT =\lambda^2 \rmI$ for some $\lambda>0$.\index{Conformal orthogonal group} Every such matrix has the form $\lambda R$ where $R\in\SO_n$ is a rotation matrix, so this is precisely the group of similarity transformations in Euclidean geometry. Then the Klein geometry $(H\ltimes \bbR^n,H)$ can be called the ``geometry of similarity'' on $\bbR^n$.
+        \item Let $H$ be the subgroup $\CO_n(\bbR)\emb\GL_n^+(\bbR)$ consisting of \emph{conformal orthogonal} matrices $A$, i.e., such that $AA^\top =\lambda^2 \rmI$ for some $\lambda>0$.\index{Conformal orthogonal group} Every such matrix has the form $\lambda R$ where $R\in\SO_n$ is a rotation matrix, so this is precisely the group of similarity transformations in Euclidean geometry. Then the Klein geometry $(H\ltimes \bbR^n,H)$ can be called the ``geometry of similarity'' on $\bbR^n$.
                 
         \item The space of $(\SL_2(\bbR),\SO_2)$ is the \emph{hyperbolic half-plane} $\bbC^+=\{z\in \bbC\mid \Im z>0\}$ from Example~\ref{ex siegel upper half-space} with the transitive action of real \glspl{flt} $\SL_2(\bbR)$ acting by \index{Hyperbolic half-plane}
         \[\begin{pmatrix}
@@ -128,14 +128,14 @@ The following proposition characterizes the groups of automorphisms of Klein geo
         
         \item Let $H<\GL_{n+1}(\bbR)$ be the subgroup
         \[H=\left\{\begin{pmatrix}
-            A& \bf{x}\\ \bf{0}_n^\sfT  &\lambda
+            A& \bf{x}\\ \bf{0}_n^\top  &\lambda
         \end{pmatrix}
         \middle| A\in\GL_n(\bbR),\bf{x}\in\bbR^n,\lambda\in \bbR^\times \right\}.\]
         Then $(\GL_{n+1}(\bbR),H)$ is the \emph{projective geometry} on $\RP^n$ with the standard action of $\GL_{n+1}(\bbR)$ on lines in $\bbR^{n+1}$. Its effective analog is $(\PGL_{n+1}(\bbR),H\slash \bbR^\times)$.
         
         \item $(\SO_{n+1},\Or_n)$, with $\Or_n$ embedded via
         \[A\mapsto \begin{pmatrix}
-            A& \bf{0}_n\\\bf{0}_n^\sfT  & (\det A)^{-1}
+            A& \bf{0}_n\\\bf{0}_n^\top  & (\det A)^{-1}
         \end{pmatrix},\]
         is the \emph{elliptic geometry} on $\RP^n$ (since great circles on the sphere intersect at two points, their images on $\RP^n$ intersect only at one) with Euclidean transformations acting on lines in $\bbR^{n+1}$. This adds a metric to the projective geometry: the distance between two lines is proportional to the angle between them, and is preserved by the symmetry group.
 
@@ -784,7 +784,7 @@ As a special case, in effective Klein geometries there are no proper subgroups o
     Consider the projective space $\RP^n$ as a homogeneous space of type $(G=\SL_{n+1}(\bbR),H)$ with $H$ the stabilizer of the basepoint $[e]=[\bf{e}_{n+1}]$, i.e., the set of unimodular matrices preserving $\bf{e}_{n+1}$ up to a scale. $H$ consists of matrices of the form 
     \[ \begin{pmatrix}
         a & \bf{0}_n \\
-        \bf{x}^\sfT  & (\det a)^{-1} 
+        \bf{x}^\top  & (\det a)^{-1} 
     \end{pmatrix},\quad a\in \GL_n(\bbR),\bf{x}\in\bbR^n.\]
     $H$ acts on $\frakg=\fraksl_{n+1}(\bbR)$ via conjugation. The tangent space $\T_{[e]}(\RP^n)=\frakg\slash\frakh$ then consists of elements of the form 
     $\left(\begin{smallmatrix}
@@ -794,7 +794,7 @@ As a special case, in effective Klein geometries there are no proper subgroups o
     is acted on via 
     \[\begin{pmatrix}
         a & \bf{0}_n\\
-        \bf{x}^\sfT  & (\det a)^{-1}
+        \bf{x}^\top  & (\det a)^{-1}
     \end{pmatrix}
     \begin{pmatrix}
         \ast & \bf{y} \\
@@ -802,7 +802,7 @@ As a special case, in effective Klein geometries there are no proper subgroups o
     \end{pmatrix}
     \begin{pmatrix}
         a & \bf{0}_n\\
-        \bf{x}^\sfT  & (\det a)^{-1}
+        \bf{x}^\top  & (\det a)^{-1}
     \end{pmatrix}^{-1}=
     \begin{pmatrix}
         \ast & (\det a) a\bf{y} \\
@@ -813,17 +813,17 @@ As a special case, in effective Klein geometries there are no proper subgroups o
     \[K_1=\left\{ 
         \begin{pmatrix}
             \lambda \rmI_n & \bf{0}_n \\
-            \bf{x}^\sfT  & \lambda
+            \bf{x}^\top  & \lambda
         \end{pmatrix} \middle| \bf{x}\in\bbR^n,\lambda\in\bbR, \lambda^{n+1}=1
     \right\}, \quad \frakk_1=\left\{ 
         \begin{pmatrix}
             \mathrm{0}_{n,n} & \bf{0}_n \\
-            \bf{x}^\sfT  & 0
+            \bf{x}^\top  & 0
         \end{pmatrix} \middle| \bf{x}\in\bbR^n\right\}.\]
     This subgroup $K_1<G$ is precisely the subgroup preserving both $[e]=[\bf{e}_{n+1}]\in\RP^n$ and the standard basis for $\T_{[e]}\RP^n$, so $G\slash K_1\to \RP^n$ is the frame bundle of $\RP^n$, i.e., the set of pairs $(m,u)$ of point $m\in \RP^n$ and linear isomorphism $u:\T_m\RP^n\to \bbR^n$.  To act trivially on $\RP^n$, an element of $G$ must lie in $K_1$, but it must also act trivially on the frame bundle of $\RP^n$, i.e., on $G\slash K_1$. By the same reasoning, it must act trivially on $\T_{u_0}(G\slash K_1)$, where $u_0$ is the standard basis of $\bbR^n$ viewed as a frame on $\RP^n$. But $\T_{u_0}(G\slash K_1)=\frakg\slash\frakk_1$, and we compute that $K_1$ acts on $\frakg\slash\frakk_1$ by 
     \[\begin{pmatrix}
         \lambda\rmI_n & \bf{0}_n\\
-        \bf{b}^\sfT  & \lambda
+        \bf{b}^\top  & \lambda
     \end{pmatrix}
     \begin{pmatrix}
         A & \bf{y} \\
@@ -831,14 +831,14 @@ As a special case, in effective Klein geometries there are no proper subgroups o
     \end{pmatrix}
     \begin{pmatrix}
         \lambda\rmI_n & \bf{0}_n\\
-        \bf{b}^\sfT  & \lambda
+        \bf{b}^\top  & \lambda
     \end{pmatrix}^{-1}=
     \begin{pmatrix}
-        A-\lambda^{-1}\bf{y}\bf{b}^\sfT & \bf{y}\\
-        \ast  & d+\lambda^{-1}\bf{b}^\sfT \bf{y}
+        A-\lambda^{-1}\bf{y}\bf{b}^\top & \bf{y}\\
+        \ast  & d+\lambda^{-1}\bf{b}^\top \bf{y}
     \end{pmatrix}.
     \]
-    Now, $K_2$ is the set of elements of $K_1$ that act trivially, i.e., $0=\lambda^{-1}\bf{y}\bf{b}^\sfT =\lambda^{-1}\bf{b}^\sfT \bf{y}$ for all vectors $\bf{y}$, hence $\bf{b}=0$. Thus, $K_2$ is 
+    Now, $K_2$ is the set of elements of $K_1$ that act trivially, i.e., $0=\lambda^{-1}\bf{y}\bf{b}^\top =\lambda^{-1}\bf{b}^\top \bf{y}$ for all vectors $\bf{y}$, hence $\bf{b}=0$. Thus, $K_2$ is 
     \[K_2=\left\{ 
         \begin{pmatrix}
             \lambda \rmI_n & 0 \\
@@ -876,7 +876,7 @@ Next, recall that the $r$-jet of a smooth map can be identified, given a particu
     Consider the projective space $\RP^n$ viewed as a Klein geometry $(G,H)$ with $G=\PGL_{n+1}$. As we saw, $G\slash K_1$ is the frame bundle of $\RP^n$, i.e., all of $\rmJ^1_{[e]}(\RP^n,\RP^n)$. Thus, any linear isomorphism of tangent spaces of $\RP^n$ arises as the first derivative of a projective transformation. Then $K_2$ is trivial, and $G\slash K_2=G=\PGL_{n+1}\subset \rmJ^2_{[e]}(\RP^n,\RP^n)$ is the set of $2$-jets of projective transformations: a projective transformation is determined by its $2$-jet. Moreover, the set of $2$-jets with a given $1$-jet is $K_1\slash K_2=K_1$, the group of projective transformations of the form 
     \[\begin{pmatrix}
         \rmI_n & \bf{0}_n\\
-        \bf{x}^\sfT  & 1
+        \bf{x}^\top  & 1
     \end{pmatrix},\quad \bf{x}\in\bbR^n,\]
     modulo multiplication by $(n+1)$-roots of unity.  So the space of $2$-jets of projective transformations with a given $1$-jet has dimension $n$.
 \end{example}
@@ -1319,7 +1319,7 @@ The problem of finding a first integral can be locally stated as the problem of 
 
 It follows that 
 \[\dim \calY=\dim \calY_m\leq \dim M-\rank D.\label{eq 126491}\]
-Let $\theta^1,\ldots,\theta^k$ be a set of forms defining the distribution $D$ and $X_1,\ldots,X_l$ be a basis of a nondegerate subspace $\calY<\sym(D)$. By \eqref{eq 126491}, $l\leq k$ and the matrix $\{\theta^i(X_j)\}$ has rank $l$ at any point of $M$. If $l=k$, then this matrix is invertible and one can choose another set of forms defining $D$, say $\theta_1',\ldots,\theta_k'$, such that $\theta_i'(X_j)=\delta_{ij}$. To do this, it suffices to multiply the column $(\theta^1,\ldots,\theta^k)^\sfT $ by the matrix inverse of $\{\theta^i(X_j)\}$. Now assume that the space $\calY$ is closed under the Lie bracket, i.e., a Lie subalgebra. Then we have the following dual algebraic structure on the $\theta^i$.
+Let $\theta^1,\ldots,\theta^k$ be a set of forms defining the distribution $D$ and $X_1,\ldots,X_l$ be a basis of a nondegerate subspace $\calY<\sym(D)$. By \eqref{eq 126491}, $l\leq k$ and the matrix $\{\theta^i(X_j)\}$ has rank $l$ at any point of $M$. If $l=k$, then this matrix is invertible and one can choose another set of forms defining $D$, say $\theta_1',\ldots,\theta_k'$, such that $\theta_i'(X_j)=\delta_{ij}$. To do this, it suffices to multiply the column $(\theta^1,\ldots,\theta^k)^\top $ by the matrix inverse of $\{\theta^i(X_j)\}$. Now assume that the space $\calY$ is closed under the Lie bracket, i.e., a Lie subalgebra. Then we have the following dual algebraic structure on the $\theta^i$.
 
 \begin{thm}[{\cite[Thm.~1.4.1]{Kras}}]\label{thm 4.1 Kras}
     Let $D$ be an integrable distribution locally defined by the set of $1$-forms $\theta^1,\ldots,\theta^k$. Let $X_1,\ldots,X_k$ be a basis of a nondegenerate Lie algebra $\calY<\sym(D)$. Suppose that $\theta^i(X_j)=\delta^i_{j}$ and $[X_i,X_j]=\sum_s c^s_{ij}X_s$, where $c^s_{ij}$ are the structure constants of $\calY$. Then there holds the \emph{structure equation}\index{Equation!Structure}
@@ -2651,7 +2651,7 @@ Suppose $\omega^1,\ldots,\omega^n$ is such a coframe. Then the total differentia
 \[\rmD I=\sum_{i=1}^n (\calD_i I) \omega^i,\]
 thus defining invariant differential operators $\calD_1,\ldots,\calD_n$. 
 
-Now write $\omega^i=\sum_j J^i_j \dd x^j$, $i=1,\ldots,n$. Since this is an $n$-coframe, the $n\times n$ matrix $\bf{J}=(J^i_j)$ is invertible. The associated invariant differential operators are $\calD_j=\sum_i K^i_j D_i$, $j=1,\ldots,n$, where $\bf{K}=\bf{J}^{-\sfT}$ is the inverse transpose of $\bf{J}$. In particular, if the $\omega^i=\rmD I_i$ are obtained from $n$ independent differential invariants $I_1,\ldots,I_n$, then $\bf{J}=(D_j I_i)$ is their total Jacobian matrix, and the invariant differential operators are given by 
+Now write $\omega^i=\sum_j J^i_j \dd x^j$, $i=1,\ldots,n$. Since this is an $n$-coframe, the $n\times n$ matrix $\bf{J}=(J^i_j)$ is invertible. The associated invariant differential operators are $\calD_j=\sum_i K^i_j D_i$, $j=1,\ldots,n$, where $\bf{K}=\bf{J}^{-\top}$ is the inverse transpose of $\bf{J}$. In particular, if the $\omega^i=\rmD I_i$ are obtained from $n$ independent differential invariants $I_1,\ldots,I_n$, then $\bf{J}=(D_j I_i)$ is their total Jacobian matrix, and the invariant differential operators are given by 
 \[\calD_j J=\frac{D(I_1,\ldots,I_{j-1},J,I_{j+1},\ldots,I_n)}{D(I_1,\ldots,I_n)},\quad j=1,\ldots,n,\]
 where $D(I_1,\ldots,I_n)=\det (D_i I_j)$ denotes the total Jacobian determinant. For a proof that these operators suffice to generate all differential invariants from a set of fundamental ones, see \cite[Thm.~5.48]{OlverEquiv}. In particular, it turns out that the fundamental differential invariants can be chosen to be of order $r+2$, where $r$ is the order of stabilization of $G$. Moreover, if the stable orbit dimension $s_r$ satisfies $\dim G=s_r\leq \dim \rmJ^r E$, so there are at least $n$ independent invariants $I_1,\ldots,I_n$ of order $r$, then the contact-invariant coframe $\rmD I_1,\ldots,\rmD I_n$ lives on $\rmJ^{r+1}E$, so the fundamental invariants have order at most $r+1$.
 
@@ -2666,7 +2666,7 @@ where $D(I_1,\ldots,I_n)=\det (D_i I_j)$ denotes the total Jacobian determinant.
     \end{split}\]
     as fundamental second-order invariants. In particular, the Laplacian can be written as $\Delta=p_{xx}+p_{yy}=r^{-2}(U+W)$.
 
-    In the $3$-dimensional case, we need one more contact-invariant $1$-form. The vector triple product $(\bf{x}\wedge \bf{p})\cdot \dd\bf{x}$ serves the purpose. The corresponding invariant operators are $\bf{J}^{-\sfT}\bf{D}$, where $\bf{D}=(D_x,D_y,D_z)$ and $\bf{J}$ is the matrix of coefficients of the contact-invariant coframe. However, note that under $\SO_3$ the matrices $\bf{J}$ and $\bf{J}^{-\sfT}$ have identical transformation properties, and hence simpler invariant operators are given by $\bf{J}\cdot\bf{D}$, or, explicitly, $\bf{x}\cdot\bf{D}$, $\bf{p}\cdot\bf{D}$, $(\bf{x}\wedge\bf{p})\cdot\bf{D}$. Applying these to $u$ yields the first-order invariants $\bf{x}\cdot\bf{p}$ and $\lVert\bf{p}\rVert^2$. Five second-order invariants can be found by applying these operators to first-order ones; if $\bf{H}=(p_{ij})$ denotes the Hessian matrix of second-order jets, these are $\bf{x}^\sfT \bf{H}\bf{x}$, $\bf{x}^\sfT \bf{H}\bf{p}$, $\bf{p}^\sfT \bf{H}\bf{p}$, $\bf{x}\bf{H}(\bf{x}\wedge\bf{p})$, $\bf{p}\bf{H}(\bf{x}\wedge\bf{p})$. Then $(\bf{x}\wedge\bf{p})^\sfT \bf{H}(\bf{x}\wedge\bf{p})$ provides the remaining second-order invariant. In this case $s_0=2$, $s_1=3$, and the orbit dimension stabilizes at order $1$. Thus, a complete system of higher-order invariants of $\SO_3$ is provided by successively applying the three invariant operators to the second-order invariants.
+    In the $3$-dimensional case, we need one more contact-invariant $1$-form. The vector triple product $(\bf{x}\wedge \bf{p})\cdot \dd\bf{x}$ serves the purpose. The corresponding invariant operators are $\bf{J}^{-\top}\bf{D}$, where $\bf{D}=(D_x,D_y,D_z)$ and $\bf{J}$ is the matrix of coefficients of the contact-invariant coframe. However, note that under $\SO_3$ the matrices $\bf{J}$ and $\bf{J}^{-\top}$ have identical transformation properties, and hence simpler invariant operators are given by $\bf{J}\cdot\bf{D}$, or, explicitly, $\bf{x}\cdot\bf{D}$, $\bf{p}\cdot\bf{D}$, $(\bf{x}\wedge\bf{p})\cdot\bf{D}$. Applying these to $u$ yields the first-order invariants $\bf{x}\cdot\bf{p}$ and $\lVert\bf{p}\rVert^2$. Five second-order invariants can be found by applying these operators to first-order ones; if $\bf{H}=(p_{ij})$ denotes the Hessian matrix of second-order jets, these are $\bf{x}^\top \bf{H}\bf{x}$, $\bf{x}^\top \bf{H}\bf{p}$, $\bf{p}^\top \bf{H}\bf{p}$, $\bf{x}\bf{H}(\bf{x}\wedge\bf{p})$, $\bf{p}\bf{H}(\bf{x}\wedge\bf{p})$. Then $(\bf{x}\wedge\bf{p})^\top \bf{H}(\bf{x}\wedge\bf{p})$ provides the remaining second-order invariant. In this case $s_0=2$, $s_1=3$, and the orbit dimension stabilizes at order $1$. Thus, a complete system of higher-order invariants of $\SO_3$ is provided by successively applying the three invariant operators to the second-order invariants.
 \end{example}
 
 
@@ -3680,7 +3680,7 @@ In the general unparametrized equivalence problem, typically, the submanifolds $
     \label{eq 2.6 OlverCo}
 \end{equation}
 
-We shall see that the reparametrization problem can be treated as a special case of the unparametrized problem by extending it to the case of $G$ being a Lie pseudogroup such as the pseudogroup of all diffeomorphisms.
+We shall see that the reparametrization problem can be treated as a special case of the unparametrized problem by extending it to the case of $G$ being a Lie pseudogroup, at least for the product of the pseudogroup of all diffeomorphisms of the parameter space with a finite-dimensional group (see Remark~\ref{rem moving frames pseudogroups} for general pseudogroups).
 
 \begin{example}
     For instance, we can reformulate the unparametrized equivalence problem for curves in the Euclidean plane as a fixed parametrization problem for curves in the extended space $E = \bbR \times \bbR^2$, which has coordinates $(t,\bf{x}) = (t,x,y)$. The extended curve is given as the graph $\{(t,\bf{x}(t))\}$ of the original parametrized curve, and the Lie pseudogroup $\pzcG = \mathpzc{Diff}(\bbR) \times \rmE_2$ acting on $E$ consists of a finite-dimensional group, the Euclidean group $\rmE_2$ acting on $\bbR^2$, together with the infinite-dimensional pseudogroup $\mathpzc{Diff}(\bbR)$ consisting of all smooth (local) diffeomorphisms $\wb{t} = \tau(t)$ of the parameter space $\bbR$.
@@ -4157,7 +4157,7 @@ First, a small computational prelude. In our approach to the theory and practica
 However, since for equivalence problems we are particularly interested in groups of transformations, another method of computing the Maurer-Cartan form becomes useful. Since the input data include only the action of the group on a manifold, the full Maurer-Cartan form will be recovered only if the action is, at least locally, effective. Given $g\in G$, $m\in M$, with local coordinates $\bf{x}=(x^1,\ldots,x^n)$ near $m$ and $\bf{g}=(g^1,\ldots,g^d)$ near $g$, we can explicitly write the group transformation $\wb m=g\cdot m$ in coordinate form:
 \[\wb x^i=H^i(\bf{x},\bf{g}),\quad i=1,\ldots,n.\]
 We then compute the differentials of the group transformations:
-\[\dd\wb x^i=\sum_{k=1}^n \frac{\partial H^i}{\partial x^k}\dd x^k+\sum_{j=1}^d \dd g^j,\quad i=,1\ldots,n,\]
+\[\dd\wb x^i=\sum_{k=1}^n \frac{\partial H^i}{\partial x^k}\dd x^k+\sum_{j=1}^d \frac{\partial H^i}{\partial g^j}\dd g^j,\quad i=1,\ldots,n,\]
 or, more compactly, 
 \[\dd\bar{\bf x}=\bf{H}_{\bf{x}}\dd \bf{x}+\bf{H}_{\bf g}\dd \bf{g}.\]
 Next, set $\dd \bar{\bf x}=0$ and solve for the $\dd x^k$:
@@ -4178,27 +4178,27 @@ then each coefficient $\theta_I$ also forms a left-invariant form on $G$. In par
     for some nonsingular matrix $g$. Equation \eqref{eq 2.4 OlverCo} is the fundamental equivalence condition for first-order Lagrangians that depend only on the derivative coordinate. Differentiating \eqref{eq 3.10 OlverCo} we find 
     \begin{align}
         \dd \wb x&=\frac{\det g\dd x+(\gamma x+\delta)(x\dd\alpha+\dd\beta)-(\alpha x+\beta)(x\dd\gamma+\dd\delta)}{(\gamma x+\delta)^2},\\
-        \dd \wb u&=\frac{(\gamma x+\delta)\dd u+u(\gamma \dd x+x\dd \gamma+\dd\delta)}{(\gamma x+\delta)^2}.
+        \dd \wb u&=\frac{(\gamma x+\delta)\dd u-u(\gamma \dd x+x\dd \gamma+\dd\delta)}{(\gamma x+\delta)^2}.
     \end{align}
     Setting $\dd\wb x=0=\dd\wb u$ and solving for $\dd x$ and $\dd u$, we obtain 
     \begin{align}
         -\dd x&=\frac{\delta\dd\beta-\beta\dd\delta}{\det g}+\left(\frac{\delta\dd\alpha+\gamma\dd\beta-\alpha\dd\delta-\beta\dd\gamma}{\det g}\right)x+\left(\frac{\gamma \dd \alpha-\alpha\dd\gamma}{\det g}\right)x^2,\\
-        -\dd u&=\left(\frac{\alpha\dd\delta-\gamma\dd\beta}{\det g}\right)u+\left(\frac{\alpha\dd\gamma-\gamma\dd\alpha}{\det g}\right)xu.
+        \dd u&=\left(\frac{\alpha\dd\delta-\gamma\dd\beta}{\det g}\right)u+\left(\frac{\alpha\dd\gamma-\gamma\dd\alpha}{\det g}\right)xu.
     \end{align}
     Note that the coefficients of $1$, $x$, and $x^2$ in the first formula, i.e., 
-    \[\theta^1=\frac{\delta\dd\beta-\beta\dd\delta}{\det g},\quad \theta^2=\frac{\delta\dd\alpha+\gamma\dd\beta-\alpha\dd\delta-\beta\dd\gamma}{\det g},\quad \theta^3=\frac{\alpha\dd\delta-\gamma\dd\beta}{\det g},\label{eq 3.12 OlverCo}\]
-    recover three of the Maurer-Cartan forms in \eqref{eq 3.4 OlverCo}, while the coefficient of either $u$ or $xu$ in the second formula provides the remaining one.
+    \[\theta^1=\frac{\delta\dd\beta-\beta\dd\delta}{\det g},\quad \theta^2=\frac{\delta\dd\alpha+\gamma\dd\beta-\alpha\dd\delta-\beta\dd\gamma}{\det g},\quad \theta^3=\frac{\gamma \dd \alpha-\alpha\dd\gamma}{\det g},\label{eq 3.12 OlverCo}\]
+    recover three of the Maurer-Cartan forms in \eqref{eq 3.4 OlverCo}, while the coefficient of $u$ in the second formula provides the remaining one (the coefficient of $xu$ is just $-\theta^3$).
 \end{example}
 
 If $G$ does not act faithfully on $M$,  then the forms computed by this method will form a basis for the annihilator 
 \[(\frakg_M)^\perp=\left\{\mu\in\frakg^\ast\mid \mu(A)=0\;\text{for all}\; A\in\frakg_M\right\}\]
-of the Lie algebra $\frakg_M$ of the kernel $G_M=\{g\in G\mid g\cdot m=m\;\text{for all}\; m\in M\}$ of the action, and thus can be identified with the Maurer-Cartan form of the effectively acting quotient $G\slash G_M$. For example, if we only treat the \glspl{flt} in $x$ in \eqref{eq 3.10 OlverCo}, then the resulting three forms \eqref{eq 3.10 OlverCo} all annihilate the generator $A=\alpha\partial_\alpha+\beta\partial_\beta+\delta\partial_\delta$ of the isotropy subgroup $\bbR\rmI<\GL_2(\bbR)$ consisting of scalar matrices. Hence, the three $1$-forms can be identified with a basis for the Maurer-Cartan form of the effectively acting projective group $\PSL_2(\bbR)=\GL_2(\bbR)\slash (\bbR\rmI)$.
+of the Lie algebra $\frakg_M$ of the kernel $G_M=\{g\in G\mid g\cdot m=m\;\text{for all}\; m\in M\}$ of the action, and thus can be identified with the Maurer-Cartan form of the effectively acting quotient $G\slash G_M$. For example, if we only treat the \glspl{flt} in $x$ in \eqref{eq 3.10 OlverCo}, then the resulting three forms \eqref{eq 3.12 OlverCo} all annihilate the generator $A=\alpha\partial_\alpha+\beta\partial_\beta+\gamma\partial_\gamma+\delta\partial_\delta$ of the kernel $\bbR^\times\rmI<\GL_2(\bbR)$ consisting of scalar matrices. Hence, the three $1$-forms can be identified with a basis for the Maurer-Cartan form of the effectively acting projective group $\PGL_2(\bbR)=\GL_2(\bbR)\slash (\bbR^\times\rmI)$.
 
 \PRLsep
 
 Now we begin the development of the moving coframe method. Throughout this \sect, assume that $G$ is a $d$-dimensional Lie group that acts \emph{locally effectively and transitively} on an $n$-dimensional manifold $M$. We begin by choosing a basepoint $m_0\in M$. 
 
-The basic idea will be to reduce the equivalence problem for submanifolds of $M$ under the $G$-action to an equivalence problem for coframes, albeit possibly on a different manifold. The only ``canonical'' set of differential forms associated with a $G$-action are the Maurer-Cartan forms on $G$. To turn them into a set of $1$-forms on something like $M$ we will need a $G$-valued function along which we can perform a pullback. Since we would like the resulting $1$-forms to be $G$-invariant (so that their equivalence problem is related to the original equivalence problem for submanifolds), this function needs to be $G$-invariant in some sense. The natural thing to attempt is to look for a function $\rho:M\to G$ which computes the ``tratio'' of the current point $m$ to a basepoint $m_0$, so that the $G$-action leaves the ratio invariant. The following definition is the closest one can get to this.
+The basic idea will be to reduce the equivalence problem for submanifolds of $M$ under the $G$-action to an equivalence problem for coframes, albeit possibly on a different manifold. The only ``canonical'' set of differential forms associated with a $G$-action are the Maurer-Cartan forms on $G$. To turn them into a set of $1$-forms on something like $M$ we will need a $G$-valued function along which we can perform a pullback. Since we would like the resulting $1$-forms to be $G$-invariant (so that their equivalence problem is related to the original equivalence problem for submanifolds), this function needs to be $G$-invariant in some sense. The natural thing to attempt is to look for a function $\rho:M\to G$ which computes the ``ratio'' of the current point $m$ to a basepoint $m_0$, so that the $G$-action leaves the ratio invariant. The following definition is the closest one can get to this.
 
 \begin{defn}[Compatible lift, moving frame]\index{Moving frame}\index{Compatible lift}
     Let $G\acts M$ be a locally effective and locally transitive action, where $\dim M=n$, and $\dim G=d$ (so $d\geq n$). A local smooth function $\rho:M\supset U\to G$ is called a \emph{compatible lift} with basepoint $m_0$ if it satisfies 
@@ -4263,10 +4263,10 @@ The next step is to characterize the group transformations by a collection of di
 will provide an invariant coframe on $P_0$, which we name the \emph{moving coframe of order zero}. The moving coframe forms $\bm\theta_0$ clearly satisfy the same Maurer-Cartan equations as $\bm\theta_G$, producing a locally Klein geometry. The following is then an immediate consequence of Proposition~\ref{prop 1.5.2 Cap 2}.
 
 \begin{thm}
-    The order zero moving coframe completely characterizes the group transformations on the bundle $P_0$: a map $F:P_0\to P_0$ satisfies $F^\ast \bm\theta_0=\bm\theta_0$ iff it coincides with the action of a group element $g\in G$: $F(m,h)=g\cdot (m,h)$
+    The order zero moving coframe completely characterizes the group transformations on the bundle $P_0$: a map $F:P_0\to P_0$ satisfies $F^\ast \bm\theta_0=\bm\theta_0$ iff it coincides with the action of a group element $g\in G$: $F(m,h)=g\cdot (m,h)$.
 \end{thm}
 
-One can start to see how this eventually allows us to reduce the submanifold equivalence problem to one for extended coframes (the pullback of $\bm\theta_0$ to the submanifold), which we have already ``solved''. The invariants of the extended coframe then become geometric quantities that specify the exact shape of the submanifold inside $M$ up the the action of $G$.
+One can start to see how this eventually allows us to reduce the submanifold equivalence problem to one for extended coframes (the pullback of $\bm\theta_0$ to the submanifold), which we have already ``solved''. The invariants of the extended coframe then become geometric quantities that specify the exact shape of the submanifold inside $M$ up to the action of $G$.
 
 \begin{example}
     Continuing the above example, we substitute \eqref{eq 4.3 OlverCo} characterizing our compatible lift \eqref{eq 4.4 OlverCo} into the Maurer-Cartan forms \eqref{eq 3.4 OlverCo}. The result is the order zero moving coframe on $P_0=M\times H$:
@@ -4288,7 +4288,7 @@ One can start to see how this eventually allows us to reduce the submanifold equ
 
 \PRLsep
 
-Even in the above example, it is clear that the order zero frame bundle will not suffice to solve the submanifold equivalence problem, because it is unclear what values to assign to the remaining group parameters $\alpha$ and $\gamma$ (or, in other words, how to lift submanifolds of $M$ to submanifolds of $P_0$). If we somehow managed to replace $M$ with a higher-dimensional manifold, we would be able to normalize away more, and eventually all, of the group parameters. Given our experience from the previous chapter, viewing $M$ as the target space of immersions $\iota:X\hookleftarrow M$, the natural thing to do is to replace $M$ with a jet space of such immersions, via a procedure called \emph{prolongation}. As we will see later on, one can combine the prolongation and normalization steps in various ways. In this section's presentation, we will alternate them, normalizing after every prolongation. Recall that the semibasic component of a differential form defined on a jet space is generally a differential form on the \emph{next} jet space.
+Even in the above example, it is clear that the order zero frame bundle will not suffice to solve the submanifold equivalence problem, because it is unclear what values to assign to the remaining group parameters $\alpha$ and $\gamma$ (or, in other words, how to lift submanifolds of $M$ to submanifolds of $P_0$). If we somehow managed to replace $M$ with a higher-dimensional manifold, we would be able to normalize away more, and eventually all, of the group parameters. Given our experience from the previous chapter, viewing $M$ as the target space of immersions $\iota:X\hookrightarrow M$, the natural thing to do is to replace $M$ with a jet space of such immersions, via a procedure called \emph{prolongation}. As we will see later on, one can combine the prolongation and normalization steps in various ways. In this section's presentation, we will alternate them, normalizing after every prolongation. Recall that the semibasic component of a differential form defined on a jet space is generally a differential form on the \emph{next} jet space.
 
 \begin{example}
     We again build on the last example. Consider a curve $C\subset E=\bbR^2\setminus\{u=0\}$ in the $(x,u)$-plane. For simplicity, we shall assume that the curve coincides with the graph of a function $u=u(x)$. We restrict the moving coframe forms to the curve, which amounts to replacing the differential $\dd u$ by $u_x\dd x$. If we interpret the derivative $u_x$ as a coordinate on the jet space $\rmJ^1\coloneqq \rmJ^1 E\cong\bbR^3$ of curves in $E$, then the restriction of a differential form to the curve can be reinterpreted as the natural projection of $\dd u$ on $\rmJ^1$ to its semibasic component, using the canonical decomposition of differential forms on jet bundles into semibasic and contact components. Indeed, the vertical component of the form $\dd u$ is the contact form $\dd u-u_x\dd x$. Therefore, the restricted (or semibasic) moving coframe forms on $\restr{P_0}{C}=C\times H$ are given by 
@@ -4302,14 +4302,14 @@ Even in the above example, it is clear that the order zero frame bundle will not
     \[\wb{u}_{\wb x}=\frac{(cx+d)u_x-cu}{\det g},\quad g=\begin{pmatrix}
         a & b\\c& d
     \end{pmatrix}\in \GL_2(\bbR).\label{eq 4.11 OlverCo}\]
-    In other words, we interpret $\alpha,\gamma,x,u,u_x$ as coordinates on a bundle $\wt P_0\to\rmJ^1$ over the first jet space, which is merely the pullback $\wt P_0=(\pi^1_0)^\ast P_0$ of the $0$-th order moving frame bundle by the standard projection $\pi^1_0:\rmJ^1\to E$. There is an induced action of $G$ on $\wt P_0$ which projects to its prolonged action on $\rmJ^1$. A first-order lifted invariant, then, is just a function $J\in C^\infty(\wt P_0)$ which is invariant under the action of $G$ on $\wt P_0$. If the lifted invariant $J=J(x,u,u_x)$ does not, in fact, depend on the group parameters $\alpha,\gamma$, then it will be a first-order differential invariant. (However, in this example, there are no non-constant first-order differential invariant, since the action is transitive on $\rmJ^1$.) Alternatively, if $J$ actually depends on $\alpha$ or $\gamma$, then it can be used in the normalization procedure.
+    In other words, we interpret $\alpha,\gamma,x,u,u_x$ as coordinates on a bundle $\wt P_0\to\rmJ^1$ over the first jet space, which is merely the pullback $\wt P_0=(\pi^1_0)^\ast P_0$ of the $0$-th order moving frame bundle by the standard projection $\pi^1_0:\rmJ^1\to E$. There is an induced action of $G$ on $\wt P_0$ which projects to its prolonged action on $\rmJ^1$. A first-order lifted invariant, then, is just a function $J\in C^\infty(\wt P_0)$ which is invariant under the action of $G$ on $\wt P_0$. If the lifted invariant $J=J(x,u,u_x)$ does not, in fact, depend on the group parameters $\alpha,\gamma$, then it will be a first-order differential invariant. (However, in this example, there are no non-constant first-order differential invariants, since the action is transitive on $\rmJ^1$.) Alternatively, if $J$ actually depends on $\alpha$ or $\gamma$, then it can be used in the normalization procedure.
 \end{example}
 
-Fortunately, the lifted invariants can be determined without explicitly computing the prolonged group action or solving any differential equations. They appear in the linear dependencies among the restricted (semibasic) moving coframe forms. Indeed, because the $1$-forms are invariant, each coefficient $J_i$ in a linear relation $\eta_0=J_1\eta_1+\cdots+J_k\eta_k$, in which the forms $\eta_i$ on the right hand side are linear independent, is automatically invariant under the action of the group.
+Fortunately, the lifted invariants can be determined without explicitly computing the prolonged group action or solving any differential equations. They appear in the linear dependencies among the restricted (semibasic) moving coframe forms. Indeed, because the $1$-forms are invariant, each coefficient $J_i$ in a linear relation $\eta_0=J_1\eta_1+\cdots+J_k\eta_k$, in which the forms $\eta_i$ on the right hand side are linearly independent, is automatically invariant under the action of the group.
 
 \begin{example}
     Continuing the above example, among the restricted forms \eqref{eq 4.9 OlverCo}, there is one linear dependency:
-    \[\eta_4=J\eta_2,\quad J=\gamma(xu_x-u)-\alpha u_x.\label{eq 4.12 OlverCo}\]
+    \[\eta^4=J\eta^2,\quad J=\gamma(xu_x-u)-\alpha u_x.\label{eq 4.12 OlverCo}\]
     One can explicitly verify that $J$ is indeed a lifted invariant, meaning that it satisfies \eqref{eq 4.10 OlverCo} whenever the coordinates are transformed according to \eqref{eq 4.7 OlverCo}, \eqref{eq 4.11 OlverCo}.
 \end{example}
 
@@ -4328,11 +4328,11 @@ The result is a first-order moving frame, depending on one fewer unnormalized gr
         \gamma & 1/u
     \end{pmatrix},\label{eq 4.15 OlverCo}\]
     which now depends on first-order derivatives of $u$ and just one unnormalized group parameter. We can regard the coordinates $(x,u,u_x,\gamma)$ as parametrizing a bundle $P_1\to \rmJ^1$ sitting over the first jet space, which is realized as a $G$-invariant subbundle of $\wt P_0$, namely $P_1=J^{-1}(0)\subset \wt P_0$. As before, one can restrict the first-order moving frame to a curve $u=u(x)$ by restricting the map $\rho_1$ to the $1$-graph of the curve. There is an induced action of $\GL_2(\bbR)$ on $P_1$, which projects to the usual first prolonged action $G^{(1)}$ of the group on $\rmJ^1$, cf.\ \eqref{eq 4.7 OlverCo}, \eqref{eq 4.11 OlverCo}, and makes the first-order moving frame $\rho_1:P_1\to G$ into a local $G$-equivariant diffeomorphism. In our case, the explicit transformation rules on $P_1$ are given by
-    \[\wb x=\frac{ax+b}{cx+d},\quad \wb u=\frac{u}{cx+d},\quad\wb u_x=\frac{(cx+d)u_x-cu}{\det g},\quad \wb \gamma=\frac{(cx+d)u_x-cu}{\det g}\gamma,\label{eq 4.16 OlverCo}\]
+    \[\wb x=\frac{ax+b}{cx+d},\quad \wb u=\frac{u}{cx+d},\quad\wb u_x=\frac{(cx+d)u_x-cu}{\det g},\quad \wb \gamma=\frac{(cx+d)u_x-cu}{u_x}\gamma,\label{eq 4.16 OlverCo}\]
     which coincide with left multiplication of the first-order moving frame \eqref{eq 4.15 OlverCo} by the given group element. (Again, these explicit formulas are provided for illustration only and are not essential for application of the method.) Furthermore, substituting \eqref{eq 4.14 OlverCo} into \eqref{eq 4.8 OlverCo}, we find the first-order moving coframe 
     \[\begin{aligned}
         \theta_1^1&=\frac{\dd \gamma}{\gamma}-\frac{\dd u_x}{u_x}+\frac{\dd u-u_x\dd x}{u}, & \theta_1^2&=-\frac{u_x\dd x}{\gamma u^2},\\
-        \theta_1^3&=\frac{\gamma u\dd u_x}{u_x}-\gamma(\dd u-u_x\dd x), & \theta_1^4&=\frac{\dd u-u_x\dd x}{u}.
+        \theta_1^3&=\frac{\gamma u\dd u_x}{u_x}-\gamma(\dd u-u_x\dd x), & \theta_1^4&=-\frac{\dd u-u_x\dd x}{u}.
         \end{aligned}\label{eq 4.17 OlverCo}
     \]
     As in the order zero case, the first-order moving coframe completely characterizes the group transformations on $P_1$.
@@ -4352,24 +4352,24 @@ The result is a first-order moving frame, depending on one fewer unnormalized gr
     \end{pmatrix}\label{eq 4.21 OlverCo}\]
     defines the second-order moving frame.  This provides an explicit $G$-equivariant identification $\rho_2:\calV^2\to G$ of the open subset $\calV^2=\{uu_{xx}\neq 0\}\subset \rmJ^2$ of the second jet bundle with an open subset of $G$, identifying the prolonged action of $G^{(2)}$ on $\rmJ^2$ with the ordinary left multiplication on $G$:
     \[\rho_2\left(g^{(2)}\cdot m^{(2)}\right)=g\cdot \rho_2\left(m^{(2)}\right),\quad g\in\GL_2(\bbR),\quad m^{(2)}=(x,u,u_x,u_{xx})\in \calV^2.\]
-    Substituting \eqref{eq 4.20 OlverCo} into \ref{eq 4.18 OlverCo} produces the final set of invariant $1$-forms 
+    Substituting \eqref{eq 4.20 OlverCo} into \eqref{eq 4.17 OlverCo} produces the final set of invariant $1$-forms 
     \[
     \begin{aligned}
         \theta_2^1&=-\frac{\dd u_{xx}}{2u_{xx}}-\frac{\dd u}{2u}-\frac{u_x\dd x}{u}, & \theta_2^2&=-\sqrt{\frac{u_{xx}}{u}}\dd x,\\
-        \theta_2^3&=\frac{\dd u_x}{\sqrt{uu_{xx}}}-\frac{u_x(\dd u-u_x\dd x)}{\sqrt{u^3u_{xx}}}, & \theta_2^4&=\frac{\dd u-u_x\dd x}{u},
+        \theta_2^3&=\frac{\dd u_x}{\sqrt{uu_{xx}}}-\frac{u_x(\dd u-u_x\dd x)}{\sqrt{u^3u_{xx}}}, & \theta_2^4&=-\frac{\dd u-u_x\dd x}{u},
     \end{aligned}
     \]
     which form a second-order moving coframe. Note that this coframe provides an equivalence, $\rho_2^\ast \theta_G^i=\theta_2^i$, mapping the moving coframe forms on $\rmJ^2$ to the Maurer-Cartan forms \eqref{eq 3.4 OlverCo}. Consequently, the forms $\theta_2^i$ uniquely characterize the second-order prolonged action of $\GL_2(\bbR)$ on $\calV^2\subset\rmJ^2$.
 
     Finally, the restricted (semibasic) moving coframe forms become 
-    \[\eta_2^1=-\frac{uu_{xxx}+3u_xu_{xx}}{2uu_{xxx}}\dd x,\quad \eta_2^2=-\sqrt{\frac{u_{xx}}{u}}\dd x,\quad \eta_2^3=-\eta_2^2,\quad \eta_2^4=0.\]
-    There is one final linear dependency, namely $\eta_2^1=-I\eta_2^2$, where 
+    \[\eta_2^1=-\frac{uu_{xxx}+3u_xu_{xx}}{2uu_{xx}}\dd x,\quad \eta_2^2=-\sqrt{\frac{u_{xx}}{u}}\dd x,\quad \eta_2^3=-\eta_2^2,\quad \eta_2^4=0.\]
+    There is one final linear dependency, namely $\eta_2^1=I\eta_2^2$, where 
     \[I=\frac{uu_{xxx}+3u_xu_{xx}}{2\sqrt{uu_{xx}^3}}\]
-    is the fundamental differential invariant -- \emph{not a lifted one, but a true one,} -- of the transformation group, also known as the \emph{group-invariant curvature}. The remaining $1$-form $\dd s=\eta_2^2$ is the fundamental invariant $1$-form, or group-invariant arclength element. All higher-order differential invariants can be found by differentiating the curvature invariant w.r.t.\ the invariant arclength element; for instance, the fundamental $4$-th order differential invariant is 
+    is the fundamental differential invariant -- \emph{not a lifted one, but a true one,} -- of the transformation group, also known as the \emph{group-invariant curvature}. The remaining $1$-form $\dd s=-\eta_2^2=\sqrt{u_{xx}/u}\,\dd x$ is the fundamental invariant $1$-form, or group-invariant arclength element. All higher-order differential invariants can be found by differentiating the curvature invariant w.r.t.\ the invariant arclength element; for instance, the fundamental $4$-th order differential invariant is 
     \begin{multline}
-        J=\frac{\partial I}{\partial \eta_2^2}=\frac{\dd I}{\dd s}=\sqrt{\frac{u}{u_{xx}}}D_xI=\\=\frac{2u^2u_{xx}u_{xxxx}-3u^2u_{xxx}^2-2uu_xu_{xx}u_{xxx}+6uu_{xx}^3-3u_x^2u_{xx}^2}{4uu_{xx}^3}.
+        J=\frac{\dd I}{\dd s}=\sqrt{\frac{u}{u_{xx}}}D_xI=\\=\frac{2u^2u_{xx}u_{xxxx}-3u^2u_{xxx}^2-2uu_xu_{xx}u_{xxx}+6uu_{xx}^3-3u_x^2u_{xx}^2}{4uu_{xx}^3}.
     \end{multline}
-    From the general theory from the last chapter, we know that for plane curves $\dim \rmJ^r = r+2$, and once the prolonged action becomes locally free, the generic orbits have dimension $\dim G=4$, so the number of invariants of order $r$ is $i_r=\dim \rmJ^r-\dim G=n-2$. Since $i_3=1$, we have already found the only fundamental invariant of order $3$, and at every following order there is only one new functionally independent invariant. Therefore, every differential invariant for the group \eqref{eq 3.10 OlverCo} is a function of the curvature and its successive derivatives w.r.t.\ the arclength. Note that the order of the fundamental invariant is generally $\dim G-1$ for curves in a manifold carrying a locally effective $G$-action. For example, under $G=\SE_2$ the fundamental invariant is the curvature $\kappa$, and all higher invariants are functions of $\kappa,\kappa_s,\kappa_{ss},\ldots$, where $s$ is the Euclidean arclength.
+    From the general theory from the last chapter, we know that for plane curves $\dim \rmJ^r = r+2$, and once the prolonged action becomes locally free, the generic orbits have dimension $\dim G=4$, so the number of invariants of order $r$ is $i_r=\dim \rmJ^r-\dim G=r-2$. Since $i_3=1$, we have already found the only fundamental invariant of order $3$, and at every following order there is only one new functionally independent invariant. Therefore, every differential invariant for the group \eqref{eq 3.10 OlverCo} is a function of the curvature and its successive derivatives w.r.t.\ the arclength. Note that the order of the fundamental invariant is generally $\dim G-1$ for plane curves in a surface carrying a locally effective $G$-action. For example, under $G=\SE_2$ the fundamental invariant is the curvature $\kappa$, and all higher invariants are functions of $\kappa,\kappa_s,\kappa_{ss},\ldots$, where $s$ is the Euclidean arclength.
 
     Alternatively, we can observe that the equivalence problem has been reduced to that for an extended coframe on a curve, namely $(\dd s, I)$. In the generic case, this coframe is of rank $1$ (when $I$ is not constant). It is also necessarily of order $0$, since the derived coframe differs only by the addition of $I_s$, which has to be a function of $I$ since there cannot be two functionally independent invariants on a curve. Therefore, the first-order classifying manifold parametrized by $(I,I_s)$ characterizes the curve (recall that, in the proof, defining the variety $\calS$ required invariants $T_\sigma$ of order $\leq r$ but to establish the tangency of $\calS$ to the distribution one needs to compare $\partial T_\sigma/\partial\theta^k$). This holds for any group $G$ acting locally effectively.
     
@@ -4383,7 +4383,7 @@ The result is a first-order moving frame, depending on one fewer unnormalized gr
 \end{rem}
 
 \begin{rem}
-    There are a few technical points that should have been addressed during the preceding discussion. First, one needs to impose certain conditions on the function $u(x)$ in order to ensure that the computation is valid. For instance, the normalization \eqref{eq 4.14 OlverCo} requires $u_x \neq 0$, i.e., the curve does not have a horizontal tangent. (We have already assumed that it does not have a vertical tangent by requiring that it be the graph of a smooth function.) If $u_x = 0$, then we can still normalize $J = 0$ as long as $u\neq xu_x$, in which case  we normalize by solving for $\gamma$ instead of $\alpha$. Actually, both cases can be simultaneously handled by the normalization $\alpha= \lambda(xu_x -u)$, $\gamma=\lambda u_x$, where $\lambda\neq 0$ is a new parameter  whose normalization will be specified at the next stage of the procedure. The reader can check that this alternative procedure leads to the same lift and differential invariants as before. In the second normalization, we have assumed $u_{xx}>0$ in order to take the square root.\footnote{In the complex-valued version of this problem, this sign restriction goes away.} For $u_{xx}<0$, we would need to normalize $K=1$, and use $\sqrt{-u_{xx}}$ instead. Thus the problem actually separates into two branches, with the inflection points $u_{xx} = 0$ being interpreted as singular points for the group action. The straight lines, for which $u_{xx} \equiv 0$, form a special class and must be analyzed separately. Finally, the square root itself has a sign ambiguity (or, in the complex case, an ambiguity in its choice of branch.) Both signs must, in fact, be allowed in the final expression for the lift and the differential invariants. Such branching and ambiguous sign phenomena are ubiquitous in the practice of Cartan's equivalence method.
+    There are a few technical points that should have been addressed during the preceding discussion. First, one needs to impose certain conditions on the function $u(x)$ in order to ensure that the computation is valid. For instance, the normalization \eqref{eq 4.14 OlverCo} requires $u_x \neq 0$, i.e., the curve does not have a horizontal tangent. (We have already assumed that it does not have a vertical tangent by requiring that it be the graph of a smooth function.) If $u_x = 0$, then we can still normalize $J = 0$ as long as $u\neq xu_x$, in which case  we normalize by solving for $\gamma$ instead of $\alpha$. Actually, both cases can be simultaneously handled by the normalization $\alpha= \lambda(xu_x -u)$, $\gamma=\lambda u_x$, where $\lambda\neq 0$ is a new parameter  whose normalization will be specified at the next stage of the procedure. The reader can check that this alternative procedure leads to the same lift and differential invariants as before. In the second normalization, we have assumed $uu_{xx}>0$ in order to take the square root.\footnote{In the complex-valued version of this problem, this sign restriction goes away.} For $uu_{xx}<0$, we would need to normalize $K=1$, and use $\sqrt{-u^3u_{xx}}$ instead. Thus the problem actually separates into two branches, with the inflection points $u_{xx} = 0$ being interpreted as singular points for the group action. The straight lines, for which $u_{xx} \equiv 0$, form a special class and must be analyzed separately. Finally, the square root itself has a sign ambiguity (or, in the complex case, an ambiguity in its choice of branch.) Both signs must, in fact, be allowed in the final expression for the lift and the differential invariants. Such branching and ambiguous sign phenomena are ubiquitous in the practice of Cartan's equivalence method.
 \end{rem}
 
 Let us finish by summarizing the basic method of moving coframes in a form which will apply to more general problems.
@@ -4396,7 +4396,7 @@ Let us finish by summarizing the basic method of moving coframes in a form which
     \item Successively eliminate parameters by substituting the normalization formulas into the moving coframe and recomputing dependencies.
     \item After the parameters have all been normalized, the differential invariants will appear through any remaining dependencies among the final moving coframe elements. The invariant differential operators are found as the dual differential operators to a basis for the invariant coframe forms.
 \end{enumerate}
-Note that we do not need the explicit isotropy groups for the transformation group actions, nor do we need compute explicit formulas for the prolonged group action in order to successfully apply the method.
+Note that we do not need the explicit isotropy groups for the transformation group actions, nor do we need to compute explicit formulas for the prolonged group action in order to successfully apply the method.
 
 
 \begin{rem}\label{rem moving coframes vs cartan}
@@ -4499,7 +4499,7 @@ The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduct
     and compute the pullback of the associated Euclidean Maurer-Cartan forms:
     \[\bm\theta=a_0^{-1}\dd a_0=\begin{pmatrix}
         R^{-1}\dd R & R^{-1}\dd\bf{x}\\
-        \bf{0}^\sfT  & 0
+        \bf{0}^\top  & 0
     \end{pmatrix}=\begin{pmatrix}
         0 & -\dd\varphi & \cos\varphi\dd x+\sin\varphi \dd y\\
         \dd\varphi & 0 & -\sin\varphi \dd x+\cos\varphi\dd y\\
@@ -4549,6 +4549,20 @@ The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduct
 
 \begin{rem}
     The problem of Euclidean equivalence of curves with \emph{fixed} parametrization, as discussed in Example~\ref{ex 2.1 OlverCo}, can also be formulated and solved in the moving coframe context. Now we are in the intransitive framework, where the parameter $t$ provides a scalar invariant. Consequently, we retain the first three $1$-forms $\eta_0^1,\eta_0^2,\eta_0^3$ in \eqref{eq 6.3 OlverCo}, but replace $\eta_0^4$ by $\dd t$ to form the moving coframe. We normalize $J_1=0$ as before, but now $J_2=v=\sqrt{x_t^2+y_t^2}$ forms a first-order differential invariant -- the speed. The final moving frame has $\eta_2^1=K\dd t$, $\eta_2^2=0$, $\eta_0^3=v\dd t$, $\eta_2^4=\dd t$, where $K=x_ty_{tt}-x_{tt}y_t=v^3\kappa$ is a second-order differential invariant. The higher-order differential invariants are found by differentiating w.r.t.\ $t$. Note that the arclength $\dd s=v\dd t$ is also an invariant $1$-form, being an invariant multiple of $\dd t$, and hence one can, \gls{wlog}, apply the arclength derivative $\dd/\dd s$ to produce the higher-order invariants instead. Thus, in this case, a complete list of differential invariants is provided by $v,\kappa$, and their arclength derivatives.
+\end{rem}
+
+\begin{rem}[Moving frames for Lie pseudogroups]\label{rem moving frames pseudogroups}
+    The method as presented here, following \cite{OlverCo,OlverCo2}, applies to finite-dimensional groups $G$. Pseudogroups only entered through the factor $\mathpzc{Diff}(\bbR)$ in the reparametrization problem, where a single extra $1$-form sufficed. The extension to arbitrary, possibly infinite-dimensional, Lie pseudogroups $\pzcG$ acting on $M$ was carried out by Olver and Pohjanpelto \cite{OlverPohjanpeltoMF}. In practice, the changes are as follows (we write $z$ for local coordinates on $M$).
+    \begin{itemize}
+        \item \emph{Group parameters.} Since there is no group to map into, the role of the group parameters is played by the jets of a pseudogroup element $\varphi$ at $z$: the target coordinates $Z^b=\varphi^b(z)$ and the derivatives $Z^b_A=\partial^A\varphi^b(z)$, $1\leq|A|\leq r$, subject to the determining equations of $\pzcG$ (i.e., to the defining equation $\rmJ^r\pzcG$ of Remark~\ref{rem Lie pseudogroups}). At each finite order $r$ there are only finitely many of them, and the lifted coframe lives on the finite-dimensional space of pairs consisting of an $r$-jet of a submanifold at $z$ and an $r$-jet of an element of $\pzcG$ at $z$, i.e., the analog of $\rmJ^r\times G$.
+        \item \emph{Maurer-Cartan forms.} In place of $\bm\theta_G$, one adds the Maurer-Cartan forms of $\pzcG$ described in Remark~\ref{rem Lie pseudogroups} (see also Remark~\ref{rem Fr infty and Diff}): the invariant semibasic forms $\sigma^b=\sum_a Z^b_a\dd z^a$ and the forms $\mu^b_A$, $|A|\leq r$, i.e., (invariant combinations of) the contact forms $\theta^b_A=\dd Z^b_A-\sum_a Z^b_{A,a}\dd z^a$, restricted to $\rmJ^r\pzcG$. Their structure equations are the restrictions of the structure equations of $\mathpzc{Diff}(M)$ given there. The practical recipe for this restriction is the key result of \cite{OlverPohjanpeltoMF}: the forms $\mu^b_A$ satisfy exactly the linear relations obtained from the \emph{infinitesimal} determining equations of $\pzcG$, i.e., the linear PDEs $L(z,\zeta^{(r)})=0$ satisfied by the components $\zeta^b(z)$ of $\pzcG$-vector fields, upon substituting $z\mapsto Z$ and $\zeta^b_A\mapsto\mu^b_A$. Thus, one never needs to integrate the determining equations or know the pseudogroup elements explicitly.
+        \item \emph{Lifted invariants and normalization.} The lifted jet coordinates, obtained by applying the prolonged action of the $r$-jet of $\varphi$ to the $r$-jet of the submanifold, are explicit functions of the jet variables and the $Z^b_A$ (computed by implicit differentiation). They play the role of the lifted invariants, and one normalizes as many of them as possible to constants, solving for the parameters $Z^b_A$ order by order. Infinitely many parameters cause no trouble: by the \emph{persistence of freeness} theorem, if the prolonged action is (locally) free at some order $r_0$, it remains free at all orders $r\geq r_0$, so each new order of submanifold jets suffices to normalize the new parameters of that order.
+        \item \emph{Output.} Substituting the normalized parameters produces the differential invariants and an invariant horizontal coframe (the normalized $\sigma^b$ restricted to the submanifold), while the normalized $\mu^b_A$ become combinations of the invariant horizontal and contact forms. Their structure equations yield recurrence formulae for differentiating the invariants, from which one obtains a finite generating set of differential invariants (a rigorous version of the classical Lie-Tresse theorem).
+        \item \emph{When to stop.} For an infinite-dimensional $\pzcG$, new parameters appear at every order, so the normalization never terminates, and the moving frame is really a compatible sequence of frames of all orders. However, one only needs to carry it out explicitly up to order $r=\max(r_0,r_\star)$, where $r_0$ is the order at which the prolonged action becomes free, and $r_\star$ is the order beyond which the determining equations of $\pzcG$ no longer produce surprises: differentiating them yields no new lower-order conditions, and the parameters $Z^b_A$ of each higher order are determined by those of lower orders in a uniform, predictable way. Note that $r_\star$ may exceed the order of $\pzcG$, since differentiating the determining equations can produce new conditions that must first be added to the system. (The precise condition is that the determining equations are \emph{involutive}, a notion we will introduce later in the context of exterior differential systems, see Definition~\ref{def involutive tableau}; by the Cartan-Kuranishi theorem, this always holds after finitely many differentiations.) Beyond this order, all further normalizations are encoded in the recurrence formulae, and the differential invariants of order at most $r+1$ generate all others under invariant differentiation. This is analogous to Case~3 of Example~\ref{ex shear structures II}, where the group parameters can never be normalized, and the computation stops once the same pattern is seen to repeat at every order.
+    \end{itemize}
+    For example, in the reparametrization problem above with $\pzcG=\mathpzc{Diff}(\bbR)\times\rmE_2$, the parameter $v$ is the first-order jet $\tau'(t)$ of the reparametrization $\wb t=\tau(t)$, and $v\dd t$ is the corresponding form $\sigma$.
+
+    Finally, note that all of this concerns submanifolds under a \emph{given} pseudogroup action. Equivalence problems whose \emph{symmetry} pseudogroups are infinite-dimensional, such as $G$-structures of infinite type, need no such extension: Cartan's equivalence method treats them directly (see \S\ref{sec: cartan equiv method}, and in particular Example~\ref{ex shear structures II}).
 \end{rem}
 
 
@@ -4828,7 +4842,7 @@ Thus, barring algebraic complications, the normalization procedure provides a si
 \PRLsep
 
 
-Another often computationally preferrable method for finding differential invariants is the \emph{method of moving coframes}, which was already employed by Cartan and generalized by P.~Olver to general transformation groups. The following definition is based on Cartan's approach to equivalence problems, which always begins by characterising the (pseudo)group of allowable transformations by a suitable collection of differential forms.
+Another often computationally preferrable method for finding differential invariants is the \emph{method of moving coframes}, which was already employed by Cartan and generalized by P.~Olver to general transformation groups. The following definition is based on Cartan's approach to equivalence problems, which always begins by characterizing the (pseudo)group of allowable transformations by a suitable collection of differential forms.
 
 \begin{defn}[$G$-coframe]\index{$G$-coframe}
     Let $G$ be a finite-dimensional Lie group acting on a manifold $M$. A $G$-coframe is a regular, involutive extended coframe $\varTheta=(\bm\theta,\bm I)$ on $M$, whose symmetry group coincides with the transformation group $G$.
@@ -5127,7 +5141,7 @@ The resulting $G$-invariant total differential operators $\calD_j$ are the jet s
     \[\omega^i=\sum_{j=1}^p P^i_j\left(\bf x,\bf u^{(r)}\right)\dd x^j=(\bf P\cdot \dd\bf x)^i,\quad i=1,\ldots,p,\label{eq 9.8 OlverCo2}\]
     where the coefficient matrix $\bf P=(P^i_j)$ is nonsingular. The corresponding invariant differential operators are then given by 
     \[\calD_j=\sum_{i=1}^p Q^i_j\left(\bf x,\bf u^{(r)}\right)D_i=(\bf Q\cdot \bf D)_j,\quad j=1,\ldots,p,\label{eq 9.9 OlverCo2}\]
-    with inverse coefficient matrix $\bf Q=(Q^i_j)=\bf P^{-1}$. The invariant differential operators $\bm\calD=\bf Q^\sfT\cdot \bf D=\bf P^{-\sfT}\cdot\bf D$ form an invariant ``horizontal frame'' on $\rmJ^\infty$.
+    with inverse coefficient matrix $\bf Q=(Q^i_j)=\bf P^{-1}$. The invariant differential operators $\bm\calD=\bf Q^\top\cdot \bf D=\bf P^{-\top}\cdot\bf D$ form an invariant ``horizontal frame'' on $\rmJ^\infty$.
 \end{rem}
 
 
@@ -5324,63 +5338,63 @@ We assume that $G$ acts locally effectively on subsets of $M$. For simplicity, w
 \end{defn}
 
 \begin{defn}[Lifted differential invariant]
-    A lifted differential invariant is a (locally defined) invariant function $L:P^{(r)}\to N$,
+    A lifted differential invariant is a (locally defined) invariant function $L:P^{(r)}\to N$.
 \end{defn}
 
-A complete system of functionally independent lifted differential invariants is probided by the components of the $r$-th order evaluation map 
-\[\mu^{(r)}\left(g,z^{(r)}\right)\coloneqq \mu^{(r)}\cdot z^{(r)},\quad \left(g,z^{(r)}\right)\in P^{(r)}.\]
-Clearly, $\mu^{(r)}:P^{(r)}\to \rmJ^r$ is an invariant under the lifted action. As in the basic zeroth-order case, every lifted invariant can be locally written as a function of the fundamental lifted differential invariants $\mu^{(r)}$. In particular, any ordinary (i.e., not lifted) differential invariant $I:\rmJ^r\to \bbR$ also defines a lifted differential invariant $L=\pi_r^\ast I$, and hence can also be locally expressed as a function of the $\mu$'s; conversely, any lifted invariant $L\left(g,z^{(r)}\right)$ that does not depend on $g$ automatically defines an ordinary differential invariant. Our simple Replacement Theorem~\ref{thm 3.7 OlverCo2} immediately applies to the construction of differential invariants from their lifted counterparts.
+A complete system of functionally independent lifted differential invariants is provided by the components of the $r$-th order evaluation map 
+\[\mu^{(r)}\left(g,z^{(r)}\right)\coloneqq g^{(r)}\cdot z^{(r)},\quad \left(g,z^{(r)}\right)\in P^{(r)}.\]
+Clearly, $\mu^{(r)}:P^{(r)}\to \rmJ^r$ is invariant under the lifted action. As in the basic zeroth-order case, every lifted invariant can be locally written as a function of the fundamental lifted differential invariants $\mu^{(r)}$. In particular, any ordinary (i.e., not lifted) differential invariant $I:\rmJ^r\to \bbR$ also defines a lifted differential invariant $L=\pi_r^\ast I$, and hence can also be locally expressed as a function of the $\mu$'s; conversely, any lifted invariant $L\left(g,z^{(r)}\right)$ that does not depend on $g$ automatically defines an ordinary differential invariant. Our simple Replacement Theorem~\ref{thm 3.7 OlverCo2} immediately applies to the construction of differential invariants from their lifted counterparts.
 
 \begin{thm}[Replacement Theorem {\cite[Thm.~10.3]{OlverCo2}}]\label{thm 10.3 OlverCo2}
     Let $I\left(z^{(r)}\right)$ be an ordinary differential invariant. Then we can write $I\left(z^{(r)}\right)=I\left(g^{(r)}\cdot z^{(r)}\right)=I\left(\mu^{(r)}\right)$ as the same function of the lifted differential invariants.
 \end{thm}
 
 \begin{rem}
-    In the special case of Riemannian geometry, this theorem becomes the Thomas Replacement Theorem, which allows to obtain any invariant affine tensor (in general a function of Christoffel symbols and their coordinate derivatives) from its expression in normal coordinates, where the Christoffel symbols vanish.
+    In the special case of Riemannian geometry, this theorem becomes the Thomas Replacement Theorem, which allows one to obtain any invariant affine tensor (in general a function of Christoffel symbols and their coordinate derivatives) from its expression in normal coordinates, where the Christoffel symbols vanish.
 \end{rem}
 
 \begin{example}
     Consider the standard action of $\SE_2$ on $M=\bbR^2$. Introducing local coordinates $(x,u)$, the second prolongation maps a point $(x,u,u_x,u_{xx})\in\rmJ^2$ to 
-    \[\left(x\cos\phi-u\sin\phi+a,x\cos\phi+u\sin\phi+b,\frac{\sin\phi+u_x\cos\phi}{\cos\phi-u_x\sin\phi},\frac{u_{xx}}{(\cos\phi-u_x\sin\phi)^3}\right),\label{eq 10.3 OlverCo2}\]
-    reproducing the action \eqref{eq 4.12 OlverCo2}. The second-order lifted invariants which we denote as $\mu^{(r)}=(y,u,v_y,v_{yy})$, are the components of the transformation formula \eqref{eq 10.3 OlverCo2}. The Euclidean curvature differential invariant can be constructed in terms of the lifted invariants:
+    \[\left(x\cos\phi-u\sin\phi+a,x\sin\phi+u\cos\phi+b,\frac{\sin\phi+u_x\cos\phi}{\cos\phi-u_x\sin\phi},\frac{u_{xx}}{(\cos\phi-u_x\sin\phi)^3}\right),\label{eq 10.3 OlverCo2}\]
+    reproducing the action \eqref{eq 4.12 OlverCo2}. The second-order lifted invariants, which we denote by $\mu^{(2)}=(y,v,v_y,v_{yy})$, are the components of the transformation formula \eqref{eq 10.3 OlverCo2}. The Euclidean curvature differential invariant can be constructed in terms of the lifted invariants:
     \[\kappa=\frac{v_{yy}}{(1+v_y^2)^{3/2}}=\frac{u_{xx}}{(1+u_x^2)^{3/2}}.\]
-    The Replacement Theorem guarantees that the formula for $\kappa$ in terms of the usual jet coordinates $(x,u,u_x,u_{xx})$ is the same function relation as its formula in terms of the lifted invariants $(y,v,v_y,v_{yy})$.
+    The Replacement Theorem guarantees that the formula for $\kappa$ in terms of the usual jet coordinates $(x,u,u_x,u_{xx})$ is the same functional relation as its formula in terms of the lifted invariants $(y,v,v_y,v_{yy})$.
 \end{example}
 
 
-The regularization costruction extends to the infinite-order regularized jet bundle $\pi_\infty:P^{(\infty)}=G\times\rmJ^\infty\to\rmJ^\infty$ in the obvious manner. The pullback of the contact bundle $\Contact^{(\infty)}<\T^\ast\rmJ^\infty$ defines the contact subbundle which we denote by the same symbol $\Contact^{(\infty)}<\T^\ast P^{(\infty)}$. Similarly, the pullback via $\pr_G:P^{(\infty)}\to G$ of the cotangent bundle of $G$, spanned by its Maurer-Cartan forms, define a second intrinsic subbundle of $\T^\ast P^{(\infty)}$, which we also denote by $\T^\ast G$. The product bundle $\T^\ast G\times\Contact^{(\infty)}$ forms a codimension $p$ subbundle of the cotangent bundle $\T^\ast P^{(\infty)}$. Since $P^{(\infty)}=G\times\rmJ^\infty$ is a Cartesian product, the differential on $P^{(\infty)}$ naturally splits into jet and group components, $\dd=\dd_\rmJ+\dd_G$.
+The regularization construction extends to the infinite-order regularized jet bundle $\pi_\infty:P^{(\infty)}=G\times\rmJ^\infty\to\rmJ^\infty$ in the obvious manner. The pullback of the contact bundle $\Contact^{(\infty)}<\T^\ast\rmJ^\infty$ defines the contact subbundle which we denote by the same symbol $\Contact^{(\infty)}<\T^\ast P^{(\infty)}$. Similarly, the pullback via $\pr_G:P^{(\infty)}\to G$ of the cotangent bundle of $G$, spanned by its Maurer-Cartan forms, defines a second intrinsic subbundle of $\T^\ast P^{(\infty)}$, which we also denote by $\T^\ast G$. The product bundle $\T^\ast G\times\Contact^{(\infty)}$ forms a codimension $p$ subbundle of the cotangent bundle $\T^\ast P^{(\infty)}$. Since $P^{(\infty)}=G\times\rmJ^\infty$ is a Cartesian product, the differential on $P^{(\infty)}$ naturally splits into jet and group components, $\dd=\dd_\rmJ+\dd_G$.
 
 \begin{prop}\label{prop 10.5 OlverCo2}
-    If $\omega$ is a $G$-invariant differential form on $P^{(\infty)}$, then so are both $\dd_\rmJ \omega$ and $\dd_G \omega$. In particular, if $L(g,z^{(r)})$ is a lifted differential invariantm then its jet and group differentials, $\dd_\rmJ L$ and $\dd_G L$, are $G$-invariant $1$-forms on $P^{(\infty)}$.
+    If $\omega$ is a $G$-invariant differential form on $P^{(\infty)}$, then so are both $\dd_\rmJ \omega$ and $\dd_G \omega$. In particular, if $L(g,z^{(r)})$ is a lifted differential invariant, then its jet and group differentials, $\dd_\rmJ L$ and $\dd_G L$, are $G$-invariant $1$-forms on $P^{(\infty)}$.
 \end{prop}
 
-Let us now discuss the local coordinate expressions for the regularized action and its invariants. As above, the introduction of local coordinates $(\bf x,\bf u^{(\infty)})$ on $\rmJ^\infty$ produces a local coframe on $P^{(\infty)}$ consisting of the horizontal forms $\dd \bf x$, the system of basic contact forms $\bm\theta$, along with the right-invariant Maurer-Cartan forms $\bm\theta_G$, all pulled back to $P^{(\infty)}$. Any specific choice of a ``horizontal'' semibasic complement produces a splitting of the differential into horizontal, vertical, and group components, so that we have the more regined decomposition:
-\[\dd\omega=\dd_\rmJ\omega+\dd_G\omega=\dd_\calH+\dd_\calV\omega+\dd_G\omega,\quad \omega\in\Omega(P^{(\infty)}).\]
+Let us now discuss the local coordinate expressions for the regularized action and its invariants. As above, the introduction of local coordinates $(\bf x,\bf u^{(\infty)})$ on $\rmJ^\infty$ produces a local coframe on $P^{(\infty)}$ consisting of the horizontal forms $\dd \bf x$, the system of basic contact forms $\bm\theta$, along with the right-invariant Maurer-Cartan forms $\bm\theta_G$, all pulled back to $P^{(\infty)}$. Any specific choice of a ``horizontal'' semibasic complement produces a splitting of the differential into horizontal, vertical, and group components, so that we have the more refined decomposition:
+\[\dd\omega=\dd_\rmJ\omega+\dd_G\omega=\dd_M\omega+\dd_\calV\omega+\dd_G\omega,\quad \omega\in\Omega(P^{(\infty)}).\]
 Note also that 
 \[\begin{gathered}
-    \dd_\calH^2=\dd_\calV^2=\dd_G^2=0,\\
-    \dd_\calH\circ\dd_\calV+\dd_\calV\circ\dd_\calH=\dd_\calH\circ\dd_G+\dd_G\circ\dd_\calH=\dd_G\circ\dd_\calV+\dd_\calV\circ\dd_G=0.
+    \dd_M^2=\dd_\calV^2=\dd_G^2=0,\\
+    \dd_M\circ\dd_\calV+\dd_\calV\circ\dd_M=\dd_M\circ\dd_G+\dd_G\circ\dd_M=\dd_G\circ\dd_\calV+\dd_\calV\circ\dd_G=0.
 \end{gathered}\label{eq 10.6 OlverCo2}\]
 
 Now the usual procedure can be used to compute invariant differential operators and to produce the full set of differential invariants. 
 % Most importantly, as usual, the differential $\dd_\rmJ$ can be further split into a ``horizontal'' and ``vertical'' components, $\dd_\rmJ=\dd_M+\dd_\calV$, according to an arbitrary local splitting of $\T\rmJ^\infty$, for example, one associated with a choice of jet coordinates. 
-The introduction of local independent and dependent coordinates $z=(\bf x,\bf u)$ on $M$ induces a local identification of $P^{(\infty)}$ with a trivial bundle $\bbR^p\times\bbR^s$. In the $(\bf x,\bf u)$ coordinates, we write $\mu=(\bf y,\bf v)$, where $\bf y=(y^1,\ldots,y^p)$ will be considered as ``lifted independent variables'' and $\bf v=(v^1,\ldots,v^s)$ as ``lifted dependent variables''. Let 
+The introduction of local independent and dependent coordinates $z=(\bf x,\bf u)$ on $M$ induces a local identification of $M$ with the total space of a trivial bundle $E=\bbR^p\times\bbR^s\to\bbR^p$. In the $(\bf x,\bf u)$ coordinates, we write $\mu=(\bf y,\bf v)$, where $\bf y=(y^1,\ldots,y^p)$ will be considered as ``lifted independent variables'' and $\bf v=(v^1,\ldots,v^s)$ as ``lifted dependent variables''. Let 
 \[\eta^i\coloneqq\dd_M y^i=\sum_{j=1}^p (D_j y^i)\dd x^j,\quad i=1,\ldots,p,\label{eq 10.7 OlverCo2}\]
-denote the semibasic differentials  of lifted independent variables. The coefficient matrix $\bf D \bf y=(D_j y^i)$ is obtained by total differentiation of the lifted invariants $\bf y$ treating the group parameters as constants, so the lifted semibasic forms $\bm\theta=(\bf D\bf y)\cdot\dd\bf x$ are defined in the first-order regularized jet space $P^{(1)}$. The $\eta$'s are linearly independent iff the $y$'s have nonvanishing total Jacobian:
+denote the semibasic differentials  of lifted independent variables. The coefficient matrix $\bf D \bf y=(D_j y^i)$ is obtained by total differentiation of the lifted invariants $\bf y$ treating the group parameters as constants, so the lifted semibasic forms $\bm\eta=(\bf D\bf y)\cdot\dd\bf x$ are defined in the first-order regularized jet space $P^{(1)}$. The $\eta$'s are linearly independent iff the $y$'s have nonvanishing total Jacobian:
 \[\det\bf D\bf y=\frac{\bf D(y^1,\ldots,y^p)}{\bf D(x^1,\ldots,x^p)}=\det(D_j y^i)\neq 0.\]
 This condition can be characterized geometrically as follows.
 
 \begin{prop}[{\cite[Prop.~10.7]{OlverCo2}}]\label{prop 10.7 OlverCo2}
-    The semibasic $1$-forms $\bm\eta=(\bf D\bf y)\cdot\dd \bf x$ are linearly independent, $\eta^1\wedge\cdots\wedge\eta^p\neq 0$, on the open subset $W^{(1)}\subset P^{(1)}$ determined by the $1$-jets of submanifolds $S$ such that both $S$ and $g\cdot S$ are tranverse w.r.t.\ the given coordinates on $M$. Thus, $W^{(1)}=\{(g,z^{(1)})\in G\times \rmJ^1 E\mid g^{(1)}\cdot z^{(1)}\in\rmJ^1 E\}$. At such points, we call $\bm\eta=(\eta^1,\ldots,\eta^p)$ \emph{the lifted (semibasic) contact-invariant coframe} for the given coordinate chart.
+    The semibasic $1$-forms $\bm\eta=(\bf D\bf y)\cdot\dd \bf x$ are linearly independent, $\eta^1\wedge\cdots\wedge\eta^p\neq 0$, on the open subset $W^{(1)}\subset P^{(1)}$ determined by the $1$-jets of submanifolds $S$ such that both $S$ and $g\cdot S$ are transverse w.r.t.\ the given coordinates on $M$. Thus, $W^{(1)}=\{(g,z^{(1)})\in G\times \rmJ^1 E\mid g^{(1)}\cdot z^{(1)}\in\rmJ^1 E\}$. At such points, we call $\bm\eta=(\eta^1,\ldots,\eta^p)$ \emph{the lifted (semibasic) contact-invariant coframe} for the given coordinate chart.
 \end{prop}
 
 The corresponding invariant differential operators are easily found. As in the unlifted version, \eqref{eq 9.7 OlverCo2}, we write the total differential of any function $f\in C^\infty(P^{(\infty)})$ in invariant form 
 \[\dd_Mf=\sum_{j=1}^p (\calE_jf)\eta^j\label{eq 10.9 OlverCo2}\]
-w.r.t.\ the prescribed contact-invariant frame. The corresponding total differential operators are $\bm\calE=(\bf D\bf y)^{-\sfT}\cdot\bf D$, or, explicitly, 
+w.r.t.\ the prescribed contact-invariant frame. The corresponding total differential operators are $\bm\calE=(\bf D\bf y)^{-\top}\cdot\bf D$, or, explicitly, 
 \[\calE_jf=\frac{\bf D(y^1,\ldots,y^{j-1},f,y^{j+1},\ldots,y^p)}{\bf D(y^1,\ldots,y^p)}=\sum_{i=1}^p Z^i_j(g,\bf x,\bf u^{(1)})D_i,\label{eq 10.10 OlverCo2}\]
 where $Z=(Z^i_j)=(\bf D\bf y)^{-1}$. Thus, we can identify the \emph{lifted invariant differential operator} $\calE_j=D_{y^j}$ with total differentiation w.r.t.\ the lifted invariant $y^j$; in particular, $\calE_j y^i=\delta^i_j$. Note that the lifted invariant differential operators do not involve differentiation w.r.t.\ the group parameters. A very important point is that, unlike the usual invariant differential operators, the lifted operators \emph{always} commute:
 \[[\calE_i,\calE_j]=0.\label{eq 10.11 OlverCo2}\]
-This follows from the closure of the semibasic differential, $\dd_M^2=0$, and is an immediate consequence of the fact that the lifted contact-invariant coframe \eqref{eq 10.7 OlverCo2} is the semibasic differential of lifted invariants. We let $\calE_K=\calE_1^{k_1}\cdots\calE_p^{j_p}$ denote the higher-order differential operators for multi-indices $K=(j_1,\ldots,j_p)$, $j_\nu\geq 0$; equation \eqref{eq 10.11 OlverCo2} shows that the order of the invariant differentiation is irrelevant.
+This follows from the closure of the semibasic differential, $\dd_M^2=0$, and is an immediate consequence of the fact that the lifted contact-invariant coframe \eqref{eq 10.7 OlverCo2} is the semibasic differential of lifted invariants. We let $\calE_K=\calE_1^{k_1}\cdots\calE_p^{k_p}$ denote the higher-order differential operators for multi-indices $K=(k_1,\ldots,k_p)$, $k_\nu\geq 0$; equation \eqref{eq 10.11 OlverCo2} shows that the order of the invariant differentiation is irrelevant.
 
 The lifted invariant differential operators can be used to compute higher-order lifted differential invariants. The basic result follows immediately from \eqref{eq 10.9 OlverCo2}, the contact-invariance of the forms $\bm\eta$, along with the fact that the prolonged group transformations preserve the contact ideal.
 
@@ -5388,23 +5402,23 @@ The lifted invariant differential operators can be used to compute higher-order 
     If $L\in C^\infty(P^{(\infty)})$ is any lifted differential invariant, then so are its invariant derivatives $\calE_K L$, $|K|\geq 0$.
 \end{prop}
 
-If we successively apply the invariant operators associated with the first $p$ lifted invariants $\bf y=(y^1,\ldots,y^p)$ to the remaining zeroth-order invariants $\bf v=(v^1,\ldots,v^s)$, we recover all the higher-order lifted invariants $\bf v^{(r)}$. Since $\mu^{(r)}=g^{(r)}\cdot z^{(r)}$, and alternative way of viewing this result is that the process of lifted invariant differentiation produces the explicit formulas for the prolonged group transformations, thereby implementing the standard process of implicit differentiation. 
+If we successively apply the invariant operators associated with the first $p$ lifted invariants $\bf y=(y^1,\ldots,y^p)$ to the remaining zeroth-order invariants $\bf v=(v^1,\ldots,v^s)$, we recover all the higher-order lifted invariants $\bf v^{(r)}$. Since $\mu^{(r)}=g^{(r)}\cdot z^{(r)}$, an alternative way of viewing this result is that the process of lifted invariant differentiation produces the explicit formulas for the prolonged group transformations, thereby implementing the standard process of implicit differentiation. 
 
 \begin{lem}\label{lem 10.9 OlverCo2}
-    The components of the $r$-th order lifted invariant $\mu^{(r)}$ consist of the basic invariants $\bm\mu=(\bf y,\bf v)$ together with the higher-order lifted differential ivnariants 
+    The components of the $r$-th order lifted invariant $\mu^{(r)}$ consist of the basic invariants $\bm\mu=(\bf y,\bf v)$ together with the higher-order lifted differential invariants 
     \[v^\alpha_K=\calE_K v^\alpha,\quad \alpha=1,\ldots,s,\; |K|\leq r.\]
 \end{lem}
 \begin{proof}
     For fixed $g$, the diffeomorphism $\mu^{(r)}(g,\_)=g^{(r)}:\rmJ^r\to \rmJ^r$ is a contact transformation on the jet bundle, hence the pullback along it maps contact forms to contact forms. Now, 
     \[\left(g^{(r)}\right)^\ast\theta^\alpha_K=\dd_\rmJ v^\alpha_K-\sum_{i=1}^p v^\alpha_{K+1_i}\dd_\rmJ y^i,\quad |K|\leq r-1.\label{eq 10.13 OlverCo2}\]
-    The right hand size will be a contact form iff its semibasic component vanishes, so that 
+    The right hand side will be a contact form iff its semibasic component vanishes, so that 
     \[\dd_M v^\alpha_K=\sum_{i=1}^pv^\alpha_{K+1_i}\eta^i,\quad |K|\leq r-1.\label{eq 10.14 OlverCo2}\]
     Comparing with \eqref{eq 10.9 OlverCo2} completes the proof.
 \end{proof}
 
 \begin{example}
     For the standard action $\SE_2\acts M=\bbR^2$, the zeroth-order lifted invariants $\mu=(y,v)$ are just the group transformation formulas:
-    \[y=x\cos\phi-u\sin\phi+a,\quad v=x\cos\phi+u\sin\phi+b.\]
+    \[y=x\cos\phi-u\sin\phi+a,\quad v=x\sin\phi+u\cos\phi+b.\]
     The lifted semibasic contact-invariant form is 
     \[\eta=\dd_M y=(\cos\phi-u_x\sin\phi)\dd x,\]
     which is well-defined provided $\phi$ does not rotate the curve to have a vertical tangent. Therefore, 
@@ -5419,10 +5433,10 @@ to define a fully invariant coframe on $P^{(\infty)}$. In \eqref{eq 10.16 OlverC
 
 There are two methods for constructing invariant contact forms. First, since the semibasic component of the invariant $1$-form on the right hand side of \eqref{eq 10.13 OlverCo2} vanishes by virtue of \eqref{eq 10.14 OlverCo2}, its vertical component 
 \[\vartheta^\alpha_K\coloneqq \dd_\rmJ v^\alpha_K-\sum_{i=1}^p v^\alpha_{K+1_i}\dd_\rmJ y^i=\dd_\calV v^\alpha_K-\sum_{i=1}^p v^\alpha_{K+1_i}\dd_\calV y^i,\quad \alpha=1,\ldots,s,\label{eq 10.17 OlverCo2}\]
-is an invariant contact form. The resulting collection $\bm\vartheta=\{\vartheta^\alpha_K\}_{\alpha,K}$ forms a complete set of lifted invariant contact forms on $P^{(\infty)}$. The forms $\bm\tau,\bm\vartheta$ are the pullbacks of the canonical coframe $(\dd\bf x,\theta^\alpha_K)$ on $\rmJ^\infty$ by the map $\mu^{\infty}=g^{(\infty)}$ modulo the Maurer-Cartan forms $\bm\theta_G$.
+is an invariant contact form. The resulting collection $\bm\vartheta=\{\vartheta^\alpha_K\}_{\alpha,K}$ forms a complete set of lifted invariant contact forms on $P^{(\infty)}$. The forms $\bm\tau,\bm\vartheta$ are the pullbacks of the canonical coframe $(\dd\bf x,\theta^\alpha_K)$ on $\rmJ^\infty$ by the map $\mu^{(\infty)}=g^{(\infty)}$ modulo the Maurer-Cartan forms $\bm\theta_G$.
 
 \begin{prop}\label{prop 10.11 OlverCo2}
-    The collection of $1$-forms $(\bm\tau,\bm\vartheta,\bm\theta_G)=(\tau^i,\vartheta^\alpha_K,\theta_G^a)$, $i=1,\ldots,n$, $\alpha=1,\ldots,s$, $K=(k_1,\ldots,k_p)$, $k_\nu\geq 0$, $a=1,\ldots,\dim G$, provide a $G$-invariant local coframe on the regularized jet space $P^{(\infty)}=G\times\rmJ^\infty$ of $p$-dimensional submanifolds of the $(n=p+s)$-dimensional $M$.
+    The collection of $1$-forms $(\bm\tau,\bm\vartheta,\bm\theta_G)=(\tau^i,\vartheta^\alpha_K,\theta_G^a)$, $i=1,\ldots,p$, $\alpha=1,\ldots,s$, $K=(k_1,\ldots,k_p)$, $k_\nu\geq 0$, $a=1,\ldots,\dim G$, provide a $G$-invariant local coframe on the regularized jet space $P^{(\infty)}=G\times\rmJ^\infty$ of $p$-dimensional submanifolds of the $(n=p+s)$-dimensional $M$.
 \end{prop}
 
 \begin{thm}\label{thm 10.12 OlverCo2}
@@ -5433,7 +5447,7 @@ is an invariant contact form. The resulting collection $\bm\vartheta=\{\vartheta
 \begin{proof}
     Applying $\dd_M$ to \eqref{eq 10.17 OlverCo2} and using \eqref{eq 10.6 OlverCo2}, we find
     \begin{multline}
-        \dd_M\vartheta^\alpha_K=-\sum_{j=1}^p \dd_\calV(v^\alpha_{K+1_j}\eta^j)-\sum_{i,j=1}^p v^\alpha_{K+1_i+1_j}\eta^j\wedge\eta^j\wedge\dd_\calV y^i+\sum_{i=1}^p v^\alpha_{K+1_i}\dd_\calV\eta^i=\\=-\sum_{j=1}^p\vartheta^\alpha_{K+1_j}\wedge\eta^j.\label{eq 10.20 OlverCo2}
+        \dd_M\vartheta^\alpha_K=-\sum_{j=1}^p \dd_\calV(v^\alpha_{K+1_j}\eta^j)-\sum_{i,j=1}^p v^\alpha_{K+1_i+1_j}\eta^j\wedge\dd_\calV y^i+\sum_{i=1}^p v^\alpha_{K+1_i}\dd_\calV\eta^i=\\=-\sum_{j=1}^p\vartheta^\alpha_{K+1_j}\wedge\eta^j.\label{eq 10.20 OlverCo2}
     \end{multline}
     The identity \eqref{eq 10.19 OlverCo2} follows by pairing \eqref{eq 10.20 OlverCo2} with the total vector field $\calE_j$.
 \end{proof}
@@ -5450,16 +5464,16 @@ The construction of higher-order moving frames proceeds in direct analogy with t
     For the jet space $\rmJ^r=\rmJ^r(\bbR^p,M)^{\mathrm{imm}}$ of jets of $p$-dimensional submanifolds, an $r$-th order (right) moving frame is a (local) map $\rho^{(r)}:\rmJ^r\supset U\to G$ which is (locally) $G$-equivariant w.r.t.\ the prolonged action $G^{(r)}\acts \rmJ^r$, and the right multiplication action $h\mapsto h\cdot g^{-1}$ on $G$ itself.
 \end{defn}
 
-The corresponding left moving frame of order $r$ is merely $\wt\rho^{(r)}\left(z^{(r)}\right)=\rho^{(r)}\left(z^{(r)}\right)^{-1}$. Note that an $r$-th order moving frame automatically defines a moving frame on the higher-order jet bundles, namely $\rho^{(r)}\circ\pi^{r'}_r:\rmJ^{r'}\to G$, $r'>r$. The fundamental existence theorem for moving frames is an immediate consequence of Theorem~\ref{thm 4.4 OlverCo2}
+The corresponding left moving frame of order $r$ is merely $\wt\rho^{(r)}\left(z^{(r)}\right)=\rho^{(r)}\left(z^{(r)}\right)^{-1}$. Note that an $r$-th order moving frame automatically defines a moving frame on the higher-order jet bundles, namely $\rho^{(r)}\circ\pi^{r'}_r:\rmJ^{r'}\to G$, $r'>r$. The fundamental existence theorem for moving frames is an immediate consequence of Theorem~\ref{thm 4.4 OlverCo2}.
 
 \begin{thm}\label{thm 11.2 OlverCo2}
     Given an action $G\acts M$, an $r$-th order moving frame exists in a neighborhood of any point $z^{(r)}\in\calV^r$ in the regular component of $\rmJ^r$.
 \end{thm}
 
 
-Note that a global moving frame will exist only if the prolonged action $G^{r}\acts \calV^r$ is free.
+Note that a global moving frame will exist only if the prolonged action $G^{(r)}\acts \calV^r$ is free.
 
-In particular, the minimal order at which any moving frame can be constructed is the stabilization order of the group aciton. Indeed, according to the previous construction, the choise of a slice $\Sigma^{(r)}\subset\rmJ^r$ to the prolonged group orbits serves to define a moving frame $\rho^{(r)}$ in a neighborhood of any point $z^{(r)}\in \Sigma^{(r)}$. The set $\calL^{(r)}=\left(\mu^{(r)}\right)^{-1}\left(\Sigma^{(r)}\right)$ forms the graph of a local $G$-equivariant section $\sigma^{(r)}:\rmJ^{(r)}\to P^{(r)}$, whose moving frame is $\rho^{(r)}=\pr_G\circ \sigma^{(r)}$. Moreover, composing $\sigma^{(r)}$ with $\mu^{(r)}$ produces the corresponding differential invariants.
+In particular, the minimal order at which any moving frame can be constructed is the stabilization order of the group action. Indeed, according to the previous construction, the choice of a slice $\Sigma^{(r)}\subset\rmJ^r$ to the prolonged group orbits serves to define a moving frame $\rho^{(r)}$ in a neighborhood of any point $z^{(r)}\in \Sigma^{(r)}$. The set $\calL^{(r)}=\left(\mu^{(r)}\right)^{-1}\left(\Sigma^{(r)}\right)$ forms the graph of a local $G$-equivariant section $\sigma^{(r)}:\rmJ^r\to P^{(r)}$, whose moving frame is $\rho^{(r)}=\pr_G\circ \sigma^{(r)}$. Moreover, composing $\sigma^{(r)}$ with $\mu^{(r)}$ produces the corresponding differential invariants.
 
 
 \begin{defn}[Fundamental normalized differential invariants]
@@ -5473,11 +5487,11 @@ In particular, the minimal order at which any moving frame can be constructed is
 
 
 \begin{rem}
-    The fundamental normalized differential invariants are not necessarily functionally independent, however, Theorem~\ref{thm 4.5 OlverCo2} does imply that they contain all of the $r$-th order differential invariants. In particular, all lower-order invariants, including those on jet bundles where $G$ does not act freely, will appear as functions of the $I^{(r)}$.
+    The fundamental normalized differential invariants are not necessarily functionally independent; however, Theorem~\ref{thm 4.5 OlverCo2} does imply that they contain all of the $r$-th order differential invariants. In particular, all lower-order invariants, including those on jet bundles where $G$ does not act freely, will appear as functions of the $I^{(r)}$.
 \end{rem}
 
 
-As in the order zero case, given an arbitrary differential function $f\in C^\infty(\rmJ^r)$, the function $L=f\circ\mu^{(r)}\in C^{(\infty)}(P^{(r)})$ defines a lifted differential invariant, and hence, $J=L\circ \sigma^{(r)}=f\circ I^{(r)}$ defines a differential invariant, called the \emph{invariantization} of $f$ w.r.t.\ the given moving frame. Thus, a moving frame provides a natural way to construct a differential invariant from any differential function. Theorem~\ref{thm 10.3 OlverCo2} just says that if $f$ itself is a differential invariant, then $f\circ\mu^{(r)}$ is independent of the group parameters, hence $J=f$. Thus, invariantization defines a projection, depending on the moving frame, from the space of differential functions to the space of differential invariants. One case of interest is the $j$-th total derivative $(D_j f)\left(x,u^{(r+1)}\right)$ of a differential function $f\left(x,u^{(r)}\right)$. The corresponding lifted invariant coincides with the $j$-th invariant derivative of the lifted invariant $L=f\circ \mu^{(r)}$, so that $D_j f\circ\mu^{(r+1)}=\calE_j L$. Consequently, the invariantization of $D_jf$ is given by 
+As in the order zero case, given an arbitrary differential function $f\in C^\infty(\rmJ^r)$, the function $L=f\circ\mu^{(r)}\in C^\infty(P^{(r)})$ defines a lifted differential invariant, and hence, $J=L\circ \sigma^{(r)}=f\circ I^{(r)}$ defines a differential invariant, called the \emph{invariantization} of $f$ w.r.t.\ the given moving frame. Thus, a moving frame provides a natural way to construct a differential invariant from any differential function. Theorem~\ref{thm 10.3 OlverCo2} just says that if $f$ itself is a differential invariant, then $f\circ\mu^{(r)}$ is independent of the group parameters, hence $J=f$. Thus, invariantization defines a projection, depending on the moving frame, from the space of differential functions to the space of differential invariants. One case of interest is the $j$-th total derivative $(D_j f)\left(x,u^{(r+1)}\right)$ of a differential function $f\left(x,u^{(r)}\right)$. The corresponding lifted invariant coincides with the $j$-th invariant derivative of the lifted invariant $L=f\circ \mu^{(r)}$, so that $D_j f\circ\mu^{(r+1)}=\calE_j L$. Consequently, the invariantization of $D_jf$ is given by 
 \[\calE_j L\circ\sigma^{(r)}=D_jf\circ I^{(r+1)}.\]
 
 As in the order zero case, in applications to equivalence problems, one restricts the moving frame to a submanifold.
@@ -5511,15 +5525,15 @@ In the second formula, $l=\max(r,|K|)$. As above, some of these may be constant 
 \begin{example}
     Consider the elementary similarity group $G=\bbR^+\ltimes \bbR^2$ acting on $M=\bbR^2$ via 
     \[(x,u)\mapsto (\alpha x+a,\alpha^3 u+b).\label{eq 11.8 OlverCo2}\]
-    If we choose $y=\alpha x+a$ as the lifted independent variable, then $\eta=\dd_M y=\alpha\dd x$ is the corresponding semibasic invariant form, with invariant differential operator $\calE=D_y=\alpha^{-1}D_x$. Successively applying $\calE$ to the dependent order zero lifted invariant $v$ produces the complete system of higher-order lifted invariants: $v_r=\calE^r v=\alpha^{3-r}u_r$, where $u_r=D_x^ru$. and $r\geq 1$. Therefore, on $P^{(4)}$, say, the lifted invariants $\mu^{(r)}$ are 
+    If we choose $y=\alpha x+a$ as the lifted independent variable, then $\eta=\dd_M y=\alpha\dd x$ is the corresponding semibasic invariant form, with invariant differential operator $\calE=D_y=\alpha^{-1}D_x$. Successively applying $\calE$ to the dependent order zero lifted invariant $v$ produces the complete system of higher-order lifted invariants: $v_r=\calE^r v=\alpha^{3-r}u_r$, where $u_r=D_x^ru$ and $r\geq 1$. Therefore, on $P^{(4)}$, say, the lifted invariants $\mu^{(4)}$ are 
     \[y=\alpha x+a,v=\alpha^3u+b,v_y=\alpha^2u_x,v_{yy}=\alpha u_{xx},v_{yyy}=u_{xxx},v_{yyyy}=\alpha^{-1}u_{xxxx}.\]
-    The simplest first-order moving frame is found by normalizing $y=v=0$, $u_x=1$, whereby 
+    The simplest first-order moving frame is found by normalizing $y=v=0$, $v_y=1$, whereby 
     \[a=-\frac{x}{\sqrt{u_x}},\quad b=-\frac{u}{u_x^{3/2}},\quad \alpha=\frac{1}{\sqrt{u_x}},\label{eq 11.10 OlverCo2}\]
-    which is well-defined on the subset $\wt\calV^1=\{u_x>0\}$. The resulting normalized fourth-order differential ivnariants $I^{(4)}$ are obtained by substituting \eqref{eq 11.10 OlverCo2} into the lifted invariants:
+    which is well-defined on the subset $\wt\calV^1=\{u_x>0\}$. The resulting normalized fourth-order differential invariants $I^{(4)}$ are obtained by substituting \eqref{eq 11.10 OlverCo2} into the lifted invariants:
     \[J^1=0,\; I_0=0,\; I_1=1,\; I_2=\frac{u_{xx}}{\sqrt{u_x}},\; I_3=u_{xxx},\; I_4=\sqrt{u_x}u_{xxxx}.\]
-    The moving frame \eqref{eq 11.10 OlverCo2} applies to curves $u=f(x)$ provided the tangent is not horizontal, so $u_x\neq 0$. If the curve has a horizontal component, then one can construct a second-order moving frame by using the alternative normalization $v_{yy}=1$, with 
-    \[a=-\frac{x}{u_{xx}},\quad b=-\frac{u}{u_{xx}^2},\quad \alpha=\frac{1}{u_{xx}},\label{eq 11.11 OlverCo2}\]
-    which is well-defined on the subdomain $\calV^2=\{u_{xx}\neq 0\}$, and hence applies to curves with horizontal tangent at a point, but not those with inflection points. (The latter can be treated with a yet higher-order normalization.) The moving frame \eqref{eq 11.11 OlverCo2} leads to a slightly different normalized fourth-order invariant $\wt I^{(4)}$:
+    The moving frame \eqref{eq 11.10 OlverCo2} applies to curves $u=f(x)$ provided the tangent is not horizontal, so $u_x\neq 0$. If the curve has a horizontal tangent, then one can construct a second-order moving frame by using the alternative normalization $v_{yy}=1$, with 
+    \[a=-\frac{x}{u_{xx}},\quad b=-\frac{u}{u_{xx}^3},\quad \alpha=\frac{1}{u_{xx}},\label{eq 11.11 OlverCo2}\]
+    which is well-defined on the subdomain $\calV^2=\{u_{xx}>0\}$, and hence applies to curves with horizontal tangent at a point, but not those with inflection points. (The latter can be treated with a yet higher-order normalization.) The moving frame \eqref{eq 11.11 OlverCo2} leads to a slightly different normalized fourth-order invariant $\wt I^{(4)}$:
     \[\wt J=0,\; \wt I_0=0,\; \wt I_1=\frac{u_x}{u_{xx}^2},\; \wt I_2=1,\quad \wt I_3=u_{xxx},\; \wt I_4=u_{xx}u_{xxxx},\]
     all of which are, naturally, functions of the previous normalized invariants on their common domain of definition. Note that the two moving frames correspond to different choices of slices on $\rmJ^2$, namely $\{(0,0,1,t)\}$ for \eqref{eq 11.10 OlverCo2} and $\{(0,0,\wt t,1)\}$ for \eqref{eq 11.11 OlverCo2}.
  \end{example}
@@ -5548,20 +5562,20 @@ In other words, $\varTheta^{(r)}$ is involutive and its symmetry group coincides
     \[I^{(r)}\left(z^{(r)}\right)=\rho^{(r)}\left(z^{(r)}\right)\cdot z^{(r)}=\left(\sigma^{(r)}\right)^\ast \mu^{(r)},\]
     and the $1$-forms  
     \[\bm\gamma^{(r)}=\rho^{(r)}\left(z^{(r)}\right)\cdot \dd z^{(r)}=\left(\sigma^{(r)}\right)^\ast \dd_\rmJ \mu^{(r)}\]
-    form a $G^{(r)}$-coframe on $\rmJ^r$, and hence is invariantly related to the moving coframe $\varTheta^{(r)}$.
+    form a $G^{(r)}$-coframe on $\rmJ^r$, and hence are invariantly related to the moving coframe $\varTheta^{(r)}$.
 \end{thm}
 
 \begin{example}
-    Consider the elemntary similarity group \eqref{eq 11.8 OlverCo2}. The moving coframe $\varTheta^{(2)}$ is obtained by applying the moving frame map \eqref{eq 11.10 OlverCo2} to the right invariant Maurer-Cartan forms 
-    \[\theta_G^1=\frac{\dd\alpha}{\alpha},\quad \theta_G^2=\dd a-\frac{a}{\alpha}\dd\alpha,\quad \theta_G^3=\dd b-\frac{3b}{a}\dd\alpha.\]
+    Consider the elementary similarity group \eqref{eq 11.8 OlverCo2}. The moving coframe $\varTheta^{(2)}$ is obtained by applying the moving frame map \eqref{eq 11.10 OlverCo2} to the right invariant Maurer-Cartan forms 
+    \[\theta_G^1=\frac{\dd\alpha}{\alpha},\quad \theta_G^2=\dd a-\frac{a}{\alpha}\dd\alpha,\quad \theta_G^3=\dd b-\frac{3b}{\alpha}\dd\alpha.\]
     The resulting moving coframe forms are 
     \[\theta^1=-\frac{\dd u_x}{2u_x},\quad \theta^3=-\frac{\dd u}{u_x^{3/2}},\quad \theta^2=-\frac{\dd x}{\sqrt{u_x}},\quad \theta^4=\dd\left(\frac{u_{xx}}{\sqrt{u_x}}\right),\]
     where the final form is the differential of the fundamental second-order differential invariant $I_2=u_x^{-1/2}u_{xx}$. The second-order extended coframe $\varGamma^{(2)}$ is obtained by applying the moving frame map \eqref{eq 11.10 OlverCo2} to the jet differentials of the lifted invariants 
     \[\dd_\rmJ y=\alpha\dd x,\quad \dd_\rmJ v=\alpha^3\dd u,\quad \dd_\rmJ v_y=\alpha^2\dd u_x,\quad \dd_\rmJ v_{yy}=\alpha\dd u_{xx},\]
     leading to 
     \[\gamma^1=\frac{\dd x}{\sqrt{u_x}},\quad \gamma^2=\frac{\dd u}{u_x^{3/2}},\quad \gamma^3=\frac{\dd u_x}{u_x},\quad \gamma^4=\frac{\dd u_{xx}}{\sqrt{u_x}}.\]
-    The invariant relation 
-    \[\gamma^1=-\theta_G^2,\quad \gamma^2=-\theta^3,\quad \gamma^3=-2\theta^1,\quad \gamma^4=\theta^4-I_2\theta^1,\]
+    The invariant relations 
+    \[\gamma^1=-\theta^2,\quad \gamma^2=-\theta^3,\quad \gamma^3=-2\theta^1,\quad \gamma^4=\theta^4-I_2\theta^1,\]
     between the two $G^{(2)}$-coframes follows from \eqref{eq 6.4 OlverCo2}, using the coefficients of the prolonged infinitesimal generators for the given group action.
 \end{example}
 
@@ -5569,17 +5583,17 @@ As above, we use the local coordinates $\left(\bf x,\bf u^{(\infty)}\right)$ on 
 
 \begin{defn}[Normalized contact-invariant coframe]\index{Contact-invariant coframe}
     The normalized contact-invariant coframe is the pullback of the lifted contact-invariant coframe:
-    \[\bm\theta\coloneqq \left(\sigma^{(r)}\right)^\ast\bm\eta=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y.\]
+    \[\bm\gamma\coloneqq \left(\sigma^{(r)}\right)^\ast\bm\eta=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y.\]
 \end{defn}
 
 \begin{lem}\label{lem 12.6 OlverCo2}
-    The semibasic $1$-forms $\bm\theta=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y$ are linearly independent at a point $z^{(r)}$ in the domain of the moving frame iff $z^{(r)}=\rmj^r_z i$ is the $r$-jet of a transverse submanifold $i:X\to M$.
+    The semibasic $1$-forms $\bm\gamma=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y$ are linearly independent at a point $z^{(r)}$ in the domain of the moving frame iff $z^{(r)}=\rmj^r_z i$ is the $r$-jet of a transverse submanifold $i:X\to M$.
 \end{lem}
 \begin{proof}
-    In terms of our bundle coordinates (where $\rmJ^r$ becomes locally identified with a jet bundle $\rmj^r E$), the transversality of $S=i(X)$ implies $z^{(r)}\in \rmJ^r E$. According to Proposition~\ref{prop 10.7 OlverCo2}, the $1$-forms $\bm\eta$ will be linearly independent at a point $(g,z^{(r)})\in G\times\rmJ^r E\in P^{(r)}$ iff $g^{(1)}\cdot \pi^r_1(z^{(r)})\in\rmJ^1 E$, which automatically implies $g^{(r)}\cdot z^{(r)}\in\rmJ^r E$. Therefore, $\bm\gamma$ will be lienarly independent iff $k^{(r)}=\rho^{(r)}(z^{(r)})\cdot z^{(r)}\in \rmJ^r E$. But, by construction, $k^{(r)}\in K^{(r)}$ is the slice representative of the orbit of $G^{(r)}$ through $z^{(r)}$, and hence lies in the coordinate chart $\rmJ^r E$ used to construct the moving frame.
+    In terms of our bundle coordinates (where $\rmJ^r$ becomes locally identified with a jet bundle $\rmJ^r E$), the transversality of $S=i(X)$ implies $z^{(r)}\in \rmJ^r E$. According to Proposition~\ref{prop 10.7 OlverCo2}, the $1$-forms $\bm\eta$ will be linearly independent at a point $(g,z^{(r)})\in G\times\rmJ^r E\subset P^{(r)}$ iff $g^{(1)}\cdot \pi^r_1(z^{(r)})\in\rmJ^1 E$, which automatically implies $g^{(r)}\cdot z^{(r)}\in\rmJ^r E$. Therefore, $\bm\gamma$ will be linearly independent iff $k^{(r)}=\rho^{(r)}(z^{(r)})\cdot z^{(r)}\in \rmJ^r E$. But, by construction, $k^{(r)}\in \Sigma^{(r)}$ is the slice representative of the orbit of $G^{(r)}$ through $z^{(r)}$, and hence lies in the coordinate chart $\rmJ^r E$ used to construct the moving frame.
 \end{proof}
 
-In local coordinates, the normalized $1$-forms $\bm\theta$ are therefore obtained by using the moving frame to replace the group parameters in \eqref{eq 10.7 OlverCo2}, so 
+In local coordinates, the normalized $1$-forms $\bm\gamma$ are therefore obtained by using the moving frame to replace the group parameters in \eqref{eq 10.7 OlverCo2}, so 
 \[\gamma^i=\sum_{j=1}^p D_j y^i\left(\rho^{(r)}\left(x,u^{(r)}\right),x,u^{(r)}\right)\dd x^j=\sum_{j=1}^p P^i_j\left(x,u^{(r)}\right)\dd x^j,\label{eq 12.5 OlverCo2}\]
 whose coefficient matrix $P=\left(\sigma^{(r)}\right)^\ast\bf D\bf y$ is the pullback of the total Jacobi matrix of the independent lifted invariants. 
 
@@ -5592,7 +5606,7 @@ The invariant differential operators associated with the semibasic coframe \eqre
 where $Q=P^{-1}=\left(\sigma^{(r)}\right)^\ast Z$ can be constructed directly from \eqref{eq 10.10 OlverCo2}.
 
 \begin{example}
-    Consider the similarity group \eqref{eq 11.8 OlverCo2}. Under the first-order moving frame \eqref{eq 11.10 OlverCo2}, the lifted semibasic form $\eta=\dd_M y=\alpha\dd x$ reduces to $\gamma=u_x^{-1/2}\dd x$. Similarly, the lifted invariant differential operator $\calE=\alpha^{-1}D_x$ reduces to $\calD=\sqrt{u_x}D_x$, which maps differential invariants to higher-order differential invariants. However, $\calD$ does not directly produce normalized invariants. For example, $v_{yy}$ normalizes to $I_2=u_x^{-1/2}u_{xx}$, but $v_{yyy}=\calE v_{yy}$ normalizes to $I_3=u_{xxx}$, which is not the same as $\calD I_2=u_{xxx}+u_x^{-1}u_{xx}^2$. The second-order moving frame \eqref{eq 11.11 OlverCo2} produces a different semibasic $1$-form, namely $\wt\gamma=u_{xx}^{-1}\dd x$, whose invariant differential operator $\wt\calD=u_{xx}D_x$ produces yet another hierarchy of differential invariants, which, naturally, are functions of the normalized differential invariants. The explicit formulae relating these alternative sets of invariants can be found by studying the \emph{syzygies} between the differential operators, see \cite[\S13]{OlverCo2}.
+    Consider the similarity group \eqref{eq 11.8 OlverCo2}. Under the first-order moving frame \eqref{eq 11.10 OlverCo2}, the lifted semibasic form $\eta=\dd_M y=\alpha\dd x$ reduces to $\gamma=u_x^{-1/2}\dd x$. Similarly, the lifted invariant differential operator $\calE=\alpha^{-1}D_x$ reduces to $\calD=\sqrt{u_x}D_x$, which maps differential invariants to higher-order differential invariants. However, $\calD$ does not directly produce normalized invariants. For example, $v_{yy}$ normalizes to $I_2=u_x^{-1/2}u_{xx}$, but $v_{yyy}=\calE v_{yy}$ normalizes to $I_3=u_{xxx}$, which is not the same as $\calD I_2=u_{xxx}-\frac12u_x^{-1}u_{xx}^2$. The second-order moving frame \eqref{eq 11.11 OlverCo2} produces a different semibasic $1$-form, namely $\wt\gamma=u_{xx}^{-1}\dd x$, whose invariant differential operator $\wt\calD=u_{xx}D_x$ produces yet another hierarchy of differential invariants, which, naturally, are functions of the normalized differential invariants. The explicit formulae relating these alternative sets of invariants can be found by studying the \emph{syzygies} between the differential operators, see \cite[\S13]{OlverCo2}.
 \end{example}
 
 
@@ -5773,7 +5787,7 @@ In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k
         \end{pmatrix}&=\begin{pmatrix}
             R_1^1+R^1_3u_1 & R_2^1+R_3^1u_2\\
             R^2_1+R^2_3u_1 & R_2^2+R^2_3u_2
-        \end{pmatrix}^{-\sfT}\begin{pmatrix}
+        \end{pmatrix}^{-\top}\begin{pmatrix}
             D_1\\ D_2
         \end{pmatrix}.
     \end{aligned}\]
@@ -5783,15 +5797,15 @@ In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k
     \end{pmatrix}=\begin{pmatrix}
         R_1^1+R^1_3u_1 & R_2^1+R_3^1u_2\\
         R^2_1+R^2_3u_1 & R_2^2+R^2_3u_2
-    \end{pmatrix}^{-\sfT}\begin{pmatrix}
+    \end{pmatrix}^{-\top}\begin{pmatrix}
         R_1^3+R_3^3u_1\\ R_2^3+R_3^3u_2
     \end{pmatrix}.\]
     The normalization 
     \[y^1=v_1=v_2=0\]
     leads to a particularly simple first-order moving frame. Introduce the column-vectors 
-    \[\bf z=(x^1,x^2,u)^\sfT ,\quad \bf n=\frac{\bf N}{\lVert \bf N\rVert}=\frac{(-u_1,-u_2,1)^\sfT }{\sqrt{1+u_1^2+u_2^2}},\]
+    \[\bf z=(x^1,x^2,u)^\top ,\quad \bf n=\frac{\bf N}{\lVert \bf N\rVert}=\frac{(-u_1,-u_2,1)^\top }{\sqrt{1+u_1^2+u_2^2}},\]
     which respectively define the point on the surface and the unit normal at that point. Then 
-    \[R=\left(\bf t\mid \hat{\bf t}\mid \bf n\right)^\sfT ,\quad \text{where } \bf t=\frac{\bf z\times\bf n}{\lVert \bf z\times\bf n\rVert},\quad \hat{\bf t}=\bf n\times\bf t=\frac{\bf z-(\bf z\cdot \bf n)\bf n}{\lVert \bf z\times\bf n\rVert},\label {eq 15.26 OlverCo2}\]
+    \[R=\left(\bf t\mid \hat{\bf t}\mid \bf n\right)^\top ,\quad \text{where } \bf t=\frac{\bf z\times\bf n}{\lVert \bf z\times\bf n\rVert},\quad \hat{\bf t}=\bf n\times\bf t=\frac{\bf z-(\bf z\cdot \bf n)\bf n}{\lVert \bf z\times\bf n\rVert},\label {eq 15.26 OlverCo2}\]
     define distinguished, orthogonally equivariant, unit tangent vectors. The moving frame \eqref{eq 15.26 OlverCo2} applies to surfaces whose unit normal is not parallel to the point $\bf z$. Pulling back the remaining lifted invariants leads to the first-order differential invariants 
     \[\begin{aligned}
         J&=\left(\sigma^{(1)}\right)^\ast y^2=\frac{(\bf z\cdot \bf n)^2-\lVert\bf z\rVert^2}{\lVert \bf z\times\bf n\rVert}=-\lVert \bf z\times\bf n\rVert=-\sqrt{\lVert \bf z\rVert^2-(\bf z\cdot \bf n)^2},\\
@@ -5802,7 +5816,7 @@ In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k
     \[
         \begin{matrix}
             \bm\eta&=A\cdot \dd\bf x,\\
-            \calD&= A^{-\sfT}\bf D,
+            \calD&= A^{-\top}\bf D,
         \end{matrix}
         \quad\text{where}\quad 
         A=\begin{pmatrix}
@@ -5814,7 +5828,7 @@ In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k
     \[\begin{pmatrix}
         I_{11} & I_{12}\\
         I_{12} & I_{22}
-    \end{pmatrix}=\frac{1}{\lVert \bf N\rVert}\calD^2 u=\frac{A^{-\sfT}(\nabla^2 u)A^{-1}}{\sqrt{1+u_1^2+u_2^2}}.\]
+    \end{pmatrix}=\frac{1}{\lVert \bf N\rVert}\calD^2 u=\frac{A^{-\top}(\nabla^2 u)A^{-1}}{\sqrt{1+u_1^2+u_2^2}}.\]
     Here, $\nabla^2 u=(\partial_i\partial_j u)$ is the usual Hessian matrix of $u$, so $\calD^2 u$ represents an ``equivariant Hessian''. However, the recurrence relations (or syzygies) 
     \[\calD_1 J=II_{12},\quad \calD_2 J=1+II_{22},\quad \calD_1 I=-JI_{12},\quad \calD_2 I=-JI_{22},\]
     show that just $I,J$, and $I_{11}$ suffice for a set of fundamental differential invariants. On the other hand, $I_{ij}$ are also translation-invariant and thus relate to the fundamental differential invariants of the Euclidean group $\rmE_3$ -- namely, the principal curvatures of the surface, -- as we shall see in \Chap~\ref{chap curves and surfaces}.
@@ -6018,7 +6032,7 @@ where $s:\bbR^n\to M$ is a local diffeomorphism with $s(0)=m$ (recall the defini
     This has exactly the form of $\alpha\circ\beta^{-1}$ and thus coincides with the action of $\iota_{p'}$.
 \end{proof}
 
-\begin{rem}
+\begin{rem}\label{rem Fr infty and Diff}
     \begin{enumerate}
         \item The meaning of the proposition is more trivial than might seem. The diffeomorphism $s^{-1}$ is a local chart on $M$ that generates canonical coordinates $p\mapsto (x^i,p^i_j,\ldots,p^i_{j_1\ldots j_r})$ on $\Fr^r(M)$ as usual. Within this chart, the isomorphism $\iota_{p'}$ is given by the obvious map
         \[\iota_{p'}:\quad\left(X^i,\ldots,X^i_{j_1\ldots j_r}\right)\mapsto X^i\frac{\partial}{\partial x^i}+\cdots +X^i_{j_1\ldots j_r}\frac{\partial}{\partial p^i_{j_1\ldots j_r}}.\]
@@ -6153,7 +6167,7 @@ The following several examples display the surprisingly wide range of equivalenc
     
     However, if they are $2$-forms or higher, we must re-express them in terms of $1$-forms. If $\dim M=n$, then define the \emph{rank} of a $2$-form $\omega$ at $m\in M$ as the smallest integer $0\leq r\leq \frac12 n$ such that 
     \[\omega^{\wedge r}_m\neq 0,\quad \text{but}\quad \omega^{\wedge(r+1)}_m=0.\]
-    It is obvious that rank is invariant under local diffeomorphisms, in particular equivalences. To be able to solve the equivalence problem, we have to assume that this rank is constant (at least on some open set). Then we can notice that the action $A\mapsto gAg^\sfT $ of $\GL_n(\bbR)$ on the space of \emph{skew-symmetric} $n\times n$ matrices $A$ can be identified with its induced action on the space of $2$-forms $\bigwedge\nolimits^2\bbR^n$. A consequence of the Jordan normal form is that the orbits of this action are completely classified by the rank $r$ of the $2$-form. Hence, any $2$-form of rank $r$ can be locally brought to the canonical form 
+    It is obvious that rank is invariant under local diffeomorphisms, in particular equivalences. To be able to solve the equivalence problem, we have to assume that this rank is constant (at least on some open set). Then we can notice that the action $A\mapsto gAg^\top $ of $\GL_n(\bbR)$ on the space of \emph{skew-symmetric} $n\times n$ matrices $A$ can be identified with its induced action on the space of $2$-forms $\bigwedge\nolimits^2\bbR^n$. A consequence of the Jordan normal form is that the orbits of this action are completely classified by the rank $r$ of the $2$-form. Hence, any $2$-form of rank $r$ can be locally brought to the canonical form 
     \[\omega=\sum_{j=1}^r \omega^j\wedge\omega^{j+r},\]
     by some choice of a local $2r$-coframe $\omega^1,\ldots,\omega^{2r}$ on $M$. Assuming $\wb \omega$ also has rank $r$ (which it has to for there to be an equivalence), an analogous formula can be written for $\wb\omega$ in terms of a $2r$-coframe $\wb\omega^1,\ldots,\wb\omega^{2r}$ on $\wb M$. The Jacobian of any potential equivalence $F$ can be written in components w.r.t.\ these coframes (completed arbitrarily to full coframes), and the equivalence condition will reduce to the requirement that the top left $2r\times 2r$ block of $F_\ast$ belong to the symplectic group $\Sp_{2r}(\bbR)$. Therefore, the $2$-forms $\omega,\wb\omega$ are equivalent iff they have the same rank and the corresponding sets of $1$-forms obey the transformation rule 
     \[\left(F^\ast\wb\omega^i\right)(m)=\sum_{j=1}^{2r}g^i_j(m)\omega^j(m),\quad i=1,\ldots,2r,\]
@@ -6162,7 +6176,7 @@ The following several examples display the surprisingly wide range of equivalenc
 
 
 \begin{example}[Equivalence of Riemannian metrics {{\cite[Example~9.2]{OlverEquiv}}}]\index{Isometry}
-    The basic equivalence problem in Riemannian geometry asks when there is a local, metric-preserving diffeomorphism (\emph{isometry}) mapping a given Riemannian manifold $(M, \sfg)$ to a second Riemannian manifold $(\wb M,\wb\sfg)$ of the same dimension. In other words, the equivalence map $F$ must satisfy $F^\ast\wb\sfg=\sfg$. In order to recast this problem in terms of $1$-forms, we recall the algebraic canonical form for symmetric positive-definite matrices $A$, namely that they can be turned into the identity matrix by a general linear transformations $A\mapsto gAg^\sfT =\rmI_n$, $g\in \GL_n(\bbR)$. This allows us to introduce local coframes $\bm\theta$ on $M$ and $\wb\theta$ on $\wb M$ which diagonalize the metrics at each point:
+    The basic equivalence problem in Riemannian geometry asks when there is a local, metric-preserving diffeomorphism (\emph{isometry}) mapping a given Riemannian manifold $(M, \sfg)$ to a second Riemannian manifold $(\wb M,\wb\sfg)$ of the same dimension. In other words, the equivalence map $F$ must satisfy $F^\ast\wb\sfg=\sfg$. In order to recast this problem in terms of $1$-forms, we recall the algebraic canonical form for symmetric positive-definite matrices $A$, namely that they can be turned into the identity matrix by a general linear transformations $A\mapsto gAg^\top =\rmI_n$, $g\in \GL_n(\bbR)$. This allows us to introduce local coframes $\bm\theta$ on $M$ and $\wb\theta$ on $\wb M$ which diagonalize the metrics at each point:
     \[\sfg=\sum_{i=1}^n \theta^i\otimes\theta^i,\quad \wb\sfg=\sum_{i=1}^n\wb\theta^i\otimes\wb\theta^i.\]
     The two metrics are equivalent iff their diagonalizing coframes satisfy 
     \[F^\ast\wb\theta^i=\sum_j g^i_j(m)\theta^j,\quad i=1,\ldots,n,\]
@@ -6823,12 +6837,14 @@ which antisymmetrizes over the three $V^\ast$ components. Note that the domain o
 \end{proof}
 
 \begin{cor}[Bianchi identity]\index{Formula!Bianchi identity}
-    The function $\delta_2\circ\rho$ does not depend on the choice of $p''$. If $c_0=0$, then $\delta_2\circ\rho=0$.
+    The function $\delta_2\circ\rho$ does not depend on the choice of $p''$, and is thus well-defined as a function on $P^{(1)}$. If $c_0=0$, then $\delta_2\circ\rho=0$.
 \end{cor}
 \begin{proof}
-    The first statement follows from the lemma and the transformation rule for $\rho$. For the second, if $c_0=0$, then $\dd\theta=-\omega\wedge\theta$ on horizontal vectors, and the horizontal part of $0=\dd^2\theta$ is exactly $-\delta_2\circ\rho$ applied to $\theta\wedge\theta\wedge\theta$.\footnote{More generally, for a principal connection with torsion, $\dd^2\theta=0$ yields the \emph{first Bianchi identity with torsion}: in terms of the torsion $T$ and curvature $R$ of the corresponding covariant derivative $\nabla$ (see \Chap~\ref{ch: connections}),
-    \[\cyclic_{u,v,w}R(u,v)w=\cyclic_{u,v,w}\left[(\nabla_uT)(v,w)+T(T(u,v),w)\right],\]
-    where $\cyclic$ denotes the cyclic sum. Thus, $\delta_2\circ\rho$ is determined by $c_0$ and its first derivatives. For example, on $\bbR^4$ with the flat metric and a nonzero $4$-form $\psi$, let $\nabla=D+K$, where $D$ is the flat connection (componentwise differentiation of vector fields) and $\<K_x(v)w,z\>=\psi(x,v,w,z)$. Since $\psi$ is antisymmetric in $w,z$, each $K_x(v)$ is skew-adjoint, i.e., $K$ is $\frakso_4$-valued, so $\nabla$ is metric. It has $T=0$ but $\nabla T\neq 0$ at $x=0$, and there $\<R(u,v)w,z\>=2\psi(u,v,w,z)$, so $\delta_2\circ\rho\neq 0$.}
+    The first statement follows from the lemma and the transformation rule for $\rho$. For the second, if $c_0=0$, then $\dd\theta=-\omega\wedge\theta$ on horizontal vectors, and the horizontal part of $0=\dd^2\theta$ is exactly $-\delta_2\circ\rho$ applied to $\theta\wedge\theta\wedge\theta$.\footnote{More generally, for a principal connection with torsion, $\dd^2\theta=0$ yields the \emph{first Bianchi identity with torsion}:
+    \[\delta_2(\rho)(u,v,w)=\acyclic_{u,v,w}\left[(\nabla_uc_0)(v,w)+c_0\left(c_0(u,v),w\right)\right],\]
+    where $\acyclic$ is the same alternating sum as in the definition of $\delta_2$, and $\nabla_uc_0\coloneqq\dd c_0(X_u)$ is the derivative of $c_0$ along the horizontal vector $X_u$ with $\theta(X_u)=u$. In terms of the torsion $\sfT$ and curvature $\sfR$ of the corresponding covariant derivative $\nabla$ on $M$ (see \Chap~\ref{ch: connections}), which $c_0$ and $\rho$ express in the frame $p$, this becomes the classical identity
+    \[\cyclic_{u,v,w}\sfR(u,v)w=\cyclic_{u,v,w}\left[(\nabla_u\sfT)(v,w)+\sfT(\sfT(u,v),w)\right],\]
+    where $\cyclic$ denotes the cyclic sum. Thus, $\delta_2\circ\rho$ is determined by $c_0$ and its first derivatives. For example, on $\bbR^4$ with the flat metric and a nonzero $4$-form $\psi$, let $\nabla=D+K$, where $D$ is the flat connection (componentwise differentiation of vector fields) and $\<K_x(v)w,z\>=\psi(x,v,w,z)$. Since $\psi$ is antisymmetric in $w,z$, each $K_x(v)$ is skew-adjoint, i.e., $K$ is $\frakso_4$-valued, so $\nabla$ is metric. It has $\sfT=0$ but $\nabla\sfT\neq 0$ at $x=0$, and there $\<\sfR(u,v)w,z\>=2\psi(u,v,w,z)$, so $\delta_2\circ\rho\neq 0$.}
 \end{proof}
 
 Thus, if $c_0=0$, then $\rho$ takes values in $\ker\delta_2$, i.e., is symmetric w.r.t.\ exchanges of two arguments, and antisymmetrized over another pair (note that this does \emph{not} produce a tensor antisymmetric in the latter pair -- that would be zero). This holds regardless of whether the pseudo-connection is equivariant. In general, $\delta_2\circ\rho$ is determined by $c_0$ and its first derivatives, so $[\rho]$ takes values in a translate of the ``curvature module'' $\rmH^{1,2}(\frakg)$ fixed by the lower-order data, and in $\rmH^{1,2}(\frakg)$ itself if $c_0=0$:
@@ -11330,21 +11346,21 @@ Before diving into the more sophisticated examples, let walk through the classic
     Let $\bf{x},\bf{y}:U\to \rmA(\bbR^n)$ be two (not necessarily affine-related) maps on $U\subset M$. We would like to compute a differential invariant that quantifies the difference between the affine structures induced by these two charts. Denote by $\psi\coloneqq \bf{y}\circ \bf{x}^{-1}$ the transition map. Since it is a diffeomorphism between subsets of $\rmA(\bbR^n)$, its derivative $\psi_\ast$ at any point $\bf{x}$ of its domain is naturally an element of $\GL_n(\bbR^n)$, so we can construct a local \emph{affine frame} corresponding to $\psi$. Following the conventional abuse of notation, we will denote the transition map by $\bf{y}(\bf{x})$, its derivative by $\bf{y}'(\bf{x})$, and define
     \[\frake(\bf{x})\coloneqq \begin{pmatrix}
         \bf{y}'(\bf{x}) & \bf{y}(\bf{x}) \\
-        \bf{0}_n^\sfT  & 1
+        \bf{0}_n^\top  & 1
     \end{pmatrix}\quad \in \Aff_n(\bbR),\]
-    where $\bf{y}'$ is the $n\times n$ Jacobi matrix, $\bf{y}$ is a column-vector, and $\bf{0}_n^\sfT $ is the zero row-vector. We now pull back the Maurer-Cartan form along this frame:
+    where $\bf{y}'$ is the $n\times n$ Jacobi matrix, $\bf{y}$ is a column-vector, and $\bf{0}_n^\top $ is the zero row-vector. We now pull back the Maurer-Cartan form along this frame:
     \begin{multline}
         \frake^{-1}\dd\frake(\bf{x})=\begin{pmatrix}
             \bf{y}'(\bf{x})^{-1} & -\bf{y}'(\bf{x})^{-1}\cdot \bf{y}(\bf{x}) \\
-            \bf{0}_n^\sfT  & 1
+            \bf{0}_n^\top  & 1
         \end{pmatrix}
         \begin{pmatrix}
             \bf{y}''(\bf{x})\cdot \dd \bf{x} & \bf{y}'(\bf{x})\cdot \dd \bf{x} \\
-            \bf{0}_n^\sfT  & 0
+            \bf{0}_n^\top  & 0
         \end{pmatrix}=\\=
         \begin{pmatrix}
             \bf{y}'(\bf{x})^{-1}\cdot \bf{y}''(\bf{x})\cdot \dd \bf{x} & \dd \bf{x} \\
-            \bf{0}_n^\sfT  & 0
+            \bf{0}_n^\top  & 0
         \end{pmatrix}.
     \end{multline}
     We see that the only nontrivial quantity involved here is the $\frakgl_n(\bbR)$-valued $1$-form $(\bf{y}')^{-1} \bf{y}'' \dd \bf{x}$. By Cartan's Fundamental Theorem (or, indeed, by elementary calculus), the map $\bf{y}(\bf{x})$ is determined uniquely up to post-composition with a global affine transformation by $(\bf{y}')^{-1} \bf{y}'' \dd \bf{x}$. In particular, this quantity vanishes iff $\bf{y}$ and $\bf{x}$ induce the same affine structures on $U$. 
@@ -11379,7 +11395,7 @@ The next two examples deal with curves in Euclidean space of dimension $2$ and h
     Now we compute the logarithmic derivative:
     \[\delta\wt\gamma(t)=\wt\gamma(t)^{-1}\dot{\tilde\gamma}(t)=
     \begin{pmatrix}
-        \frake^\sfT  & -\frake^\sfT \cdot\gamma\\
+        \frake^\top  & -\frake^\top \cdot\gamma\\
         0 & 1
     \end{pmatrix} 
     \begin{pmatrix}
@@ -11416,13 +11432,13 @@ The next two examples deal with curves in Euclidean space of dimension $2$ and h
     \[\left(\frac{\dd}{\dd s}\gamma,\frac{\dd^2}{\dd s^2}\gamma,\ldots,\frac{\dd^{n-1}}{\dd s^{n-1}}\gamma\right),\] assume that they are linearly independent (such curves are called \emph{regular}) and apply the Gram-Schmidt process to them to get $\{e_1,\ldots,e_{n-1}\}$ (note that the Gram-Schmidt process doesn't change the differential order of these vectors). The final vector is then uniquely defined as $e_n=e_1\times\cdots\times e_{n-1}$. Now we define the \emph{generalized curvatures}
     \[\kappa_i\coloneqq \<\frac{\dd}{\dd s}e_i,e_{i+1}\>,\quad i=1,\ldots,n-1.\] 
     In particular, in three dimensions, $\tau\coloneqq \kappa_2$ is called the \emph{torsion}\index{Torsion!of a curve} of $\gamma$ since it describes the ``twisting'' of the frame around the curve and vanishes iff the curve is planar. The formula for the logarithmic derivative of the frame $\frake:\bbR\to \SO_n$ is given by the \emph{Frenet-Serret equation}\index{Equation!Frenet-Serret}
-    \[\frac{\dd}{\dd s}\frake^\sfT =\begin{pmatrix}
+    \[\frac{\dd}{\dd s}\frake^\top =\begin{pmatrix}
         0 & \kappa_1 & &\\
         -\kappa_1 &\ddots & \ddots&\\
          & \ddots &0 &\kappa_{n-1}\\
          0 & &-\kappa_{n-1} & 0
-    \end{pmatrix}\cdot \frake^\sfT ,\quad 
-    \frake^\sfT =\begin{pmatrix}
+    \end{pmatrix}\cdot \frake^\top ,\quad 
+    \frake^\top =\begin{pmatrix}
         e_1 \\e_2 \\ \vdots \\ e_n
     \end{pmatrix}.
     \]
@@ -11925,7 +11941,7 @@ In particular,
 \quad 
 \wt\frake^\ast(\omega_1^3,\omega_2^3)=\frake^\ast(\omega_1^3,\omega_2^3)R.
 \]
-Since $R^{-1}=R^\sfT $, we conclude that 
+Since $R^{-1}=R^\top $, we conclude that 
 \[h_{\wt\frake}=R^{-1}h_\frake R.\]
 This is exactly the transformation law for a section of $\bbT^1_1 \varSigma$, therefore $h_{\frake}$ actually represents a globally defined quadratic form $\sfh$ on $\varSigma$. In particular, the properties of $\sfh$ that are invariant under conjugation by a rotation matrix are invariants of the parametrizing map $\bf{x}$. By the spectral theorem for symmetric matrices, the functions $H=\frac12 \tr(h_\frake)$ and $K=\det h_\frake$ generate the ideal of invariant functions of $h_\frake$. They are exactly the mean curvature and the Gauss curvature. We see immediately that any two congruent surfaces must have the same $K$ and $H$ at corresponding points.
 
