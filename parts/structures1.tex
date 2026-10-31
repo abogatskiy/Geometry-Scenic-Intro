@@ -4423,7 +4423,7 @@ whose first components $g=\rho(m,h)$ are those of the general compatible lift (f
 
 The moving coframe forms in this case are constructed from the Maurer-Cartan forms $\bm\theta_G$ on $G$, together with the coordinate $1$-forms $\dd\bf w=(\tuple{\dd w_1,\ldots,\dd w_{n-s}})$ on $\bbR^{n-s}$. The group transformations are then characterized by the conditions 
 \[F^\ast\bar{\bf w}=\bf w,\quad F^\ast\dd \bar{\bf w}=\dd \bf w,\quad F^\ast\bar{\bm\theta}_G=\bm\theta_G.\]
-Using the moving frame lift $g=\rho(m,h)$, $w=I(m)$, to pull back these $1$-forms, we are lef to the $0$-th order moving coframe, consisting of the pulled back Maurer-Cartan forms $(\rho_0)^\ast\bm\theta$, along with the differentials $(\rho_0)^\ast\dd\bf w_\nu=\dd I_\nu$ of the group invariants. At this stage, the set up of the intransitive problem is complete, and one proceeds, as in the transitive case, to look for dependencies among the restricted coframe forms, and then normalize the resulting lifted invariants.
+Using the moving frame lift $g=\rho(m,h)$, $w=I(m)$, to pull back these $1$-forms, we are led to the $0$-th order moving coframe, consisting of the pulled back Maurer-Cartan forms $(\rho_0)^\ast\bm\theta$, along with the differentials $(\rho_0)^\ast\dd\bf w_\nu=\dd I_\nu$ of the group invariants. At this stage, the set up of the intransitive problem is complete, and one proceeds, as in the transitive case, to look for dependencies among the restricted coframe forms, and then normalize the resulting lifted invariants.
 
 \begin{example}[Schwarzian derivative]\label{ex schwarian der via coframe}
     The intransitive action 
@@ -4437,24 +4437,24 @@ Using the moving frame lift $g=\rho(m,h)$, $w=I(m)$, to pull back these $1$-form
     \end{pmatrix},\label{eq 5.5 OlverCo}\]
     which forms the group component of the $0$-th order moving frame. The other component is just the invariant 
     \[w=I(x,u)=x.\label{eq 5.6 OlverCo}\]
-    Pulling back the Maurer-Cartan forms $\bm\theta=a^{-1}\dd a$ and $\dd w$ via the lift \eqref{eq 5.5 OlverCo}, \eqref{eq 5.6 OlverCo}, leads to the order zero moving frame 
+    Pulling back the Maurer-Cartan forms $\bm\theta=a^{-1}\dd a$ and $\dd w$ via the lift \eqref{eq 5.5 OlverCo}, \eqref{eq 5.6 OlverCo}, leads to the order zero moving coframe 
     \[\begin{aligned}
         \theta_0^1&=(\alpha\delta-1)\frac{\dd u}{u}-\frac{\dd\delta}{\delta}, & \theta_0^2&=\delta^2\dd u,\\
         \theta_0^3&=\frac{u\dd (\alpha\delta)+\alpha\delta(1-\alpha\delta)\dd u}{\delta^2u^2},\quad &\theta_0^4&=\dd x.
     \end{aligned}\label{eq 5.7 OlverCo}\]
     As before, we restrict to a curve $u=u(x)$ by replacing $\dd u$ by its semibasic component $u_x\dd x$. Letting $\eta_0^i$ denote the semibasic component of $\theta_0^i$, we find that there is one resulting linear dependency, namely 
-    \[\theta_0^2=\delta^2u_x\dd x=J\dd x=J\theta_0^4.\]
+    \[\eta_0^2=\delta^2u_x\dd x=J\dd x=J\eta_0^4.\]
     This leads to the first normalization $\delta=1/\sqrt{u_x}$ resulting from setting $J=1$. Substituting this normalized value into \eqref{eq 5.5 OlverCo}, \eqref{eq 5.6 OlverCo}, provides the first-order moving frame. Furthermore, substituting into \eqref{eq 5.7 OlverCo} produces the second-order moving coframe, with semibasic components
-    \[\eta_2^1=\frac{2\alpha u_x^{3/2}+uu_{xx}-2u_x^2}{2uu_x}\dd x,\quad \eta_2^2=\eta_2^4=\dd x,\quad \eta_2^3=\frac{\sqrt{u_x}}{u}(\dd\alpha-\alpha\eta_0^1).\]
-    Now we normalize the coefficient of $\eta_0^1$ to $0$ by setting $\alpha=u_x^{-3/2}(u_x^2-\frac12 uu_{xx})$. The final moving frame (of order $2$) is 
+    \[\eta_2^1=\frac{2\alpha u_x^{3/2}+uu_{xx}-2u_x^2}{2uu_x}\dd x,\quad \eta_2^2=\eta_2^4=\dd x,\quad \eta_2^3=\frac{\sqrt{u_x}}{u}(\dd\alpha-\alpha\eta_2^1).\]
+    Now we normalize the coefficient of $\eta_2^1$ to $0$ by setting $\alpha=u_x^{-3/2}(u_x^2-\frac12 uu_{xx})$. The final moving frame (of order $2$) is 
     \[a_2=\frac{1}{u_x^{3/2}}\begin{pmatrix}
         u_x^2-\frac12 uu_{xx} &  uu_x\\ -\frac12u_{xx} & u_x
     \end{pmatrix},\quad w=x.\label{eq 5.9 OlverCo}\]
     The corresponding restricted moving coframe has reduced to 
-    \[\eta_2^2=\eta_2^4=\dd x,\quad \eta_2^3=-\frac12\calS \eta_0^2,\quad \eta_2^1=0,\label{eq 5.10 OlverCo}\]
+    \[\eta_2^2=\eta_2^4=\dd x,\quad \eta_2^3=-\frac12\calS \eta_2^2,\quad \eta_2^1=0,\label{eq 5.10 OlverCo}\]
     where 
     \[\calS=\frac{u_{xxx}}{u_x}-\frac32\frac{u_{xx}^2}{u_x^2}\]
-    is the classical Schwarzian derivative \index{Schwarzian derivative} of the function $u(x)$, whose invariance under \glspl{flt} is of fundamental invariance in complex analysis (where the only difference is that $u$ and $x$ are complex and $u(x)$ is assumed analytic). Since the $1$-form $\dd x$ is invariant, all the higher-order differential invariants are found by differentiating $\calS$ w.r.t.\ $x$.
+    is the classical Schwarzian derivative \index{Schwarzian derivative} of the function $u(x)$, whose invariance under \glspl{flt} is of fundamental importance in complex analysis (where the only difference is that $u$ and $x$ are complex and $u(x)$ is assumed analytic). Since the $1$-form $\dd x$ is invariant, all the higher-order differential invariants are found by differentiating $\calS$ w.r.t.\ $x$.
 \end{example}
 
 Actually, the preceding computation can be slightly simplified by extending our general method to non-effective actions. We consider \eqref{eq 5.4 OlverCo} as defining a non-effective (and intransitive) action of the general linear group $\GL_2(\bbR)$ on $\bbR^2$. We may apply the second algorithm for computing the required Maurer-Cartan forms, leading to the three $1$-forms \eqref{eq 3.12 OlverCo} that annihilate the kernel subalgebra $\frakg_M$. We substitute the compatible lift formulas $\beta=\delta u$ for the order zero moving coframe, which is now $a_0=\left(\begin{smallmatrix}
@@ -4467,7 +4467,7 @@ Actually, the preceding computation can be slightly simplified by extending our 
 The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduction $\delta=(\alpha-u\gamma)/u_x$. Substituting into $\wh\eta_0^3$ leads to a second dependency, and the resulting normalization yields $\alpha=\gamma(u-2u_x^2/u_{xx})$. At this stage, even though we have not normalized the final parameter $\gamma$, it no longer appears in the coframe, which coincides with our earlier one, \eqref{eq 5.10 OlverCo}. It does, of course, occur in the final moving frame lift, which is obtained by multiplying the matrix $a_2$ in \eqref{eq 5.9 OlverCo} by $\gamma$. However, $\gamma$ plays no other role in the problem, and merely reflects a final indeterminacy stemming from the ineffectiveness of the group action. The main point in this solution method is that one does not have to explicitly implement an effective action, as was done in the original lift \eqref{eq 5.5 OlverCo}, in order to solve the problem. Indeed, in more complicated examples, it may be relatively straightforward to write down the compatible lift for an ineffective group action, whereas doing the same for the effectively acting quotient group $G\slash G_M$ may be considerably more complicated.
 
 \begin{example}
-    Consider the elementary similarity group $G=\bbR_+\times\bbR^2$ acting transitively on $M=\bbR^2$ via 
+    Consider the elementary similarity group $G=\bbR^+\ltimes\bbR^2$ acting transitively on $M=\bbR^2$ via 
     \[g:\quad (x,u)\mapsto (\alpha x+a,\alpha u+b).\]
     For the basepoint $m_0=(0,0)$, the associated moving frame of order $0$ is the lift with $a=x$, $b=u$. The Maurer-Cartan forms $(\dd\alpha/\alpha,\dd a/\alpha,\dd b/\alpha)$ are pulled back to provide the order zero moving coframe, whose semibasic (or, more precisely, non-contact) components are 
     \[\eta_0^1=\frac{\dd\alpha}{\alpha},\quad\eta_0^2=\frac{\dd x}{\alpha},\quad \eta_0^3=\frac{u_x\dd x}{\alpha}.\]
@@ -4478,7 +4478,7 @@ The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduct
     yielding two fundamental differential invariants 
     \[I=u_x,\quad J=u_{xx}^{-2}u_{xxx}.\]
     The higher-order invariants are found by differentiating $J$ w.r.t.\ $\eta_1^4=u_{xx}\dd x\equiv \dd u_x$, so that a basic $4$-th order invariant is 
-    \[K=\frac{\dd J}{\dd u_x}=\frac{1}{u_{xx}}\frac{\dd J}{\dd x}=\frac{u_{xxxx}}{u_x^2}-2J^2.\]
+    \[K=\frac{\dd J}{\dd u_x}=\frac{1}{u_{xx}}\frac{\dd J}{\dd x}=\frac{u_{xxxx}}{u_{xx}^3}-2J^2.\]
     Note that $\dd I/\dd u_x=1$, so that differentiating $I$ produces nothing new. Thus, in this case, we find two fundamental differential invariants, and require three, namely $(I,J,K)$, to parametrize the classifying curve that solves the associated equivalence problem. We conclude that the phenomenon of pseudo-stabilization of group orbits is reflected in the moving coframe procedure by the premature appearance of differential invariants, whose differentials are required to finish the procedure.
 \end{example}
 
@@ -4507,7 +4507,7 @@ The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduct
     \end{pmatrix}.\]
     On the other hand, the pseudogroup $\mathpzc{Diff}(\bbR)$ is characterized by the invariance of the canonical $1$-form $v\dd t$ on the frame bundle $\Fr(\T \bbR)$ (here, $v$ is the fiber coordinate of $\T\bbR$), and hence we include this additional $1$-form in our moving coframe formulation. Restricting these four $1$-forms to a parametrized curve $(x(t),y(t))$ leads to 
     \[\begin{aligned}
-        \eta_1^1&=\dd \varphi,\quad &\eta_1^2&=(x_t\cos\varphi+y_t\sin\varphi)\dd t,\\\quad\eta_1^3&=(-x_t\sin\varphi+y_t\cos\varphi)\dd t,\quad &\eta_1^4&=v\dd t.\label{eq 6.3 OlverCo}
+        \eta_0^1&=\dd \varphi,\quad &\eta_0^2&=(x_t\cos\varphi+y_t\sin\varphi)\dd t,\\\quad\eta_0^3&=(-x_t\sin\varphi+y_t\cos\varphi)\dd t,\quad &\eta_0^4&=v\dd t.\label{eq 6.3 OlverCo}
     \end{aligned}\]
     Now $\eta_0^2=J_1\eta_0^4$ and $\eta_0^3=J_2\eta_0^4$ are the linear dependencies with associated lifted invariants 
     \[J_1=\frac{x_t\cos\varphi+y_t\sin\varphi}{v},\quad J_2=\frac{-x_t\sin\varphi+y_t\cos\varphi}{v}.\]
@@ -4530,7 +4530,7 @@ The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduct
     \end{smallmatrix}\right)$, which reduces to the first Frenet equation $\frac{\dd\bf{x}}{\dd s}=\bf{e}_1$. Similarly, the Maurer-Cartan matrix 
     \[R^{-1}\dd R=\begin{pmatrix}
         0 & -\kappa \\ \kappa & 0
-    \end{pmatrix} \quad \text{implies that}\quad \frac{\dd R}{\dd s}=R\cdot\begin{pmatrix}
+    \end{pmatrix}\dd s \quad \text{implies that}\quad \frac{\dd R}{\dd s}=R\cdot\begin{pmatrix}
         0 & -\kappa \\ \kappa & 0
     \end{pmatrix}.\]
     The columns of the latter matrix equation complete the system of Frenet equations:
@@ -4548,7 +4548,7 @@ The first dependency between $\wh\eta_0^1$ and $\wh\eta_0^4$ leads to the reduct
 \end{rem}
 
 \begin{rem}
-    The problem of Euclidean equivalence of curves with \emph{fixed} parametrization, as discussed in Example~\ref{ex 2.1 OlverCo}, can also be formulated and solved in the moving coframe context. Now we are in the intransitive framework, where the parameter $t$ provides a scalar invariant. Consequently, we retain the first three $1$-forms $\eta_0^1,\eta_0^2,\eta_0^3$ in \eqref{eq 6.3 OlverCo}, but replace $\eta_0^4$ by $\dd t$ to form the moving coframe. We normalize $J_1=0$ as before, but now $J_2=v=\sqrt{x_t^2+y_t^2}$ forms a first-order differential invariant -- the speed. The final moving frame has $\eta_2^1=K\dd t$, $\eta_2^2=0$, $\eta_0^3=v\dd t$, $\eta_2^4=\dd t$, where $K=x_ty_{tt}-x_{tt}y_t=v^3\kappa$ is a second-order differential invariant. The higher-order differential invariants are found by differentiating w.r.t.\ $t$. Note that the arclength $\dd s=v\dd t$ is also an invariant $1$-form, being an invariant multiple of $\dd t$, and hence one can, \gls{wlog}, apply the arclength derivative $\dd/\dd s$ to produce the higher-order invariants instead. Thus, in this case, a complete list of differential invariants is provided by $v,\kappa$, and their arclength derivatives.
+    The problem of Euclidean equivalence of curves with \emph{fixed} parametrization, as discussed in Example~\ref{ex 2.1 OlverCo}, can also be formulated and solved in the moving coframe context. Now we are in the intransitive framework, where the parameter $t$ provides a scalar invariant. Consequently, we retain the first three $1$-forms $\eta_0^1,\eta_0^2,\eta_0^3$ in \eqref{eq 6.3 OlverCo}, but replace $\eta_0^4$ by $\dd t$ to form the moving coframe. We now normalize $J_1=0$ instead, but then $J_2=v=\sqrt{x_t^2+y_t^2}$ forms a first-order differential invariant -- the speed. The final moving frame has $\eta_2^1=K\dd t$, $\eta_2^2=0$, $\eta_2^3=v\dd t$, $\eta_2^4=\dd t$, where $K=(x_ty_{tt}-x_{tt}y_t)/v^2=v\kappa$ is a second-order differential invariant. The higher-order differential invariants are found by differentiating w.r.t.\ $t$. Note that the arclength $\dd s=v\dd t$ is also an invariant $1$-form, being an invariant multiple of $\dd t$, and hence one can, \gls{wlog}, apply the arclength derivative $\dd/\dd s$ to produce the higher-order invariants instead. Thus, in this case, a complete list of differential invariants is provided by $v,\kappa$, and their arclength derivatives.
 \end{rem}
 
 \begin{rem}[Moving frames for Lie pseudogroups]\label{rem moving frames pseudogroups}
@@ -4600,13 +4600,13 @@ If $G$ acts semi-regularly, then the \gls{immt} guarantees the existence of loca
 
 \begin{example}\label{ex 2.7 OlverCo2}
     The following simple construction, based on the Frobenius Theorem, is of fundamental importance for the theoretical justification of the method of moving frames. Suppose $G$ acts freely and regularly on $M$. Then we can introduce \emph{flat local coordinates}
-    \[z(m)=(x,y)=(x^1\ldots,x^d,y^1,\ldots,y^{n-d}),\quad x\in G,\;y\in Y,\]
-    such that the $y^j$ are constant on each orbit, so that $M$ is locally identified with a subset of the product $G\times Y$, where $Y\cong \bbR^{n-d}$. (For simplicity of notation, we identify points of $G$ and $Y$ with their coordinates.) The $G$-action in these coordinates is the trivial left action $g\cdot z=(g\cdot x,y)$. The $y$ coordinates provide a complete system of functionally independent invariants for the group action. In these coordinates, a general slice is given by the graph $K=\{(a(y),y)\}$ of a smooth map $a:Y\to G$. When we use the flat coordinates, we shall always assume, without loss of generality, that the identity slice $\{e\}\times Y$, i.e., when $a(y)\cong e$, belongs to the flat coordinate chart.
+    \[z(m)=(x,y)=(x^1,\ldots,x^d,y^1,\ldots,y^{n-d}),\quad x\in G,\;y\in Y,\]
+    such that the $y^j$ are constant on each orbit, so that $M$ is locally identified with a subset of the product $G\times Y$, where $Y\cong \bbR^{n-d}$. (For simplicity of notation, we identify points of $G$ and $Y$ with their coordinates.) The $G$-action in these coordinates is the trivial left action $g\cdot z=(g\cdot x,y)$. The $y$ coordinates provide a complete system of functionally independent invariants for the group action. In these coordinates, a general slice is given by the graph $\varSigma=\{(a(y),y)\}$ of a smooth map $a:Y\to G$. When we use the flat coordinates, we shall always assume, without loss of generality, that the identity slice $\{e\}\times Y$, i.e., when $a(y)\equiv e$, belongs to the flat coordinate chart.
 \end{example}
 
 In practice, of course, the determination of flat coordinates for a given group action may be extremely difficult. A significant achievement of the method of moving frames is that it allows one to compute invariants without having to find the flat coordinates, or integrate any differential equations.
 
-In general, any group action can be ``regularized'' by lifting it to a suitable bundle sitting over the original bundle. Let $G$ be a Lie group acting on a manifold $M$. Let $P\coloneqq G\times M$ denote the trivial left \gls{pfb} over $M$ (the choice of the left bundle is more convenient for our purposes).
+In general, any group action can be ``regularized'' by lifting it to a suitable bundle sitting over the original manifold. Let $G$ be a Lie group acting on a manifold $M$. Let $P\coloneqq G\times M$ denote the trivial left \gls{pfb} over $M$ (the choice of the left bundle is more convenient for our purposes).
 
 \begin{defn}[Regularized action]\index{Regularized action}
     The left and right regularizations of the action $G\acts M$, also called \emph{lifted actions}, are the diagonal actions of $G$ on $P=G\times M$ provided by the maps 
@@ -4616,7 +4616,7 @@ In general, any group action can be ``regularized'' by lifting it to a suitable 
 In the sequel, the left, resp.\ right, regularization of an action will lead to left, resp.\ right, moving frames associated with submanifolds of $M$. The key elementary result is that regularizing any action immediately eliminates all singularities and irregularities, e.g., lower-dimensional orbits, non-embedded orbits, etc. Moreover, the orbits of $G$ in $M$ are the projections of their lifted counterparts in $P$; all of the lifted orbits have the same dimension as $G$ itself. We have the following.
 
 \begin{thm}[{\cite[Thm.~3.2]{OlverCo2}}]
-    The right and left regularizations of any action $G\acts M$ is a regular free action on $P=G\times M$.
+    The right and left regularizations of any action $G\acts M$ are regular free actions on $P=G\times M$.
 \end{thm}
 
 \begin{defn}[Lifted invariant]
@@ -4638,7 +4638,7 @@ In other words, ``fundamental lifted invariant'' is just another term for the $G
 If we introduce local coordinates on $M$, then the components of $\mu$ form a complete system of $n=\dim M$ functionally independent invariants on $P$. The following trivial proposition explains the name for the fundamental lifted invariant.
 
 \begin{prop}\label{prop 3.6 OlverCo2}
-    Any lifted invariant $L:P\to N$ can be locally written as a function of the fundamental lifted invariants, $L(g,m)=F(\mu(g,z))$, so that $L=F\circ \mu$ for some $F:M\to N$.
+    Any lifted invariant $L:P\to N$ can be locally written as a function of the fundamental lifted invariants, $L(g,m)=F(\mu(g,m))$, so that $L=F\circ \mu$ for some $F:M\to N$.
 \end{prop}
 
 In particular, if $F$ is any function on $M$, then we can produce a lifted invariant $F\circ\mu$ on $P$ by replacing $m$ with $\mu=g\cdot m$ in the formula for $F$. The ordinary invariants $I:M\to N$ of the original group action are particular cases of lifted invariants, where we identify $I$ with its composition $I\circ \pi_M$ with the canonical projection $\pi_M:P\to M$. Therefore, Proposition~\ref{prop 3.6 OlverCo2} indicates that ordinary invariants are particular functional combinations of lifted invariants that happen to be independent of the group parameters. For such functions, a simple but striking ``replacement theorem'' provides an explicit formula expressing an ordinary invariant in terms of the lifted invariants.
@@ -4651,16 +4651,16 @@ In particular, if $F$ is any function on $M$, then we can produce a lifted invar
 \end{proof}
 
 \begin{example}
-    Let $G=\SO_2$ act on $M=\bbR^2$via the standard action 
+    Let $G=\SO_2$ act on $M=\bbR^2$ via the standard action 
     \[(x,u)\mapsto (x\cos\theta-u\sin\theta,x\sin\theta+u\cos\theta).\label{eq 3.3 OlverCo2}\]
-    The (right) regularized action on the cylinder $P=\SO_2\times\bbR^2$ is given by supplementing the above action with the group law $\phi\mapsto (\phi-\theta)\mod 2\pi$. Note that the action on $P$ is regular, so we have effectively replaced the singular orbit at the origin by a regular orbit $\{(0,0)\}\times \SO_2\subset P$. There are two fundamental right lifted invariants:
+    The (right) regularized action on the cylinder $P=\SO_2\times\bbR^2$ is given by supplementing the above action with the group law $\phi\mapsto (\phi-\theta)\mod 2\pi$. Note that the action on $P$ is regular, so we have effectively replaced the singular orbit at the origin by a regular orbit $\SO_2\times\{(0,0)\}\subset P$. There are two fundamental right lifted invariants:
     \[y=x\cos\phi-u\sin\phi,\quad v=x\sin\phi+u\cos\phi.\label{eq 3.6 OlverCo2}\]
-    Note that $r^2=y^2+v^2=x^2+u^2$ is an invariant for the lifted action which reduces to the ordinary radial invariant for the action back on $M$. The fact that $r$ has the same formula in terms of $x$ and $y$ as it does in $y,v$ is a simple manifestation of the general Replacement Theorem~\ref{thm 3.7 OlverCo2}.
+    Note that $r^2=y^2+v^2=x^2+u^2$ is an invariant for the lifted action which reduces to the ordinary radial invariant for the action back on $M$. The fact that $r$ has the same formula in terms of $x,u$ as it does in terms of $y,v$ is a simple manifestation of the general Replacement Theorem~\ref{thm 3.7 OlverCo2}.
 \end{example}
 
 A differential form $\theta$ on the principal bundle $P=G\times M$ is (right) $G$-invariant if it satisfies $\wt\rmR_g^\ast\theta=\theta$ for all $g\in G$. Of particular importance are the pulled back Maurer-Cartan forms associated with the Lie group $G$. Using an arbitrary basis $\bf t_1,\ldots,\bf t_d$ of the (right) Lie algebra $\frakg^\rmR$ of $G$, we get the dual basis $\theta^1_G,\ldots,\theta^d_G$ of right-invariant Maurer-Cartan forms on $G$. We shall also use $\bm\theta_G$ to denote the corresponding Maurer-Cartan forms on $P$, namely, the pullbacks $\pr_G^\ast\bm\theta_G$ under the standard projection $\pr_G:P\to G$. The Maurer-Cartan forms $\bm\theta_G$ on $P$ are invariant under the right regularized action of $G$.
 
-Since $P=G\times M$ is a Cartesian product, its exterior derivative $\dd$ naturally splits into components: $\dd =\dd_G+\dd M$. Moreover, since the regularized action is a Cartesian product action, this splitting is $G$-invariant.
+Since $P=G\times M$ is a Cartesian product, its exterior derivative $\dd$ naturally splits into components: $\dd =\dd_G+\dd_M$. Moreover, since the regularized action is a Cartesian product action, this splitting is $G$-invariant.
 
 \begin{prop}\label{prop 3.9 OlverCo2}
     If $\theta$ is a $G$-invariant differential form on $P$, then both $\dd_M\theta$ and $\dd_G \theta$ are invariant forms. In particular, if $L$ is any lifted invariant, then $\dd_M L$ and $\dd_G L$ are invariant $1$-forms on $P$.
@@ -4672,7 +4672,7 @@ In particular, the differential $\dd\mu$ of the fundamental lifted invariant $\m
     Let $G$ act on $M$. Let $\bf t_1,\ldots,\bf t_d$ be a basis for the Lie algebra $\frakg^\rmR$, and let 
     \[\wb{\bf t}_\nu=\sum_{i=1}^n f_\nu^i(\bf x)\frac{\partial}{\partial x^i},\quad \nu=1,\ldots,d,\label{eq 3.7 OlverCo2}\]
     be the corresponding infinitesimal generators on $M$, written in local coordinates $\bf x=(x^1,\ldots,x^n)$ on $M$. Let $\bm\theta_G=(\theta^1_G,\ldots,\theta^d_G)$ be the dual right Maurer-Cartan forms, pulled back to $P$. Let $\bm\mu=\bf{x}\circ\mu=(\mu^1,\ldots,\mu^n)$ be the components of the fundamental lifted invariant $\mu=g\cdot m$. Then the group differential of the components of $\mu$ is given by
-    \[\dd_G\mu^i=\sum_{\nu=1}^d f_\nu^i(\bm\mu)\mu^\nu,\quad i=1,\ldots,n.\label{eq 3.8 OlverCo2}\]
+    \[\dd_G\mu^i=\sum_{\nu=1}^d f_\nu^i(\bm\mu)\theta_G^\nu,\quad i=1,\ldots,n.\label{eq 3.8 OlverCo2}\]
     In other words, the coefficients of the Maurer-Cartan forms in \eqref{eq 3.8 OlverCo2} are the lifted invariant counterparts of the coefficients of the infinitesimal generators \eqref{eq 3.7 OlverCo2}, obtained by replacing $\bf{x}$ by the lifted invariant $\bm\mu$.
 \end{thm}
 \begin{proof}
@@ -4690,7 +4690,7 @@ This result justifies the method for computing the Maurer-Cartan forms directly 
 \begin{example}
     Return to the rotation group acting on $M=\bbR^2$. Applying $\dd_M$ and $\dd_G$ to the lifted invariants \eqref{eq 3.6 OlverCo2} will produce four lifted invariant $1$-forms on $P$. The manifold components are 
     \[\dd_M y=\cos\phi\dd x-\sin\phi \dd u,\quad \dd_M v=\sin\phi\dd x+\cos\phi\dd u.\]
-    On the other hand, the group components can be written as invariant multiples of the Maurer-Cartan form $\mu=\dd \phi$, namely, 
+    On the other hand, the group components can be written as invariant multiples of the Maurer-Cartan form $\theta_G=\dd \phi$, namely, 
     \[\dd_G y=-(x\sin\phi+u\cos\phi)\dd \phi=-v\dd\phi,\quad \dd_G v=(x\cos\phi-u\sin\phi)\dd \phi=y\dd\phi.\]
     Equation \eqref{eq 3.8 OlverCo2} implies that the coefficients $(-v,y)$ can be computed directly, by ``replacement'', as the invariant counterparts of the coefficients $(-u,x)$ of the infinitesimal generator $A_\ast=-u\partial_x+x\partial_u$.
 \end{example}
@@ -4718,8 +4718,8 @@ Not every group action admits a moving frame. The following theorem explains the
     which implies that $g_k\to e$ in $G$. This suffices to ensure regularity of the orbit through $m$.
 
     To prove sufficiency, we use the flat local coordinates $z=(x,y)\in G\times Y$ introduced in Example~\ref{ex 2.7 OlverCo2}. A general local slice $\varSigma\subset M$ is given by a graph $x=a(y)$. Then the map 
-    \[\wt\rho(x,y)\coloneqq x\cdot a(y)\label{eq 4.2 OlverCo2}\]
-    is clearly $G$-equivariant under left multiplication on $G$, and hence defines a left moving frame. Moreover, every left moving frame has this form, provided we define the slice via $a(y)=\wt\rho(e,y)$.
+    \[\wt\rho(x,y)\coloneqq x\cdot a(y)^{-1}\label{eq 4.2 OlverCo2}\]
+    is clearly $G$-equivariant under left multiplication on $G$, and hence defines a left moving frame. Moreover, every left moving frame has this form, provided we define the slice via $a(y)=\wt\rho(e,y)^{-1}$.
 \end{proof}
 
 \begin{rem}
@@ -4727,13 +4727,13 @@ Not every group action admits a moving frame. The following theorem explains the
 \end{rem}
 
 \begin{thm}\label{thm 4.5 OlverCo2}
-    If $\rho$ is a right moving frame, then the components of the map $I:M\to M$, $I(m)\coloneqq \rho(z)\cdot z$ provide a complete system of invariants for the group.
+    If $\rho$ is a right moving frame, then the components of the map $I:M\to M$, $I(m)\coloneqq \rho(m)\cdot m$ provide a complete system of invariants for the group.
 \end{thm}
 \begin{proof}
     Using our flat coordinates, the right moving frame corresponding to the left frame \eqref{eq 4.2 OlverCo2} is 
-    \[\rho(z)=a(y)^{-1}\cdot x^{-1},\quad z=(x,y).\label{eq 4.3 OlverCo2}\]
+    \[\rho(z)=a(y)\cdot x^{-1},\quad z=(x,y).\label{eq 4.3 OlverCo2}\]
     Therefore, 
-    \[\rho(z)\cdot z=(a(y)^{-1},y)\in\varSigma.\label{eq 4.4 OlverCo2}\] 
+    \[\rho(z)\cdot z=(a(y),y)\in\varSigma.\label{eq 4.4 OlverCo2}\] 
     In particular, the last $n-d$ components of the latter expression provide the invariants $y$, while the first $d$ components are functions of the invariants.
 \end{proof}
 
@@ -4752,23 +4752,23 @@ An alternative way of understanding the moving frame construction presented abov
 \end{tikzcd}\]
 of the regularized bundle $P$ over $M$. Given a slice $\varSigma$ to the $G$-orbits, the set 
 \[\scrL\coloneqq \mu^{-1}(\varSigma)\subset P=G\times M\]
-forms a $n$-dimensional submanifold of $P$ that is invariant w.r.t.\ the lifted action of $G$. Projection onto $M$ defines a locally equivariant diffeomorphism $\pi_M:\scrL\to M$ and hence $\scrL$ is the graph of a local section $\sigma=\left(\restr{\pi_M}{\scrL}\right)^{-1}$, called the \emph{moving frame section}. \index{Moving frame section} It is not hard to see that $\sigma$ defines the graph of the moving frame, so $\sigma(m)=(\rho(m),m)$ for $m\in M$, i.e., 
+forms an $n$-dimensional submanifold of $P$ that is invariant w.r.t.\ the lifted action of $G$. Projection onto $M$ defines a locally equivariant diffeomorphism $\pi_M:\scrL\to M$ and hence $\scrL$ is the graph of a local section $\sigma=\left(\restr{\pi_M}{\scrL}\right)^{-1}$, called the \emph{moving frame section}. \index{Moving frame section} It is not hard to see that $\sigma$ defines the graph of the moving frame, so $\sigma(m)=(\rho(m),m)$ for $m\in M$, i.e., 
 \[\rho=\pr_G\circ \sigma:\; M\to G.\]
 Since $\sigma:M\to \scrL$ is $G$-equivariant, any invariant object on $P$ pulls back, via $\sigma$, to an invariant object on $M$. In particular, the invariant $I(m)=\rho(m)\cdot m$ constructed in Theorem~\ref{thm 4.5 OlverCo2} is given by 
 \[I=\sigma^\ast\mu=\mu\circ\sigma:\; M\to \varSigma.\]
 
-As noted above, given any function $f\in C^\infty(M)$, the composition $F\circ\mu\in C^\infty(P)$ defines a lifted invariant, $L(g,m)=f(g\cdot m)$. Moreover, pulling back $L$ via the moving frame section $\sigma$ defines an ordinary invariant $J(m)=f(\mu(\sigma(m)))=f(\rho(m)\cdot m)$. Thus, a moving frame provides a natural way to construct invariants from arbitrary functions!
+As noted above, given any function $f\in C^\infty(M)$, the composition $f\circ\mu\in C^\infty(P)$ defines a lifted invariant, $L(g,m)=f(g\cdot m)$. Moreover, pulling back $L$ via the moving frame section $\sigma$ defines an ordinary invariant $J(m)=f(\mu(\sigma(m)))=f(\rho(m)\cdot m)$. Thus, a moving frame provides a natural way to construct invariants from arbitrary functions!
 
 \begin{defn}[Invariantization]\index{Invariantization}
     The invariantization of a function $f\in C^\infty(M,N)$ w.r.t.\ a moving frame $\rho:M\supset U\to G$ is the composition 
     \[\iota[f]\coloneqq f\circ \mu\circ\sigma=f\circ I,\] 
-    where $\mu(g,m)=g\cdot m$ is the fundamental lifted invariant $\sigma$ and $\sigma(m)=(\rho(m),m)$ is the moving frame section. Thus, $\iota[f](m)=f(\rho(m)\cdot m)$.
+    where $\mu(g,m)=g\cdot m$ is the fundamental lifted invariant and $\sigma(m)=(\rho(m),m)$ is the moving frame section. Thus, $\iota[f](m)=f(\rho(m)\cdot m)$.
 \end{defn}
 
 Invariantization \emph{does} depend on the choice of moving frame. Geometrically, $\iota[f](m)$ equals the value of $f$ at the point on the slice $\varSigma$ that lies on the $G$-orbit of $m$. Theorem~\ref{thm 3.7 OlverCo2} says that if $f$ itself is an invariant, then $f\circ\mu$ is independent of the group parameters, and hence $\iota[f]=f$. Thus, one can view invariantization as a projection operator from the space of all functions to the space of invariants.
 
 \begin{example}
-    Consider the usual action \eqref{eq 3.3 OlverCo2} of $\SO_2$, which is regular on $M=\bbR^2\setminus\{0\}$. The positive $u$-axis defines a slice $\varSigma=\{(0,v)\mid v>0\}$ to the orbits. The map $\rho:M\to \varSigma$ which rotates the point $(x,u)$ to the point $(0,r)\in\varSigma$, where $r=\sqrt{x^2+u^2}$, is clearly $\SO_2$-equivariant. The moving frame $\rho:M\to \SO_2$ induced by this choice of slice is therefore given by the equivariant map $\phi=\arctan (x/u)\in\SO_2$ that computes the angle of rotation needed to get from $(x,u)$ to the slice. The corresponding moving frame section $\sigma$ is given by $\varSigma(x,u)=(\arctan(x/u),(x,u))$. Pulling back the lifted invariants \eqref{eq 3.6 OlverCo2} produces the invariants $\sigma^\ast y=0$, $\sigma^\ast v=r$. If $f(x,u)$ is any function, then $L(\phi,(x,u))=f(y,v)$ is its lifted counterpart, and so its invariantization is the radial invariant $\iota[f](x,u)=f(0,r)$. The reader should try computing other moving frames and the corresponding invariants by choosing other slices, e.g., $\{(v,v)\mid v>0\}$, or $\{(v,v^2)\mid v>0\}$.
+    Consider the usual action \eqref{eq 3.3 OlverCo2} of $\SO_2$, which is regular on $M=\bbR^2\setminus\{0\}$. The positive $u$-axis defines a slice $\varSigma=\{(0,v)\mid v>0\}$ to the orbits. The map $I:M\to \varSigma$ which rotates the point $(x,u)$ to the point $(0,r)\in\varSigma$, where $r=\sqrt{x^2+u^2}$, is clearly $\SO_2$-equivariant. The moving frame $\rho:M\to \SO_2$ induced by this choice of slice is therefore given by the equivariant map $\phi=\arctan (x/u)\in\SO_2$ that computes the angle of rotation needed to get from $(x,u)$ to the slice. The corresponding moving frame section $\sigma$ is given by $\sigma(x,u)=(\arctan(x/u),(x,u))$. Pulling back the lifted invariants \eqref{eq 3.6 OlverCo2} produces the invariants $\sigma^\ast y=0$, $\sigma^\ast v=r$. If $f(x,u)$ is any function, then $L(\phi,(x,u))=f(y,v)$ is its lifted counterpart, and so its invariantization is the radial invariant $\iota[f](x,u)=f(0,r)$. The reader should try computing other moving frames and the corresponding invariants by choosing other slices, e.g., $\{(v,v)\mid v>0\}$, or $\{(v,v^2)\mid v>0\}$.
 \end{example}
 
 
@@ -4796,7 +4796,7 @@ for $n'$ of the group parameters, say $\hat{\bf g}=(g^1,\ldots,g^{n'})$, in term
 or simply $\hat{\bf g}=\bm\gamma(\bf h,\bf z)$.  The coordinates $\bf h$ and $\bf z$ serve to parametrize the $G$-invariant level set $\scrL_c=L^{-1}(c)$. The remaining group parameters $\bf h$ can be interpreted as parametrizing the stabilizer of the entire submanifold $\{m\mid L(e,m)=c\}\subset M$.
 
 \begin{prop}\label{prop 4.10 OlverCo2}
-    If $G$ acts freely and regularly on $M$, then we can completely normalize all of the group parameters by choosing a regular lifted invariant $L:P\supset U\to N$ having maximal rank $\dd_G L=d=\dim N=\dim G$ everywhere.
+    If $G$ acts freely and regularly on $M$, then we can completely normalize all of the group parameters by choosing a regular lifted invariant $L:P\supset U\to N$ having maximal rank $\rank\dd_G L=d=\dim N=\dim G$ everywhere.
 \end{prop}
 
 \begin{defn}[Normalization equations]
@@ -4804,7 +4804,7 @@ or simply $\hat{\bf g}=\bm\gamma(\bf h,\bf z)$.  The coordinates $\bf h$ and $\b
     \[\mu=g\cdot m=s,\quad s\in \varSigma.\label{eq 4.8 OlverCo2}\]
 \end{defn}
 
-If we assume that $G$ acts freely and $\varSigma$ is a regular slice, then there is a unique solution $g=\rho(m)$ to the normalization equations, determining the right moving frame associated with $\varSigma$. More explicitly, if we choose the flat coordinates $z=(x,y)\in G\times Y$ from Example~\ref{ex 2.7 OlverCo2}, then the fundamental lifted invariant has the form $\mu=g\cdot z=(g\cdot x,y)$. Choosing a slice $x=a(y)$ reduces the normalization equations \eqref{eq 4.8 OlverCo2} to $g\cdot x=a(y)$, with $G$-equivariant solution $g=\rho(x,y)=a(y)x^{-1}$, which agrees with the right frame \eqref{eq 4.3 OlverCo2} after inverting the slice map $a(y)$. 
+If we assume that $G$ acts freely and $\varSigma$ is a regular slice, then there is a unique solution $g=\rho(m)$ to the normalization equations, determining the right moving frame associated with $\varSigma$. More explicitly, if we choose the flat coordinates $z=(x,y)\in G\times Y$ from Example~\ref{ex 2.7 OlverCo2}, then the fundamental lifted invariant has the form $\mu=g\cdot z=(g\cdot x,y)$. Choosing a slice $x=a(y)$ reduces the normalization equations \eqref{eq 4.8 OlverCo2} to $g\cdot x=a(y)$, with $G$-equivariant solution $g=\rho(x,y)=a(y)x^{-1}$, which agrees with the right frame \eqref{eq 4.3 OlverCo2}. 
 
 In practice, one constructs a ``standard'' slice by solving the normalization conditions in the following manner. Locally, we choose $d$ components of the fundamental lifted invariant $\mu=g\cdot m$, say $\mu^1,\ldots,\mu^d$, which satisfy the regularity condition on the Jacobian 
 \[\frac{\partial(\mu^1,\ldots,\mu^d)}{\partial(g^1,\ldots,g^d)}\neq 0.\]
@@ -4814,13 +4814,13 @@ Thus, barring algebraic complications, the normalization procedure provides a si
 
 \begin{example}
     Let $G=\SE_2=\SO_2\ltimes\bbR^2$  be the planar Euclidean group, parametrized by $(\phi,a,b)$. Consider the free local action of $\SE_2$ on $M=\bbR^4$ that maps a point $(x,u,p,q)\in M$ to 
-    \[\left(x\cos\phi-u\sin\phi+a,x\sin\phi+u\cos\phi+b,\frac{\sin\phi}{\cos\phi-p\sin\phi},\frac{q}{(\cos\phi-p\sin\phi)^3}\right).\label{eq 4.12 OlverCo2}\]
-    The fundamental lifted invariants are the individual components $(y,w,r,s)$ of \eqref{eq 4.12 OlverCo2}. Let us normalize the first three lifted invariants to all be zero, leading to the normalization equations 
+    \[\left(x\cos\phi-u\sin\phi+a,x\sin\phi+u\cos\phi+b,\frac{\sin\phi+p\cos\phi}{\cos\phi-p\sin\phi},\frac{q}{(\cos\phi-p\sin\phi)^3}\right).\label{eq 4.12 OlverCo2}\]
+    The fundamental lifted invariants are the individual components $(y,v,r,s)$ of \eqref{eq 4.12 OlverCo2}. Let us normalize the first three lifted invariants to all be zero, leading to the normalization equations 
     \[y=v=r=0.\]
     This corresponds to choosing the slice $\varSigma=\{(0,0,0,\kappa)\mid\kappa\in\bbR\}$ to the $3$-dimensional orbits of $\SE_2$. The solution to the normalization equations is 
     \[\phi=-\arctan p,\quad a=-\frac{x+up}{\sqrt{1+p^2}},\quad b=\frac{xp-u}{\sqrt{1+p^2}},\label{eq 4.14 OlverCo2}\]
     which defines the right moving frame $\rho:M\to \SE_2$. The left moving frame is obtained by inverting the group element parametrized by \eqref{eq 4.14 OlverCo2}, whereby 
-    \[\wt\phi=\arctan p,\quad \wt a=a,\quad \wt b=u.\label{eq 4.15 OlverCo2}\]
+    \[\wt\phi=\arctan p,\quad \wt a=x,\quad \wt b=u.\label{eq 4.15 OlverCo2}\]
     Finally, if we substitute \eqref{eq 4.14 OlverCo2} into the final lifted invariant $s=(\cos\phi-p\sin\phi)^{-3}q$, we recover the fundamental invariant 
     \[\kappa=\frac{s}{(1+r^2)^{3/2}}=\frac{q}{(1+p^2)^{3/2}}.\label{eq 4.16 OlverCo2}\]
     Note again the common functional dependency on the coordinates on $M$ and the associated lifted invariants, in accordance with Theorem~\ref{thm 3.7 OlverCo2}. If we identify $p=u_x$, $q=u_{xx}$, then \eqref{eq 4.12 OlverCo2} coincides with the second prolongation of the standard action of $\SE_2$ on graphs of functions $\bbR\to\bbR$, \eqref{eq 4.15 OlverCo2} agrees with the classical left moving frame for Euclidean curves, and the invariant \eqref{eq 4.16 OlverCo2} is, of course, the Euclidean curvature.
@@ -4834,7 +4834,7 @@ Thus, barring algebraic complications, the normalization procedure provides a si
 \end{defn}
 
 \begin{example}
-    Consider the joint action $(\bf x,\bf y)\mapsto (R\bf x+\bf a,R\bf y+\bf a)$ of the Euclidean group $(R,\bf a)\in\SE_2$ on pairs of vectors $(\bf x,\bf y)\in M=\bbR^2\times\bbR^2$. The action is free on $M\setminus \varDelta$, where $\varDelta=\{\bf x=\bf y\}$ is the diagonal. The lifted invariants are the components of $\bf z=R\bf x+\bf a$, $\bf w=R\bf y+\bf a$. We normalize $\bf z=0$ by setting $\bf a=-R\bf x$. The remaining normalized invariant now reduces to $\bf w=R(\bf y-\bf x)$. Away from the diagonal, we can further normalize the second component of $\bf w$ to be zero by specifying the rotation matrix $R$ to have angle normalizations specify the right moving frame for the joint Euclidean action. The first component of $\bf w$ then reduces to the distance $\lVert \bf x-\bf y\rVert$, which forms the fundamental joint invariant for the Euclidean group. A similar construction for the $n$-dimensional Euclidean group $\rmE_n$ provides a simple proof of an analytical version of a theorem by Weyl that the only joint Euclidean invariants are functions of the distances between points. Extensions to joint invariants for other transformation groups are straightforward.
+    Consider the joint action $(\bf x,\bf y)\mapsto (R\bf x+\bf a,R\bf y+\bf a)$ of the Euclidean group $(R,\bf a)\in\SE_2$ on pairs of vectors $(\bf x,\bf y)\in M=\bbR^2\times\bbR^2$. The action is free on $M\setminus \varDelta$, where $\varDelta=\{\bf x=\bf y\}$ is the diagonal. The lifted invariants are the components of $\bf z=R\bf x+\bf a$, $\bf w=R\bf y+\bf a$. We normalize $\bf z=0$ by setting $\bf a=-R\bf x$. The remaining normalized invariant now reduces to $\bf w=R(\bf y-\bf x)$. Away from the diagonal, we can further normalize the second component of $\bf w$ to be zero by specifying the rotation matrix $R$ to have angle $\phi=-\arg(\bf y-\bf x)$; this amounts to picking the slice $\varSigma=\{(0,0,d,0)\}$. The resulting normalizations specify the right moving frame for the joint Euclidean action. The first component of $\bf w$ then reduces to the distance $\lVert \bf x-\bf y\rVert$, which forms the fundamental joint invariant for the Euclidean group. A similar construction for the $n$-dimensional Euclidean group $\rmE_n$ provides a simple proof of an analytical version of a theorem by Weyl that the only joint Euclidean invariants are functions of the distances between points. Extensions to joint invariants for other transformation groups are straightforward.
 \end{example}
 
 
@@ -4842,7 +4842,7 @@ Thus, barring algebraic complications, the normalization procedure provides a si
 \PRLsep
 
 
-Another often computationally preferrable method for finding differential invariants is the \emph{method of moving coframes}, which was already employed by Cartan and generalized by P.~Olver to general transformation groups. The following definition is based on Cartan's approach to equivalence problems, which always begins by characterizing the (pseudo)group of allowable transformations by a suitable collection of differential forms.
+Another often computationally preferable method for finding differential invariants is the \emph{method of moving coframes}, which was already employed by Cartan and generalized by P.~Olver to general transformation groups. The following definition is based on Cartan's approach to equivalence problems, which always begins by characterizing the (pseudo)group of allowable transformations by a suitable collection of differential forms.
 
 \begin{defn}[$G$-coframe]\index{$G$-coframe}
     Let $G$ be a finite-dimensional Lie group acting on a manifold $M$. A $G$-coframe is a regular, involutive extended coframe $\varTheta=(\bm\theta,\bm I)$ on $M$, whose symmetry group coincides with the transformation group $G$.
@@ -4874,7 +4874,7 @@ form a coframe on $M$.
 \end{defn}
 
 \begin{lem}[{\cite[Lem.~6.4]{OlverCo2}}]\label{lem 6.4 OlverCo2}
-    The moving coframe $\varSigma_\rho$ forms a (involutive) $G$-coframe on $M$.
+    The moving coframe $\varSigma_\rho$ forms an (involutive) $G$-coframe on $M$.
 \end{lem}
 \begin{proof}
     Involutivity is immediate since the Maurer-Cartan equations, along with the equations $\dd(\dd y^i)=0$, imply that all the derived invariants for the moving coframe are constant. To prove that the only symmetries are the group transformations $z\mapsto g\cdot z$, we note that, in the flat coordinates of Example~\ref{ex 2.7 OlverCo2}, the associated moving coframe consists of the Maurer-Cartan forms $\bm\theta_G^\rmR$ pulled back to the orbits $G\times \{\bm y_0\}$, along with the invariants and their differentials. Invariance of the $y^i$ implies that any symmetry of the moving coframe must have the form $\psi(x,y)=(\varphi(x),y)$, where $\varphi:G\to G$ is a symmetry of the Maurer-Cartan coframe, and hence agrees with the right translation by a group element.
@@ -4891,9 +4891,9 @@ We have thus proved the following basic existence theorem.
     \end{enumerate}
 \end{thm}
 
-There is a second important method that can be used to construct an alternative $G$-coframe for a free group action without appealing to the Maurer-Cartan forms. First, the invariants $\bm I(z)=g\cdot z$ were earlier interpreted as the pullback, via the moving frame section $\sigma:M\to P=G\times M$, of the fundamental lifted invariants $\mu=g\cdot z$. Second, by applying Proposition~\ref{prop 3.9 OlverCo2}, the differential $\dd \mu$ will split into two sets of invariant forms on $P$, namely, $\dd_M\mu=g\cdot \dd z$ and the group component $\dd_G\mu$. Theorem~\ref{thm 3.10 OlverCo2} implies that the latter are invariant linear combinations of the Maurer-Cartan forms $\bm\theta_G^\rmR$ on $P$ (pulled back via $\pr_G:P\to G$, as usual). Therefore, 
+There is a second important method that can be used to construct an alternative $G$-coframe for a free group action without appealing to the Maurer-Cartan forms. First, the invariants $\bm I(z)=\rho(z)\cdot z$ were earlier interpreted as the pullback, via the moving frame section $\sigma:M\to P=G\times M$, of the fundamental lifted invariants $\mu=g\cdot z$. Second, by applying Proposition~\ref{prop 3.9 OlverCo2}, the differential $\dd \mu$ will split into two sets of invariant forms on $P$, namely, $\dd_M\mu=g\cdot \dd z$ and the group component $\dd_G\mu$. Theorem~\ref{thm 3.10 OlverCo2} implies that the latter are invariant linear combinations of the Maurer-Cartan forms $\bm\theta_G^\rmR$ on $P$ (pulled back via $\pr_G:P\to G$, as usual). Therefore, 
 \[\dd\mu=\dd_M\mu+\dd_G\mu =g\cdot\dd z+F(\mu)\cdot\bm\theta,\label{eq 6.3 OlverCo2}\]
-where the coefficients $F(\mu)\in \GL_n(\bbR)$ are explicitly determined by \eqref{eq 3.8 OlverCo2}. We now pull back $\dd_M\mu$ via our moving frame section $\sigma$ to construct a system of $G$-invariant $1$-forms on $M$.
+where the $n\times d$ coefficient matrix $F(\mu)$ is explicitly determined by \eqref{eq 3.8 OlverCo2}. We now pull back $\dd_M\mu$ via our moving frame section $\sigma$ to construct a system of $G$-invariant $1$-forms on $M$.
 
 \begin{thm}[{\cite[Thm.~6.6]{OlverCo2}}]\label{thm 6.6 OlverCo2}
     Let $G$ act freely on $M$. Let $\rho:M\supset U\to G$ be a right moving frame. Then the extended coframe $\varGamma=\{\bm\gamma,\bm I\}$ consisting of the invariant functions $\bm I(\bm z)=\rho(\bm z)\cdot \bm z$ along with the $1$-forms $\bm\gamma=\rho(\bm z)\cdot\dd\bm z$ forms a $G$-coframe on $M$.
@@ -4907,31 +4907,31 @@ where the coefficients $F(\mu)\in \GL_n(\bbR)$ are explicitly determined by \eqr
 
 Formula \eqref{eq 3.8 OlverCo2} provides an explicit local coordinate formula relating the normalized coframe forms $\bm\gamma$ with the (right-invariant) Maurer-Cartan forms:
 \[\gamma^k=\dd I^k-\sum_{\nu=1}^{d}(f^k_\nu\circ I)\theta^{\nu}_G,\quad k=1,\ldots,n,\label{eq 6.4 OlverCo2}\]
-where $I^k(\bm z)$ is the $k$-th component of $\bm I(\bm z)=\rho(\bm z)\cdot\bm z$. Note that the coefficients \eqref{eq 6.4 OlverCo2} areobtained by invariantization of coefficients $f^k_\nu(\bm z)$ of the infinitesimal generators \eqref{eq 3.7 OlverCo2} w.r.t.\ the moving frame $\rho$. In particular, if we normalize $\mu^k=c^k$ to be constant, then $I^k=c^k$ is constant also, and the $\dd I^k$ term in \eqref{eq 6.4 OlverCo2} disappears.
+where $I^k(\bm z)$ is the $k$-th component of $\bm I(\bm z)=\rho(\bm z)\cdot\bm z$. Note that the coefficients \eqref{eq 6.4 OlverCo2} are obtained by invariantization of coefficients $f^k_\nu(\bm z)$ of the infinitesimal generators \eqref{eq 3.7 OlverCo2} w.r.t.\ the moving frame $\rho$. In particular, if we normalize $\mu^k=c^k$ to be constant, then $I^k=c^k$ is constant also, and the $\dd I^k$ term in \eqref{eq 6.4 OlverCo2} disappears.
 
 \begin{example}
-    Consider the action \eqref{eq 4.12 OlverCo2} of the planar Euclidean group on $\bbR^4$. The right Maurer-Cartan form on $\SE_2$ are 
+    Consider the action \eqref{eq 4.12 OlverCo2} of the planar Euclidean group on $\bbR^4$. The right Maurer-Cartan forms on $\SE_2$ are 
     \[\theta_G^1=\dd\phi,\quad \theta_G^2=\dd a+b\dd\phi,\quad\theta_G^3=\dd b-a\dd\phi.\label{eq 6.5 OlverCo2}\]
     The corresponding components of the right moving coframe $\bm\theta=\rho^\ast\bm\theta_G$ are obtained by pulling back these forms using the right moving frame \eqref{eq 4.14 OlverCo2}, so 
     \[\theta^1=-\frac{\dd p}{1+p^2},\quad \theta^2=-\frac{\dd x+p\dd u}{\sqrt{1+p^2}},\quad \theta^3=\frac{p\dd x-\dd u}{\sqrt{1+p^2}}.\label{eq 6.6 OlverCo2}\]
-    In order to complete \eqref{eq 6.6 OlverCo2} to a $G$-coframe on $M=\bbR^4$, we must supplement the forms \eqref{eq 6.5 OlverCo2} by the fundamental invariant \eqref{eq 4.16 OlverCo2} and its differential 
+    In order to complete \eqref{eq 6.6 OlverCo2} to a $G$-coframe on $M=\bbR^4$, we must supplement the forms \eqref{eq 6.6 OlverCo2} by the fundamental invariant \eqref{eq 4.16 OlverCo2} and its differential 
     \[\theta^4=\dd \kappa=\frac{(1+p^2)\dd q-3pq\dd p}{(1+p^2)^{5/2}},\quad \kappa=\frac{q}{(1+p^2)^{3/2}}.\label{eq 6.7 OlverCo2}\]
     The complete extended coframe \eqref{eq 6.6 OlverCo2}, \eqref{eq 6.7 OlverCo2} forms a $\SE_2$ coframe on $M$ -- its symmetries coincide with the group transformations \eqref{eq 4.12 OlverCo2}.
 
     On the other hand, computing the $G$-coframe $\{\bm\gamma,I\}$ as in Theorem~\ref{thm 6.6 OlverCo2}, we only need to compute the differentials of the fundamental lifted invariants, and then pull back via the moving frame, thereby avoiding the explicit determination of the Maurer-Cartan forms. Differentiating \eqref{eq 4.12 OlverCo2} w.r.t.\ the coordinates $(x,u,p,q)$ on $M$ leads to the $1$-forms 
     \[\begin{aligned}
         \dd_M y&=\cos\phi\dd x-\sin\phi \dd u,\quad &\dd_M v&=\sin\phi\dd x+\cos\phi\dd u,\\
-        \dd_M r&=\frac{\dd p}{(\cos\phi-p\sin\phi)^2},\quad &\dd_M s&=\frac{(\cos\phi=p\sin\phi)\dd q+3q\sin\phi\dd p}{(\cos\phi-p\sin\phi)^4,}
+        \dd_M r&=\frac{\dd p}{(\cos\phi-p\sin\phi)^2},\quad &\dd_M s&=\frac{(\cos\phi-p\sin\phi)\dd q+3q\sin\phi\dd p}{(\cos\phi-p\sin\phi)^4},
     \end{aligned}\label{eq 6.8 OlverCo2}\]
     which, along with the Maurer-Cartan forms \eqref{eq 6.5 OlverCo2}, form a $\SE_2$-coframe for the lifted action on $P=\SE_2\times M$. The corresponding $\SE_2$-coframe on $M$ is found by pulling back \eqref{eq 6.8 OlverCo2} via the right moving frame \eqref{eq 4.14 OlverCo2}; the result is 
     \[\begin{aligned}
         \gamma^1&=\sigma^\ast(\dd_M y)=-\theta^2,\quad &\gamma^3&=\sigma^\ast(\dd_M r)=-\theta^1,\\ 
         \gamma^2&=\sigma^\ast(\dd_M v)=-\theta^3,\quad &\gamma^4&=\sigma^\ast(\dd_M s)=\theta^4.
     \end{aligned}\label{eq 6.9 OlverCo2}\]
-    The formulas \eqref{eq 6.9 OlverCo2} relating the two coframes can be deduced from \eqref{eq 6.4 OlverCo2}, as we now explicily show. The group components of the differentials are 
+    The formulas \eqref{eq 6.9 OlverCo2} relating the two coframes can be deduced from \eqref{eq 6.4 OlverCo2}, as we now explicitly show. The group components of the differentials are 
     \[\begin{aligned}
         \dd_G y&=\dd_G (x\cos\phi-u\sin\phi+a)=-v\theta_G^1+\theta_G^2,\\
-        \dd_G v&= \dd_G(x\sin\phi+u\cos\phi+b)=y\theta_G^1-\theta_G^3,\\ 
+        \dd_G v&= \dd_G(x\sin\phi+u\cos\phi+b)=y\theta_G^1+\theta_G^3,\\ 
         \dd_G r&=\dd_G\left(\frac{\sin\phi+p\cos\phi}{\cos\phi-p\sin\phi}\right)=(1+r^2)\theta_G^1,\\
         \dd_G s&=\dd_G\left(\frac{q}{(\cos\phi-p\sin\phi)^3}\right)=3rs\theta_G^1.
     \end{aligned}\label{eq 6.10 OlverCo2}\]
@@ -4965,7 +4965,7 @@ where $I^k(\bm z)$ is the $k$-th component of $\bm I(\bm z)=\rho(\bm z)\cdot\bm 
         \gamma^1\\\gamma^2\\\gamma^3\\\gamma^4
     \end{pmatrix}
     =\begin{pmatrix}
-        0 & 0& 0 & \dd\kappa
+        0 \\ 0\\ 0 \\ \dd\kappa
     \end{pmatrix}-
     \begin{pmatrix}
         0 & 1 & 0\\
@@ -4977,7 +4977,7 @@ where $I^k(\bm z)$ is the $k$-th component of $\bm I(\bm z)=\rho(\bm z)\cdot\bm 
         \theta^1\\\theta^2\\\theta^3
     \end{pmatrix}.\label{eq 6.14 OlverCo2}
     \]
-    In \eqref{eq 6.14 OlverCo2}, the first term is the pullback of the lifted coordinate differentials $(\dd y,\dd v,\dd r,\dd s)$ via the normalization map \eqref{eq 4.13 OlverCo}, while the coefficient matrix in the second is the invariantization of the infinitesimal generator coefficient matrix \eqref{eq 6.12 OlverCo2} w.r.t.\ the given moving frame.
+    In \eqref{eq 6.14 OlverCo2}, the first term is the pullback of the lifted coordinate differentials $(\dd y,\dd v,\dd r,\dd s)$ via the moving frame \eqref{eq 4.14 OlverCo2}, while the coefficient matrix in the second is the invariantization of the infinitesimal generator coefficient matrix \eqref{eq 6.12 OlverCo2} w.r.t.\ the given moving frame.
 \end{example}
 
 
