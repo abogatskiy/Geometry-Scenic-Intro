@@ -5583,22 +5583,22 @@ As above, we use the local coordinates $\left(\bf x,\bf u^{(\infty)}\right)$ on 
 
 \begin{defn}[Normalized contact-invariant coframe]\index{Contact-invariant coframe}
     The normalized contact-invariant coframe is the pullback of the lifted contact-invariant coframe:
-    \[\bm\gamma\coloneqq \left(\sigma^{(r)}\right)^\ast\bm\eta=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y.\]
+    \[\bm\varpi\coloneqq \left(\sigma^{(r)}\right)^\ast\bm\eta=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y.\]
 \end{defn}
 
 \begin{lem}\label{lem 12.6 OlverCo2}
-    The semibasic $1$-forms $\bm\gamma=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y$ are linearly independent at a point $z^{(r)}$ in the domain of the moving frame iff $z^{(r)}=\rmj^r_z i$ is the $r$-jet of a transverse submanifold $i:X\to M$.
+    The semibasic $1$-forms $\bm\varpi=\left(\sigma^{(r)}\right)^\ast\dd_M \bm y$ are linearly independent at a point $z^{(r)}$ in the domain of the moving frame iff $z^{(r)}=\rmj^r_z i$ is the $r$-jet of a transverse submanifold $i:X\to M$.
 \end{lem}
 \begin{proof}
-    In terms of our bundle coordinates (where $\rmJ^r$ becomes locally identified with a jet bundle $\rmJ^r E$), the transversality of $S=i(X)$ implies $z^{(r)}\in \rmJ^r E$. According to Proposition~\ref{prop 10.7 OlverCo2}, the $1$-forms $\bm\eta$ will be linearly independent at a point $(g,z^{(r)})\in G\times\rmJ^r E\subset P^{(r)}$ iff $g^{(1)}\cdot \pi^r_1(z^{(r)})\in\rmJ^1 E$, which automatically implies $g^{(r)}\cdot z^{(r)}\in\rmJ^r E$. Therefore, $\bm\gamma$ will be linearly independent iff $k^{(r)}=\rho^{(r)}(z^{(r)})\cdot z^{(r)}\in \rmJ^r E$. But, by construction, $k^{(r)}\in \Sigma^{(r)}$ is the slice representative of the orbit of $G^{(r)}$ through $z^{(r)}$, and hence lies in the coordinate chart $\rmJ^r E$ used to construct the moving frame.
+    In terms of our bundle coordinates (where $\rmJ^r$ becomes locally identified with a jet bundle $\rmJ^r E$), the transversality of $S=i(X)$ implies $z^{(r)}\in \rmJ^r E$. According to Proposition~\ref{prop 10.7 OlverCo2}, the $1$-forms $\bm\eta$ will be linearly independent at a point $(g,z^{(r)})\in G\times\rmJ^r E\subset P^{(r)}$ iff $g^{(1)}\cdot \pi^r_1(z^{(r)})\in\rmJ^1 E$, which automatically implies $g^{(r)}\cdot z^{(r)}\in\rmJ^r E$. Therefore, $\bm\varpi$ will be linearly independent iff $k^{(r)}=\rho^{(r)}(z^{(r)})\cdot z^{(r)}\in \rmJ^r E$. But, by construction, $k^{(r)}\in \Sigma^{(r)}$ is the slice representative of the orbit of $G^{(r)}$ through $z^{(r)}$, and hence lies in the coordinate chart $\rmJ^r E$ used to construct the moving frame.
 \end{proof}
 
-In local coordinates, the normalized $1$-forms $\bm\gamma$ are therefore obtained by using the moving frame to replace the group parameters in \eqref{eq 10.7 OlverCo2}, so 
-\[\gamma^i=\sum_{j=1}^p D_j y^i\left(\rho^{(r)}\left(x,u^{(r)}\right),x,u^{(r)}\right)\dd x^j=\sum_{j=1}^p P^i_j\left(x,u^{(r)}\right)\dd x^j,\label{eq 12.5 OlverCo2}\]
+In local coordinates, the normalized $1$-forms $\bm\varpi$ are therefore obtained by using the moving frame to replace the group parameters in \eqref{eq 10.7 OlverCo2}, so 
+\[\varpi^i=\sum_{j=1}^p D_j y^i\left(\rho^{(r)}\left(x,u^{(r)}\right),x,u^{(r)}\right)\dd x^j=\sum_{j=1}^p P^i_j\left(x,u^{(r)}\right)\dd x^j,\label{eq 12.5 OlverCo2}\]
 whose coefficient matrix $P=\left(\sigma^{(r)}\right)^\ast\bf D\bf y$ is the pullback of the total Jacobi matrix of the independent lifted invariants. 
 
 \begin{rem}
-    The coefficients $P^i_j$ \emph{cannot} be obtained by invariantly differentiating the normalized invariants $J^i=\left(\sigma^{(r)}\right)^\ast y^i$; in other words, $\gamma^i\neq \dd_M J^i$. Indeed, in many cases, the $y^i$ are normalized to be constant, whereas the $\gamma^i$ are clearly not zero. This is because the operations of total differentiation and normalization do not commute.
+    The coefficients $P^i_j$ \emph{cannot} be obtained by invariantly differentiating the normalized invariants $J^i=\left(\sigma^{(r)}\right)^\ast y^i$; in other words, $\varpi^i\neq \dd_M J^i$. Indeed, in many cases, the $y^i$ are normalized to be constant, whereas the $\varpi^i$ are clearly not zero. This is because the operations of total differentiation and normalization do not commute.
 \end{rem}
 
 The invariant differential operators associated with the semibasic coframe \eqref{eq 12.5 OlverCo2} are obtained by normalizing the lifted invariant differential operators \eqref{eq 10.10 OlverCo2}, so that the $\calE_i$ on $P^{(\infty)}$ project, via $\sigma^{(r)}$, to $G$-invariant total differential operators on $\rmJ^\infty$. In coordinates,
@@ -5606,7 +5606,7 @@ The invariant differential operators associated with the semibasic coframe \eqre
 where $Q=P^{-1}=\left(\sigma^{(r)}\right)^\ast Z$ can be constructed directly from \eqref{eq 10.10 OlverCo2}.
 
 \begin{example}
-    Consider the similarity group \eqref{eq 11.8 OlverCo2}. Under the first-order moving frame \eqref{eq 11.10 OlverCo2}, the lifted semibasic form $\eta=\dd_M y=\alpha\dd x$ reduces to $\gamma=u_x^{-1/2}\dd x$. Similarly, the lifted invariant differential operator $\calE=\alpha^{-1}D_x$ reduces to $\calD=\sqrt{u_x}D_x$, which maps differential invariants to higher-order differential invariants. However, $\calD$ does not directly produce normalized invariants. For example, $v_{yy}$ normalizes to $I_2=u_x^{-1/2}u_{xx}$, but $v_{yyy}=\calE v_{yy}$ normalizes to $I_3=u_{xxx}$, which is not the same as $\calD I_2=u_{xxx}-\frac12u_x^{-1}u_{xx}^2$. The second-order moving frame \eqref{eq 11.11 OlverCo2} produces a different semibasic $1$-form, namely $\wt\gamma=u_{xx}^{-1}\dd x$, whose invariant differential operator $\wt\calD=u_{xx}D_x$ produces yet another hierarchy of differential invariants, which, naturally, are functions of the normalized differential invariants. The explicit formulae relating these alternative sets of invariants can be found by studying the \emph{syzygies} between the differential operators, see \cite[\S13]{OlverCo2}.
+    Consider the similarity group \eqref{eq 11.8 OlverCo2}. Under the first-order moving frame \eqref{eq 11.10 OlverCo2}, the lifted semibasic form $\eta=\dd_M y=\alpha\dd x$ reduces to $\varpi=u_x^{-1/2}\dd x$. Similarly, the lifted invariant differential operator $\calE=\alpha^{-1}D_x$ reduces to $\calD=\sqrt{u_x}D_x$, which maps differential invariants to higher-order differential invariants. However, $\calD$ does not directly produce normalized invariants. For example, $v_{yy}$ normalizes to $I_2=u_x^{-1/2}u_{xx}$, but $v_{yyy}=\calE v_{yy}$ normalizes to $I_3=u_{xxx}$, which is not the same as $\calD I_2=u_{xxx}-\frac12u_x^{-1}u_{xx}^2$. The second-order moving frame \eqref{eq 11.11 OlverCo2} produces a different semibasic $1$-form, namely $\wt\varpi=u_{xx}^{-1}\dd x$, whose invariant differential operator $\wt\calD=u_{xx}D_x$ produces yet another hierarchy of differential invariants, which, naturally, are functions of the normalized differential invariants. The explicit formulae relating these alternative sets of invariants can be found by studying the \emph{syzygies} between the differential operators, see \cite[\S13]{OlverCo2}.
 \end{example}
 
 
@@ -5618,37 +5618,37 @@ where $Q=P^{-1}=\left(\sigma^{(r)}\right)^\ast Z$ can be constructed directly fr
 \section{Equivalence of submanifolds II}
 
 
-We are finally ready to present the solution to the general equivalence problem for submanifolds. As we have seen, in the zeroth-order case, the answer is provided in Theorems~\ref{thm 7.7 OlverCo2} and \ref{thm 7.8 OlverCo2}. However, in the non-free case, we need to prolong in order to make the group act (locally) freely. Since two submanifolds are equivalent under the aciton of $G$ on $M$ iff their $r$-jets are equivalent under the prolonged action $G^{(r)}\acts\rmJ^r$, we can then readily adapt our earlier results.
+We are finally ready to present the solution to the general equivalence problem for submanifolds. As we have seen, in the zeroth-order case, the answer is provided in Theorems~\ref{thm 7.7 OlverCo2} and \ref{thm 7.8 OlverCo2}. However, in the non-free case, we need to prolong in order to make the group act (locally) freely. Since two submanifolds are equivalent under the action of $G$ on $M$ iff their $r$-jets are equivalent under the prolonged action $G^{(r)}\acts\rmJ^r$, we can then readily adapt our earlier results.
 
 When we restrict the $G^{(r)}$-coframe on $\rmJ^r$ to a submanifold, the resulting linear dependencies among the restricted $1$-forms lead to additional scalar invariants. In the zeroth-order context, these invariants are not directly predicted by the moving coframe, but appear to depend on the submanifold itself. An important fact is that, in the jet bundle context, they are merely the restrictions of \emph{higher-order differential invariants}! Thus, even in the zeroth-order case, the jet bundle constructions lead to significant new information.
 
-We start with the $G^{(r)}$-coframe $\varGamma^{(r)}=\left(\bm\gamma,I^{(r)}\right)$ on $\rmJ^r$ constructed in Theorem~\ref{thm 12.3 OlverCo2}. Let $i:X\to M$ parametrize a submanifold $S=i(X)$, so that $\rmj^r i:X\to \rmJ^r$ parametrize the corresponding $r$-jet $\rmj^r S$. We assume that $\rmj^r S$ lies in the domain of our chosen moving frame $\rho^{(r)}$, which implies that $S$ is order $r$ regular. Let $\varXi^{(r)}=\left(\rmj^r i\right)^\ast\varGamma^{(r)}$ denote the restriction of the $r$-th order coframe to $S$. As in the zeroth-order case, the $1$-form system $\varXi^{(r)}$ is overdetermined on $X$, and we need to reduce it to an extended coframe. Now since $\rmj^r i$ annihilates the contact forms, only the semibasic linear dependencies among these $1$-forms will arise from the linear dependencies among the semibasic components of the $1$-forms in the $G^{(r)}$-coframe. The $1$-forms $\bm\gamma^{(r)}=\left(\sigma^{(r)}\right)^\ast\dd_\rmJ\mu^{(r)}$ are, by definition, the pullbacks of the jet differentials of the lifted invariants. We have already used the horizontal components $\dd_M y$ of the ``independent variable'' lifted invariants to construct the contact-invariant coframe $\bm\theta=\left(\sigma^{(r)}\right)^\ast\dd_M y$. The remaining ``dependent variable'' lifted invariants will lead to additional contact-invariant horizontal forms $\bm\delta^{(r)}=\left(\sigma^{(r)}\right)^\ast\dd_M v^{(r)}$, which must be invariant linear combinations of the contact-invariant coframe $\bm\theta$. 
+We start with the $G^{(r)}$-coframe $\varGamma^{(r)}=\left(\bm\gamma,I^{(r)}\right)$ on $\rmJ^r$ constructed in Theorem~\ref{thm 12.3 OlverCo2}. Let $i:X\to M$ parametrize a submanifold $S=i(X)$, so that $\rmj^r i:X\to \rmJ^r$ parametrizes the corresponding $r$-jet $\rmj^r S$. We assume that $\rmj^r S$ lies in the domain of our chosen moving frame $\rho^{(r)}$, which implies that $S$ is order $r$ regular. Let $\varXi^{(r)}=\left(\rmj^r i\right)^\ast\varGamma^{(r)}$ denote the restriction of the $r$-th order coframe to $S$. As in the zeroth-order case, the $1$-form system $\varXi^{(r)}$ is overdetermined on $X$, and we need to reduce it to an extended coframe. Now since $\rmj^r i$ annihilates the contact forms, only the semibasic components of the forms in $\varGamma^{(r)}$ contribute to $\varXi^{(r)}$, so the linear dependencies among these $1$-forms arise from the linear dependencies among the semibasic components of the $1$-forms in the $G^{(r)}$-coframe. The $1$-forms $\bm\gamma^{(r)}=\left(\sigma^{(r)}\right)^\ast\dd_\rmJ\mu^{(r)}$ are, by definition, the pullbacks of the jet differentials of the lifted invariants. We have already used the horizontal components $\dd_M y$ of the ``independent variable'' lifted invariants to construct the contact-invariant coframe $\bm\varpi=\left(\sigma^{(r)}\right)^\ast\dd_M y$. The remaining ``dependent variable'' lifted invariants will lead to additional contact-invariant horizontal forms $\bm\delta^{(r)}=\left(\sigma^{(r)}\right)^\ast\dd_M v^{(r)}$, which must be invariant linear combinations of the contact-invariant coframe $\bm\varpi$. 
 
-Recall that the relation $I^\alpha=(\sigma^{(r)})^\ast v^\alpha$ by which the normalized differential invariant $I^\alpha$ corresponds to the lifted zeroth-order invariant $v^\alpha$ as \eqref{eq 11.7 OlverCo2}. Applying an invariant differential operator to $I^\alpha$ produces a higher-order differential invariant $\calD_K I^\alpha$, but this is \emph{not}, in general, equal to its normalized counterpart 
+Recall from \eqref{eq 11.7 OlverCo2} that the normalized differential invariant $I^\alpha=(\sigma^{(r)})^\ast v^\alpha$ corresponds to the lifted zeroth-order invariant $v^\alpha$. Applying an invariant differential operator to $I^\alpha$ produces a higher-order differential invariant $\calD_K I^\alpha$, but this is \emph{not}, in general, equal to its normalized counterpart 
 \[I^\alpha_K=\left(\sigma^{(r)}\right)^\ast v^\alpha_K=\left(\sigma^{(r)}\right)^\ast \left[\calE_K v^\alpha\right].\label{eq 31691}\] 
-For example, if we notmalize $v^\alpha=c^\alpha$, then $I^\alpha=c^\alpha$ is contant, and so its derivatives vanish, but the higher-order $I^\alpha_K$ are generally \emph{not} trivial. It is possible to determine a recursive formula for constructing the $I^\alpha_K$ directly without having to appeal to lifted invariants. The reader can find the full procedure for this in \cite[\S13]{OlverCo2}.
+For example, if we normalize $v^\alpha=c^\alpha$, then $I^\alpha=c^\alpha$ is constant, and so its derivatives vanish, but the higher-order $I^\alpha_K$ are generally \emph{not} trivial. It is possible to determine a recursive formula for constructing the $I^\alpha_K$ directly without having to appeal to lifted invariants. The reader can find the full procedure for this in \cite[\S13]{OlverCo2}.
 
-Applying a semibasic differential to \eqref{eq 31691}, we have $\left(\sigma^{(r)}\right)^\ast \dd_M v^\alpha_K=\sum_{i=1}^p I^\alpha_{K+1_i}\omega^i$, and hence,
-\[\delta^\alpha_K=\left(\sigma^{(r)}\right)^\ast\dd_M v^\alpha_K=\sum_{i=1}^p I^\alpha_{K+1_i}\omega^i,\quad \alpha=1,\ldots,s,\; |K|\geq 0.\label{eq 14.1 OlverCo2}\]
-The coefficient $I^\alpha_{K+1_i}$ is the normalized differential invariant of order $|K|+1$. Therefore, the linear dependencies among the horizontal forms $\bm\gamma_M^{(r)}=\{\bm\theta,\bm\delta^{(r)}\}$ are the differential invariants of order $r+1$. With this in mind, we make the following definition.
+Applying a semibasic differential to \eqref{eq 31691}, we have $\left(\sigma^{(r)}\right)^\ast \dd_M v^\alpha_K=\sum_{i=1}^p I^\alpha_{K+1_i}\varpi^i$, and hence,
+\[\delta^\alpha_K=\left(\sigma^{(r)}\right)^\ast\dd_M v^\alpha_K=\sum_{i=1}^p I^\alpha_{K+1_i}\varpi^i,\quad \alpha=1,\ldots,s,\; |K|\geq 0.\label{eq 14.1 OlverCo2}\]
+The coefficient $I^\alpha_{K+1_i}$ is the normalized differential invariant of order $|K|+1$. Therefore, the linear dependencies among the horizontal forms $\bm\gamma_M^{(r)}=\{\bm\varpi,\bm\delta^{(r)}\}$ are the differential invariants of order $r+1$. With this in mind, we make the following definition.
 
 \begin{defn}[Differential invariant coframe]
     The $r$-th order \emph{differential invariant coframe} on $\rmJ^r$ is the extended semibasic coframe 
-    \[\varDelta^{(r)}=\{\bm\theta,I^{(r)}\}\]
+    \[\varDelta^{(r)}=\{\bm\varpi,I^{(r)}\}\]
     consisting of the contact-invariant coframe and the $r$-th order normalized differential invariants.
 \end{defn}
 
 \begin{prop}[{\cite[Prop.~14.2]{OlverCo2}}]\label{prop 14.2 OlverCo2}
-    The horizontal components of the $r$-th order moving coframe $\varTheta^{(r)}_M=\{\bm\theta^{(r)}_M,\dd_M I^{(r)},I^{(r)}\}$ or its normalized counterpart $\varGamma^{(r)}_M=\{\bm\gamma_M^{(r)},I^{(r)}\}$ are invariantly related to the differential invariant coframe $\varDelta^{(r+1)}=\{\bm\theta,I^{(r+1)}\}$ of order $r+1$.
+    The horizontal components of the $r$-th order moving coframe $\varTheta^{(r)}_M=\{\bm\theta^{(r)}_M,\dd_M I^{(r)},I^{(r)}\}$ or its normalized counterpart $\varGamma^{(r)}_M=\{\bm\gamma_M^{(r)},I^{(r)}\}$ are invariantly related to the differential invariant coframe $\varDelta^{(r+1)}=\{\bm\varpi,I^{(r+1)}\}$ of order $r+1$.
 \end{prop}
 \begin{proof}
-    Formula \eqref{eq 14.1 OlverCo2} shows that $\varGamma^{(r)}_M$ is invariantly related to $\varDelta^{(r+1)}$. Moreover, since $\varTheta^{(r)}$ is invariantly related to $\varGamma^{(r)}$, the same is true for $\varTheta^{(r)}_M$. In particular, the fact that $\dd_M I^{(r)}$ can be written as a linear combination of the $\omega^i$ with $(r+1)$-st order differential invariant coefficients is immediate from \eqref{eq 9.7 OlverCo2}.
+    Formula \eqref{eq 14.1 OlverCo2} shows that $\varGamma^{(r)}_M$ is invariantly related to $\varDelta^{(r+1)}$. Moreover, since $\varTheta^{(r)}$ is invariantly related to $\varGamma^{(r)}$, the same is true for $\varTheta^{(r)}_M$. In particular, the fact that $\dd_M I^{(r)}$ can be written as a linear combination of the $\varpi^i$ with $(r+1)$-st order differential invariant coefficients is immediate from \eqref{eq 9.7 OlverCo2}.
 \end{proof}
 
 
 We now restrict the coframes to a regular submanifold $S=i(X)$. Let 
 \[\varUpsilon^{(r)}=\{\bm\omega,J^{(r)}\}=\left(\rmj^r i\right)^\ast \varDelta^{(r)}\] 
-denote the restriction of the differential invariant coframe to $S$. Transversality implies that $\bm\omega=\left(\rmj^r i\right)^\ast\bm\theta$ will form a coframe on the parameter space $X$, while $J^{(r)}=\left(\rmj^r i\right)^\ast I^{(r)}$ corresponds to the pullback of the $r$-th order normalized differential invariants to $X$.
+denote the restriction of the differential invariant coframe to $S$. Transversality implies that $\bm\omega=\left(\rmj^r i\right)^\ast\bm\varpi$ will form a coframe on the parameter space $X$, while $J^{(r)}=\left(\rmj^r i\right)^\ast I^{(r)}$ corresponds to the pullback of the $r$-th order normalized differential invariants to $X$.
 
 \begin{prop}[{\cite[Prop.~14.3]{OlverCo2}}]\label{prop 14.3 OlverCo2}
     Let $S=i(X)$ be a submanifold whose $r$-jet lies in the domain of the given moving frame. Then $\varXi^{(r)}=\left(\rmj^r i\right)^\ast \varGamma^{(r)}$ is invariantly related to the restricted $(r+1)$-st order differential invariant coframe $\varUpsilon^{(r+1)}=\left(\rmj^{r+1}i\right)^\ast\varDelta^{(r+1)}$.
@@ -5661,7 +5661,7 @@ denote the restriction of the differential invariant coframe to $S$. Transversal
 If $\varUpsilon^{(r+1)}$ is not involutive, then we need to extend it by appending additional derived invariants. A second key fact is that the derived invariants are merely the differential invariants of the next order restricted to $S$ (by \cite[(13.4), (13.6)]{OlverCo2}). 
 
 \begin{prop}[{\cite[Prop.~14.4]{OlverCo2}}]\label{prop 14.4 OlverCo2}
-    The derived coframe $\left(\varUpsilon^{(r+1)}\right)^{(k)}$ for the restricted differential invariant coframe $\varUpsilon^{(r+1)}$ are invariantly related to the coframe $\varUpsilon^{r+k+1}$.
+    The $k$-th derived coframe $\left(\varUpsilon^{(r+1)}\right)^{(k)}$ of the restricted differential invariant coframe $\varUpsilon^{(r+1)}$ is invariantly related to the coframe $\varUpsilon^{(r+k+1)}$.
 \end{prop}
 
 \begin{rem}
@@ -5695,11 +5695,11 @@ where $t$ is the differential invariant rank and $s$ is the differential invaria
 If $S$ is fully regular, then its differential invariant order is always bounded by either $r+p-1$ or, possibly, $r+p$; the latter case occurs only if all $r$-th order differential invariants are constant, and there is but one independent differential invariant appearing at each order $r+1\leq k\leq r+p$. In this context, it is instructive to reconsider the higher-order submanifold discussed in Example~\ref{ex 7.9 OlverCo2}.
 
 \begin{example}\label{ex 14.8 OlverCo2}
-    Consider the Lie group $G=\bbR^3$ acting by translations on $M=\bbR^3$. For a moving frame of order zero, the generating differential invariants for surfaces $u=f(x,y)$ are just the derivatives $u_x,u_y$. Any nonplanar solution to the nonlinear PDE $u_y=\frac12 u_x^2$ will define a surface of rank $2$ and differential invariant order $2$. (The function $u(x,y)=-x^2/2y$ discussed in Example~\ref{ex 7.9 OlverCo2} above is a particular case.) Indeed, the second-order differential invariants are $u_{xx}$, $u_{xy}=u_x u_{xx}$, and $u_{yy}=u_x^2 u_{xx}$. The single independent invariant $u_{xx}$ is, however, not a function of the first-order invariant $u_x$, since their Jacobian matrix is 
-    \[\frac{\partial(u_x,u_{xx})}{\partial(x,y)}=\begin{pmatrix}
+    Consider the Lie group $G=\bbR^3$ acting by translations on $M=\bbR^3$. For a moving frame of order zero, the generating differential invariants for surfaces $u=f(x,y)$ are just the derivatives $u_x,u_y$. Any nonplanar solution to the nonlinear PDE $u_y=\frac12 u_x^2$ will define a surface of rank $2$ and differential invariant order $2$. (The function $u(x,y)=-x^2/2y$ discussed in Example~\ref{ex 7.9 OlverCo2} above is a particular case.) Indeed, the second-order differential invariants are $u_{xx}$, $u_{xy}=u_x u_{xx}$, and $u_{yy}=u_x^2 u_{xx}$. The single independent invariant $u_{xx}$ is, however, not a function of the first-order invariant $u_x$, since their Jacobian determinant is 
+    \[\det\frac{\partial(u_x,u_{xx})}{\partial(x,y)}=\det\begin{pmatrix}
         u_{xx} & u_{xy}\\
         u_{xxx} & u_{xxy}
-    \end{pmatrix}=\begin{pmatrix}
+    \end{pmatrix}=\det\begin{pmatrix}
         u_{xx} & u_x u_{xx}\\
         u_{xxx} & u_x u_{xxx}+u_{xx}^2
     \end{pmatrix}=u_{xx}^3\neq 0,\]
@@ -5719,7 +5719,7 @@ Finally, we discuss rigidity theorems for submanifolds under transformation grou
 \end{defn}
 
 \begin{defn}[Order $r$ congruency]\index{Congruency of submanifolds}
-    A submanifold $S$ is said to be order $r$ congruent to a submanifold $\wb S$ at a point $z\in S$ if there is a group transformation $g\in G$ such that $S$ and $g\cdot S$ have order $r$ contact at the point $z$. We shall call $S$ order $r$ congruent to $\wb S$ if this occurs for every $z\in S$, where the group transformation $g=g(z)$ can vary from point to point.
+    A submanifold $S$ is said to be order $r$ congruent to a submanifold $\wb S$ at a point $z\in S$ if there is a group transformation $g\in G$ such that $\wb S$ and $g\cdot S$ have order $r$ contact at the point $z$. We shall call $S$ order $r$ congruent to $\wb S$ if this occurs for every $z\in S$, where the group transformation $g=g(z)$ can vary from point to point.
 \end{defn}
 
 If $G^{(r)}$ acts freely on $\rmJ^r$, then the group transformation $g(z)$ determining the contact is uniquely determined. The first rigidity theorem states that order $k$ congruence implies congruence provided $k$ is sufficiently large. The \emph{rigidity order} of $S$ is the minimal $k$ for which this applies. \index{Rigidity order}
@@ -5733,18 +5733,18 @@ If $G^{(r)}$ acts freely on $\rmJ^r$, then the group transformation $g(z)$ deter
     Let $S<M$ be a regular $p$-submanifold which has differential invariant order $s$ w.r.t.\ a given moving frame. Then $S$ has rigidity order at most $s+1$. In other words, a submanifold $\wb S$ is order $s+1$ congruent to $S$ at every point $z\in S$ iff $S=g\cdot \wb S$ for a fixed $g\in G$.
 \end{thm}
 \begin{proof}
-    Note first that $\wb S$ and $\wb S_g=g\cdot \wb S$ have identical classifying manifolds. Moreover, if $S$ and $\wb S_g$ have contact at a common point $z$, then their $(s+1)$-jets coincide, and hence their order $s+1$ differential invariant classifying manifolds agree at the point $z$. Therefore, the two submanifolds are order $s+1$ congruent at every point iff their order $s+1$ differential invariant classifying manifolds overlap, $\scrC^{(s+1)}(\wb S)=\scrC^{(s+1)}(S)$. The result follows by Theorem~\ref{thm 14.9 OlverCo2}.
+    Note first that $\wb S$ and $\wb S_g=g\cdot \wb S$ have identical classifying manifolds. Moreover, if $S$ and $\wb S_g$ have order $s+1$ contact at a common point $z$, then their $(s+1)$-jets coincide, and hence their order $s+1$ differential invariant classifying manifolds agree at the point $z$. Therefore, the two submanifolds are order $s+1$ congruent at every point iff their order $s+1$ differential invariant classifying manifolds overlap, $\scrC^{(s+1)}(\wb S)=\scrC^{(s+1)}(S)$. The result follows by Theorem~\ref{thm 14.9 OlverCo2}.
 \end{proof}
 
 The simplest case is when the order of the moving frame equals the stabilization order of the group $G$. Generically, the rigidity order of a regular submanifold will be either $r+1$ or $r+2$ depending on whether \eqref{eq 14.4 OlverCo2} holds. Barring higher-order singularities, the maximal rigidity order will be $r+p+1$. 
 
-A second type of rigidity theorem shows that one can uniquely characterize the group trasnformation mapping congruent submanifolds by knowing their order of contact.
+A second type of rigidity theorem shows that one can uniquely characterize the group transformation mapping congruent submanifolds by knowing their order of contact.
 
 \begin{defn}[Order $k$ rigid submanifold]\index{Rigid submanifold}
     A $p$-submanifold $S<M$ is said to be order $k$ rigid if the only congruent submanifold $\wb S=g\cdot S$ which has $k$-th order contact with $S$ at a point is $S$ itself.
 \end{defn}
 
-In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k_{z_0}S$ at $z_0\in S\cap \wb S$ implies $g\in G_S$ and so $\wb S=S$. The second rigidity theorem can now be stated.
+In other words, if $\wb S=g\cdot S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k_{z_0}S$ at $z_0\in S\cap \wb S$ implies $g\in G_S$ and so $\wb S=S$. The second rigidity theorem can now be stated.
 
 \begin{thm}[Rigidity II {\cite[Thm.~14.13]{OlverCo2}}]\label{thm 14.13 OlverCo2}\index{Theorem!Rigidity II}
     Let $G$ act freely on $\calV^r\subset \rmJ^r$. Let $S$ be an order $r$ regular $p$-submanifold of differential invariant order $s\geq r$. Then $S$ is rigid of order $s+1$.
@@ -5759,20 +5759,20 @@ In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k
 \end{rem}
 
 \begin{example}
-    Consider the translation action $\bf z\mapsto \bf z+\bf a$ of $G=\bbR^2$ on $M=\bbR^2=\rmJ^0(\bbR,\bbR)$. The derivative coordinates $u_x,u_{xx},\ldots $ provide a complete system of differential invariants. The classifying curve of a generic curve $u=f(x)$ is parametrized by $(u_x,u_{xx})$. However, singularities may require us to prolong to higher order to ensure rigidity. For example, the curve $C$ given by $u=x^4-2x^2$ has second-order contact at $\bf z_0=(1,0)$ with its translate by $\bf a=(2,0)$. Moreover, the first two differential invariants $(u_x,u_{xx})$ have rank $1$ on $C$. However, $C$ is not regular of differential invariant order $2$ because its second-order classifying curve intersects itself at the point $(u_x,u_{xx})=(0,8)$, which permits second-order non-rigidity. The curve $C$ is locally rigid at order $1$, and completely rigid at order $3$.
+    Consider the translation action $\bf z\mapsto \bf z+\bf a$ of $G=\bbR^2$ on $M=\bbR^2=\rmJ^0(\bbR,\bbR)$. The derivative coordinates $u_x,u_{xx},\ldots $ provide a complete system of differential invariants. The classifying curve of a generic curve $u=f(x)$ is parametrized by $(u_x,u_{xx})$. However, singularities may require us to prolong to higher order to ensure rigidity. For example, the curve $C$ given by $u=x^4-2x^2$ has second-order contact at $\bf z_0=(1,-1)$ with its translate by $\bf a=(2,0)$. Moreover, the first two differential invariants $(u_x,u_{xx})$ have rank $1$ on $C$. However, $C$ is not regular of differential invariant order $2$ because its second-order classifying curve intersects itself at the point $(u_x,u_{xx})=(0,8)$, which permits second-order non-rigidity. The curve $C$ is locally rigid at order $1$, and completely rigid at order $3$.
 \end{example}
 
 
 
 
 \begin{example}
-    Consider the intransitive standard action of $\Or_3$ on surfaces in Euclidean space $M=\bbR^3$. Assume that the surface is given as the graph of a funcion $u=f(x^1,x^2)$. The zeroth-order invariants are 
+    Consider the intransitive standard action of $\Or_3$ on surfaces in Euclidean space $M=\bbR^3$. Assume that the surface is given as the graph of a function $u=f(x^1,x^2)$. The zeroth-order invariants are 
     \[\begin{pmatrix}
         y^1\\y^2\\ v
     \end{pmatrix}=R\cdot \begin{pmatrix}
         x^1 \\ x^2 \\ u
     \end{pmatrix},\quad R\in\Or_3.\]
-    The lifted onctact-invariant coframe and associated invariant differential operators are 
+    The lifted contact-invariant coframe and associated invariant differential operators are 
     \[\begin{aligned}
         \begin{pmatrix}
             \eta^1\\\eta^2
@@ -5808,7 +5808,7 @@ In other words, if $\wb S=g\do S$, then the condition $\rmj^k_{z_0} \wb S=\rmj^k
     \[R=\left(\bf t\mid \hat{\bf t}\mid \bf n\right)^\top ,\quad \text{where } \bf t=\frac{\bf z\times\bf n}{\lVert \bf z\times\bf n\rVert},\quad \hat{\bf t}=\bf n\times\bf t=\frac{\bf z-(\bf z\cdot \bf n)\bf n}{\lVert \bf z\times\bf n\rVert},\label {eq 15.26 OlverCo2}\]
     define distinguished, orthogonally equivariant, unit tangent vectors. The moving frame \eqref{eq 15.26 OlverCo2} applies to surfaces whose unit normal is not parallel to the point $\bf z$. Pulling back the remaining lifted invariants leads to the first-order differential invariants 
     \[\begin{aligned}
-        J&=\left(\sigma^{(1)}\right)^\ast y^2=\frac{(\bf z\cdot \bf n)^2-\lVert\bf z\rVert^2}{\lVert \bf z\times\bf n\rVert}=-\lVert \bf z\times\bf n\rVert=-\sqrt{\lVert \bf z\rVert^2-(\bf z\cdot \bf n)^2},\\
+        J&=\left(\sigma^{(1)}\right)^\ast y^2=\frac{\lVert\bf z\rVert^2-(\bf z\cdot \bf n)^2}{\lVert \bf z\times\bf n\rVert}=\lVert \bf z\times\bf n\rVert=\sqrt{\lVert \bf z\rVert^2-(\bf z\cdot \bf n)^2},\\
         I&=\left(\sigma^{(1)}\right)^\ast v=\bf z\cdot \bf n.
     \end{aligned}\]
 
