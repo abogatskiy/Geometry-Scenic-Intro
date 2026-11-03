@@ -7167,16 +7167,16 @@ The most general statement on equivalence of $G$-structures that can be made her
 % Now let $P<\Fr^r(M)$ be a $G$-structure of order $r$ and let $\frakg<L^0\slash L^r$ be the Lie algebra of $G$. By definition,
 
 
-\section{Example: $2$-plane distributions on $5$-manifolds}
+\section{Example: \texorpdfstring{$2$}{2}-plane distributions on \texorpdfstring{$5$}{5}-manifolds}
 
 
-In 1893, Cartan found certain algebraic spaces that carry transitive actions of the exceptional Lie groups such as $\rmG_2$. This was the first explicit description of the group $\rmG_2$, following Killing's and Cartan's discovery of the Lie algebra $\frakg_2$. We refer the reader to \cite{Bryant2000} for a pedagogical summary of that description. Then, in the famous 1910 ``five variables'' paper \cite{Cartan5}, Cartan studied certain $G$-structures whose first-order integrability amounts to $\rmG_2$-invariance. These structures are very simple: distributions of rank $2$ on $5$-dimensional manifolds. The reasons for these specific dimensions are explained in some detail in \S\ref{sec: pfaff darboux thms} and \S\ref{sec: monge equations}. Here, following \cite{Sternberg}, we will illustrate the method of normalization of torsion (part of the equivalence method) by retracing a small part the ``five variables'' paper.
+In 1893, Cartan found certain algebraic spaces that carry transitive actions of the exceptional Lie groups such as $\rmG_2$. This was the first explicit description of the group $\rmG_2$, following Killing's and Cartan's discovery of the Lie algebra $\frakg_2$. We refer the reader to \cite{Bryant2000} for a pedagogical summary of that description. Then, in the famous 1910 ``five variables'' paper \cite{Cartan5}, Cartan studied certain $G$-structures whose first-order integrability amounts to $\rmG_2$-invariance. These structures are very simple: distributions of rank $2$ on $5$-dimensional manifolds. The reasons for these specific dimensions are explained in some detail in \S\ref{sec: pfaff darboux thms} and \S\ref{sec: monge equations}. Here, following \cite{Sternberg}, we will illustrate the method of normalization of torsion (part of the equivalence method) by retracing a small part of the ``five variables'' paper.
 
-As we have already seen, a distribution on $M$ is a $G$-structure for $G$ the group of marices leaving invariant a subspace $V_1<V$. Then the space $\coker\delta$ can be identified with $\Hom(V_1\wedge V_1,V\slash V_1)$. The group $G$ acts on $V_1$ by restriction and by projection on $V\slash V_1$, thus also on $\Hom(V_1\wedge V_1,V\slash V_1)$. Let us first look at the case where $\codim V_1=1$. Then $V\slash V_1$ is a line and $G$ acts by multiplication. Thus, $\Hom(V_1\wedge V_1,V\slash V_1)\cong \bigwedge\nolimits^2 V_1^\ast$. Two such forms $\omega_1,\omega_2$ lie in the same $G$-orbit if there is a scalar $\lambda$, and a non-singular linear transformation $T\in \GL(V_1)$ such that $\omega_1(u,v)=\lambda\omega_2(Tu,Tv)$ for all $u,v\in V_1$. Viewing $\omega_1$ and $\omega_2$ as square matrices, this holds iff they have the same rank. Thus, there are a finite number of orbits. The orbit of maximal dimension corresponds to maximal rank, and the orbit of zero dimension is the origin. 
+As we have already seen, a distribution on $M$ is a $G$-structure for $G$ the group of matrices leaving invariant a subspace $V_1<V$. Then the space $\coker\delta$ can be identified with $\Hom(V_1\wedge V_1,V\slash V_1)$. The group $G$ acts on $V_1$ by restriction and by projection on $V\slash V_1$, thus also on $\Hom(V_1\wedge V_1,V\slash V_1)$. Let us first look at the case where $\codim V_1=1$. Then $V\slash V_1$ is a line and $G$ acts by multiplication. Thus, $\Hom(V_1\wedge V_1,V\slash V_1)\cong \bigwedge\nolimits^2 V_1^\ast$. Two such forms $\omega_1,\omega_2$ lie in the same $G$-orbit if there is a scalar $\lambda$, and a non-singular linear transformation $T\in \GL(V_1)$ such that $\omega_1(u,v)=\lambda\omega_2(Tu,Tv)$ for all $u,v\in V_1$. Viewing $\omega_1$ and $\omega_2$ as square matrices, this holds iff they have the same rank. Thus, there are a finite number of orbits. The orbit of maximal dimension corresponds to maximal rank, and the orbit of zero dimension is the origin. 
 
-Now, the Darboux Theorem~\ref{thm darboux normal forms} implies that this rank is the only invariant of the Pfaffian system defined by our distribution, that is, any two distributions with the same rank are equivalent. Notice that in this theorem we \emph{do} allow the structure function $[c]$ to take values in a singular orbit (i.e., an orbit of non-maximal dimension). What we do require to apply the Darboux Theorem is that if $[c]$ has values in a singular orbit that it have values in that orbit on a whole open set. Thus, for instance, in the case $[c]=0$ the system is completely integrable and the Darboux Theorem reduces to the Frobenius Theorem. If $[c]$ is allowed to take on singular values at isolated points the situation becomes complicated and very little is known.
+Now, the Darboux Theorem~\ref{thm darboux normal forms} implies that this rank is the only invariant of the Pfaffian system defined by our distribution, that is, any two distributions with the same rank are equivalent. Notice that in this theorem we \emph{do} allow the structure function $[c]$ to take values in a singular orbit (i.e., an orbit of non-maximal dimension). What we do require to apply the Darboux Theorem is that if $[c]$ has values in a singular orbit then it must take values in that orbit on a whole open set. Thus, for instance, in the case $[c]=0$ the system is completely integrable and the Darboux Theorem reduces to the Frobenius Theorem. If $[c]$ is allowed to take on singular values at isolated points the situation becomes complicated and very little is known.
 
-Let us return to the case of arbitrary codimension of $V_1$. It turns out that the first situation that cannot be completely analyzed on the basis of the Frobenius and Darboux Theorems occurs when $V$ is $5$-dimensional. We therefore study this case. If $\dim V_1=1$, all distributions are equivalent and if $\dim V_1=4$, the situation is covered by the Darboux Theorem. The interesting case is then when $\dim V_1$ is $2$ or $3$. As we will see, these two cases are eseentially equivalent, so let us consider $\dim V_1=2$. We can choose a basis $e_1,\ldots,e_5$ of $V$ such that $V_1=\<e_4,e_5\>$, and $G$ is the group of invertible matrices of the form 
+Let us return to the case of arbitrary codimension of $V_1$. It turns out that the first situation that cannot be completely analyzed on the basis of the Frobenius and Darboux Theorems occurs when $V$ is $5$-dimensional. We therefore study this case. If $\dim V_1=1$, all distributions are equivalent and if $\dim V_1=4$, the situation is covered by the Darboux Theorem. The interesting case is then when $\dim V_1$ is $2$ or $3$. As we will see, these two cases are essentially equivalent, so let us consider $\dim V_1=2$. We can choose a basis $e_1,\ldots,e_5$ of $V$ such that $V_1=\<e_4,e_5\>$, and $G$ is the group of invertible matrices of the form 
 \[
 \left(\begin{array}{ccc|cc}
     * & * & * & 0 & 0\\
@@ -7189,10 +7189,10 @@ Let us return to the case of arbitrary codimension of $V_1$. It turns out that t
 \]
 This group is $19$-dimensional. Since we will be repeatedly reducing the group (and $G$-structure), let us denote these groups by their dimension, starting with $G_{19}$. The structure function takes values in $\Hom(V_1\wedge V_1,V\slash V_1)$. Since $V_1$ is two-dimensional, $\dim V_1\wedge V_1=1$ and $\dim V\slash V_1=3$. Therefore, $\dim\Hom(V_1\wedge V_1,V\slash V_1)=3$. The group $G_{19}$ acts transitively on the nonzero vectors of this space, as can easily be checked. In other words, there are exactly two orbits: The $0$-dimensional manifold consisting of the zero vector and the $3$-dimensional manifold consisting of all nonzero vectors. If the structure function vanishes identically, we are in the completely integrable situation and all such structures are equivalent. 
 
-If the structure function vanishes at a point but not identically, our procedure breaks down. We therefore consider this case. Let us pick an element $w\in \Hom(V_1\wedge V_1,V\slash V_1)$ such that 
+If the structure function vanishes at a point but not identically, our procedure breaks down. We therefore exclude this case and assume that the structure function vanishes nowhere. Let us pick an element $w\in \Hom(V_1\wedge V_1,V\slash V_1)$ such that 
 \[w(e_4\wedge e_5)=[e_3]=e_3+V_1.\]
 Our procedure then yields a reduction of the $G_{19}$-structure to the subgroup $G_{16}$ consisting of all $a\in G_{19}$ such that 
-\[w(au\wedge av)=(aw)(u\wedge v)\quad \text{for all }u,v\in V_1.\]
+\[a\,w(u\wedge v)=w(au\wedge av)\quad \text{for all }u,v\in V_1.\]
 The group $G_{16}$ can be regarded as the group of all invertible matrices of the form 
 \[
 \left(
@@ -7218,10 +7218,10 @@ The Lie algebra $\frakg_{16}$ is the set of all matrices of the form
 \end{array}\right).
 \]
 We must now examine the range of the structure function $[c_{16}]$ of the new $G_{16}$-structure. This time it takes values in 
-\[\Hom(V\wedge V,V\slash V_1)\slash\delta(\Hom(V,\frakg_{16})).\]
-According to our general procedure, we should study the action of $G$ on this space. As this involves a rather messy computation we proceed a little differently. Observe that $G_{16}$ leaves invariant the $3$-dimensional subspace $W\coloneqq \<e_3,e_4,e_5\>$. (It leaves $w$ invariant and thus the subspace $w(V_1)<V\slash V_1$; the space $\<e_3,e_4,e_5\>$ is just the preimage of $w(V_1)$ in $V$.) There is a natural projection 
-\[\chi: \Hom(V\wedge V,V)\slash \delta(\Hom (V,\frakg_{16}))\to \Hom(W\wedge V,V\slash W).\]
-As $G_{16}$ is not the group of all matrices leaving $W$ invariant, this is not an isomorphism. Nevertheless, we can consider the function $\chi\circ [c_{16}]$ to reduce the group. (So we will only use a piece of the structure function to reduce the group -- a trick useful in many cases.) Since $\dim W=3$, we have $\dim W\wedge W=3$ and $\dim V\slash W=2$. An element of $\Hom(W\wedge W,V\slash W)$ is thus of rank $0$, $1$ or $2$. [If $\chi\circ[c_{16}]$ vanishes identically then the structure corresponding to $W$ is completely integrable. It is then an elementary consequence of the Darboux and Frobenius Theorems that all such structures are locally equivalence. If $\chi\circ[c_{16}]$ has rank $1$ identically, a case analysis again shows (after a further group reduction) that the situation can be completely handled by the same theorems.] The generic case is where the rank is $2$ everywhere. Notice that the element $\chi\circ [c_{16}]$ is not arbitrary. By the very construction of the $G_{16}$-structure, the value must annihilate $e_4\wedge e_5$. The reader can verify that $G_{16}$ acts transitively on the $4$-dimensional manifold of all elements of rank $2$ of $\Hom(W\wedge W,V\slash W)$ which annihilate $e_4\wedge e_5$. Let us pick a specific element $c_0$ of this manifold such that 
+\[\Hom(V\wedge V,V)\slash\delta(\Hom(V,\frakg_{16})).\]
+According to our general procedure, we should study the action of $G_{16}$ on this space. As this involves a rather messy computation we proceed a little differently. Observe that $G_{16}$ leaves invariant the $3$-dimensional subspace $W\coloneqq \<e_3,e_4,e_5\>$. (It leaves $w$ invariant and thus the subspace $w(V_1)<V\slash V_1$; the space $\<e_3,e_4,e_5\>$ is just the preimage of $w(V_1)$ in $V$.) There is a natural projection 
+\[\chi: \Hom(V\wedge V,V)\slash \delta(\Hom (V,\frakg_{16}))\to \Hom(W\wedge W,V\slash W).\]
+As $G_{16}$ is not the group of all matrices leaving $W$ invariant, this is not an isomorphism. Nevertheless, we can consider the function $\chi\circ [c_{16}]$ to reduce the group. (So we will only use a piece of the structure function to reduce the group -- a trick useful in many cases.) Since $\dim W=3$, we have $\dim W\wedge W=3$ and $\dim V\slash W=2$. An element of $\Hom(W\wedge W,V\slash W)$ is thus of rank $0$, $1$ or $2$. [If $\chi\circ[c_{16}]$ vanishes identically then the structure corresponding to $W$ is completely integrable. It is then an elementary consequence of the Darboux and Frobenius Theorems that all such structures are locally equivalent. If $\chi\circ[c_{16}]$ has rank $1$ identically, a case analysis again shows (after a further group reduction) that the situation can be completely handled by the same theorems.] The generic case is where the rank is $2$ everywhere. Notice that the element $\chi\circ [c_{16}]$ is not arbitrary. By the very construction of the $G_{16}$-structure, the value must annihilate $e_4\wedge e_5$. The reader can verify that $G_{16}$ acts transitively on the $4$-dimensional manifold of all elements of rank $2$ of $\Hom(W\wedge W,V\slash W)$ which annihilate $e_4\wedge e_5$. Let us pick a specific element $c_0$ of this manifold such that 
 \[c_0(e_3\wedge e_4)=[e_1],\quad c_0(e_3\wedge e_5)=[e_2].\]
 The stabilizer of $c_0$ is then a $12$-dimensional group $G_{12}$ consisting of the matrices
 \[
@@ -7236,7 +7236,7 @@ The stabilizer of $c_0$ is then a $12$-dimensional group $G_{12}$ consisting of 
 \end{array}\right),\quad \text{where}\; \Delta=\alpha\delta-\beta\gamma.
 \]
 
-Finally, we note that in the other case of rank $3$ distributions on $5$-manifolds, modeled on a $3$-dimensional subspace $W_1<V$. Here the original structure group would still be $19$-dimensional (the $3\times 2$ block of zeros in the matrices would instead be of size $2\times 3$), we would get $\dim W_1\wedge W_1=3$, $\dim \Hom(W_1\wedge W_1,V\slash W_1)=6$, and the group would act transitively on elements of rank $2$. Any such rank $2$ element $c_0$ acts on the $3$-dimensional space $W_1\wedge W_1$, hence vanishes on a line, and a line in $W_1\wedge W_1$ corresponds to a $2$-dimensional subspace of $W_1$. We have thus picked out a $2$-dimensional subspace of $W_1$ invariant under the ($13$-dimensional) group leaving $c_0$ invariant. In particular, we have associated a rank $2$ distribution to every generic rank $3$ one. If we carry out a similar reduction of this new rank $2$ distribution, we will again get $G_{12}$. Thus, \emph{the problems of classifying generic distributions of rank $2$ and $3$ on $5$-manifolds are completely equivalent.}
+Let us briefly consider the other case: rank $3$ distributions on $5$-manifolds, modeled on a $3$-dimensional subspace $W_1<V$. Here the original structure group would still be $19$-dimensional (the $3\times 2$ block of zeros in the matrices would instead be of size $2\times 3$), we would get $\dim W_1\wedge W_1=3$, $\dim \Hom(W_1\wedge W_1,V\slash W_1)=6$, and the group would act transitively on elements of rank $2$. Any such rank $2$ element $c_0$ is defined on the $3$-dimensional space $W_1\wedge W_1$, hence vanishes on a line, and a line in $W_1\wedge W_1$ corresponds to a $2$-dimensional subspace of $W_1$. We have thus picked out a $2$-dimensional subspace of $W_1$ invariant under the ($13$-dimensional) group leaving $c_0$ invariant. In particular, we have associated a rank $2$ distribution to every generic rank $3$ one. If we carry out a similar reduction of this new rank $2$ distribution, we will again get $G_{12}$. Thus, \emph{the problems of classifying generic distributions of rank $2$ and $3$ on $5$-manifolds are completely equivalent.} One word of caution is in order, since the argument above is pointwise. Let $D$ be the rank $3$ distribution and $E<D$ the rank $2$ subdistribution we have just constructed; by construction, $[E,E]\subset D$. If $E$ is not integrable, then $[E,E]=D$, i.e., $D$ is recovered from $E$ as its first derived distribution, and the equivalence holds as stated. This is the generic situation. If $E$ is integrable, it does not hold: the basic example is the contact distribution $D=\ker\{\dd z^1-p_1\dd x,\dd z^2-p_2\dd x\}$ on $\rmJ^1(\bbR,\bbR^2)$, for which $E=\<\partial_{p_1},\partial_{p_2}\>$ is the (integrable) vertical distribution.
 
 The reductions from $G_{12}$ get more complicated. By straightforward but lengthy and messy calculations one can carry out this reduction procedure twice more to get a $7$-dimensional group $G_7$ whose Lie algebra is 
 \[
@@ -7250,7 +7250,71 @@ The reductions from $G_{12}$ get more complicated. By straightforward but length
     0 & a_7 & -\frac43 a_5 & a_3 & a_4\\
 \end{array}\right).
 \]
-No further reductions are possible via the method outlined above. Instead, one must look at the second-order structure functions.  We thus conclude that $G_7$-invariance of the value of the intrinsic torsion of our $G$-structure is equivalent to its first-order integrability. The group $G_7$ turns out to be the split real form of the ($14$-dimensional) exceptional Lie group $\rmG_2$.
+No further reductions are possible via the method outlined above: what remains of the first-order structure function is $G_7$-invariant, i.e., it has been normalized to a constant. To go further, one must prolong the $G_7$-structure and look at the second-order structure functions. This is where we stop the computations. Notice that $G_7$ itself is \emph{not} $\rmG_2$ (it is only $7$-dimensional). Let us sketch how the story ends and how the exceptional group enters.
+
+\begin{rem}\label{rem 235 symbol}
+    Write $D<\T M$ for our rank $2$ distribution, and $D^2\coloneqq D+[D,D]$, $D^3\coloneqq D^2+[D,D^2]$ for its derived distributions.\index{Derived distribution} The first reduction (to $G_{16}$) used the assumption that the structure function never vanishes, i.e., that $D^2$ has rank $3$, and the subspace $W$ is the model of $D^2$. The second reduction (to $G_{12}$) used the rank $2$ condition, i.e., $D^3=\T M$. So generic distributions grow as $D\subset D^2\subset D^3=\T M$ with ranks $(2,3,5)$, and we call them \emph{$(2,3,5)$ distributions}.\index{Distribution!$(2,3,5)$} The brackets of vector fields in $D$ produce a basis of each $\T_xM$ of the form
+    \[X_1,\;X_2,\;X_3=[X_1,X_2],\;X_4=[X_1,X_3],\;X_5=[X_2,X_3],\]
+    and in the notation above $e_4,e_5$ model $X_1,X_2$, $e_3$ models $X_3$, and $e_1,e_2$ model $X_4,X_5$.
+
+    There is a subtlety here: the value $X_3(x)=[X_1,X_2](x)$ depends on how the vectors $X_1(x),X_2(x)$ are extended to vector fields, but only up to adding a vector in $D_x$. Similarly, $X_4(x)$ and $X_5(x)$ are well defined only up to vectors in $D^2_x$. What \emph{is} canonical is the ``layered'' space
+    \[\frakm_x\coloneqq \underbrace{D_x}_{\frakm_{-1}}\oplus \underbrace{D^2_x\slash D_x}_{\frakm_{-2}}\oplus \underbrace{\T_xM\slash D^2_x}_{\frakm_{-3}},\]
+    in which vectors are sorted by how many brackets it takes to reach them, and in each layer we forget the contributions of the lower layers. The bracket of vector fields induces a well-defined bilinear bracket on $\frakm_x$ (one checks that the ambiguities cancel), which adds the weights: $[\frakm_{-i},\frakm_{-j}]\subset\frakm_{-i-j}$ (with $\frakm_{-k}=0$ for $k>3$). This makes $\frakm_x$ a \emph{graded Lie algebra}\index{Lie algebra!Graded}: a Lie algebra split into pieces labeled by integers, such that brackets add the labels.\footnote{The most familiar example is the polynomial vector fields on $\bbR$, where $x^{k+1}\partial_x$ has weight $k$, since $[x^{i+1}\partial_x,x^{j+1}\partial_x]=(j-i)x^{i+j+1}\partial_x$.} It is the first-order approximation of $D$ at $x$, in the same way as $\T_xM$ is the first-order approximation of $M$, and it is the same (isomorphic to the span of $X_1,\ldots,X_5$ with the brackets above, all others zero) for all $(2,3,5)$ distributions.
+
+    In these terms, $G_{12}$ consists exactly of the linear maps of $V$ which preserve the flag $V_1<W<V$ (modeling $D\subset D^2\subset\T M$) and induce automorphisms of $\frakm$ on the layers. Its block-diagonal part is the group of automorphisms of $\frakm$ preserving the layers, which is just $\GL(\frakm_{-1})\cong\GL_2(\bbR)$: a change of basis $(X_1,X_2)$ by a matrix $\begin{psmallmatrix}\alpha&\beta\\ \gamma&\delta\end{psmallmatrix}$ multiplies $X_3$ by $\Delta$ and transforms $(X_4,X_5)$ by $\Delta\begin{psmallmatrix}\alpha&\beta\\ \gamma&\delta\end{psmallmatrix}$. The $8$ starred entries act trivially on the layers; they reflect precisely the ambiguity of adding lower terms (e.g., $X_3\mapsto X_3+(\text{something in }D)$). Since $\frakm$ is the same for all $(2,3,5)$ distributions, the first two reductions have not yet distinguished any two of them. The actual geometry begins with the reductions from $G_{12}$ to $G_7$.
+\end{rem}
+
+\begin{example}[The flat model]
+    The simplest example is given by the Hilbert--Cartan equation\index{Equation!Hilbert-Cartan} $z'=(y'')^2$ (see \S\ref{sec: monge equations}). This is an underdetermined ODE for \emph{two} unknown functions $y(x)$ and $z(x)$ of one variable $x$: one can choose $y(x)$ arbitrarily and then find $z(x)$ by integration. We use jet coordinates $p=y'$ and $q=y''$ for $y$. For $z$, we only need its value, since the equation itself determines $z'$. Thus, we work on the $5$-dimensional space with coordinates $(x,y,p,q,z)$. The equations $p=y'$, $q=p'$ and $z'=q^2$ then become the distribution
+    \[D=\ker\{\dd y-p\dd x,\;\dd p-q\dd x,\;\dd z-q^2\dd x\}=\<X,Q\>,\]
+    where
+    \[X=\partial_x+p\partial_y+q\partial_p+q^2\partial_z,\quad Q=\partial_q.\]
+    Its integral curves with $\dd x\neq0$ are exactly the curves $x\mapsto(x,y(x),y'(x),y''(x),z(x))$ for solutions $(y(x),z(x))$ of the equation. One computes $[Q,X]=\partial_p+2q\partial_z\eqqcolon Y$, $[Q,Y]=2\partial_z$, $[X,Y]=-\partial_y$, which confirms the growth $(2,3,5)$. The symmetry algebra\index{Symmetry algebra of a distribution} of this distribution (the Lie algebra of vector fields whose flows preserve $D$) is the $14$-dimensional split real form of $\frakg_2$.\index{Exceptional Lie group $\rmG_2$} This algebra can be graded (in the sense of Remark~\ref{rem 235 symbol}) as
+    \[\frakg_2=\frakg_{-3}\oplus\frakg_{-2}\oplus\frakg_{-1}\oplus\frakg_0\oplus\frakg_1\oplus\frakg_2\oplus\frakg_3,\qquad [\frakg_i,\frakg_j]\subset\frakg_{i+j},\]
+    with dimensions $2,1,2,4,2,1,2$. The negative part $\frakg_{-3}\oplus\frakg_{-2}\oplus\frakg_{-1}$ is isomorphic to the graded Lie algebra $\frakm$ of Remark~\ref{rem 235 symbol}, and $\frakg_0\cong\frakgl_2(\bbR)$ acts on it by the layer-preserving automorphisms described there. The non-negative part $\frakp\coloneqq\frakg_0\oplus\frakg_1\oplus\frakg_2\oplus\frakg_3$ is a $9$-dimensional \emph{parabolic} subalgebra,\index{Parabolic subgroup (subalgebra)}\footnote{Intuitively, parabolic subgroups are the analogs, in a general semisimple Lie group $G$, of the groups of block upper-triangular matrices in $\GL_n$, i.e., of stabilizers of flags of subspaces $V_1<V_2<\cdots<\bbR^n$. Correspondingly, the homogeneous spaces $G\slash P$ generalize the flag manifolds of \S\ref{sec: flag manifolds}, and in particular are compact. On the level of Lie algebras, parabolic subalgebras are exactly the non-negative parts of gradings like the one above: for block upper-triangular matrices, give the $(i,j)$-th block the weight $j-i$.} and the flat model is locally the $5$-dimensional homogeneous space $\rmG_2\slash P$, where $P$ is the corresponding subgroup. A more down-to-earth incarnation of the same distribution, in terms of two balls rolling on each other, is described in Remark~\ref{rem rolling balls} below.
+\end{example}
+
+We can now see where $G_7$ fits in. The group $P$ acts on $\frakg_2\slash\frakp$, which is the tangent space of $\rmG_2\slash P$ at the base point and is identified with $V$. Since $[\frakg_3,\frakg_{-k}]\subset\frakg_{3-k}\subset\frakp$ for $k=1,2,3$, the subgroup $\exp\frakg_3$ acts trivially, while the rest of $P$ acts faithfully. The image of $P$ in $\GL(V)$ is therefore $(9-2)$-dimensional, and this is precisely $G_7$: in the matrix above, $a_1,\ldots,a_4$ span $\frakg_0$, $a_5,a_6$ span $\frakg_1$ (mapping $\frakg_{-3}\to\frakg_{-2}\to\frakg_{-1}$), and $a_7$ spans $\frakg_2$ (mapping $\frakg_{-3}\to\frakg_{-1}$). The missing piece $\frakg_3$ is invisible at first order and reappears in the first prolongation of the $G_7$-structure, after which the procedure terminates. In the language of Cartan geometry, which we will develop in Chapter~\ref{ch: cartan geom}, the result reads as follows.
+
+\begin{thm}[Cartan, 1910]\index{Theorem!Cartan's five variables}
+    Let $D$ be a $(2,3,5)$ distribution on $M$. Then there is a principal $P$-bundle $B\to M$ with a canonical Cartan connection $\eta\in\Omega^1(B,\frakg_2)$ of type $(\rmG_2,P)$; in particular, $\dim B=\dim M+\dim G_7+\dim\frakg_3=5+7+2=14$. The curvature of $\eta$ is controlled by a single invariant (in particular, it vanishes iff this invariant does): a quartic form $\calA$\index{Cartan's quartic} on the $2$-plane $D_x$ at each point $x$ (defined up to a scalar factor), called \emph{Cartan's quartic}, and:
+    \begin{itemize}
+        \item $\calA\equiv 0$ iff $D$ is locally equivalent to the flat model, and then its symmetry algebra is $\frakg_2$;
+        \item if $\calA\not\equiv0$, the symmetry algebra of $D$ has dimension at most $7$.
+    \end{itemize}
+\end{thm}
+
+\begin{rem}
+    Thus, the dimension of the symmetry algebra of a $(2,3,5)$ distribution is either $14$ or at most $7$, and nothing in between. A homogeneous quartic in two variables factors into four linear factors over $\bbC$, and the pattern of repeated roots of $\calA$ (which is invariant) splits the non-flat distributions into further classes. Since every $(2,3,5)$ distribution is locally given by a Monge equation $z'=F(x,y,y',y'',z)$ with $F_{y''y''}\neq0$ (\S\ref{sec: monge equations}), $\calA$ can be computed explicitly from $F$, although the formula is lengthy. For instance, among the equations $z'=(y'')^m$ (with $m\neq0,1$, so that $F_{y''y''}\neq0$), the flat ones are exactly those with $m\in\{-1,\tfrac13,\tfrac23,2\}$. For all other values of $m$, the symmetry algebra is $7$-dimensional, so the upper bound in the theorem is attained.
+\end{rem}
+
+\begin{rem}[Rolling balls]\label{rem rolling balls}\index{Rolling balls}\index{Rolling without slipping}
+    Let a ball of radius $1$ roll on a fixed ball of radius $R$ centered at the origin. A configuration of the rolling ball is a pair $(g,\bf{x})\in M\coloneqq\SO_3\times\bbS^2$, where $\bf{x}$ is the unit vector pointing from the origin towards the point of contact (so the moving center is at $(R+1)\bf{x}$), and $g$ is the orientation of the rolling ball relative to some reference position. Thus, $\dim M=5$. Along a motion $(g(t),\bf{x}(t))$, let $\bm{\omega}$ be the angular velocity of the rolling ball, so that $\dot g g^{-1}$ is the infinitesimal rotation $\bf{v}\mapsto\bm{\omega}\times \bf{v}$. The material point of the rolling ball that touches the fixed ball is at $(R+1)\bf{x}-\bf{x}$, so its velocity is $(R+1)\dot{\bf{x}}-\bm{\omega}\times \bf{x}$. The two constraints are:
+    \begin{itemize}
+        \item \emph{no slipping}: the point of contact has zero velocity, i.e., $\bm{\omega}\times \bf{x}=(R+1)\dot{\bf{x}}$;
+        \item \emph{no twisting}: the ball does not spin about the common normal, i.e., $\<\bm{\omega},\bf{x}\>=0$.
+    \end{itemize}
+    Together they say exactly that $\bm{\omega}=(R+1)\,\bf{x}\times\dot{\bf{x}}$. Thus, the admissible velocities at $(g,\bf{x})$ form the $2$-plane
+    \[D_{(g,\bf{x})}=\{(\bm{\omega}\times g,\;\dot{\bf{x}})\mid \dot{\bf{x}}\in\T_{\bf{x}}\bbS^2,\ \bm{\omega}=(R+1)\,\bf{x}\times\dot{\bf{x}}\},\]
+    where $\bm{\omega}\times g$ denotes the matrix $(\bf{v}\mapsto\bm{\omega}\times \bf{v})\circ g$. The integral curves of $D$ are the rolling motions: any path $\bf{x}(t)$ traced by the point of contact on the fixed ball, together with an initial orientation, determines a unique rolling motion. (This is the original physical form of the development of curves, which we will meet in Chapter~\ref{ch: cartan geom}.) Here are the main facts about $D$.
+    \begin{itemize}
+        \item If $R=1$, $D$ is integrable, so from any given configuration the rolling ball can only reach a $2$-dimensional family of configurations: its orientation is a function of the point of contact. (One can check that the rolling ball always remains the mirror image of the fixed one in their common tangent plane.) For $R\neq1$, $D$ is a $(2,3,5)$ distribution. Then iterated brackets of admissible velocities span all directions, and one can show that any configuration can be reached from any other.
+        \item The obvious symmetries are rotations of the whole system about the origin, and rotations of the rolling ball about its own center (i.e., changes of the reference position). They form the group $\SO_3\times\SO_3$, which acts transitively on $M$. Hence $D$ looks the same at every point, and in particular Cartan's quartic $\calA$ is determined by its value at a single point. It depends only on $R$.
+        \item $\calA$ vanishes iff $R=3$ or $R=\frac13$. For all other $R\neq1$, the symmetry algebra of $D$ is just $\frakso_3\times\frakso_3$. For $R=3$ or $\frac13$, $D$ is locally equivalent to the flat model, so its symmetry algebra is $\frakg_2$. (The corresponding action of $\rmG_2$ is defined globally only on the double cover $\bbS^3\times\bbS^2$ of $M$, where $\bbS^3\cong\SU_2$ double-covers $\SO_3$.)
+    \end{itemize}
+    The number $3$ was found by calculation, and there is still no elementary explanation for it.
+
+    It is natural to ask about the physical meaning of $\calA$ and of the extra symmetries. $\calA$ does not seem to have a direct mechanical interpretation; it simply measures, at each point, the obstruction to having $\frakg_2$ as the symmetry algebra. The extra symmetries are symmetries of the constraints only: they map rolling motions to rolling motions, but most of them mix the position and orientation of the ball in a way that no rigid motion does. In particular, they do not preserve kinetic energy. In fact, no $\rmG_2$-invariant inner product on $D$ exists at all, since the stabilizer $P$ of a point acts on the $2$-plane $D_{(g,\bf{x})}$ through all of $\GL_2(\bbR)$, which preserves no inner product. So any actual dynamics of the ball (e.g., rolling with given kinetic energy, or rolling along shortest paths) has only the $\SO_3\times\SO_3$ symmetry, and the hidden $\rmG_2$ symmetry gives no conservation laws.
+
+    The Cartan connection $\eta$ of Cartan's theorem, on the other hand, has a concrete meaning: it lets us roll one rolling system on another. As we will see in Chapter~\ref{ch: cartan geom}, a Cartan connection allows us to \emph{develop} curves in $M$ into curves in the model space $\rmG_2\slash P$, once a starting point in the fiber of $B$ is chosen. Since $\eta$ is adapted to $D$, integral curves of $D$ develop into integral curves of the flat distribution. Now, the flat model is (locally, on the double cover) the configuration space of balls with $R=3$. So $\eta$ translates every rolling motion of a ball on a ball of radius $R$ into a rolling motion of a ball on a ball of radius $3$, in a canonical way (up to the choice of the starting point, which corresponds to a symmetry of the flat model).
+
+    The failure of this translation to be exact is measured by the holonomy of $\eta$. Development turns out to be parallel transport in the extended $\rmG_2$-bundle $B\times^P\rmG_2$ (with a principal connection induced by $\eta$). By a \emph{closed rolling motion} we mean a closed integral curve $\gamma$ of $D$, i.e., a rolling motion that returns to its initial configuration: the point of contact returns to its initial position \emph{and} the rolling ball returns to its initial orientation. (Returning the point of contact alone is not enough: rolling around a closed path on the fixed ball usually leaves the rolling ball rotated, which is how one can reach all configurations.) If we follow a closed rolling motion $\gamma$ for radius $R$, the developed motion for radius $3$ ends at $h$ applied to its initial configuration, where $h\in\rmG_2$ is the holonomy of $\gamma$. The developed motion therefore returns to its initial configuration iff $h$ lies in the stabilizer $P$ of that configuration.
+    \begin{itemize}
+        \item For $R=3$, the geometry is flat, so the holonomy of contractible loops is trivial, and every closed rolling motion (in a simply connected region) develops into a closed one. Development then gives a \emph{developing map} (Theorem~\ref{thm development flat cartan}), which identifies the system with the flat model, and $B$ is (locally) the group $\rmG_2$ itself.
+        \item For $R\neq3$, some closed rolling motions must develop into rolling motions for radius $3$ which do \emph{not} return to their initial configuration. Indeed, suppose that near some point all closed motions developed into closed ones. Then the endpoint of the development of a path would depend only on the endpoint of the path, which would define a local map from $M$ to the flat model taking $D$ to the flat distribution. That would make $D$ locally flat, contradicting $\calA\neq0$. Since $\calA$ does not vanish anywhere, such loops exist near every point, and can be taken arbitrarily small.
+    \end{itemize}
+    For infinitesimally small loops, the holonomy is given by the curvature of $\eta$, exactly as for principal connections. In this sense, the curvature, and hence $\calA$, measures how much an infinitesimal closed rolling motion for radius $R$ fails to be mimicked by a closed rolling motion for radius $3$.
+\end{rem}
 
 
 
@@ -8845,7 +8909,7 @@ At the end of this procedure, assuming torsion vanishes, one can perform Cartan'
     where $x^i,y^i$ are the real and imaginary parts of the standard complex coordinate $z^i$ on $\bbC^n$. If $f=u+\i v$ with real $u,v$, then this becomes 
     \[u_{x^i}=v_{y^i},\quad v_{x^i}=-u_{y^i}.\]
     Let $M\coloneqq \bbR^{2n+2+2n}$ be the space parametrized by $(\bf{x},\bf{y},u,v,\bf{p},\bf{q})$ and take the canonical contact system restricted to the manifold defined by these equations:
-    \[\theta^1\coloneqq \dd u-p_i\dd x^i-q_k\dd y^j,\quad \theta^2\coloneqq \dd v+q_i\dd x^i-p_j \dd y^j.\]
+    \[\theta^1\coloneqq \dd u-p_i\dd x^i-q_i\dd y^i,\quad \theta^2\coloneqq \dd v+q_i\dd x^i-p_i \dd y^i.\]
     The only algebraic generators of degree above $1$ are $\dd\theta^k$, so the structure equation is
     \[
     \begin{pmatrix}
@@ -8871,24 +8935,24 @@ At the end of this procedure, assuming torsion vanishes, one can perform Cartan'
         \dd p_i\\
         \dd q_i
     \end{pmatrix}=\begin{pmatrix}
-        r_{ij} & -s_{ij}\\
-        s_{ij} & r_{ij}
+        r_{ij} & s_{ij}\\
+        s_{ij} & -r_{ij}
     \end{pmatrix}
     \begin{pmatrix}
         \dd x^j \\
         \dd y^j
     \end{pmatrix},
     \]
-    with $(r_{ij}),(s_{ij})$ symmetric matrices. So the space of integral elements has dimension $4n+2+n(n+1)$ and we conclude involution. The general holomorphic function depends on $2$ functions of $n$ variables. For example, it suffices to provide arbitrary (real analytic) values of the function on an $n$-dimensional analytic submanifold, and then they will have a unique complex analytic continuation to an open neighborhood of that manifold.
+    with $(r_{ij}),(s_{ij})$ symmetric matrices. So the space of integral elements has dimension $4n+2+n(n+1)$ and we conclude involution. The general holomorphic function depends on $2$ functions of $n$ variables. For example, it suffices to provide arbitrary (real analytic) values of the function on an $n$-dimensional totally real analytic submanifold, such as $\bbR^n\subset\bbC^n$, and then they will have a unique holomorphic extension to an open neighborhood of that submanifold.
 
-    This is even easier in complex notation. Let $\omega^i\coloneqq \dd x^i+\i \dd y^i$, $\theta\coloneqq \theta^1+\i \theta^2$, $\pi_i\coloneqq \dd p_i+\i \dd q_i$ and $\wb\omega^i\coloneqq \dd x^i-\i \dd y^i$. In general, a tableau in complex forms will have terms expressed in wedge products with $\omega^i$ and $\wb\omega^i$. But the Cauchy-Riemann equations give 
+    This is even easier in complex notation. Let $\omega^i\coloneqq \dd x^i+\i \dd y^i$, $\theta\coloneqq \theta^1+\i \theta^2$, $\pi_i\coloneqq \dd p_i-\i \dd q_i$ and $\wb\omega^i\coloneqq \dd x^i-\i \dd y^i$. In general, a tableau in complex forms will have terms expressed in wedge products with $\omega^i$ and $\wb\omega^i$. But the Cauchy-Riemann equations give 
     \[\dd\theta=-\begin{pmatrix}
-        \boxed{\pi^1} & \cdots &\boxed{\pi^n}
+        \boxed{\pi_1} & \cdots &\boxed{\pi_n}
     \end{pmatrix}\wedge 
     \begin{pmatrix}
         \omega^1\\\vdots \\ \omega^n
     \end{pmatrix}\]
-    with no $\wb\omega^i$ terms. The characters count complex polars, so we double them to count real and imaginary parts, giving the same characters. Integral elements are described by $\pi_i=p_{ij}\omega^j$ with some complex matrix $p_{ij}=p_{ji}$, which is $n(n+1)/2$ complex numbers or $n(n+1)$ real ones, as before.
+    with no $\wb\omega^i$ terms. The characters count complex polars, so we double them to count real and imaginary parts, giving the same characters. Integral elements are described by $\pi_i=c_{ij}\omega^j$ with some complex matrix $c_{ij}=c_{ji}$ (in fact $c_{ij}=r_{ij}-\i s_{ij}$), which is $n(n+1)/2$ complex numbers or $n(n+1)$ real ones, as before.
 \end{example}
 
 
@@ -9582,15 +9646,15 @@ We will be interested in what higher-order terms can appear in the Taylor series
         \end{multline}
         \item  The tableau $A=\{0\}$ corresponds to a Pfaffian system. The equations are $u^a_{x^i}=0$ for all $i,a$. The only solutions to this system are constants. We say that \emph{solutions depend on $s$ constants}.
         \item When $A=W\otimes V^\ast$, there are no equations and any map is a solution. We say that \emph{solutions depend on $s$ functions of $n$ variables}.
-        \item Let $L^\ast\subset V^\ast$ be a $k$-dimensional linear subspace and let $A=W\otimes L^\ast$. If $L^\ast=\<\dd x^1,\ldots,\dd x^k\>$, the equations are $u^a_{x^\rho}=0$, $k+1\leq \rho\leq n$, and the solutions are $u^a(x^1,\ldots,x^n)=f^a(x^1,\ldots,x^k)$, where $f^a$ are arbitrary functions. We say that \emph{solutions depend on $s$ functions of $k$ variables}. w.r.t.\ adapted bases we may write elements of $A$ in block form as $\left(\begin{smallmatrix}
+        \item Let $L^\ast\subset V^\ast$ be a $k$-dimensional linear subspace and let $A=W\otimes L^\ast$. If $L^\ast=\<\dd x^1,\ldots,\dd x^k\>$, the equations are $u^a_{x^\rho}=0$, $k+1\leq \rho\leq n$, and the solutions are $u^a(x^1,\ldots,x^n)=f^a(x^1,\ldots,x^k)$, where $f^a$ are arbitrary functions. We say that \emph{solutions depend on $s$ functions of $k$ variables}. With respect to adapted bases we may write elements of $A$ in block form as $\left(\begin{smallmatrix}
             *&0
         \end{smallmatrix}\right)$, where the left block is free and the right block is zero.
-        \item Let $A=Y\otimes V^\ast$, where $Y$ is a $p$-dimensional linear subspace of $W$. If $Y$ is spanned by $u^\lambda$, $1\leq \lambda\leq p$, the equations are $u^\xi_{x^i}=0$, where $p+1\leq \xi\leq s$. Solutions are 
+        \item Let $A=Y\otimes V^\ast$, where $Y$ is a $p$-dimensional linear subspace of $W$. If $Y$ is spanned by $\partial_{u^\lambda}$, $1\leq \lambda\leq p$, the equations are $u^\xi_{x^i}=0$, where $p+1\leq \xi\leq s$. Solutions are 
         \begin{align}
             u^\lambda(x^1,\ldots,x^n)&=f^\lambda(x^1,\ldots,x^n),\\
             u^\xi(x^1,\ldots,x^n)&=f^\xi_0,
         \end{align}
-        where $f^\lambda(x^1,\ldots,x^n)$ are arbitrary functions and the $f_0^\xi$ are constants; so, \emph{solutions depend on $p$ functions of $n$ variables and $s-p$ constants.} One may think of this tableau as a combination of the previous two. w.r.t.\ adapted bases we may write $A$ in block form as $\left(\begin{smallmatrix}
+        where $f^\lambda(x^1,\ldots,x^n)$ are arbitrary functions and the $f_0^\xi$ are constants; so, \emph{solutions depend on $p$ functions of $n$ variables and $s-p$ constants.} One may think of this tableau as a combination of (2) and (3). With respect to adapted bases we may write $A$ in block form as $\left(\begin{smallmatrix}
             *\\0
         \end{smallmatrix}\right)$.
     \end{enumerate}
@@ -9840,7 +9904,7 @@ The freedom of the functions of $l$ variables is more significant than all the o
 
 
 \begin{example}[Cauchy-Riemann system]
-    We already know that the Cauchy-Riemann system is involutive (cf.\ Example~\ref{example cauchy-riemann eds}), but we can nevertheless compute its prolongations our of curiosity. Continuing Example~\ref{ex tableau}(1), we see that the space $A\otimes \bbR^2$ has the basis (omitting tensor products)
+    We already know that the Cauchy-Riemann system is involutive (cf.\ Example~\ref{example cauchy-riemann eds}), but we can nevertheless compute its prolongations out of curiosity. Continuing Example~\ref{ex tableau}(1), we see that the space $A\otimes \bbR^2$ has the basis (omitting tensor products)
     \begin{multline}
         \{\partial_{u^1}\dd x^1\dd x^1+\partial_{u^2}\dd x^2\dd x^1,-\partial_{u^2}\dd x^1\dd x^1+\partial_{u^1}\dd x^2\dd x^1,\\
         \partial_{u^1}\dd x^1\dd x^2+\partial_{u^2}\dd x^2\dd x^2, -\partial_{u^2}\dd x^1\dd x^2+\partial_{u^1}\dd x^2\dd x^2\}.
@@ -9856,13 +9920,13 @@ The freedom of the functions of $l$ variables is more significant than all the o
             a&b\\b&-a
         \end{pmatrix}\middle| a,b\in\bbR
     \right\}.\]
-    Since we had $s_1=2$ and $s_2=0$, we conclude involutivity because $\dim A^{(1)}=s_1+2s_2$ holds. Thus, solutions of the Cauchy-Riemann system depend on two functions of one variable. Indeed, in complex analysis an analytic function is determined uniquely by its real and imaginary parts along a smooth curve. Continuing, it is similarly easy to check that the second prolongation is one-dimensional:
+    Since we had $s_1=2$ and $s_2=0$, we conclude involutivity because $\dim A^{(1)}=s_1+2s_2$ holds. Thus, solutions of the Cauchy-Riemann system depend on two functions of one variable. Indeed, in complex analysis a holomorphic function can be prescribed by arbitrary real analytic values of its real and imaginary parts along a real analytic curve, and is then determined uniquely. Continuing, it is similarly easy to check that the second prolongation is again two-dimensional:
     \begin{align}
-        A^{(2)}=\<t\>,\text{ where }
-        t&=(\partial_{u^1}+\partial_{u^2})(111)+(-\partial_{u^1}+\partial_{u^2})(112)+\\
-        &\quad +(-\partial_{u^1}-\partial_{u^2})(122)+(\partial_{u^1}-\partial_{u^2})(222),
+        A^{(2)}=\<t_1,t_2\>,\text{ where }
+        t_1&=\partial_{u^1}\big((111)-(122)\big)+\partial_{u^2}\big((112)-(222)\big),\\
+        t_2&=-\partial_{u^1}\big((112)-(222)\big)+\partial_{u^2}\big((111)-(122)\big),
     \end{align}
-    where $(ijk)$ stands for the sum of $\dd x^i\dd x^j\dd x^k$ over all distinct permutations if $i,j,k$. One more iteration confirms that $A^{(3)}=\{0\}$, so all higher prolongations vanish.
+    where $(ijk)$ stands for the sum of $\dd x^i\dd x^j\dd x^k$ over all distinct permutations of $i,j,k$. These are the third derivatives of the real and imaginary parts of $z^3$ and $\i z^3$, where $z=x^1+\i x^2$. In general, $A^{(k)}$ is spanned by the $(k+1)$-st derivatives of the real and imaginary parts of $z^{k+1}$ and $\i z^{k+1}$, so $\dim A^{(k)}=2$ for all $k$. The prolongations never vanish, as one expects from a system whose solutions depend on functions rather than finitely many constants.
 \end{example}
 
 
@@ -10847,8 +10911,8 @@ According to the Cartan-K\"ahler Theorem, the Cartan characteristic variety dete
 \begin{thm}[{{\cite[Thm.~V.3.15]{Bryant}}}]\label{thm v.3.15 Bryant}
     If $(\calI,\sfv)$ is involutive and of character $l$, then 
     \begin{align}
-        \varLambda^\bbC&=\{E\in \Gr_l(L^{\ast,\bbC})\mid E\in [\xi]^\perp \text{ for some characteristic }[\xi]\in\varXi^\bbC\},\\
-        \varXi^\bbC&=\{[\xi]\in\bbP L^\bbC\mid E\in \varLambda^\bbC \text{ for all subspaces }E<[\xi]^\perp\}.
+        \varLambda^\bbC&=\left\{E\in \Gr_l\left(L^{\ast,\bbC}\right)\middle| E\in [\xi]^\perp \text{ for some characteristic }[\xi]\in\varXi^\bbC\right\},\\
+        \varXi^\bbC&=\left\{[\xi]\in\bbP L^\bbC\middle| E\in \varLambda^\bbC \text{ for all subspaces }E<[\xi]^\perp\right\}.
     \end{align}
 \end{thm}
 
@@ -10860,13 +10924,13 @@ Similarly, the second assertion in Theorem~\ref{thm v.3.15 Bryant} gives $\varXi
     Consider again the Cauchy-Riemann system on $\bbR^{2n}\cong \bbC^n$, now with the standard complex structure $\sfJ:\bbR^{2n}\to \bbR^{2n}$ given by 
     \[\sfJ(\partial_{x^i})=\partial_{y^i},\quad \sfJ(\partial_{y^i})=-\partial_{x^i}.\]
     We've already seen that this system is elliptic, so $\varXi=\varnothing$. To describe the Cartan characteristic variety, since the system is translation invariant it will suffice to describe the fiber $\varLambda_0$ of $\varLambda$ over the origin, and using \eqref{eq v.102 Bryant} this is given by 
-    \[\varLambda_0=\{E\in\Gr_n(\bbR^{2n}):E\cap \sfJ(E)\neq \{0\}\}.\]
+    \[\varLambda_0=\{E\in\Gr_n\left(\bbR^{2n}\right):E\cap \sfJ(E)\neq \{0\}\}.\]
     In other words, $\varLambda_0$ consists of real $n$-planes that contain at least one \emph{complex line} (i.e., a \emph{real} $\sfJ$-invariant $2$-plane). 
 
     It is, of course, well known that real $n$-dimensional submanifolds $Y^n\subset \bbC^n$ such that $\T_y Y\cap \sfJ(\T_y Y)=\{0\}$ for every $y\in Y$ are locally determining sets for holomorphic functions. 
 
     In general we have 
-    \[\varLambda_{p,0}=\{E\in\Gr_p(\bbR^{2n})\mid \dim E\cap \sfJ(E)\geq \max(1,2(p-m)+1)\}.\]
+    \[\varLambda_{p,0}=\{E\in\Gr_p\left(\bbR^{2n}\right)\mid \dim E\cap \sfJ(E)\geq \max(1,2(p-m)+1)\}.\]
     For instance, $\varLambda_{2m-1,0}=\Gr_{2m-1}(\bbR^{2n})$ contains no information.
 \end{example}
 

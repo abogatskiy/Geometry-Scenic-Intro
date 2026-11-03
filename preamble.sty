@@ -378,8 +378,13 @@
   },
   % use for layer 1 boxes only
   every box on layer 1/.append style={
-    % use \footnotetext befere the default /tcb/after ends the current paragraph
-    after pre=\tcb@footnote@use
+    % use \footnotetext befere the default /tcb/after ends the current paragraph.
+    % The \penalty\z@ allows a page break between the box and its footnotes:
+    % tcolorbox doesn't account for the collected footnotes when deciding whether
+    % the box fits on the page, so without it, footnotes that don't fit drag the
+    % whole box to the next page, leaving a large gap. With it, they move on
+    % their own instead.
+    after pre={\par\penalty\z@\tcb@footnote@use}
   }
 }
 \makeatother
