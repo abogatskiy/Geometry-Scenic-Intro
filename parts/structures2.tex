@@ -4409,7 +4409,7 @@ In the case of a flat Cartan geometry, the endpoints of developments become inva
 
 Looking back at the definition of locally Klein geometry from \S\ref{sec: locally Klein geom}, one notices that it's exactly the definition of a \emph{flat} Cartan geometry. Thus, we can round up the discussion started in that \sect. The following rephrasing of the Development Theorem~\ref{prop locally klein} can be seen as a generalization of our characterization of Lie groups as Cartan geometries (with trivial $H$) from Theorem~\ref{thm 8.7 Sharpe}.
 
-\begin{thm}[Development/Uniformization Theorem {{\cite[Thm.~14.20]{McKayCartan}}}]\label{thm development flat cartan}\index{Theorem!Development (Uniformization)}
+\begin{thm}[Development/Uniformization Theorem {{\cite[Thm.~20.1]{McKayCartan}}}]\label{thm development flat cartan}\index{Theorem!Development (Uniformization)}
     Let $(P\to M,\eta)$ be a \emph{flat} Cartan geometry modeled on an \emph{effective} Klein geometry $(G,H)$ (in particular, $G\slash H$ is connected). Let $\wt\pi:\wt M\to M$ be the universal covering map of $M$. Then there exists a \emph{developing map} $\dev:\wt{M}\to G\slash H$ equivariant w.r.t.\ deck transformations for a \emph{monodromy homomorphism} $\hol:\pi_1(M)\to G$, so that the developing map lifts to a local diffeomorphism between the pulled back Cartan bundles $\widetilde{\dev}:\wt{\pi}^\ast P\to \dev^\ast G$:
     \[
     \begin{tikzcd}
@@ -4516,7 +4516,7 @@ In dimension $\leq 2$ it is possible to fully classify connected and simply conn
 
 In the last corollary we answer the question \emph{when is a connected Cartan geometry a Klein manifold}? Locally, the only obstruction is the obvious one -- the curvature. For the corresponding global statement, flatness is not enough. For example, an open subset of a Klein geometry is flat but is not isomorphic to a Klein geometry. The missing ingredient here is \emph{completeness}.
 
-\begin{cor}[Complete flat Cartan geometries {\cite[Thm.~5.3]{Sharpe},\cite[Cor.~14.11]{McKayCartan}}]\label{cor uniformization of complete flat cartan}
+\begin{cor}[Complete flat Cartan geometries {\cite[Thm.~5.3]{Sharpe},\cite[Cor.~19.8]{McKayCartan}}]\label{cor uniformization of complete flat cartan}
     If $(P\to M,\eta)$ is a complete flat Cartan geometry of type $(G,H)$ on a manifold $M$, then it is isomorphic to a Klein manifold $(\varGamma\bslash G\to \varGamma\bslash \widetilde{G\slash H},\theta_{\varGamma\bslash \wt G})$ of the universal covering homogeneous model $\widetilde{G\slash H}$ (cf.\ Lemma~\ref{lem univ cov hom space}). Moreover, $\varGamma=\ker\hol$, where $\hol:\pi_1(M)\to G$ is the monodromy homomorphism.
 \end{cor}
 \begin{proof}
@@ -5470,7 +5470,7 @@ In Proposition~\ref{prop 1.5.2 Cap} we saw that the automorphisms of the model K
 \end{defn}
 
 
-\begin{thm}[Cartan (1910, 1937) {{\cite[Thm.~15.6]{McKayCartan}}}]
+\begin{thm}[Cartan (1910, 1937) {{\cite[Thm.~21.16]{McKayCartan}}}]
     Any local isomorphism of Cartan geometries $(P\to M,\eta)\to (P'\to M',\eta')$ over a connected manifold $M$ is determined by its value at any one point of $P$.
 \end{thm}
 \begin{proof}
@@ -5494,7 +5494,7 @@ In Proposition~\ref{prop 1.5.2 Cap} we saw that the automorphisms of the model K
 
 If the geometry is not effective, then it is natural to ask how many derivatives of the base map one needs to take to uniquely determine the automorphism.
 
-\begin{thm}[{{\cite[Prop.~15.31]{McKayCartan}}}]
+\begin{thm}[{{\cite[Prop.~21.32]{McKayCartan}}}]
     Let $(P\to M,\eta)$ be a Cartan geometry with kernel $K$. Pick a point $p_i\in \restr{P}{M_i}$ and an element $k_i\in K$ for each connected component $M_i\subset M$. Then there is at most one vertical automorphism that maps $p_i\mapsto p_i\cdot k_i$ for all $i$, and every vertical automorphism is represented by an element $(k_i)\in K^{\pi_0(M)}$.
 \end{thm}
 \begin{proof}
@@ -5569,7 +5569,7 @@ The above property of Cartan geometries -- that their symmetry groups are ``smal
 
 The infinitesimal automorphisms of any Klein geometry, or even locally Klein geometry, are clearly the (restrictions of the) right-invariant vector fields of $G$. The actual Lie algebra of the automorphism group, meanwhile, consists only of those right-invariant vector fields that are complete. Let us compute explicitly the automorphism groups of complete Klein manifolds.
 
-\begin{thm}[{{\cite[Thm.~15.3]{McKayCartan}}}]
+\begin{thm}[{{\cite[Thm.~21.3]{McKayCartan}}}]
     Let $M=\varGamma\bslash \wt M$ be a Klein manifold of type $(G,H)$ (so $\wt M\subset G\slash H$ is an open $\varGamma$-invariant subset such that the action of $\varGamma$ on $\wt M$ is properly discontinuous). Let $\rmN_G(\varGamma)$ be the normalizer of $\varGamma$ in $G$ and let $N\subset \rmN_G(\varGamma)$ be the subgroup of elements that leave $\wt M$ invariant. Clearly, $\varGamma$ is a normal subgroup of $N$. Then the automorphism group of (the geometry on) $M$ is exactly the quotient group
     \[\Aut_M=N\slash \varGamma.\]
     The identity component of $N$ is the identity component of the centralizer $\rmZ_G(\varGamma)$ of $\varGamma$ in $G$. The Lie algebra of infinitesimal automorphisms is thus the Lie algebra centralizer 
@@ -5617,7 +5617,7 @@ The infinitesimal automorphisms of any Klein geometry, or even locally Klein geo
 
 The following lemma establishes a simpler criterion for being a local automorphism.
 
-\begin{lem}[Microlocal is local {{\cite[Lem.~15.6]{McKayCartan}}}]\index{Automorphism!Microlocal infinitesimal}
+\begin{lem}[Microlocal is local {{\cite[Lem.~21.6]{McKayCartan}}}]\index{Automorphism!Microlocal infinitesimal}
     Let $(P\overset{\pi}{\to} M,\eta)$ be a Cartan geometry of type $(G,H)$. Let $\varphi:V\to W$ be a (set-theoretic) bijection of open sets $V,W\subset P$ which commutes with the flows of constant vector fields where defined. In addition, assume that for any $m\in \pi(V)$ and connected components $V_0,V_1$ of $P_m\cap V$ there are $p\in V_0$ and $h\in H$ such that $\varphi(p\cdot h)=\varphi(p)\cdot h$ (such a $\varphi$ is called a ``microlocal automorphism''). Then $\varphi$ extends to a unique local automorphism on $\pi^{-1}(\pi(V))$. 
 
     Similarly, if $X\in\fX(V)$ is a vector field whose flow commutes with the flows of constant vector fields where defined and such that, as above, $X(p\cdot h)=\Phi_{h\ast p}\cdot X(p)$ (a ``microlocal infinitesimal automorphism''), it extends uniquely to a local infinitesimal automorphism on $\pi^{-1}(\pi(V))$. 
@@ -5651,7 +5651,7 @@ In particular, if the geometry is torsion-free and complete, then this leads to 
 
 While Theorem~\ref{thm 1.5.11 Cap} states that an infinitesimal automorphism is uniquely determined by its value at a single point, there is no guarantee that a given microlocal infinitesimal automorphism can be extended to become global. Each infinitesimal automorphism projects to $M$ to give a vector field that has zeroes arizing from points of $P$ where it is vertical. Outside of such points, there is a dense $H$-invariant open subset of $P$ on which the linear projection of the subspace spanned by $\aut(P,\eta)_p$ achieves maximal rank. Quotienting by $H$, there is a dense open subset of $M$ over which the integral manifolds of $\aut(P,\eta)$ form a foliation. In fact, without going into too much detail, these integral manifolds are smooth even away from that subset. Thus, the leaves of this foliation are covering spaces $\wh{M}\to M$. If these covering spaces are multi-sheeted, we say that the infinitesimal automorphisms are \emph{multivalued}.\index{Automorphism!Multivalued infinitesimal} The group of deck transformations of the covering space is called the \emph{holonomy group of infinitesimal automorphisms}.\index{Holonomy!of infinitesimal automorphisms}
 
-\begin{thm}[Amores II (1980) {{\cite[Thm.~15.8]{McKayCartan}}}]
+\begin{thm}[Amores II (1980) {{\cite[Thm.~21.8]{McKayCartan}}}]
     Let $(P\to M,\eta)$ be a real analytic Cartan geometry on a connected manifold $M$. Let $X\in \fX(V)$ be a microlocal infinitesimal automorphism defined on a connected open set $V\subset P$. If $M$ is simply connected, then $X$ extends uniquely to an infinitesimal automorphism over $M$. If $M$ is not simply connected, $X$ extends over the universal covering space of $M$, and it descends to an infinitesimal automorphism over $M$ iff $X$ is invariant under the holonomy of infinitesimal automorphisms.
 \end{thm}
 \begin{proof}
@@ -5669,7 +5669,7 @@ Take two infinitesimal automorphisms $X,Y\in\aut(P,\eta)$ with associated functi
 \index{Curvature-deformed bracket} so the Lie bracket of $\aut(P,\eta)$ is given exactly by the \emph{curvature-deformed bracket} from \eqref{eq deformed bracket}, with the extra terms appearing since $A=\eta(X),B=\eta(Y)$ are no longer constant. From this, the underlying vector field on $M$ is represented by the function
 \[\underline{\eta}([X,Y])=\underline{[\eta(X),\eta(Y)]}-\underline{\scrK}(\underline{\eta}(X),\underline{\eta}(Y))+\Lie_X (\underline{\eta}(Y))-\Lie_Y (\underline{\eta}(X)).\]
 
-\begin{prop}[{{\cite[Prop.~15.9]{McKayCartan}}}]
+\begin{prop}[{{\cite[Prop.~21.9]{McKayCartan}}}]
     For a flat Cartan geometry $(P\to M,\eta)$ of type $(G,H)$ on a connected manifold $M$, the Lie algebra $\aut(P,\eta)$ is identified by the developing map with the holonomy-invariant Lie subalgebra of $\frakg$.
 \end{prop}
 \begin{proof}
@@ -5700,7 +5700,7 @@ Finally, let us discuss the circumstances under which infinitesimal automorphism
 
 Automorphisms commute with the flows of constant vector fields and with the principal action of the structure group. These flows need not be complete, but if defined for some time at some point, they are defined for the same time throughout the orbit of the automorphism group (\emph{automorphism orbit} for short) through that point. Hence, the orbits of the automorphism group are taken to one another by these flows, and by the structure group. Over a connected manifold, this action on the set of orbits is thereby transitive.
 
-\begin{thm}[Kobayashi (1957) {{\cite[Thm.~15.18]{McKayCartan}}}]
+\begin{thm}[Kobayashi (1957) {{\cite[Thm.~21.18]{McKayCartan}}}]
     The automorphism orbits of any Cartan geometry $(P\to M,\eta)$ are closed.
 \end{thm}
 \begin{proof}
@@ -5723,14 +5723,14 @@ The tangent spaces of each automorphism orbit are taken to one another by the au
 In the following, we assume a fixed Cartan geometry $(P\to M,\eta)$ of type $(G,H)$ and do not specify it every time. To each $A\in\frakg$ we also assign the flow of its constant vector field at time $1$:
 \[F^A\coloneqq \Fl^{\eta^{-1}(A)}_1\quad\text{for}\quad  A\in\frakg.\]
 
-\begin{lem}[{{\cite[Lem.~15.19]{McKayCartan}}}]\label{lem 12.19 McKay}
+\begin{lem}[{{\cite[Lem.~21.19]{McKayCartan}}}]\label{lem 12.19 McKay}
     Let $X_i\in \T_{p_0}P$ be a sequence of vectors with $X_i\to 0$ and let $A_i\coloneqq \eta(X_i)\in\frakg$. Suppose that infinitely many among $F^{A_i}(p_0)$ are in the automorphism orbit $\scrO$ of a point $p_0\in P$. After perhaps replacing $(X_i)$ by a subsequence, the lines spanned by the vectors $X_i$ converge to a line tangent to $\scrO$. A constant vector field is somewhere tangent to an orbit iff it is everywhere tangent to that orbit, which occurs iff its flow preserves that orbit.
 \end{lem}
 \begin{proof}
     Suppose that $F^{A_i}(p_0)=g_i(p_0)$ for some $A_i\to 0$ and $g_i\in \Aut(P,\eta)$. Pick $\lambda_i>0$ such that $\lambda_i A_i$ stays bounded and stays outside of some neighborhood of the origin in $\frakg$. Choosing a subsequence, we can arrange that $\lambda_i A_i$ converges, say $\lambda_i A_i\to A\in\frakg$. Pick a $t\in \bbR$ and let $n_i\coloneqq \lfloor t\lambda_i\rfloor\in\bbN$. But $A_i\to 0$, so $t\lambda_i A_i-n_i A_i\to 0$, i.e., $n_i A_i\to tA$. But $F^{n_iA_i}(p_0)=g_i^{n_i}(p_0)\in\scrO$ while $F^{n_iA_i}(p_0)\to F^{tA}(p_0)$. Since the orbit is closed as a subset of $P$, $F^{tA}(p_0)\in\scrO$ for all $t$. In particular, if $A=\eta(X)$ for a vector $X$ tangent to $\scrO$, then the flow of $A$ preserves $\scrO$.
 \end{proof}
 
-\begin{lem}[{{\cite[Lem.~15.20]{McKayCartan}}}]
+\begin{lem}[{{\cite[Lem.~21.20]{McKayCartan}}}]
     The tangent spaces of each automorphism orbit $\scrO\subset P$ are closed cones, i.e., closed subsets of the tangent spaces of $P$ invariant under rescalings by real numbers (including zero and negatives).
 \end{lem}
 \begin{proof}
@@ -5752,7 +5752,7 @@ for any $A,B\in\frakg$ close enough to zero. (Continuing in the same vein, Melni
 The next lemma shows that the tangent spaces are actually vector spaces and explains the appearance of the curvature-deformed bracket in our earlier study of Cartan space forms, where the automorphism groups acted transitively on $P$, so $\T \scrO=\T P$.
 
 
-\begin{lem}[{{\cite[Lem.~15.21]{McKayCartan}}}]
+\begin{lem}[{{\cite[Lem.~21.21]{McKayCartan}}}]
     The tangent spaces of each automorphism orbit in $P$ are linear subspaces of the tangent spaces of $P$, and Lie algebras under the curvature-deformed bracket.
 \end{lem}
 \begin{proof}
@@ -5772,7 +5772,7 @@ The next lemma shows that the tangent spaces are actually vector spaces and expl
 Now that we know that the tangent spaces have the same dimension, we can use them to construct slices for the action of the automorphism group, which will imply that the orbits are smooth. Let $p_0\in P$ and let $\scrO$ be its automorphism orbit. As usual, a \emph{slice} at $p_0$ is a smooth embedding $\varphi:U\to P$ of an open $0$-neighborhood $U\subset V$ in a finite-dimensional vector space $V$ such that $\varphi(0)=p_0$, $\varphi^{-1}(\scrO)=\{0\}$, and the image is transversal to the orbit at $p_0$: 
 \[\varphi_{\ast 0}(V)\oplus\T_{p_0}\scrO=\T_p P.\]
 
-\begin{lem}[{{\cite[Lem.~15.22]{McKayCartan}}}]\label{lem 12.22 McKay}
+\begin{lem}[{{\cite[Lem.~21.22]{McKayCartan}}}]\label{lem 12.22 McKay}
     Let $V<\T_{p_0}P$ be a subspace complementary to $\T_{p_0}\scrO$. Then there is an open $0$-neighborhood $U\subset V$ such that the following map is a slice:
     \[\varphi:U\to P,\quad  v\mapsto F^{\eta(v)}(p_0).\]
 \end{lem}
@@ -5782,7 +5782,7 @@ Now that we know that the tangent spaces have the same dimension, we can use the
 
 The following lemma constructs slice charts for the orbit, turning it into an embedded submanifold.
 
-\begin{lem}[{{\cite[Lem.~15.23]{McKayCartan}}}]\label{lem 12.23 McKay}
+\begin{lem}[{{\cite[Lem.~21.23]{McKayCartan}}}]\label{lem 12.23 McKay}
     Let $V<\T_{p_0}\scrO$ be a subspace complementary to $\T_{p_0}\scrO$. Pick $0$-neighborhoods $U\subset V$ and $W\subset \T_{p_0}\scrO$. If the open sets are small enough then the map 
     \[\varphi:V\times W\to P,\quad (v,w)\mapsto F^{\eta(v)}\circ F^{\eta(w)}(p_0)\]
     is a diffeomorphism to an open subset of $P$ an a slice for any fixed $w$.
@@ -5797,7 +5797,7 @@ The following lemma constructs slice charts for the orbit, turning it into an em
     Every automorphism orbit of a Cartan geometry is a closed embedded submanifold.
 \end{cor}
 
-\begin{cor}[{{\cite[Cor.~15.25]{McKayCartan}}}]
+\begin{cor}[{{\cite[Cor.~21.25]{McKayCartan}}}]
     Let $M$ be connected, and pick an automorphism orbit $\scrO$ through a point $p_0\in P$. The orbit is a closed embedded submanifold, and the action of automorphisms is free, so we can endow the group $\Aut(P,\eta)$ with the smooth structue diffeomorphic to that of $\scrO$ via the map $g\mapsto g(p_0)$. Then 
     \begin{enumerate}
         \item this smooth structure turns the group $\Aut(P,\eta)$ into a Lie group;
@@ -5812,7 +5812,7 @@ The following lemma constructs slice charts for the orbit, turning it into an em
 
 Finally, now that we have a free Lie group action of $\Aut(P,\eta)$ on $P$, we can ask whether this action is proper, so that $P$ can be treated as a principal $\Aut(P,\eta)$-bundle. Recall that an action $(g,m)\mapsto g\cdot m$ is called proper when the map $(g,m)\mapsto (g\cdot m,m)$ is proper. 
 
-\begin{cor}[{{\cite[Cor.~15.26]{McKayCartan}}}]
+\begin{cor}[{{\cite[Cor.~21.26]{McKayCartan}}}]
     If $M$ is connected, then the Lie group action of $\Aut(P,\eta)$ on $P$ is free and proper.
 \end{cor}
 \begin{proof}
@@ -5825,7 +5825,7 @@ Finally, now that we have a free Lie group action of $\Aut(P,\eta)$ on $P$, we c
 
 By Corollary~\ref{cor 6.5.1 RS1}, the quotient by a free and proper Lie group action is a smooth manifold, and the quotient map is a \gls{pfb}. The action of automorphisms is a left action, so this will be a left quotient. We summarize our results on automorphisms in the following main theorem.
 
-\begin{thm}[{{\cite[Thm.~15.13]{McKayCartan}}}]\label{thm 12.13 McKay}
+\begin{thm}[{{\cite[Thm.~21.13]{McKayCartan}}}]\label{thm 12.13 McKay}
     If $(P\to M,\eta)$ is a Cartan geometry of type $(G,H)$ on a connected manifold $M$. Then:
     \begin{enumerate}
         \item The automorphism group $\Aut(P,\eta)$ admits a unique Lie group structure (up to isomorphism) for which the quotient map $P\to \Aut(P,\eta)\bslash P$ is a smooth principal bundle;
@@ -5846,7 +5846,7 @@ Sometimes a generalization of this result to disconnected base manifolds is usef
     Let $(P\to M,\eta)$ be a Cartan geometry over a connected $M$. Prove that the topology of the automorphism group determined by identifying it with an orbit in $P$ is the topology of pointwise convergece, but is also the compact-open topology on it as a collection of maps of $P$, and is also the topology of uniform convergence on compact sets with all derivatives.
 \end{xca}
 
-\begin{thm}[{{\cite[Thm.~15.28]{McKayCartan}}}]\label{lem thm 12.28 McKay}
+\begin{thm}[{{\cite[Thm.~21.28]{McKayCartan}}}]\label{lem thm 12.28 McKay}
     Suppose $\varGamma$ is a group consisting of some automorphisms of a Cartan geometry $(P\to M,\eta)$, closed in the topology of uniform convergence on compact sets with all derivatives. Suppose that, for every connected component $M'\subset M$, the only element of $\varGamma$ that fixes every point of $P$ above $M'$ is the identity. Then $\varGamma$ is a Lie group acting smoothly on $P$ and $M$ and the quotient map $P\to \varGamma\bslash P$ is a principal $\varGamma$-bundle. There is a finite set of smooth $\varGamma$-invariant functions on $P$ that distinguish $\varGamma$-orbits.
 \end{thm}
 \begin{proof}
@@ -5855,7 +5855,7 @@ Sometimes a generalization of this result to disconnected base manifolds is usef
 
 All automorphisms that fix a point in the base are vertical automorphisms given by some principal right actions (note that generic principal actions are usually not automorphisms, even in Klein geometries):
 
-\begin{lem}[{{\cite[Lem.~15.27]{McKayCartan}}}]
+\begin{lem}[{{\cite[Lem.~21.27]{McKayCartan}}}]
     Let $(P\to M,\eta)$ be a Cartan geometry. For a point $m\in M$, its stabilizer $\Aut(P,\eta)_m$ is a closed subgroup of $\Aut(P,\eta)$ contained inside $H\cap \Aut(P,\eta)$, where by $H$ we mean the set of principal right $H$-actions.
 \end{lem}
 \begin{proof}
@@ -5877,7 +5877,7 @@ In particular, if $H$ is compact, the stabilizers of all points of $M$ are also 
 \end{xca}
 
 
-\begin{cor}[{{\cite[Cor.~15.29]{McKayCartan}}}]
+\begin{cor}[{{\cite[Cor.~21.30]{McKayCartan}}}]
     Let $(P\to M,\eta)$ be a Cartan geometry on a connected manifold $M$. Then, along each automorphism orbit $\scrO$, the constant vector fields which are tangent to $\scrO$ are exactly the left-invariant vector fields of $\scrO$ as a $\Aut(P,\eta)$-torsor. In particular, the Lie bracket of the Lie algebra of $\Aut(P,\eta)$ is identified, via $\eta$, with the curvature-deformed bracket on $\frakg$.
 \end{cor}
 \begin{proof}
@@ -5927,7 +5927,7 @@ For the proof of the next theorem, the following enrichment of the notion of a C
 
 Clearly, the automorphism group of a decorated Cartan geometry is a closed subgroup of the automorphism group of the undecorated geometry. Thus, all of our results about the action of the automorphism group extend trivially to decorated geometries.
 
-\begin{thm}[{{\cite[Thm.~15.33]{McKayCartan}}}]
+\begin{thm}[{{\cite[Thm.~21.34]{McKayCartan}}}]
     Let $(P\to M,\eta)$ be a Cartan geometry on a connected manifold $M$. Let $(S,i:S\to M)$ be an immersed submanifold such that $i$ is injective on a dense subset of $S$. Then the automorphisms of $S$ form a finite-dimensional Lie group for a unique Lie group structure such that the quotient map 
     \[P_S\to \Aut_S(P,\eta)\bslash P_S\]
     is a smooth principal $\Aut_S(P,\eta)$-bundle. This Lie group acts smoothly on $P_S$, $S$, $P$, and $M$. The Lie group homomorphism $\Aut_S(P,\eta)\to \Aut(P,\eta)$ is an immersion.
