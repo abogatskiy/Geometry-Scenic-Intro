@@ -425,10 +425,10 @@ This correspondence can actually be restated as an equivalence of the category $
 
 \section{Flat bundles}
 
-Now let us try to use this transformation rule for transition functions to ``simplify'' the cocycle and see how far we can go. If we have two charts with a transition function $t_{\alpha\beta}$, then we always find a pair of functions $\lambda_\alpha,\lambda_\beta$ on those charts such that $\lambda_\alpha t_{\alpha\beta}\lambda_\beta^{-1}$ is constant, in fact equal to identity: just pick $\lambda_\alpha=e$ and let $\lambda_\beta$ be an arbitrary smooth extension of $t_{\alpha\beta}$ from $U_{\alpha\beta}$ to all of $U_\beta$. We can try to keep expanding this procedure to more and more charts, but there is no guarantee that we will be able to make all transition functions constant. Thus we single out the following important class of bundles.
+Now let us try to use this transformation rule for transition functions to ``simplify'' the cocycle and see how far we can go. If we have two charts with a transition function $t_{\alpha\beta}$, then we always find a pair of functions $\lambda_\alpha,\lambda_\beta$ on those charts such that $\lambda_\alpha t_{\alpha\beta}\lambda_\beta^{-1}$ is constant, in fact equal to identity: just pick $\lambda_\alpha=e$ and let $\lambda_\beta$ be a smooth extension of $t_{\alpha\beta}$ from $U_{\alpha\beta}$ to all of $U_\beta$ (assuming one exists, which can usually be arranged by shrinking the charts). We can try to keep expanding this procedure to more and more charts, but there is no guarantee that we will be able to make all transition functions constant. Thus we single out the following important class of bundles.
 
 \begin{defn}[Flat $G$-structure]\index{Flat!fiber bundle}\index{Flat!$G$-structure}\label{def flat G-bundle}
-	A $G$-structure on a \gls{fb} is called \emph{flat} if it contains a bundle atlas with constant (or locally constant) transition functions. Alternatively, a $G$-structure is flat if structure group $G$ can be reduced to a subgroup with a \emph{totally disconnected} topology (one where all connected subsets are one-point sets, e.g., the discrete topology; then the transition functions are forced to be constant by continuity). If the default $\Diff(F)$-structure is flat, then the bundle itself is called flat.
+	A $G$-structure on a \gls{fb} is called \emph{flat} if it contains a bundle atlas with constant (or locally constant) transition functions. Alternatively, a $G$-structure is flat if the structure group $G$ can be reduced to a subgroup with a \emph{totally disconnected} topology (one where all connected subsets are one-point sets, e.g., the discrete topology; then the transition functions are forced to be constant by continuity). If the default $\Diff(F)$-structure is flat, then the bundle itself is called flat.
 \end{defn}
 \begin{rem}
     Note that the flatness of the bundle (w.r.t.\ the default $\Diff(F)$-structure) does not imply that all other $G$-structures on it are flat.
@@ -438,7 +438,7 @@ Now let us try to use this transformation rule for transition functions to ``sim
 \begin{example}[Line bundles above $\bbS^1$]\label{line bundles over S1}
     We can use the idea of a bundle atlas and Theorem~\ref{bundle isomorphism thm} to classify all line bundles above the circle up to isomorphisms. It suffices to pick one covering of the circle, so we will pick a covering by the three circular arcs $U_1=(\epsilon,4\pi/3-\epsilon)$, $U_2=(2\pi/3+\epsilon,2\pi-\epsilon)$, and $U_3=(4\pi/3+\epsilon,8\pi/3-\epsilon)$. The transition functions in a line bundle take values in the group $G$ of diffeomorphisms of $\bbR $. Each such diffeomorphism is a smooth function $f:\bbR \to\bbR $ such that the derivative $f'$ is never zero. Now, clearly $G$ consists of two path-connected components, one of diffeomorphisms that preserve the orientation, i.e., $f'(x)>0$ for all $x$, and others that reverse it, $f'(x)<0$. We say that these diffeomorphisms have one of two possible \emph{parities}. Let $g_+(x)=\id_{\bbR }(x)=x$ and $g_-(x)=-x$, so that $g_+$ is the identity element of $\Diff(\bbR )$ and $g_-$ is an orientation-reversing involution.
 
-    There are three transition functions, $t_{12}$, $t_{23}$, and $t_{31}$. Any three $G$-valued functions $\lambda_1,\lambda_2,\lambda_3$ provide an isomorphic line bundle. Choose $\lambda_1\equiv g_+$. Furthermore, $t_{12}:U_{12}\to G$ can be extended to a continuous function $\lambda_2: U_2\to G$, $\restr{\lambda_2}{U_{12}}=t_{12}$. Then $t_{12}'=\lambda_1 t_{12}\lambda_2^{-1}\equiv g_+$. By continuity, all values of $\lambda_2$ have the same parity.  Now, we let $\lambda_3$ be a continuous extension to $U_3$ of the function $\lambda_2 t_{23}:U_{23}\to G$. Then $t_{23}'=\lambda_2 t_{23} \lambda_3^{-1}\equiv g_+$. Finally, $t_{31}'=\lambda_3 t_{31} \lambda_1=\lambda_3 t_{31}$.  The parity of the values of $t_{31}'$ by construction is the product of the parities of $t_{12}$, $t_{23}$, and $t_{31}$.
+    There are three transition functions, $t_{12}$, $t_{23}$, and $t_{31}$. Any three $G$-valued functions $\lambda_1,\lambda_2,\lambda_3$ provide an isomorphic line bundle. Choose $\lambda_1\equiv g_+$. Furthermore, $t_{12}:U_{12}\to G$ can be extended to a continuous function $\lambda_2: U_2\to G$, $\restr{\lambda_2}{U_{12}}=t_{12}$. Then $t_{12}'=\lambda_1 t_{12}\lambda_2^{-1}\equiv g_+$. By continuity, all values of $\lambda_2$ have the same parity.  Now, we let $\lambda_3$ be a continuous extension to $U_3$ of the function $\lambda_2 t_{23}:U_{23}\to G$. Then $t_{23}'=\lambda_2 t_{23} \lambda_3^{-1}\equiv g_+$. Finally, $t_{31}'=\lambda_3 t_{31} \lambda_1^{-1}=\lambda_3 t_{31}$.  The parity of the values of $t_{31}'$ by construction is the product of the parities of $t_{12}$, $t_{23}$, and $t_{31}$.
 
     The values of $\lambda_3$ are already uniquely fixed up to the point $2\pi-\epsilon=-\epsilon$. Due to the path-connectedness of the two components of $G$, $\lambda_3$ can be deformed on $U_3\setminus U_{23}=(-\epsilon,2\pi/3-\epsilon)$ so that it remains smooth and $\restr{\lambda_3}{(\epsilon,2\pi/3-\epsilon)}=g_\pm t_{31}^{-1}$, which leads to $t_{31}'\equiv g_\pm$.
 
@@ -453,7 +453,7 @@ Now let us try to use this transformation rule for transition functions to ``sim
 \end{xca}
 
 \begin{example}
-    Staying in the category of topological \glspl{fb}, let us classify two-fold covering spaces of the ``figure eight space'' in the language of \glspl{fb}. The fiber $F$ in this case consists of two points. The base space $M=\bbS^1\vee \bbS^1$ can be covered by three contractible sets: one $\mathsf{x}$ and two intervals. All of their overlaps are contractible, and therefore, by adjusting the transition functions we will always be able to make them constant. This we have four overlaps with four corresponding elements of the structure group $G=\rmS_2$. The bundle will be constructed out of the disjoint union of two copies of each of our three pieces: we need to glue the following six pieces $\begin{matrix}
+    Staying in the category of topological \glspl{fb}, let us classify two-fold covering spaces of the ``figure eight space'' in the language of \glspl{fb}. The fiber $F$ in this case consists of two points. The base space $M=\bbS^1\vee \bbS^1$ can be covered by three contractible sets: one $\mathsf{x}$ and two intervals. All of their overlaps are disjoint unions of contractible sets, and therefore, by adjusting the transition functions we will always be able to make them constant. Thus we have four overlap components with four corresponding elements of the structure group $G=\rmS_2$. The bundle will be constructed out of the disjoint union of two copies of each of our three pieces: we need to glue the following six pieces $\begin{matrix}
         |\; \times \;|\\
         |\; \times \;|
     \end{matrix}$. Now note that two of the transition functions, namely one on the left side of the base manifold $\infty$ and one on the right, can be turned into the identity by permuting the two pairs of straight segments to match those two permutations. Thus we end up with two copies of $\infty$, where each loop has been cut at one point, giving us two pairs of cuts to glue back using the two permutations. Since each permutation can only take two values, we get a total of four covering spaces. Two of them happen to be isomorphic if we allow for nontrivial diffeomorphisms of the base (the left-right symmetry of $\infty$), but usually the classification is done without considering such symmetries. One of the \glspl{fb} obtained this way is trivial, and the other three are represented in Figure \ref{fig:coverings of 8}(1,2).
@@ -466,17 +466,17 @@ The following example is a preview of the concept of connection, which will be t
 	
 	Continuing Remark~\ref{covering spaces and connections}, we see that the monodromy, or holonomy, is also nothing but a representation of $\pi_1(M)$ on the fiber. Therefore, bundles with discrete fibers are completely classified by the monodromy/holonomy of the connection on them. Can we generalize these ideas to a larger class of bundles?
 	
-	First of all, by a simple extension of the argument in Example~\ref{line bundles over S1}, we see  that all bundles with fiber $F$ and structure group $G$ above $\bbS^1$ are classified by homomorphisms $\Hom(\pi_1(M),\allowbreak\pi_0(G))/\sim$, where $\pi_0(G)=G/G_0$ and $G_0$ is the connected component of the identity in $G$ (which is a normal subgroup), so that $\pi_0(G)$ is the group whose elements are the connected components of $G$. The equivalence relation is the global conjugation of all values of the given homomorphism by an arbitrary element of the target group (corresponds to a diffeomorphism on $F$, which of course doesn't change the bundle). For instance, for $F=\bbR $ and $G=\Diff(\bbR )$, we found that $\pi_0(G)=\bbZ_2$. The statement also agrees with the classification theorem for covering spaces.
+	First of all, by a simple extension of the argument in Example~\ref{line bundles over S1}, we see  that all bundles with fiber $F$ and structure group $G$ above $\bbS^1$ are classified by homomorphisms $\Hom(\pi_1(\bbS^1),\allowbreak\pi_0(G))/\sim$, where $\pi_0(G)=G/G_0$ and $G_0$ is the connected component of the identity in $G$ (which is a normal subgroup), so that $\pi_0(G)$ is the group whose elements are the connected components of $G$. The equivalence relation is the global conjugation of all values of the given homomorphism by an arbitrary element of the target group (corresponds to a diffeomorphism on $F$, which of course doesn't change the bundle). For instance, for $F=\bbR $ and $G=\Diff(\bbR )$, we found that $\pi_0(G)=\bbZ_2$. The statement also agrees with the classification theorem for covering spaces.
 	
-	Recall that a connection is just a prescription for lifting curves from the base into the total space. The lifted curves are called \emph{horizontal}, and the lifting procedure is also known as \emph{parallel transport} (of the starting point in the bundle along the path in the base). If the curve in the base is a loop $\gamma$ such that $\gamma(0)=\gamma(1)=p\in M$, then its lifts with all possible starting points $\wt{\gamma}(0)=e_0\in E_p$ determine the holonomy $e_0\mapsto e_1=\wt{\gamma}(1)=h(\gamma)(e_0)$, where we introduced the map $h:\gamma\mapsto h(\gamma)\in G$. Defined this way, $h(\gamma)$ is an element of the structure group $G$, and moreover $h$ is a homomorphism from the group $L_p(M)$ of all loops based at $p$ to $G$. The image of this homomorphism is a subgroup $\mathrm{Hol}_p<G$ called the \emph{holonomy group} of the bundle based at $p$. If $h$ is restricted only to contractible loops, then the corresponding group is called $\widetilde{\mathrm{Hol}}_p<\mathrm{Hol}_p<G$, the \emph{local holonomy} group at $p$. 
+	Recall that a connection is just a prescription for lifting curves from the base into the total space. The lifted curves are called \emph{horizontal}, and the lifting procedure is also known as \emph{parallel transport} (of the starting point in the bundle along the path in the base). If the curve in the base is a loop $\gamma$ such that $\gamma(0)=\gamma(1)=p\in M$, then its lifts with all possible starting points $\wt{\gamma}(0)=e_0\in E_p$ determine the holonomy $e_0\mapsto e_1=\wt{\gamma}(1)=h(\gamma)(e_0)$, where we introduced the map $h:\gamma\mapsto h(\gamma)\in G$. Defined this way, $h(\gamma)$ is an element of the structure group $G$, and moreover $h$ is a homomorphism from the group $L_p(M)$ of all loops based at $p$ to $G$. The image of this homomorphism is a subgroup $\mathrm{Hol}_p<G$ called the \emph{holonomy group} of the bundle based at $p$. If $h$ is restricted only to contractible loops, then the corresponding group is called $\widetilde{\mathrm{Hol}}_p<\mathrm{Hol}_p<G$, the \emph{restricted holonomy} group at $p$. 
 	
-	If $\widetilde{\mathrm{Hol}}_p=\{\id\}$ for all $p$, the connection is called \emph{flat}. This is equivalent to the property that the holonomy depends only on the homotopy class of the base loop. In particular, a small simply connected neighborhood $U\subset M$ of $p\in M$ can be uniquely lifted to a local section of $E$ passing through $e_0\in E_p$, which is of course diffeomorphic to $U$. That is, $E$ can be locally fibrated by horizontal sections, each diffeomorphic to $U$. 
+	If $\widetilde{\mathrm{Hol}}_p=\{\id\}$ for all $p$, the connection is called \emph{flat}. This is equivalent to the property that the holonomy depends only on the homotopy class of the base loop. In particular, a small simply connected neighborhood $U\subset M$ of $p\in M$ can be uniquely lifted to a local section of $E$ passing through $e_0\in E_p$, which is of course diffeomorphic to $U$. That is, $E$ can be locally foliated by horizontal sections, each diffeomorphic to $U$. 
 	
-	Flatness of a connection is sometimes called \emph{integrability}\index{Integrability}, and is exactly what people mean when they speak of integrable systems in physics: the phase space of an integrable system can be fibrated by hypersurfaces that are locally spanned by physical trajectories.
+	Flatness of a connection is sometimes called \emph{integrability}\index{Integrability}, because it means that the horizontal directions fit together into a foliation of $E$ by horizontal submanifolds, much like the integral curves of a vector field.
 	
 	Finally, we notice that the definition of flat \glspl{fb} given above implies the existence of a flat connection. Namely, a loop $\gamma$ in $M$ that passes through charts $U_1,U_2,\ldots,U_n=U_1$ with the starting point $(p,f)\in U_1\times F$ can be lifted as $(\gamma(t),f)$ on $U_1$, $(\gamma(t),\tau_{21}f)$ on $U_2$, $(\gamma(t),\tau_{32}\tau_{21}f)$ on $U_3$, and so on (here $\tau_{ij}\in G$ represent the constant transition functions). These actually stitch together into a continuous path under the identifications in the bundle. Similarly one can lift non-closed curves, which completes the definition of the connection.
 	
-	Exercise: check that the local holonomy of the connection just described is independent of the choice of a bundle atlas (even though the connection itself does depend on the atlas) and trivial , i.e., the connection is indeed flat.
+	Exercise: check that the restricted holonomy of the connection just described is independent of the choice of a bundle atlas (even though the connection itself does depend on the atlas) and trivial, i.e., the connection is indeed flat.
 	
 	The non-local part of the holonomy is described by ordered products of transition functions $\prod \tau_{ij}$ along non-contractible loops. Since these are homotopy-invariant, we have a homomorphism $\pi_1(M)\to G$ that completely describes the holonomy of the flat connection. A global conjugation $g\mapsto g_0 g g_0^{-1}$ on the group doesn't affect the connection (it is essentially equivalent to shifting the base point in the definition of $\pi_1(M)$), therefore, all flat connections on bundles with structure group $G$ above $M$ are classified by $\Hom(\pi_1(M),G)/\sim$, where $\sim$ is the conjugation equivalence. Moreover, one can show that every homomorphism of this kind corresponds to a bundle with a connection. This is the generalization of the classification theorem for covering spaces.
 	
@@ -499,9 +499,9 @@ We've seen that bundles are, in categorical terms, pushouts (i.e., quotients of 
 \begin{defn}[Pullback bundle]\index{Pullback bundle}\label{Pullback bundle}
     Let $E\overset{\pi}{\to}M$ be a smooth \gls{fb} and $N\overset{f}{\to}M$ a smooth map. We define the \emph{pullback of $E$ along $f$}, or the bundle \emph{induced from $E$ by $f$}, denoted $f^\ast E$, in three ways:
     \begin{itemize}        
-        \item $f^\ast E=\{(n,p)\in N\times E\mid f(n)=\pi(p)\}\subset E\times N$ with the subspace topology induced from $E\times N$. Obviously we have two canonical projections onto the two components of the product, $f^\ast E\overset{\wt{f}}{\to}E$ and $f^\ast E\overset{\pi'}{\to}N$. The latter one is the new bundle projection, equal to the restriction of the natural projection $\pr_1$ on $N\times E$. We show below that there is a unique smooth structure on $f^\ast E$ that makes $\pi'$ into a smooth submersion.
+        \item $f^\ast E=\{(n,p)\in N\times E\mid f(n)=\pi(p)\}\subset N\times E$ with the subspace topology induced from $N\times E$. Obviously we have two canonical projections onto the two components of the product, $f^\ast E\overset{\wt{f}}{\to}E$ and $f^\ast E\overset{\pi'}{\to}N$. The latter one is the new bundle projection, equal to the restriction of the natural projection $\pr_1$ on $N\times E$. We show below that there is a unique smooth structure on $f^\ast E$ that makes $\pi'$ into a smooth submersion.
         \item If the typical fiber of $E$ is $F$ and we know a set of transition functions $t_{\alpha\beta}:U_{\alpha\beta}\to G$ defining $E$, then $f^\ast E$ can be defined as the bundle with base $N$, same fiber $F$, and transition functions $f^\ast t_{\alpha\beta}:f^{-1}(U_{\alpha\beta})\to G$, where $f^\ast t\coloneqq t\circ f$ is the definition of the \emph{pullback of a function} $t$ on $M$ via $f$.
-        \item In categorical terms, it is literally the pullback $N\times_M E$ that uses the maps $E\overset{\pi}{\to}M$ and $N\overset{f}{\to}M$ in its Cartesian square. This object indeed exists because it can be explicitly constructed using either of the next two alternative definitions. The pullback naturally comes with two canonical projections $f^\ast E\overset{\wt{f}}{\to}E$ and $f^\ast E\overset{\pi'}{\to}N$.
+        \item In categorical terms, it is literally the pullback $N\times_M E$ that uses the maps $E\overset{\pi}{\to}M$ and $N\overset{f}{\to}M$ in its Cartesian square. This object indeed exists because it can be explicitly constructed using either of the previous two definitions. The pullback naturally comes with two canonical projections $f^\ast E\overset{\wt{f}}{\to}E$ and $f^\ast E\overset{\pi'}{\to}N$.
     \end{itemize} 
     \[\begin{tikzcd}[every matrix/.append style={name=m},   
     execute at end picture={\draw [<-] ([xshift=-8mm,yshift=1mm]m-2-2.north) arc[start angle=-90,delta angle=270,radius=0.25cm];}]
@@ -514,14 +514,14 @@ We've seen that bundles are, in categorical terms, pushouts (i.e., quotients of 
     Let $N$ be a smooth manifold and $M\subset N$ a subset with the relative topology induced from $N$. Consider the following condition.
     \begin{enumerate}[label=(E)]
         \item \begin{enumerate}[label=(E\alph*)]
-            \item $M\subset \bigcup_i V_i$,
+            \item $M\subset \bigcup_i V_i$ for some family of open subsets $V_i\subset N$,
             \item for every $i$, $V_i\cap M$ admits a smooth structure of dimension $l$ w.r.t.\ which it is an embedded submanifold of $N$.
         \end{enumerate}
     \end{enumerate}
     If condition (E) holds for some $l\in\bbN$, the smooth structures on $V_i\cap M$ induce a smooth structure on $M$, w.r.t.\ which $M$ is an embedded submanifold of $N$. Conversely, if there exists a smooth structure on $M$ which makes it an embedded submanifold of dimension $l$, then (E) holds for this $l$ and the induced smooth structure on $M$ coincides with the original one.
 \end{lem}
 \begin{proof}
-    Pick local slice charts $(V_i,\rho_i)$ on $N$ such that $\rho(V_i\cap M)=\rho_i(V_i)\cap (\bbR^l\times \{0\})$. As a topological subspace of $N$, $M$ is Hausdorff and second countable. For every $i$, $V_i\cap M$ is open in the relative topology. Being the restriction of a homeomorphism onto its image, $\restr{\rho_i}{V_i\cap M}$ is a homeomorphism onto its image. Since by assumption the image is $\rho_i(V_i)\cap (\bbR^l\times\{0\})$ and is hence open in $\bbR^l\times\{0\}$, these data give a local chart on $M$. The transition maps are obtained by restriction of the original local charts on $N$ to subsets of the subspace $\bbR^l\times\{0\}$ which are open by condition (E2). Hence the transition maps are smooth and define a smooth structure. By definition of the relative topology the inclusion is open onto its image, thus $M$ is embedded.
+    Pick local slice charts $(V_i,\rho_i)$ on $N$ such that $\rho_i(V_i\cap M)=\rho_i(V_i)\cap (\bbR^l\times \{0\})$. As a topological subspace of $N$, $M$ is Hausdorff and second countable. For every $i$, $V_i\cap M$ is open in the relative topology. Being the restriction of a homeomorphism onto its image, $\restr{\rho_i}{V_i\cap M}$ is a homeomorphism onto its image. Since by assumption the image is $\rho_i(V_i)\cap (\bbR^l\times\{0\})$ and is hence open in $\bbR^l\times\{0\}$, these data give a local chart on $M$. The transition maps are obtained by restriction of the original local charts on $N$ to subsets of the subspace $\bbR^l\times\{0\}$ which are open by condition (Eb). Hence the transition maps are smooth and define a smooth structure. By definition of the relative topology the inclusion is open onto its image, thus $M$ is embedded.
 \end{proof}
 
 
@@ -547,7 +547,7 @@ We've seen that bundles are, in categorical terms, pushouts (i.e., quotients of 
     \item From the proof of Proposition~\ref{prop 2.6.1 RS1}, every local trivialization of $E$ induces a local trivialization of $f^\ast E$. In particular, the pullback of a trivial bundle is trivial. As indicated above, transition functions also get simply pulled back by $f^\ast \tau_{\alpha\beta}=\tau_{\alpha\beta}\circ f$.
     \item A bundle morphism $h:E'\to E$ covering a map $\underline{h}:M'\to M$ naturally decomposes as
     \[E'\overset{h_{\mathrm{ver}}}{\to} \underline{h}^\ast E\overset{h_{\mathrm{hor}}}{\to} E,\label{eq 2.6.2 RS1}\]
-    where $h_{\mathrm{ver}}(x)=(\pi'(x),h(x))$, $x\in E'$, and $h_{\mathrm{hor}}=\underline{\wt{h}}$ is the induced vector bundle morphism $\wt{f}$ defined by the pullback diagram \eqref{eq pullback bundle diagram} for $f=\underline{h}$. One can check that $h_{\mathrm{ver}}$ is a vertical bundle morphism.  Using this decomposition, one can give the following characterization of isomorphisms in terms of their projections and fiber mappings: a bundle morphism is an isomorphism iff its projection (the base map) is a diffeomorphism and its fiber mappings are bijective.
+    where $h_{\mathrm{ver}}(x)=(\pi'(x),h(x))$, $x\in E'$, and $h_{\mathrm{hor}}$ is the induced bundle morphism $\wt{f}$ defined by the pullback diagram \eqref{eq pullback bundle diagram} for $f=\underline{h}$. One can check that $h_{\mathrm{ver}}$ is a vertical bundle morphism.  Using this decomposition, one can give the following characterization of isomorphisms in terms of their projections and fiber mappings: a bundle morphism is an isomorphism iff its projection (the base map) is a diffeomorphism and its fiber mappings are diffeomorphisms.
 \end{enumerate}
 \end{rem}
 
@@ -584,24 +584,24 @@ We've seen that bundles are, in categorical terms, pushouts (i.e., quotients of 
 
 
 \begin{defn}[Fiber subbundle]\index{Fiber subbundle}
-    A (immersed, weakly embedded, or embedded) subbundle of a smooth \gls{fb} $E\overset{\pi}{\to}M$ is a \gls{fb} $E'\overset{\pi'}{\to}M'$ with an injective \gls{fb} morphism $\wt{h}:E'\to E$ which turns $E'$ into an immersed, weakly embedded, or embedded, respectively, submanifold of $E$. If $M=M'$ then we usually assume that $\wt{h}$ covers the identity in the base, and we call such subbundles \emph{vertical}, or \emph{subbundles over $M$}. 
+    An (immersed, weakly embedded, or embedded) subbundle of a smooth \gls{fb} $E\overset{\pi}{\to}M$ is a \gls{fb} $E'\overset{\pi'}{\to}M'$ with an injective \gls{fb} morphism $\wt{h}:E'\to E$ which turns $E'$ into an immersed, weakly embedded, or embedded, respectively, submanifold of $E$. If $M=M'$ then we usually assume that $\wt{h}$ covers the identity in the base, and we call such subbundles \emph{vertical}, or \emph{subbundles over $M$}. 
 \end{defn}
 
-\begin{prop}[{{\cite[Prop.~2.7.4]{RS1}}}]
-    Consider a bundle morphism $H:E'\to E$ covering a map $h:M'\to M$.  \gls{tfae}:
+\begin{prop}[{{cf.~\cite[Prop.~2.7.4]{RS1}}}]
+    Consider a bundle morphism $H:E'\to E$ covering a map $h:M'\to M$, and suppose that the vertical part $H_{\mathrm{ver}}:E'\to h^\ast E$ in the decomposition \eqref{eq 2.6.2 RS1} is an embedding, i.e., $(E',H_{\mathrm{ver}})$ is an embedded vertical subbundle of $h^\ast E$. Then \gls{tfae}:
     \begin{enumerate}
         \item $(E',H)$ is a subbundle (resp.~immersed, weakly embedded, embedded) of $E$.
-        \item $(M',h)$ is a submanifold (resp.~immersed, weakly embedded, embedded) of $M$ and the fiber maps $H_m:E'_m\to E_m$ are injective for all $m\in M'$.
-        \item In the decomposition \eqref{eq 2.6.2 RS1}, $(E',H_{\mathrm{ver}})$ is a vertical subbundle of $h^\ast E$ and $(h^\ast E,H_{\mathrm{hor}})$ is a subbundle (resp.~immersed, weakly embedded, embedded) of $E$.
+        \item $(M',h)$ is a submanifold (resp.~immersed, weakly embedded, embedded) of $M$.
     \end{enumerate}
 \end{prop}
 \begin{proof}
-    $1\implies 2$ The fiber maps $H_m$ are obviously injective. Since Since all bundles have local sections, let $\sigma':U'\to E'$ be such a local section for $E'$. Then $H\circ\sigma'$ is a smooth local section over the set $h(U')$ (which may not be open) for $E$. Every local section over an open set is an embedding, in particular $\sigma'$, and thus its composition with another submanifold map, $H\circ \sigma'$, defines a submanifold of $E$ of the same type as $H$. This submanifold is the image of a section of $\pi$, and $\pi$ restricted to any section is a diffeomorphism onto the domain of that section. Thus the composition $\pi\circ H\circ \sigma':U'\to h(U')$ is also a submanifold of the same type. Finally, since $\pi$ is locally trivial, this means that every point $m\in M$ has a neighborhood $U$ such that $h(M')\cap U$ coincides with a submanifold of the form we described above. This implies that the entire image $h(M)$ is a submanifold.
+    $1\implies 2$ Since all bundles have local sections, let $\sigma':U'\to E'$ be such a local section for $E'$. Then $H\circ\sigma'$ is a smooth local section over the set $h(U')$ (which may not be open) for $E$. Every local section over an open set is an embedding, in particular $\sigma'$, and thus its composition with another submanifold map, $H\circ \sigma'$, defines a submanifold of $E$ of the same type as $H$. This submanifold is the image of a section of $\pi$, and $\pi$ restricted to any section is a diffeomorphism onto the domain of that section. Thus the composition $\pi\circ H\circ \sigma':U'\to h(U')$ is also a submanifold of the same type. Finally, since $\pi$ is locally trivial, this means that every point $m\in M$ has a neighborhood $U$ such that $h(M')\cap U$ coincides with a submanifold of the form we described above. This implies that the entire image $h(M')$ is a submanifold.
     
-    $2\implies 3$ Since the $H_m$ are injective, $H_{\mathrm{ver}}$ is injective, hence the assertion on $(E',H_{\mathrm{ver}})$ holds since every vertical subbundle is embedded. The assertion on $(h^\ast E,H_{\mathrm{hor}})$ was proven in Exercise~\ref{example 2.7.3 RS1}.
-
-    $3\implies 1$ Since vertical subbundles are embedded, this follows from transitivity of submanifold properties as earlier in this proof.
+    $2\implies 1$ By Exercise~\ref{example 2.7.3 RS1}, $(h^\ast E,H_{\mathrm{hor}})$ is a subbundle of $E$ of the same type as $(M',h)$. Since $H=H_{\mathrm{hor}}\circ H_{\mathrm{ver}}$ and $H_{\mathrm{ver}}$ is an embedding, the claim follows from transitivity of submanifold properties.
 \end{proof}
+\begin{rem}
+    The assumption on $H_{\mathrm{ver}}$ cannot be dropped, and it is not enough to require the fiber maps $H_m:E'_m\to E_m$ to be injective, or even embeddings. For instance, an injective immersion of $\bbR$ into $\bbR^2$ whose image is a figure eight gives a vertical bundle morphism $M\times \bbR\to M\times\bbR^2$ that is an immersed, but not embedded, subbundle. For vector bundles, however, the assumption holds automatically as soon as the fiber maps are injective: in local trivializations $H_{\mathrm{ver}}$ takes the form $(m,v)\mapsto (m,A(m)v)$ with injective linear maps $A(m)$, which is an embedding (see \S\ref{sec: vector bundles}).
+\end{rem}
 
 
 
@@ -610,29 +610,29 @@ We've seen that bundles are, in categorical terms, pushouts (i.e., quotients of 
 
 
 \begin{thm}[Bundles over $M\times I$ {{\cite[Thm.~3.3.1]{RS2}}}]\label{bundles over MxI}
-    Every \gls{fb} $E$ over $M\times I$, where $I=[0,1]$, is isomorphic to $E_0\times I$ where $E_0=\restr{E}{M\times\{0\}}$. The isomorphism can be chosen so that its restriction to $E_0$ is the inclusion $E_0\hookrightarrow E\times I$ as $p_0\mapsto (p_0,0)$.
+    Every \gls{fb} $E$ over $M\times I$, where $I=[0,1]$, is isomorphic to $E_0\times I$ where $E_0=\restr{E}{M\times\{0\}}$. The isomorphism can be chosen so that its restriction to $E_0$ is the inclusion $E_0\hookrightarrow E_0\times I$ as $p_0\mapsto (p_0,0)$.
 \end{thm}
 \begin{proof}
     First we show that $E$ can be trivialized over a locally finite open covering of the form $\{U_i\times I\}_i$.
 
-    By local triviality, for a fixed $x\in M$ and every $t\in I$, there is an open neighborhood $V_t\subset M$ of $x$ and an open interval $t\in I_t\subset I$ such that $E$ is trivial over $V_t\times I_t$. Therefore, we can construct a countable, locally finite open covering of $M\times I$ with sets of this kind. By compactness, there is a finite set $0<t_1<\cdots<t_k<1$ such that $\bigcup_i I_{t_i}=I$. Let $V_i=V_{t_i}$, $I_i=I_{t_i}$, and define 
+    By local triviality, for a fixed $x\in M$ and every $t\in I$, there is an open neighborhood $V_t\subset M$ of $x$ and an open interval $t\in I_t\subset I$ such that $E$ is trivial over $V_t\times I_t$. Therefore, we can construct a countable, locally finite open covering of $M\times I$ with sets of this kind. By compactness, there is a finite set $0\leq t_1<\cdots<t_k\leq 1$ such that $\bigcup_i I_{t_i}=I$. Let $V_i=V_{t_i}$, $I_i=I_{t_i}$, and define 
     \[
         U_i=\bigcap_{j=1}^i V_j,\quad J_i=\bigcup_{j=1}^i I_j.
     \]
-    Obviously $E$ is trivial over $U_1\times J_1$. Let $\chi_1$ be a trivialization of $E$ over $U_1\times J_1$ and $\wt{\chi}_2$ -- one over $V_2\times I_2$. Then $(U_1\times J_1)\cap (V_2\times I_2)=U_2\times (J_1\cap I_2)$. Assuming that $I_2$ intersects $J_1$ non-trivially and one is not contained in the other (otherwise $I_2$ can be dropped from the covering of $I$), consider the transition function $\tau:U_2\times(J_1\cap I_2)\to G$ defined by $\chi_1(p)=\left(\id\times    \tau(\pi(p))\right)\cdot \wt{\chi}_2(p)$. Choose $c\in J_1\cap I_2$ and a continuous function $f:I_2\to J_1\cap I_2$ such that $f(t)=t$ for $t\geq c$ to define 
+    Obviously $E$ is trivial over $U_1\times J_1$. Let $\chi_1$ be a trivialization of $E$ over $U_1\times J_1$ and $\wt{\chi}_2$ -- one over $V_2\times I_2$. Then $(U_1\times J_1)\cap (V_2\times I_2)=U_2\times (J_1\cap I_2)$. Assuming that $I_2$ intersects $J_1$ non-trivially and one is not contained in the other (otherwise $I_2$ can be dropped from the covering of $I$), consider the transition function $\tau:U_2\times(J_1\cap I_2)\to G$ defined by $\chi_1(p)=\left(\id\times    \tau(\pi(p))\right)\cdot \wt{\chi}_2(p)$. Choose $c\in J_1\cap I_2$ and a continuous function $f:I_2\to J_1\cap I_2$ such that $f(t)=t$ for $t\leq c$ to define 
     \[
         \wt{\tau}:U_2\times I_2\to G,\quad \wt{\tau}(x,t)=\tau(x,f(t)).
     \]
     Clearly $\tau$ and $\wt{\tau}$ coincide on $U_2\times([0,c]\cap I_2)$. Hence the new mapping
     \[
     \chi_2(p)=\begin{cases}
-    \chi_1(p), & \pi(p)\in U_2\times[0,c],\\
-    (\id\times\wt{\tau}(\pi(p)))\cdot \wt{\chi}_2(p), & \pi(p)\in U_2\times I_2
+    \chi_1(p), & \pi(p)\in U_2\times(J_1\cap[0,c]),\\
+    (\id\times\wt{\tau}(\pi(p)))\cdot \wt{\chi}_2(p), & \pi(p)\in U_2\times(I_2\cap[c,1])
     \end{cases}
     \]
-    defines a trivialization of $E$ over $U_2\times I_2$. By induction, we find that $E$ is trivial over every every $U_i\times I$. 
+    defines a trivialization of $E$ over $U_2\times J_2$. By induction, we find that $E$ is trivial over $U_k\times J_k=U_k\times I$, where $U_k$ is an open neighborhood of $x$. 
 
-    We sketch the rest of the proof. Since this construction applies to every $x\in M$, we can extract a locally finite open covering of the entire $M$ of the form $\{U_i\times I\}_i$ such that $E$ is trivial over every set in the covering (this can be done using a \gls{pou}). Let $\chi_i$ be the corresponding local trivializations and $\wh{\chi}_i$ the induced local trivializations of $\restr{E_0}{U_i}\times I$.
+    We sketch the rest of the proof. Since this construction applies to every $x\in M$, we can extract a locally finite open covering of the entire $M$ of the form $\{U_i\times I\}_i$ such that $E$ is trivial over every set in the covering (this can be done by paracompactness of $M$). Let $\chi_i$ be the corresponding local trivializations and $\wh{\chi}_i$ the induced local trivializations of $\restr{E_0}{U_i}\times I$.
 
     Now we construct a global trivialization inductively in $i$. For $V_1=U_1$, there is already an isomorphism $\varPhi_1:\restr{E}{V_1\times I}\to\restr{E_0}{V_1}\times I$. We can construct a chain of open sets $V_1\subset V_2\subset\cdots$ that eventually covers all of $M$ and $U_i\subset V_i$, and by induction extend the isomorphism to $\varPhi_i:\restr{E}{V_i\times I}\to\restr{E_0}{V_i}\times I$. Via the local trivializations $\chi_i$ and $\wh{\chi}_i$, bundle isomorphisms are represented by $G$-valued functions $g_i:U_{i}\times I\to G$ with $g_i(x,0)=e\in G$. Let $g_1:(V_1\cap U_2)\times I\to G$ be the representative of $\varPhi_1$ in $\chi_2$ and $\wh{\chi}_2$. Then $g_1$ can be smoothly extended to $V_2\times I$ so that it equals $e$ on $(U_2\setminus V_1)\times I$. This represents the isomorphism $\varPhi_2$ that agrees with $\varPhi_1$ on the common domain. Repeating this procedure on $U_3$ and so on, we construct a global isomorphism of the bundles in question. See \cite[Thm.~3.3.1]{RS2} for details.
 \end{proof}
@@ -659,11 +659,11 @@ Now we are ready to prove the smooth version of the \gls{hlp} for \glspl{fb} (a 
     \[
     \lambda:E\to H_0^\ast E'\subset M\times E',\; \lambda(p)=(\pi(p),\wt{H}_0(p)).
     \]
-    This is a bundle isomorphism of two bundles over $M$. Moreover, by Theorem~\ref{bundles over MxI}, there exists a bundle isomorphism 
+    This is a vertical bundle morphism of two bundles over $M$. Moreover, by Theorem~\ref{bundles over MxI}, there exists a bundle isomorphism 
     \[
-    \varPhi:H^\ast E'\to \wt{H}_0^\ast E'\times I
+    \varPhi:H^\ast E'\to H_0^\ast E'\times I
     \]
-    of bundles over $M\times I$ satisfying $\varPhi\left((x,0),f\right)=\left((x,f),0\right)$. Together with the natural bundle morphism $\pr_2:H^\ast E'\to E'$, the isomorphisms $\lambda $ and $\varPhi$ combine to a morphism
+    of bundles over $M\times I$ satisfying $\varPhi\left((x,0),f\right)=\left((x,f),0\right)$. Together with the natural bundle morphism $\pr_2:H^\ast E'\to E'$, the morphisms $\lambda $ and $\varPhi$ combine to a morphism
     \[
     \wt{H}:E\times I\overset{\lambda\times\id_I}{\longrightarrow}H_0^\ast E' \times I\overset{\varPhi^{-1}}{\to}H^\ast E'\overset{\pr_2}{\to}E'
     \]
@@ -689,8 +689,8 @@ Now we are ready to prove the smooth version of the \gls{hlp} for \glspl{fb} (a 
 
 \begin{proof}
 \begin{enumerate}
-    \item Let $H:M\times I\to M'$ be a homotopy from $f$ to $g$ and consider the bundle $P=H^\ast E'$ over $M\times I$. Let $P_t=\restr{P}{X\times\{t\}}$ viewed as a bundle over $M$. Then $P_0=f^\ast E'$ and $P_1=g^\ast E'$. By the above Theorem, $P$ is isomorphic to $P_0\times I$. By restricting the isomorphism to the subbundle $P_1\subset P$, we get an isomorphism from $P_1$ to $P_0$.
-    \item Contractible spaces by definition are homotopy equivalent to a point, and all bundles over a point are trivial with the trivialization given by the pullback of the bundle bundle along the contraction.
+    \item Let $H:M\times I\to M'$ be a homotopy from $f$ to $g$ and consider the bundle $P=H^\ast E'$ over $M\times I$. Let $P_t=\restr{P}{M\times\{t\}}$ viewed as a bundle over $M$. Then $P_0=f^\ast E'$ and $P_1=g^\ast E'$. By the above Theorem, $P$ is isomorphic to $P_0\times I$. By restricting the isomorphism to the subbundle $P_1\subset P$, we get an isomorphism from $P_1$ to $P_0$.
+    \item If $M$ is contractible, then $\id_M$ is homotopic to a constant map $c$. By part 1, every bundle $E\to M$ satisfies $E=\id_M^\ast E\cong c^\ast E$, and the pullback along a constant map is trivial.
 \end{enumerate}
 \end{proof}
 
@@ -698,16 +698,17 @@ Now we are ready to prove the smooth version of the \gls{hlp} for \glspl{fb} (a 
 We've established that \glspl{fb} are, roughly speaking, classified by homotopy-plus-conjugacy classes of cocycles. We now present the first elementary example in which this classification can be reduced to familiar algebraic objects.
 
 \begin{cor}[Classification of fiber bundles over spheres]
-     Isomorphism classes of \glspl{fb} over the sphere $\bbS^n$, $n\geq 1$, with fiber $F$ and a given faithful action $G\acts F$ of the structure group $G$ are in one-to-one correspondence with the homotopy classes of maps from $\bbS^{n-1}$ to the identity component $G_0$, up to conjugation by the discrete group of connected components of $G$, $G\slash G_0\cong \pi_0(G)$:
+     Isomorphism classes of \glspl{fb} over the sphere $\bbS^n$, $n\geq 1$, with fiber $F$ and a given faithful action $G\acts F$ of the structure group $G$ are in one-to-one correspondence with the homotopy classes of maps from $\bbS^{n-1}$ to $G$ sending a base point to $e$, up to conjugation by the discrete group of connected components of $G$, $G\slash G_0\cong \pi_0(G)$:
     \[
-    \mathsf{Sk}\left(\FB_{\bbS^n}(G\acts F)\right)\cong [\bbS^{n-1},G_0]/\pi_0(G)= \pi_{n-1}(G)/\pi_0(G),\label{FB(G) and homotopy(G)}
+    \mathsf{Sk}\left(\FB_{\bbS^n}(G\acts F)\right)\cong \pi_{n-1}(G)/\pi_0(G),\label{FB(G) and homotopy(G)}
     \]
+    For $n\geq 2$, these maps take values in $G_0$, and $\pi_{n-1}(G)=\pi_{n-1}(G_0)=[\bbS^{n-1},G_0]$ (free and based homotopy classes agree because $G_0$ is a group).
     (here the group $\pi_0(G)$ acts on the set $\pi_{n-1}(G)$ by conjugation of the values, which is a well-defined action within homotopy classes). In particular, when $G$ is connected, this set forms a group isomorphic to $\pi_{n-1}(G)$.
 \end{cor}
 \begin{proof}
-    We have already proven this for $n=1$ in Example~\ref{line bundles over S1}. For $n\geq 2$, $\bbS^n$ can be covered by two hemispheres $U_\pm$ that overlap along a neighborhood $U_0$ of the equator. The equator $C$ is diffeomorphic to $\bbS^{n-1}$ and $U_0$ can be chosen so that $U_0\cong \bbS^{n-1}\times (-1,1)$. Then the only transition function in any given bundle $E\overset{\pi}{\to}\bbS^n$ is $\tau:U_0\to G$. It can be chosen so that is maps a given point $x_0\in C$ to $e\in G$. Its restriction to the equator provides the \emph{clutching function}\index{Clutching function} $\theta=\restr{\tau}{C}:\bbS^{n-1}\to G_0$ whose homotopy class will be the one put into correspondence with the bundle. 
+    We have already proven this for $n=1$ in Example~\ref{line bundles over S1}. For $n\geq 2$, $\bbS^n$ can be covered by two hemispheres $U_\pm$ that overlap along a neighborhood $U_0$ of the equator. The equator $C$ is diffeomorphic to $\bbS^{n-1}$ and $U_0$ can be chosen so that $U_0\cong \bbS^{n-1}\times (-1,1)$. Then the only transition function in any given bundle $E\overset{\pi}{\to}\bbS^n$ is $\tau:U_0\to G$. It can be chosen so that it maps a given point $x_0\in C$ to $e\in G$. Its restriction to the equator provides the \emph{clutching function}\index{Clutching function} $\theta=\restr{\tau}{C}:\bbS^{n-1}\to G_0$ whose homotopy class will be the one put into correspondence with the bundle. 
      
-    To check that this mapping is consistent, we need to show that isomorphic bundles have homotopic clutching functions, up to conjugation by an element of $\pi_0(G)$. Let the two transition functions be $\tau_1$ and $\tau_2$ and consider an isomorphism given by $\tau_2=\lambda_+ \tau_1 \lambda_-^{-1}$, where $\lambda_\pm$ are two $G$-valued functions on $U_\pm$, respectively. Since $\tau_{1,2}(x_0)=e$, we can first consider the case when $\lambda_\pm(x_0)=e$ and therefore, $\lambda_\pm$ take values in the connected component of the identity $G_0\subset G$. Then we can deform $\lambda_\pm$ by a homotopy so that $\lambda_+(P_+)=\lambda_-(P_-)=e\in G$, where $P_\pm$ are the respective poles of the sphere. Since $U_\pm $ are both diffeomorphic to a ball $B^n\in\bbR^n$, we can use the Cartesian coordinate $x$ on the ball to introduce the homotopy $\lambda_+(tx)\tau_1(x) \lambda_-^{-1}(tx)$ from $\tau_1$ to $\tau_2$. 
+    To check that this mapping is consistent, we need to show that isomorphic bundles have homotopic clutching functions, up to conjugation by an element of $\pi_0(G)$. Let the two transition functions be $\tau_1$ and $\tau_2$ and consider an isomorphism given by $\tau_2=\lambda_+ \tau_1 \lambda_-^{-1}$, where $\lambda_\pm$ are two $G$-valued functions on $U_\pm$, respectively. Since $\tau_{1,2}(x_0)=e$, we can first consider the case when $\lambda_\pm(x_0)=e$ and therefore, $\lambda_\pm$ take values in the connected component of the identity $G_0\subset G$. Then we can deform $\lambda_\pm$ by a homotopy so that $\lambda_+(P_+)=\lambda_-(P_-)=e\in G$, where $P_\pm$ are the respective poles of the sphere. Since $U_\pm $ are both diffeomorphic to a ball $B^n\subset\bbR^n$, we can use the Cartesian coordinate $x$ on the ball to introduce the homotopy $\lambda_+(tx)\tau_1(x) \lambda_-^{-1}(tx)$ from $\tau_1$ to $\tau_2$. 
     
     Another choice for $\lambda_\pm$ is when $\lambda_+(x_0)=\lambda_-(x_0)=g_0$ with $g_0$ in another connected component of $G$ than the identity. Then the same argument leads to clutching functions that are, up to a homotopy, conjugates of each other by $g_0$. Different choices of $g_0$ within its connected component only change the clutching functions by a homotopy, just like above, because each connected component of $G$ is path-connected.
     
@@ -734,41 +735,42 @@ The above corollary shows the importance of the computation of homotopy groups o
     \begin{example}[Plane bundles over $\bbS^2$]
     Let us classify all $\bbR^2$-bundles over $\bbS^2$. We have by Corollary~\ref{HLP cor} that 
     \[
-        \mathsf{Sk}\left(\FB_{\bbS^2}\left(\bbR^2\right)\right)\cong \pi_{1}\left(\GL_2(\bbR )\right)/\pi_0\left(\GL_2(\bbR )\right)=\bbZ/\bbZ_2\cong \bbZ
+        \mathsf{Sk}\left(\FB_{\bbS^2}\left(\bbR^2\right)\right)\cong \pi_{1}\left(\GL_2(\bbR )\right)/\pi_0\left(\GL_2(\bbR )\right)=\bbZ/\{\pm1\}\cong \bbZ_{\geq 0}.
     \]
+    Here the nontrivial element of $\pi_0(\GL_2(\bbR))=\bbZ_2$ is represented by a reflection, and conjugating a loop of rotations by a reflection reverses its direction, so $\bbZ_2$ acts on $\pi_1(\GL_2(\bbR))\cong\bbZ$ by $n\mapsto -n$.
     Similarly we can classify circle bundles above the 2-sphere. The structure group of circle bundles is $\Diff(\bbS^1)$, which is homotopy equivalent to $\Or_2\cong \bbS^1\sqcup \bbS^1$. Therefore
     \[
-        \mathsf{Sk}\left(\FB_{\bbS^2}\left(\bbS^1,\Or_2\right)\right)\cong \pi_{1}\left(\Or_2\right)/\pi_0\left(\Or_2\right)\cong\bbZ/\bbZ_2\cong\bbZ
+        \mathsf{Sk}\left(\FB_{\bbS^2}\left(\bbS^1,\Or_2\right)\right)\cong \pi_{1}\left(\Or_2\right)/\pi_0\left(\Or_2\right)\cong\bbZ/\{\pm1\}\cong\bbZ_{\geq 0}
     \]
-    (because $\bbZ_2$ acts by conjugation, which is a trivial action on the abelian group $\bbZ$). If we were to restrict the structure group to orientation-preserving diffeomorphisms of the circle, we would need to replace $\Or_2$ by $\SO_2=\U_1$, so 
+    for the same reason. If we were to restrict the structure group to orientation-preserving diffeomorphisms of the circle, we would need to replace $\Or_2$ by $\SO_2=\U_1$, so 
     \[
         \FB_{\bbS^2}(\bbS^1,\U_1)\cong \pi_{1}\left(\bbS^1\right)\cong\bbZ.
     \]
-    This implies that every plane bundle over $\bbS^2$ is orientable. The integer number that classifies these (oriented) plane or circle bundles over the 2-sphere is called the \emph{Chern number}\index{Chern number} and represents yet another characteristic class of bundles.
+    Since the clutching functions take values in the identity component, every plane bundle over $\bbS^2$ is orientable, and the two orientations of a bundle correspond to the integers $\pm n$. The integer number that classifies these (oriented) plane or circle bundles over the 2-sphere is called the \emph{Chern number}\index{Chern number} and represents yet another characteristic class of bundles.
 \end{example}
 
 \begin{example}[Hopf bundle revisited]\label{ex hopf bundle atlas}\index{Hopf fibration}
-    If we cover $\bbS^2$ by two disks $D_\pm$ overlapping along the equator, the Hopf fibration $\bbS^3\overset\pi\to \bbS^2$ (Example~\ref{Hopf bundle}) restricted to each of them is trivial and diffeomorphic to a solid torus in $\bbR^3$. Therefore, the 3-sphere $\bbS^3$ can be broken up into two disjoint (aside from their boundary) solid tori that are glued to each other along the 2-torus that is their common boundary.The twists of the boundary performed in this process classify the resulting circle bundles over the 2-sphere, so here we will try to understand the case of the Hopf bundle. In terms of the coordinates on the bundle used in Example~\ref{Hopf bundle}, we have 
+    If we cover $\bbS^2$ by two disks $D_\pm$ overlapping along the equator, the Hopf fibration $\bbS^3\overset\pi\to \bbS^2$ (Example~\ref{Hopf bundle}) restricted to each of them is trivial and diffeomorphic to a solid torus in $\bbR^3$. Therefore, the 3-sphere $\bbS^3$ can be broken up into two disjoint (aside from their boundary) solid tori that are glued to each other along the 2-torus that is their common boundary. The twists of the boundary performed in this process classify the resulting circle bundles over the 2-sphere, so here we will try to understand the case of the Hopf bundle. In terms of the coordinates on the bundle used in Example~\ref{Hopf bundle}, we have 
     \[\restr{E}{D_+}=\{|z_1|\geq|z_2|\},\quad \restr{E}{D_-}=\{|z_1|\leq|z_2|\}.\]
-    Note that $D_+=\bbS^2\setminus \{\pi(0,1)\}$ and $D_-=\bbS^2 \setminus \{\pi(1,0)\}$. It is conventional to define $0\coloneqq \pi(1,0)$ and $\infty\coloneqq \pi(0,1)$. Therefore, we can also call these sets $U_0\coloneqq D_+$ and $U_\infty\coloneqq D_-$. The standard complex coordinate on $U_0=D_+$ is $z\coloneqq \frac{z_2}{z_1}$ and on $U_\infty$, $w\coloneqq \frac{z_1}{z_2}$. The transition map is $w(z)=\frac{1}{z}$, which is complex analytic, so this atlas turns $\bbS^2$ into a \emph{complex manifold}, namely the projective complex line $\CP^1$.
+    Note that $D_+\subset\bbS^2\setminus \{\pi(0,1)\}$ and $D_-\subset\bbS^2 \setminus \{\pi(1,0)\}$. It is conventional to define $0\coloneqq \pi(1,0)$ and $\infty\coloneqq \pi(0,1)$, and to denote the two open sets above by $U_0\coloneqq \bbS^2\setminus\{\infty\}\supset D_+$ and $U_\infty\coloneqq \bbS^2\setminus\{0\}\supset D_-$. The standard complex coordinate on $U_0=D_+$ is $z\coloneqq \frac{z_2}{z_1}$ and on $U_\infty$, $w\coloneqq \frac{z_1}{z_2}$. The transition map is $w(z)=\frac{1}{z}$, which is complex analytic, so this atlas turns $\bbS^2$ into a \emph{complex manifold}, namely the projective complex line $\CP^1$.
     
     Over the equator $C$ we have 
     \[\restr{E}{C}=\left\{|z_1|^2=|z_2|^2=\frac12\right\},\]
     so the restriction of the Hopf bundle to the equator is a 2-torus with two angular coordinates $\varphi,\psi$, where $\varphi$ is the standard azimuthal coordinate on the sphere and $\psi$ is the coordinate in the fiber:
     \[\restr{E}{C}=\left\{(z_1,z_2)=\frac{1}{\sqrt{2}}\left(\rme^{\rmi\varphi/2+\rmi\psi},\rme^{-\rmi\varphi/2+\rmi\psi}\right)\right\}.\]
-    Identifying $D_\pm$ with $\mathbb{C}$ via the coordinates $z$ and $w$, respectively , we construct the bundle atlas
+    Identifying $U_0$ and $U_\infty$ with $\mathbb{C}$ via the coordinates $z$ and $w$, respectively, we construct the bundle atlas
     \begin{align}
-        \chi_0(z_1,z_2)=\left(\frac{z_2}{z_1},\frac{z_1}{|z_1|}\right)\in \bbC\times \bbS^1,\quad 0\leq|z_2|\leq |z_1|,\\
-        \chi_\infty(z_1,z_2)=\left(\frac{z_1}{z_2},\frac{z_2}{|z_2|}\right)\in \bbC\times \bbS^1,\quad 0\leq|z_1|\leq|z_2|.
+        \chi_0(z_1,z_2)=\left(\frac{z_2}{z_1},\frac{z_1}{|z_1|}\right)\in \bbC\times \bbS^1,\quad z_1\neq 0,\\
+        \chi_\infty(z_1,z_2)=\left(\frac{z_1}{z_2},\frac{z_2}{|z_2|}\right)\in \bbC\times \bbS^1,\quad z_2\neq 0.
     \end{align}
-    Incidentally, limiting $|z_1|$ and $|z_2|$ to $[0,\frac12]$, this shows once again that the 3-sphere is a union of two solid tori overlapping only at their common $\bbT^2$-boundary. Note that in this atlas, a point over the equator gets mapped to a conjugate pair of points on $\partial\bbD^2$ by $\pr_1\circ \chi_\pm$ (this could be fixed by redefining one of the charts, but that would violate the convenient analytic structure). These trivializations are indeed diffeomorphisms because their inverses are
+    Incidentally, restricting $z$ and $w$ to the closed unit disk, i.e., $|z_2|\leq|z_1|$ and $|z_1|\leq|z_2|$, respectively, this shows once again that the 3-sphere is a union of two solid tori overlapping only at their common $\bbT^2$-boundary. Note that in this atlas, a point over the equator gets mapped to a conjugate pair of points on $\partial\bbD^2$ by $\pr_1\circ \chi_\pm$ (this could be fixed by redefining one of the charts, but that would violate the convenient analytic structure). These trivializations are indeed diffeomorphisms because their inverses are
     \begin{align}
         \chi_0^{-1}(z,\rme^{\rmi\psi})=\left(\frac{\rme^{\rmi\psi}}{{\sqrt{1+|z|^2}}},\frac{z\rme^{\rmi\psi}}{{\sqrt{1+|z|^2}}}\right),\quad (z,\rme^{\rmi\psi})\in \bbC\times \bbS^1,\\
         \chi_\infty^{-1}(z,\rme^{\rmi\psi})=\left(\frac{z\rme^{\rmi\psi}}{{\sqrt{1+|z|^2}}},\frac{\rme^{\rmi\psi}}{{\sqrt{1+|z|^2}}}\right),\quad (z,\rme^{\rmi\psi})\in \bbC\times \bbS^1.
     \end{align}
     We compute the clutching function
     \[\tau_{\infty0}(z)\cdot \rme^{\rmi\psi}=\pr_2\circ \chi_\infty\circ \chi_0^{-1}(z,\rme^{\rmi\psi})=\frac{z}{|z|}\cdot \rme^{\rmi\psi},\]
-    in particular, on the equator, $\tau_{\infty0}(\rme^{\rmi\varphi})=\rme^{\rmi\varphi}$. Therefore, following a standard sign convention, the Chern number of this bundle equals $-1$.\footnote{The sign of the Chern number is usually fixed by the complex structure of the corresponding bundle, which induces a specific orientation on the fibers, see more in Example~\ref{ex holomorphic bundle O(k)}.}
+    in particular, on the equator $|z|=1$, we have $\tau_{\infty0}(z)=z$. Therefore, following a standard sign convention, the Chern number of this bundle equals $-1$.\footnote{The sign of the Chern number is usually fixed by the complex structure of the corresponding bundle, which induces a specific orientation on the fibers, see more in Example~\ref{ex holomorphic bundle O(k)}.}
 \end{example}
 
 
@@ -776,14 +778,14 @@ The above corollary shows the importance of the computation of homotopy groups o
      \begin{enumerate}
         \item As we saw above, every plane bundle over $\bbS^2$ is orientable. This can be made more general. We will see later that non-orientability of a vector bundle over a manifold $M$ implies the existence of some nontrivial two-fold covering of $M$. Therefore, every vector bundle over a simply connected base is orientable, since such manifolds have no non-trivial covering spaces.
         
-        \item Since the transition functions of every circle bundle over $\bbS^2$ can always be reduced to $\U_1$, and $\U_1$ is abelian, every such bundle comes with a natural global free (and fiberwise transitive) action of $\U_1$. This bundle can be trivialized over two hemispheres, thus being decomposed into a gluing of two solid tori $\bbD^2\times \bbS^1$. Recall that the lens space $L(p;1)$ (Example~\ref{example Lens space bredon}) can similarly be decomposed into two solid tori glued along a map acting on the boundary torus $\bbT^2$ of one of them by $(\rme^{2\pi\rmi \varphi},\rme^{2\pi\rmi\psi})\mapsto (e^{2\pi\rmi\varphi},e^{2\pi\rmi(p\varphi+\psi)})$. But this is exactly the identification that produces the circle bundle over $\bbS^2$ with the transition function $\tau_{-+}(\rme^{2\pi\rmi\varphi})=\rme^{2\pi\rmi p\varphi}$. Thus the total space of every $\bbS^1$-bundle over $\bbS^2$ is a lens space. Note that $p=1$, corresponding to the Hopf bundle, gives the correct total space $L(1;1)=L(1;0)=\bbS^3$. Another example is $p=2$, which gives $\RP^3$. \index{Lens spaces}
+        \item Since the transition functions of every circle bundle over $\bbS^2$ can always be reduced to $\U_1$, and $\U_1$ is abelian, every such bundle comes with a natural global free (and fiberwise transitive) action of $\U_1$. This bundle can be trivialized over two hemispheres, thus being decomposed into a gluing of two solid tori $\bbD^2\times \bbS^1$. Recall that the lens space $L(p;1)$ (Example~\ref{example Lens space bredon}) can similarly be decomposed into two solid tori glued along a map acting on the boundary torus $\bbT^2$ of one of them by $(\rme^{2\pi\rmi \varphi},\rme^{2\pi\rmi\psi})\mapsto (\rme^{2\pi\rmi\varphi},\rme^{2\pi\rmi(p\varphi+\psi)})$. But this is exactly the identification that produces the circle bundle over $\bbS^2$ with the transition function $\tau_{-+}(\rme^{2\pi\rmi\varphi})=\rme^{2\pi\rmi p\varphi}$. Thus the total space of every $\bbS^1$-bundle over $\bbS^2$ is a lens space (with the convention $L(0;1)=\bbS^2\times\bbS^1$). Note that $p=1$, corresponding to the Hopf bundle, gives the correct total space $L(1;1)=L(1;0)=\bbS^3$. Another example is $p=2$, which gives $\RP^3$. \index{Lens spaces}
     \end{enumerate}
 \end{example}
    
 \begin{rem}
-    In the mid-20th century there was a conjecture that any two closed (compact with no boundary) manifolds of the same dimension that are homotopy equivalent must be homeomorphic. 3-dimensional lens spaces were the first counterexample: $L(p;q_1)$ and $L(p;q_2)$ are homotopy equivalent iff $q_1q_2\equiv \pm n^2\pmod{p}$ for some $n\in\bbN$, but homeomorphic only if $q_1\equiv \pm q_2^{\pm 1}\pmod{p}$.
+    In the first half of the 20th century there was a conjecture that any two closed (compact with no boundary) manifolds of the same dimension that are homotopy equivalent must be homeomorphic. 3-dimensional lens spaces were the first counterexample: $L(p;q_1)$ and $L(p;q_2)$ are homotopy equivalent iff $q_1q_2\equiv \pm n^2\pmod{p}$ for some $n\in\bbN$, but homeomorphic iff $q_1\equiv \pm q_2^{\pm 1}\pmod{p}$.
 
-    The enhanced conjecture of Armand Borel asks the same question under the additional constraint that both manifolds are aspherical (trivial homotopy groups $\pi_\geq 2$). The answer to the Borel conjecture is positive in 3 dimensions thanks to Perelman's solution of the Poincar\'e conjecture. It is also known to hold for Riemannian manifolds of negative curvature. It remains an open problem outside of these cases, but is expected to be false in higher dimensions.
+    The enhanced conjecture of Armand Borel asks the same question under the additional constraint that both manifolds are aspherical (trivial homotopy groups $\pi_\geq 2$). The answer to the Borel conjecture is positive in 3 dimensions thanks to Perelman's proof of Thurston's geometrization conjecture. In dimensions at least $5$, it is also known to hold for closed Riemannian manifolds of nonpositive curvature and for many other classes of aspherical manifolds. It remains an open problem in general, but is widely believed to be true.
 \end{rem}
 
 
@@ -799,7 +801,7 @@ The above corollary shows the importance of the computation of homotopy groups o
 \chapter{Vector Bundles}
 
 
-\section{Vector bundles}
+\section{Vector bundles}\label{sec: vector bundles}
 
 Vector bundles are nothing but \glspl{fb} whose fibers carry vector space structures such that these structures, in some sense, vary smoothly with the base point. We make this precise by putting a natural restriction on the transition functions using the language of $G$-structures. For this definition we allow the field $\bbK$ be $\bbR,\bbC$, or $\bbH$, but we will mostly deal with real vector bundles until we get to complex geometry.
 
@@ -979,7 +981,7 @@ The following is an exercise.
 
 
 \begin{defn}[Vector subbundle]\index{Vector subbundle}
-    A (immersed, weakly embedded, or embedded) subbundle of a smooth vector bundle $E\overset{\pi}{\to}M$ is a vector bundle $E'\overset{\pi'}M'$ with an injective \gls{vb} morphism $\wt{h}:E'\to E$ which turns $E'$ into an immersed, weakly embedded, or embedded, respectively, submanifold of $E$. If $M=M'$ then we usually assume that $\wt{h}$ covers the identity in the base, and we call such subbundles \emph{vertical}. 
+    An (immersed, weakly embedded, or embedded) subbundle of a smooth vector bundle $E\overset{\pi}{\to}M$ is a vector bundle $E'\overset{\pi'}M'$ with an injective \gls{vb} morphism $\wt{h}:E'\to E$ which turns $E'$ into an immersed, weakly embedded, or embedded, respectively, submanifold of $E$. If $M=M'$ then we usually assume that $\wt{h}$ covers the identity in the base, and we call such subbundles \emph{vertical}. 
 \end{defn}
 
 \begin{rem}
