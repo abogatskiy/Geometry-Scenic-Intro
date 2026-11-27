@@ -446,7 +446,7 @@ Now let us try to use this transformation rule for transition functions to ``sim
 \end{example}
 
 \begin{xca}\label{Rk-bundles above circle}
-    Show that if $f:\bbR^k\to \bbR^k$ is a diffeomorphism such that $f(0)=0$, then $f_t(x)=f(tx)/t$ is a homotopy from $f$ to an element of $\GL_k(\bbR)$. Use this to argue that the group $\Diff(\bbR^k)$ has only two path-connected components, and that there are only two isomorphism classes of \glspl{fb} with fiber $\bbR^k$  above $\bbS^1$ for any $k$.
+    Show that if $f:\bbR^k\to \bbR^k$ is a diffeomorphism such that $f(0)=0$, then $f_t(x)=f(tx)/t$ is a homotopy from $f$ to an element of $\GL_k(\bbR)$. Use this and Proposition~\ref{prop components of GLn} to argue that the group $\Diff(\bbR^k)$ has only two path-connected components, and that there are only two isomorphism classes of \glspl{fb} with fiber $\bbR^k$  above $\bbS^1$ for any $k$.
 \end{xca}
 \begin{xca}
     Show that every diffeomorphism of the circle $\bbS^1\subset \bbC$ is homotopic to one of the two maps $z\mapsto z^{\pm 1}$. Using this fact, classify all circle bundles over $\bbS^1$ (i.e., with typical fiber $\bbS^1$). Note that this result can also be obtained from Exercise~\ref{Rk-bundles above circle}.
@@ -1870,7 +1870,7 @@ We can now easily show one direction of the isomorphism asserted by the complex 
     \end{pmatrix},\quad \varphi_{(H\otimes H)\oplus 1}(z)=\begin{pmatrix}
         z^2&0\\0&1
     \end{pmatrix}.\]
-    Now we rely on the fact that $\GL_n(\bbC)$ is path-connected to say that there exists a continuous path $\gamma:[0,1]\to \GL_2(\bbC)$ such that $\gamma(0)=I$ and $\gamma(1)=\begin{pmatrix}
+    Now we rely on the fact that $\GL_n(\bbC)$ is path-connected (Proposition~\ref{prop components of GLn}) to say that there exists a continuous path $\gamma:[0,1]\to \GL_2(\bbC)$ such that $\gamma(0)=I$ and $\gamma(1)=\begin{pmatrix}
         0&1\\1&0
     \end{pmatrix}.$
     Then a holomorphic homotopy between the two clutching functions written above is given by
