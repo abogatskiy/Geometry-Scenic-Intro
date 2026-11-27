@@ -1585,18 +1585,13 @@ This \chap\ contains an \emph{extremely brief} introduction into general point-s
 This \sect\ will be a quick review of the basic definitions and results of point-set topology. To keep it brief, we shall skip the proofs for most results and refer the reader to any standard textbook on general topology (e.g., \cite{Munk}).
 
 \begin{defn}[Topology]\index{Topological space}
-    A topology $\mathcal{{T}}$ on a set $X$ is a collection of subsets
-    of $X$ with the following properties
+    A topology $\mathcal{{T}}$ on a set $X$ is a collection of subsets of $X$ with the following properties
     \begin{enumerate}
     \item $\varnothing$, $X\in\mathcal{{T}}$.
-    \item $\mathcal{{T}}$ is closed under union of arbitrary (finite, countably
-    or uncountably infinite) number of its elements.
-    \item $\mathcal{{T}}$ is closed under intersection of a finite number of
-    its elements.
+    \item $\mathcal{{T}}$ is closed under union of arbitrary (finite, countably or uncountably infinite) number of its elements.
+    \item $\mathcal{{T}}$ is closed under intersection of a finite number of its elements.
     \end{enumerate}
-    The elements of the topology of a set are called \emph{open sets},
-    and the pair $(X,\mathcal{{T}})$ is called a \emph{topological
-    space}.
+    The elements of the topology of a set are called \emph{open sets}, and the pair $(X,\mathcal{{T}})$ is called a \emph{topological space}.
 \end{defn}
 
 The intuitive meaning of a topology is that we ``distinguish'' two points in $X$ only if one of them can be put in an open set not containing the other. Thus, we tend to associate the property of belonging to the same ``small'' open set with proximity (the smaller the open set, in terms of inclusion, the ``closer'' the points), even though there is no notion of distance at this point. There are variations of this interpretation of topology, see \S\ref{Separation Axioms}.
@@ -1619,7 +1614,6 @@ The intuitive meaning of a topology is that we ``distinguish'' two points in $X$
 \begin{defn}[Interior]\index{Interior}
 The interior of a subset $M$ of a topological space $X$ is defined as the union of all the open sets in $X$ that are contained in $M$, and denoted by $\Int M$. Since a union of open sets is open, $\Int M$ is open.
 \end{defn}
-
 
 \begin{defn}[Subspace Topology]\index{Subspace topology}
     For $M\subset X$, $(X,\mathcal{T})$ being a topological space, one can define the \emph{subspace} (or \emph{induced}) topology $\mathcal{T}_M$ on $M$ as the set of those subsets of $M$ that can be written as an intersection of $M$ with an open set, i.e.,
@@ -1706,10 +1700,9 @@ Since there is no universal algorithm that allows one to answer the first questi
 
 \begin{rem}
     In some applications, like knot theory, we are interested in \emph{isotopies} of embedded topological subspaces, which are essentially smooth deformations of embeddings without self-intersections. Isotopy is an even stronger condition than homotopy or homeomorphism, which allows for more interesting invariants like knot polynomials, which would not be invariant under homotopies or homeomorphisms (every knot can be ``untied'' by a homeomorphism!). In particular, there are more chances to find a complete system of isotopy invariants for certain classes of embeddings, therefore completely classifying all such objects by a fixed set of topological invariants. 
-    
+
     Beyond isotopy, there are many other kinds of topological isomorphisms on various categories of topological spaces, but the basic task of topology remains the same: identify invariants that help classify spaces up to isomorphism.
 \end{rem}
-
 
 \begin{defn}[Comparison of topologies]\index{Topology!fine}\index{Topology!coarse}
     Let $\tau,\rho$ be two topologies on a set $X$. If the inclusion
@@ -1731,7 +1724,6 @@ where $[x]$ is the equivalence class of the element $x$ defined as
 \end{equation}
 We also have the canonical map $\pi:X\rightarrow X/\sim$ that takes an element $x$ to its equivalence class $[x]$. If $X$ is equipped with a topology, the quotient can always be equipped with an induced topology as follows.\footnote{Existence of quotients is a pretty strong property for a category. In group theory, as we know, quotients exist only w.r.t.\ normal subgroups (i.e., $x\sim y$ iff $xy^{-1}$ is contained in a given normal subgroup), whereas in topological groups quotients don't even exist for all normal subgroups. In particular, the first isomorphism theorem doesn't hold for topological groups.}
 
-
 \begin{defn}[Quotient/Factor Topology]\index{Topology!quotient}
     The quotient topology on $X/\sim$ is the collection of sets  in the quotient space whose inverse image under the canonical projection $\pi$ is open in $X$, i.e.,
     \begin{equation}
@@ -1748,7 +1740,7 @@ The quotient space together with the canonical projection can be instead defined
 
 The quotient topology can also be defined in an equivalent way by first defining quotient maps.
 \begin{defn}[Quotient Map]\index{Quotient map}
-    A surjective map $\pi:X\rightarrow Y$ is called a \emph{quotient map} if a subset $U$ of $Y$ is open in $Y$ iff $\pi^{-1}(U)$ is open in $X$. In other words, a quotient map is a surjective, strongly continuous map. Another way to put this is that the topology on $Y$ must coincide with the final topology defined by $\pi$.
+    A surjective map $\pi:X\rightarrow Y$ is called a \emph{quotient map} if a subset $U$ of $Y$ is open in $Y$ iff $\pi^{-1}(U)$ is open in $X$. Continuity of $\pi$ gives only the ``if'' direction; the ``only if'' direction says that $Y$ carries the \emph{final} topology defined by $\pi$ (the finest one for which $\pi$ is continuous). So a quotient map is a continuous surjection whose target carries the final topology. Such maps are also called \emph{identifications}.
 \end{defn}
 
 Now, for any surjective map $\pi$ from a topological space $X$ to a \emph{set} $Z$, we can show that there exists exactly one topology on $Z$ for which $\pi$ is a quotient map. This topology is called the quotient topology on $Z$. To connect with our previous definition of the quotient topology, define $x_1\sim x_2$ iff $\pi(x_1)=\pi(x_2)$. The quotient topologies defined either way coincide with each other.
@@ -1762,9 +1754,6 @@ Now, for any surjective map $\pi$ from a topological space $X$ to a \emph{set} $
 \end{example}
 
 From the above example, one can see that quotienting a topological space is equivalent to \emph{gluing together} equivalent points of the topological space.
-
-
-
 
 
 \subsection{Generated topologies}
@@ -1834,7 +1823,6 @@ Using the definition of a basis, we can define the topology on the Cartesian pro
     \end{enumerate}
 \end{xca}
 
-
 % \begin{defn}[Final/Initial Topology]
 % A map $f$ from a set $X$ to a topological space $Y$ induces a topology on $X$, defined by
 % \begin{equation}
@@ -1844,15 +1832,11 @@ Using the definition of a basis, we can define the topology on the Cartesian pro
 % \end{defn}
 
 
-
-
 \subsection{Connectedness}
 
 \begin{defn}[Connected Space]\index{Connected space}
-    A space $X$ is said to be connected if there do not exist two non-empty open sets $U,V$ such that $U\cap V=\varnothing$ and $U\cup V=X$.
-    Equivalently, $X$ is connected iff the only clopen\footnote{Closed and open.}\index{Clopen set} subsets in it are $\varnothing$ and $X$.
+    A space $X$ is said to be connected if there do not exist two non-empty open sets $U,V$ such that $U\cap V=\varnothing$ and $U\cup V=X$. Equivalently, $X$ is connected iff the only clopen\footnote{Closed and open.}\index{Clopen set} subsets in it are $\varnothing$ and $X$.
 \end{defn}
-
 
 \begin{defn}[Connected subspace]
     A subset of a topological space $X$ is said to be connected if it forms a connected topological space under the subset topology.
@@ -1861,7 +1845,6 @@ Using the definition of a basis, we can define the topology on the Cartesian pro
 \begin{xca}
     Show that the interval $[a,b]\subset\bbR $ is connected in the standard topology. \emph{Hint:} prove that any nonempty clopen subset of the interval has to contain the whole interval.
 \end{xca}
-
 
 \begin{prop}[Connectedness is a Topological Invariant]
     The image of a connected space under a continuous map is connected, i.e., if $f\in C(X,Y)$ and $X$ is connected, so is $f(X)$.
@@ -1882,7 +1865,6 @@ Using the definition of a basis, we can define the topology on the Cartesian pro
 \end{xca}
 
 The equivalence classes of the connectedness relation are also the maximal connected subsets of $X$. Therefore any topological space $X$ is a disjoint union of connected components, each of which is closed.
-
 
 \begin{defn}[Path]\index{Path}
     A (continuous) path in a topological space $X$ is defined as a continuous map $f:[0,1]\rightarrow X$. A path is said to connect the points $x_0=f(0)$ and $x_1=f(1)$.
@@ -1926,9 +1908,6 @@ The set is connected, since every point on the y-axis is a limit point of the cu
 \end{xca}
 
 
-
-
-
 \subsection{Compactness}
 
 \begin{defn}[Covering/cover]
@@ -1965,7 +1944,6 @@ The set is connected, since every point on the y-axis is a limit point of the cu
 \end{enumerate}
 \end{xca}
 
-
 \begin{defn}[Classes of continuous maps]\index{Open map}\index{Closed map}\index{Proper map}
     A map $f:X\to Y$ (not necessarily continuous) is called
     \begin{enumerate}
@@ -1978,10 +1956,6 @@ The set is connected, since every point on the y-axis is a limit point of the cu
 \begin{xca}
    Show that the image of any proper map $f:\bbR^m\to\bbR^n$ is closed.
 \end{xca}
-
-
-
-
 
 
 \section{Metric spaces}
@@ -2091,21 +2065,17 @@ A sequence $(x_n)$ of points of a metric space $(X,\rho)$ is called a Cauchy seq
 A metric space $(X,\rho)$ is called complete if every Cauchy sequence $(x_n)$ in it has a limit $x_\infty\in X$.
 \end{defn}
 
-
 \begin{thm}[Cantor's intersection theorem]\index{Theorem!Cantor's intersection}
 Let $(X,\rho)$ be a complete metric space and let $C_n$ be a sequence of closed nested subsets $C_{n+1}\subset C_n$ whose diameters tend to zero, $\mathrm{diam}\,C_n=\sup_{x,y\in C_n} \rho(x,y) \to 0$. Then the intersection $\bigcap_{n=1}^\infty C_n$ consists of exactly one point.
 \end{thm}
-
 
 \begin{prop}
     A metric space is sequentially compact iff every decreasing sequence of closed nonempty subsets (not necessarily tending to zero diameter) has a nonempty intersection.
 \end{prop}
 
-
 \begin{thm}
     A metric space is compact iff it is complete and for every $\epsilon>0$ it can be covered by a finite number of open balls of radius $\epsilon$ (i.e., it is \emph{totally bounded}).
 \end{thm}
-
 
 \begin{xca}
     Consider $\mathbb{N}$ with the metric $\rho (n,m)=\lvert \frac 1 n-\frac 1 m\rvert$. Construct a sequence of balls $B_{r_k}(x_k)$ in this space such that $r_{k+1}<r_k$, $B_{r_{k+1}}(x_{k+1})\subset B_{r_k}(x_k)$, but the intersection of all these balls is empty.
@@ -2130,10 +2100,6 @@ Notice how this condition is much stronger than just the equivalence of the indu
 \begin{proof}
     Exercise.
 \end{proof}
-
-
-
-
 
 
 \section{Separation axioms} \label{Separation Axioms}
@@ -2215,11 +2181,6 @@ The following theorem is one of the most fundamental theorems in functional anal
 \end{thm}
 
 
-
-
-
-
-
 \section{Homotopy}\label{sec.homotopy}
 
 \begin{defn}[Homotopic maps]\index{Homotopy} 
@@ -2233,7 +2194,6 @@ The following theorem is one of the most fundamental theorems in functional anal
 \end{proof}
 
 The first argument of $F(t,x)$ is essentially ``time'', and $F(t,\cdot)$ continuously interpolates between $f_0$ and $f_1$ as time goes from 0 to 1. In topology, homotopy is synonymous with the phrase ``continuous deformation''.
-
 
 \begin{defn}[Contractible space]\index{Contractible space}
     A space $X$ is called contractible if it is homotopy equivalent to the one-point space, i.e., there exists a point $x_0\in X$ such that the constant map $f(x)=x_0$ is homotopic to the identity, $f\sim \id_X$. This property is in fact independent of $x_0$.
@@ -2274,8 +2234,7 @@ The first argument of $F(t,x)$ is essentially ``time'', and $F(t,\cdot)$ continu
 \end{defn}
 
 \begin{defn}[Homotopy equivalence of spaces]\index{Homotopy equivalence}
-    Two topological spaces $X$ and $Y$ are called homotopy equivalent if there exist two continuous maps $f\in C(X,Y)$, $g\in C(Y,X)$ such that their compositions are homotopic to identity: $g\circ f\sim \id_X$ and $f\circ g\sim \id_Y$. We write $X\simeq Y$.
-    In the presence of basepoints, these homotopies are required to leave the basepoints fixed for all values of the deformation parameter $t$.
+    Two topological spaces $X$ and $Y$ are called homotopy equivalent if there exist two continuous maps $f\in C(X,Y)$, $g\in C(Y,X)$ such that their compositions are homotopic to identity: $g\circ f\sim \id_X$ and $f\circ g\sim \id_Y$. We write $X\simeq Y$. In the presence of basepoints, these homotopies are required to leave the basepoints fixed for all values of the deformation parameter $t$.
 \end{defn}
 
 \begin{cor}
@@ -2294,11 +2253,7 @@ The first argument of $F(t,x)$ is essentially ``time'', and $F(t,\cdot)$ continu
 \end{example}
 
 
-
-
-
-
-\section{Fundamental group}
+\section{Fundamental group}\label{sec: fundamental group}
 
 \begin{defn}[Loops, Pointed homotopy]\index{Loop}
     Let $X$ be a path-connected topological space, pick a ``base point'' $x_0\in X$, and consider the set of all \emph{loops} in $X$ based at $x_0$, i.e., paths $\gamma\in C([0,1], X)$ such that $\gamma(0)=\gamma(1)=x_0$. A pointed homotopy between two such loops is a homotopy $F\in C([0,1]\times[0,1],X)$ such that $F(\cdot,0)=F(\cdot,1)=x_0$. Pointed homotopy is an equivalence relation on the set of based loops.
@@ -2307,7 +2262,7 @@ The first argument of $F(t,x)$ is essentially ``time'', and $F(t,\cdot)$ continu
 \begin{defn}[Fundamental/Poincar\'e group]\index{Fundamental group}
     The fundamental group $\pi_1(X,x_0)$ of a path-connected space $X$ with a base point $x_0$ is defined as the set $\{ [\gamma]\}$ of pointed homotopy classes of based loops with the inversion operation given by $[\gamma(t)]^{-1}=[\gamma(1-t)]$ and the multiplication operation 
     \[
-    [\gamma_1(t)]\circ [\gamma_2(t)]=\left[ \begin{cases} \gamma_1(2t), & t\in[0,1/2], \\ \gamma_2(2t-1), & t\in(1/2,1] \end{cases}\right].\label{pi1 group op}
+    [\gamma_1(t)]\circ [\gamma_2(t)]=\left[ \begin{cases} \gamma_1(2t), & t\in[0,1/2], \\ \gamma_2(2t-1), & t\in(1/2,1] \end{cases}\right].
     \]
     The unit element is given by the equivalence class of the ``constant loop'' $\gamma(t)\equiv x_0$. If $X$ is not path-connected, then $\pi_1(X,x_0)$ is defined as the fundamental group of the path-connected component containing $x_0$.
 \end{defn}
@@ -2342,7 +2297,7 @@ Show that contractible spaces are simply connected.
     Verify that $\Sigma$ extends to a functor on the category of pointed spaces. This will follow from the uniqueness of the pointed map at the bottom of the following square that makes it commute:
     \[\begin{tikzcd}[every matrix/.append style={name=m},   
     execute at end picture={\draw [<-] ([xshift=-2.3em,yshift=1mm]m-2-2.north) arc[start angle=-90,delta angle=270,radius=0.25cm];}]
-   X \arrow[r,"f"]\arrow[d,swap,"\pi_X"]& Y\arrow[d,"\pi_Y"] \\
+   X\times[0,1] \arrow[r,"f\times\id"]\arrow[d,swap,"\pi_X"]& Y\times[0,1]\arrow[d,"\pi_Y"] \\
    \Sigma X\arrow[r,swap,dashed, "\exists !\,\Sigma(f)"]& \Sigma Y
     \end{tikzcd}\]
     where $\pi_X$ and $\pi_Y$ are the quotient maps that define the suspensions.
@@ -2357,10 +2312,10 @@ Show that contractible spaces are simply connected.
 \end{defn}
 
 \begin{prop}
-    If $X,Y$ are Hausdorff and $X$ is locally compact, then $C(X,Y)$ is Hausdorff.
+    If $Y$ is Hausdorff, then $C(X,Y)$ is Hausdorff.
 \end{prop}
 \begin{proof}
-    Let $f,g\in C(X,Y)$ with an $x\in X$ such that $f(x)\neq g(x)$. Since $Y$ is Hausdorff, there exist disjoint open neighborhoods $U_1$ of $f(x)$ and $U_2$ of $g(x)$. Then $f^{-1}(U_1)\cap g^{-1}(U_2)$ is an open neighborhood of $x$, because $f$ and $g$ are continuous. Since $X$ is locally compact, this neighborhood contains a compact neighborhood $K$. Then, $M(K,U_1)$ and $M(K,U_2)$ are neighborhoods of $f$ and $g$, respectively. They are disjoint because $U_1$ and $U_2$ are.
+    Let $f\neq g$, so that $f(x)\neq g(x)$ for some $x\in X$. Since $Y$ is Hausdorff, there exist disjoint open neighborhoods $U_1$ of $f(x)$ and $U_2$ of $g(x)$. The one-point set $K=\{x\}$ is compact, so $M(K,U_1)$ and $M(K,U_2)$ are open neighborhoods of $f$ and $g$, respectively. They are disjoint because $U_1$ and $U_2$ are.
 \end{proof}
 
 \begin{prop}
@@ -2369,7 +2324,6 @@ Show that contractible spaces are simply connected.
 \begin{proof}
     Let $U$ be an open neighborhood of $f(x)$. Since $f$ is continuous and due to the properties of $X$, there is a compact neighborhood $K$ of $x$ such that $f(K)\subset U$. Thus $f\in M(K,U)$ and $M(K,U)\times K$ is mapped into $U$ by the evaluation map $e$. Finally, $M(K,U)\times K \subset Y^X\times X$ is a neighborhood of $(f,x)$. This proves continuity.
 \end{proof}
-
 
 \begin{thm}[{{\cite[Thm.~VII.2.4]{Bredon}}}]\label{compact open continuity}
     Let $X$ be a locally compact Hausdorff space, and $Y$ and $T$ Hausdorff spaces. For any map $f:X\times T\to Y$, denote $f_t(x)=f(x,t)$. Then the continuity of $f$ is equivalent to each $f_t$ being continuous separately and the mapping $t\mapsto f_t$ also being continuous from $T$ into $Y^X$. 
@@ -2385,12 +2339,11 @@ Similarly, one can show that under similar conditions, one has homeomorphisms $Y
     The loop space of a pointed space $X$ is the space $\Omega X=X^{\bbS^1}$ that consists of loops based at $x_0$, with the compact-open topology. Its basepoint is the constant loop at $x_0$.
 \end{defn}
 
-
 \begin{prop}\label{suspension maps prop}
     \begin{enumerate}
-        \item The set of homotopy classes $[X;\Omega Y]$ is a group under the multiplication induced by the usual multiplication of loops in $Y$;
-        \item The set of homotopy classes $[\Sigma X;Y]$ is a group under the multiplication induced by the concatenation of maps along the interval $[0,1]\times\{x_0\}$ in $\Sigma X$ (namely $f(2t,x)$ for $t\leq 1/2$ and $g(2t-1,x)$ after that);
-        \item On the set $[\Sigma X;\Omega Y]$, the two multiplications defined above coincide and are abelian.
+        \item The set of homotopy classes $[X,\Omega Y]$ is a group under the multiplication induced by the usual multiplication of loops in $Y$;
+        \item The set of homotopy classes $[\Sigma X,Y]$ is a group under the multiplication induced by the concatenation of maps along the interval $[0,1]\times\{x_0\}$ in $\Sigma X$ (namely $f(2t,x)$ for $t\leq 1/2$ and $g(2t-1,x)$ after that);
+        \item On the set $[\Sigma X,\Omega Y]$, the two multiplications defined above coincide and are abelian.
     \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -2410,41 +2363,145 @@ Similarly, one can show that under similar conditions, one has homeomorphisms $Y
 \end{proof}
 
 \begin{defn}[Zeroth degree homotopy set]
-    Denote by $\pi_0(X)$ the set of path-connected components of $X$. It can be identified with the set of homotopy equivalence classes of maps from the one-point space into $X$. Note that this set carries no natural structure of a group.
+    Denote by $\pi_0(X)$ the set of path-connected components of $X$. It can be identified with the set of homotopy classes of maps from the one-point space into $X$. Note that this set carries no natural structure of a group.
 \end{defn}
 
 \begin{rem}
-    One of the most useful consequences of the above discussion is that in sufficiently nice topological categories, such as that of topological manifolds, homotopies are just paths in the space of continuous maps. Therefore homotopy classes of maps $[X;Y]$ are nothing but the path-connected components in the space $Y^X$, that is, $\pi_0( Y^X)$. For compact $X$ Lemma~\ref{lemma on suspension and loops} can be shown indirectly using the exponential law, $Y^{\Sigma X}\cong (\Omega Y)^X$. As we've just seen, the multiplications on these spaces correspond, thus we have group homomorphisms $[\Sigma X;Y]= \pi_0(Y^{\Sigma X})\cong \pi_0((\Omega Y)^X)= [X;\Omega Y]$.
+    One of the most useful consequences of the above discussion is that for sufficiently nice spaces (e.g., when $X$ is locally compact Hausdorff), homotopies are just paths in the space of continuous maps. Therefore homotopy classes of maps $[X,Y]$ are nothing but the path-connected components in the space $Y^X$, that is, $\pi_0( Y^X)$. For compact $X$ Lemma~\ref{lemma on suspension and loops} can be shown indirectly using the exponential law, $Y^{\Sigma X}\cong (\Omega Y)^X$. As we've just seen, the multiplications on these spaces correspond, thus we have group homomorphisms $[\Sigma X,Y]= \pi_0(Y^{\Sigma X})\cong \pi_0((\Omega Y)^X)= [X,\Omega Y]$.
 \end{rem}
 \begin{prop}\label{prop computing pi1}
 \begin{enumerate}
     \item $\pi_1$ is a covariant functor $\pi_1:\mathsf{Top}_\bullet\to \mathsf{Gr}$.
     \item For a path-connected space, fundamental groups with different base points are isomorphic (this is why we often abuse the notation by writing $\pi_1(X)$).
-    \item For any number of path-connected spaces, $\pi_n(\prod_\alpha X_\alpha)\cong \prod_\alpha \pi_n(X_\alpha)$.
+    \item For any number of path-connected spaces, $\pi_1(\prod_\alpha X_\alpha)\cong \prod_\alpha \pi_1(X_\alpha)$.
 \end{enumerate}
 \end{prop}
 \begin{proof}
 Exercise.
 \end{proof}
 
+So far we have not computed a single nontrivial fundamental group. The simplest candidate is the circle, and the key to it is a very concrete object: the continuous choice of an angle. Let
+\[p:\bbR\to\bbS^1\subset\bbC,\quad p(x)=\rme^{2\pi\rmi x},\]
+so that $x$ measures the angle in full turns. Every point of $\bbS^1$ has infinitely many angles, differing by integers, and the whole difficulty is to choose them continuously along a path. Denote by $\mathrm{Arg}:\bbS^1\setminus\{-1\}\to(-\pi,\pi)$ the principal value of the argument; it is continuous, and $\rme^{\rmi\,\mathrm{Arg}(z)}=z$.
+
+\begin{figure}[tp]
+    \centering
+    \begin{tikzpicture}[scale=1.1]
+        % base circle
+        \draw[thick] (0,-1.8) ellipse (1.6 and 0.45);
+        \node[right] at (1.65,-1.8) {$\bbS^1$};
+        \fill (1.6,-1.8) circle (1.3pt) node[below right] {$1$};
+        % helix (back parts dashed)
+        \foreach \k in {0,1,2} {
+            \draw[gray, domain={2*pi*\k}:{2*pi*\k+pi}, samples=40, smooth, variable=\t, dashed]
+                plot ({1.6*cos(\t r)}, {0.45*sin(\t r)+0.16*\t});
+            \draw[gray, domain={2*pi*\k+pi}:{2*pi*(\k+1)}, samples=40, smooth, variable=\t]
+                plot ({1.6*cos(\t r)}, {0.45*sin(\t r)+0.16*\t});
+        }
+        \node[gray, left] at (-1.6,2.6) {$\bbR$};
+        % lifted path from 0 to 2
+        \draw[red, very thick, domain=0:{4*pi}, samples=80, smooth, variable=\t]
+            plot ({1.6*cos(\t r)}, {0.45*sin(\t r)+0.16*\t});
+        \foreach \k/\h in {0/0, 1/1.005, 2/2.011} {
+            \fill (1.6,\h) circle (1.3pt);
+        }
+        \node[right] at (1.6,0) {$0$};
+        \node[right] at (1.6,1.005) {$1$};
+        \node[right] at (1.6,2.011) {$2=\wt\gamma(1)$};
+        \node[red] at (-0.9,1.45) {$\wt\gamma$};
+        % projection
+        \draw[->] (2.6,1) -- node[right] {$p$} (2.6,-1.4);
+        % loop downstairs
+        \draw[red, very thick, ->] (1.6,-1.8) arc (0:330:1.6 and 0.45);
+        \node[red, below] at (0,-2.25) {$\gamma$};
+    \end{tikzpicture}
+    \caption{The exponential map $p(x)=\rme^{2\pi\rmi x}$ wraps $\bbR$ around $\bbS^1$ like a spring. A loop $\gamma$ going twice around the circle lifts to a path $\wt\gamma$ climbing from $0$ to $2$.}
+    \label{fig: lifting to R}
+\end{figure}
+
+\begin{lem}[Continuous choice of angle]\label{lem lifting to R}
+\begin{enumerate}
+    \item For every path $\gamma:[0,1]\to\bbS^1$ and every $x_0\in\bbR$ with $p(x_0)=\gamma(0)$ there is a unique continuous \emph{lift} $\wt\gamma:[0,1]\to \bbR$ with $p\circ\wt\gamma=\gamma$ and $\wt\gamma(0)=x_0$.
+    \item For every continuous map $H:[0,1]\times[0,1]\to\bbS^1$ and every $x_0$ with $p(x_0)=H(0,0)$ there is a unique continuous lift $\wt H:[0,1]\times[0,1]\to\bbR$ with $p\circ\wt H=H$ and $\wt H(0,0)=x_0$.
+\end{enumerate}
+\end{lem}
+\begin{proof}
+    \emph{Uniqueness.} Two lifts of the same map differ by a continuous function with values in $\bbZ$ (since $p(x)=p(y)$ iff $x-y\in\bbZ$). On a connected domain such a function is constant, and it vanishes at the starting point.
+
+    \emph{Existence in (1).} By uniform continuity of $\gamma$ on the compact interval, there is $N$ such that $\gamma$ moves by less than half a turn on each interval $[t_k,t_{k+1}]$, $t_k=k/N$; that is, $\gamma(t)/\gamma(t_k)\neq -1$ there. Then we simply add up small angle increments: define $\wt\gamma(0)=x_0$ and, inductively in $k$,
+    \[\wt\gamma(t)=\wt\gamma(t_k)+\frac{1}{2\pi}\mathrm{Arg}\frac{\gamma(t)}{\gamma(t_k)},\qquad t\in[t_k,t_{k+1}].\]
+    Each piece is continuous, consecutive pieces agree at $t_k$, and $p(\wt\gamma(t))=p(\wt\gamma(t_k))\cdot\gamma(t)/\gamma(t_k)=\gamma(t)$.
+
+    \emph{Existence in (2).} First lift the path $t\mapsto H(t,0)$ by (1) to get $\wt H(t,0)$. By uniform continuity of $H$ on the compact square, there is $N$ such that $H(t,s)/H(t,s_k)\neq -1$ for all $t$ and all $s\in[s_k,s_{k+1}]$, $s_k=k/N$. Now apply the same formula in the variable $s$:
+    \[\wt H(t,s)=\wt H(t,s_k)+\frac{1}{2\pi}\mathrm{Arg}\frac{H(t,s)}{H(t,s_k)},\qquad s\in[s_k,s_{k+1}].\]
+    By induction in $k$, each step is a continuous function of \emph{both} variables $(t,s)$.
+\end{proof}
+
+\begin{defn}[Degree of a loop]\index{Degree!of a loop in $\bbS^1$}\index{Winding number}
+    The \emph{degree} (or \emph{winding number}) of a closed path $\gamma:[0,1]\to\bbS^1$, $\gamma(0)=\gamma(1)$, is the integer
+    \[\deg\gamma=\wt\gamma(1)-\wt\gamma(0)\in\bbZ,\]
+    where $\wt\gamma$ is any lift of $\gamma$. It does not depend on the choice of the lift, since any two lifts differ by a constant.
+\end{defn}
+
+\begin{prop}\label{prop degree homotopy invariant}
+    If $H:[0,1]\times[0,1]\to\bbS^1$ is a homotopy through closed paths (i.e., $H(t,0)=H(t,1)$ for all $t$; the basepoint is allowed to move), then $\deg H(0,\cdot)=\deg H(1,\cdot)$.
+\end{prop}
+\begin{proof}
+    Take the lift $\wt H$ from Lemma~\ref{lem lifting to R}. By uniqueness, $\wt H(t,\cdot)$ is a lift of $H(t,\cdot)$ for every $t$, so $\deg H(t,\cdot)=\wt H(t,1)-\wt H(t,0)$ is a continuous integer-valued function of $t\in[0,1]$, hence constant.
+\end{proof}
+
+\begin{thm}[Fundamental group of the circle]\label{thm pi1 of circle elementary}
+    The degree defines an isomorphism $\deg:\pi_1(\bbS^1,1)\to\bbZ$. The class of the loop $\omega_n(s)=\rme^{2\pi\rmi ns}$ corresponds to $n$.
+\end{thm}
+\begin{proof}
+    By Proposition~\ref{prop degree homotopy invariant}, $\deg$ is well defined on homotopy classes.
+
+    \emph{Homomorphism.} Let $\wt\beta,\wt\gamma$ be lifts of $\beta,\gamma$ starting at $0$. Then $\wt\beta$ followed by the shifted path $\wt\gamma+\deg\beta$ is a lift of $\beta\bullet\gamma$, and it ends at $\deg\beta+\deg\gamma$.
+
+    \emph{Surjectivity.} The loop $\omega_n$ lifts to $s\mapsto ns$, so $\deg\omega_n=n$.
+
+    \emph{Injectivity.} If $\deg\gamma=0$, the lift $\wt\gamma$ starting at $0$ ends at $0$, i.e., it is a loop in $\bbR$. Shrinking it linearly, $F(t,s)=p\big((1-t)\wt\gamma(s)\big)$ is a pointed homotopy from $\gamma$ to the constant loop.
+\end{proof}
+
+\begin{rem}
+    The map $p$ is the prototype of a \emph{covering map}, and Lemma~\ref{lem lifting to R} is a special case of the path and homotopy lifting properties, Theorems~\ref{Path lifting property} and \ref{homotopy lifting property}. In the \chap\ on covering spaces, the same computation will reappear as Theorem~\ref{pi_1 of the circle thm}, this time as a consequence of the general theory.
+\end{rem}
+
+The circle is therefore not simply connected, and in particular not contractible. This single computation already has striking consequences.
+
+\begin{cor}[No retraction]\label{cor no retraction D2 S1}
+    There is no retraction of the closed disk $\wb{B^2}$ onto its boundary circle $\bbS^1$. Consequently, Brouwer's fixed point theorem (Theorem~\ref{thm Brouwer's fixed point}) holds for $n=2$.
+\end{cor}
+\begin{proof}
+    By the retraction theorem above, a retraction would make $i_\ast:\pi_1(\bbS^1)\cong\bbZ\to \pi_1(\wb{B^2})=0$ injective, which is absurd. The proof of Brouwer's theorem constructs exactly such a retraction $h$ from a map without fixed points.
+\end{proof}
+
+\begin{cor}[Fundamental theorem of algebra]\index{Theorem!Fundamental theorem of algebra}
+    Every polynomial $P(z)=z^n+a_{n-1}z^{n-1}+\dots+a_0$ with complex coefficients and $n\geq1$ has a complex root.
+\end{cor}
+\begin{proof}
+    Suppose $P$ has no roots. Then for every $r\geq0$ the closed path $\gamma_r(s)=P(r\rme^{2\pi\rmi s})/\lvert P(r\rme^{2\pi\rmi s})\rvert$ in $\bbS^1$ is defined, and $r\mapsto\gamma_r$ is a homotopy through closed paths. For $r=0$ the path is constant, so $\deg\gamma_r=0$ for all $r$ by Proposition~\ref{prop degree homotopy invariant}.
+
+    On the other hand, take $R>1+\sum_k\lvert a_k\rvert$. On the circle $\lvert z\rvert=R$ we have $\lvert z^n\rvert>\lvert a_{n-1}z^{n-1}+\dots+a_0\rvert$, so the polynomials $P_t(z)=z^n+t(a_{n-1}z^{n-1}+\dots+a_0)$, $t\in[0,1]$, have no zeros there. Normalizing $P_t(R\rme^{2\pi\rmi s})$ as before gives a homotopy through closed paths from $\gamma_R$ to $s\mapsto \rme^{2\pi\rmi ns}=\omega_n$, whose degree is $n\neq0$. Contradiction.
+\end{proof}
+
 \begin{lem}\label{lem product of loops}
     If a space $X$ is the union of a collection of path-connected open sets $U_\alpha$ each containing the basepoint $x_0$ and if each intersection $U_{\alpha\beta}$ is path-connected, then every loop in $X$ at $x_0$ is homotopic to a product of loops each of which is contained in a single $U_\alpha$.
 \end{lem}
 \begin{proof}
-    The key is in the compactness of the interval $[0,1]$, which guarantees that the loop can be broken up into a finite number segments each of whose closure is contained inside only one of the $U_\alpha$'s. Call these segments $f_i, i=1,\ldots,n$. Since $x_0$ belongs to each $U_\alpha$, we can then find a path $g_i$ from $x_0$ to the starting point of $f_i$. We can always choose $g_0$ and $g_{n+1}$ to be trivial. The loops we seek are then $g_i\cdot f_i\cdot g_{i+1}^{-1}$. Their product is homotopic to the original loop because all $g_i$'s cancel out.
+    The key is in the compactness of the interval $[0,1]$, which guarantees that the loop can be broken up into a finite number of segments each of which is contained inside a single $U_{\alpha_i}$. Call these segments $f_i$, $i=1,\ldots,n$. The starting point of $f_i$ ($i\geq 2$) lies in $U_{\alpha_{i-1}}\cap U_{\alpha_i}$, which is path-connected and contains $x_0$, so we can find a path $g_i$ inside this intersection from $x_0$ to the starting point of $f_i$. We choose $g_1$ and $g_{n+1}$ to be trivial. The loops we seek are then $g_i\cdot f_i\cdot g_{i+1}^{-1}$, each lying in $U_{\alpha_i}$. Their product is homotopic to the original loop because all $g_i$'s cancel out.
 \end{proof}
 \begin{cor}\label{cor pi_1(S^n)=0}
     $\pi_1(\bbS^n)=0$ for $n\geq 2$.
 \end{cor}
 \begin{proof}
-    $\bbS^n$ is the union of the open neighborhoods of two hemispheres, $U_+$ and $U_-$. Each of these is homeomorphic to $\bbR^n$ and $U_+\cap U_-\cong \bbS^{n-1}\times \bbR $. If $n\geq 2$, then $U_+\cap U_-$ is path-connected. By the above lemma, every loop in $\bbS^n$ based at a point $x_0\in U_+\cap U_-$ is a product of two loops within each hemisphere. However both of these loops are trivial since $\pi_1(U_\pm)=0$.
+    $\bbS^n$ is the union of the open neighborhoods of two hemispheres, $U_+$ and $U_-$. Each of these is homeomorphic to $\bbR^n$ and $U_+\cap U_-\cong \bbS^{n-1}\times \bbR $. If $n\geq 2$, then $U_+\cap U_-$ is path-connected. By the above lemma, every loop in $\bbS^n$ based at a point $x_0\in U_+\cap U_-$ is homotopic to a product of loops each lying in one of $U_\pm$. However all of these loops are trivial since $\pi_1(U_\pm)=0$.
 \end{proof}
 \begin{cor}
     $\bbR^2$ is not homeomorphic to $\bbR^n$ for $n\neq 2$.
 \end{cor}
 \begin{proof}
-    Assume there is a homeomorphism $f:\bbR^2\to \bbR^n$. The case $n=1$ is easy because $\bbR \setminus\{f(0)\}$ is not connected whereas the supposedly homeomorphic $\bbR^2\setminus\{0\}$ is. 
-    When $n>2$, the complement $\bbR^n\setminus\{f(x)\}$ is homeomorphic to $\bbS^{n-1}\times \bbR $, whose fundamental group is $\pi_1(\bbS^{n-1})=0$ by Proposition~\ref{prop computing pi1}. However, for $n>2$ the fundamental group of the complement $\bbR^2\setminus\{x\}$ is $\pi_1(\bbS^1)=\bbZ$. This leads to a contradiction.
+    Assume there is a homeomorphism $f:\bbR^2\to \bbR^n$. The case $n=1$ is easy because $\bbR \setminus\{f(0)\}$ is not connected whereas the supposedly homeomorphic $\bbR^2\setminus\{0\}$ is. When $n>2$, $f$ restricts to a homeomorphism $\bbR^2\setminus\{0\}\to\bbR^n\setminus\{f(0)\}$. Each of these punctured spaces deformation retracts onto a sphere around the removed point (via $x\mapsto x/\lvert x\rvert$), so their fundamental groups are $\pi_1(\bbS^1)\cong\bbZ$ (Theorem~\ref{thm pi1 of circle elementary}) and $\pi_1(\bbS^{n-1})=0$ (Corollary~\ref{cor pi_1(S^n)=0}), respectively. This is a contradiction.
 \end{proof}
 
 We are now prepared to prove one of the most important theorems about the fundamental group. First let us recall the categorical notion of pushouts (see Definition~\ref{pushouts}). If a path-connected space is represented as a union of two open sets, $X=U\cup V$, then the corresponding set inclusions induce homomorphisms of fundamental groups:
@@ -2472,14 +2529,14 @@ Note, however, that the ``background square'' involving $\pi_1(U\cap V),\pi_1(U)
 
 \begin{thm}[Seifert-van Kampen {{\cite[Thm.~1.20]{Hatcher}}}]\index{Theorem!Seifert-van~Kampen}\label{thm seifert-van kampen}
     If $X$ is the union of path-connected open sets $U_\alpha$ each containing the basepoint $x_0\in X$ and if each intersection $U_{\alpha\beta}$ is path-connected, then the homomorphism $\varPhi: \ast_\alpha \pi_1(U_\alpha)\to \pi_1(X)$ induced by the inclusions $U_\alpha \hookrightarrow X$ is surjective. 
-    
-    Denote the inclusion-induced homomorphisms $i_\alpha:\pi_1(U_\alpha)\to \pi_1(X)$ and $i_{\alpha\beta}:\pi_1(U_{\alpha\beta})\to \pi_1(U_\alpha)$. We have $i_\alpha \circ i_{\alpha\beta}=i_{\beta}\circ i_{\beta\alpha}$ since both sides are induced by the inclusion $U_{\alpha\beta}\hookrightarrow X$. Now, if in addition each intersection $U_{\alpha\beta\gamma}$ is path-connected, then the kernel of $\varPhi$ is the normal subgroup $N$ generated by all elements of the form $i_{\alpha\beta }(g)i_{\beta\alpha}(g)^{-1}$ for $g\in\pi_1(U_{\alpha\beta})$, and hence $\varPhi$ induces a homomorphism $\pi_1(X)\cong \ast_\alpha \pi_1(U_\alpha)/N$.
+
+    Denote the inclusion-induced homomorphisms $i_\alpha:\pi_1(U_\alpha)\to \pi_1(X)$ and $i_{\alpha\beta}:\pi_1(U_{\alpha\beta})\to \pi_1(U_\alpha)$. We have $i_\alpha \circ i_{\alpha\beta}=i_{\beta}\circ i_{\beta\alpha}$ since both sides are induced by the inclusion $U_{\alpha\beta}\hookrightarrow X$. Now, if in addition each intersection $U_{\alpha\beta\gamma}$ is path-connected, then the kernel of $\varPhi$ is the normal subgroup $N$ generated by all elements of the form $i_{\alpha\beta }(g)i_{\beta\alpha}(g)^{-1}$ for $g\in\pi_1(U_{\alpha\beta})$, and hence $\varPhi$ induces an isomorphism $\pi_1(X)\cong \ast_\alpha \pi_1(U_\alpha)/N$.
 
     In particular, in the case of two sets, $\pi_1(U\cup V)\cong \pi_1(U)\ast_{\pi_1(U\cap V)}\pi_1(V)$.
 \end{thm}
 \begin{proof}
     The surjectivity of $\varPhi$ was already shown in Lemma~\ref{lem product of loops}. 
-    
+
     Now we need to show that the kernel of $\varPhi$ is exactly $N$. We already know that $N\subset \ker \varPhi$ since $i_\alpha\circ i_{\alpha\beta}=i_\beta\circ i_{\beta\alpha}$. For the reverse inclusion, the idea is to study \emph{factorizations} of loops into ``smaller'' loops $[\gamma_i]$ that are completely contained in one of the $U_\alpha$'s. There are two ``moves'' that, as we would like to show, transform differing factorizations of the same loop into each other. Namely, a substring of the form $[\gamma_i][\gamma_{i+1}]$ can be replaced with $[\gamma_i\cdot \gamma_{i+1}]$, and an element $[\gamma_i]$ viewed as an element of $\pi_1(U_\alpha)$ can be replaced with its analog in $\pi_1(U_\beta)$ if $\gamma_i$ is a loop contained in $U_{\alpha\beta}$. If we can show that all factorizations of a loop can be transformed into each other via a sequence of moves of this kind (or their inverses), that will mean that $\varPhi$ induces an \emph{injective} map from the quotient group into $\pi_1(X)$, and thus the kernel of $\varPhi$ is exactly $N$.
 
     The goal is therefore to decompose any homotopy of loops into a sequence of moves like this. A homotopy is a continuous map defined on the unit square, $H:[0,1]\times[0,1]\to X$, whose value on the left and right edges of the square is $x_0$. Now we need to subdivide this square into smaller squares as in the Figure, so that each square is mapped entirely into only one of the open sets $U_\alpha$, and so that the resulting subdivisions of the top and bottom edges of the square are refinements of the subdivisions implied in the two factorizations at hand (that is, each interval of the new subdivision is entirely contained in an interval from the old). Lastly, we can ``perturb'' the squares in the central rows so that each point is contained in at most three squares (this is why triple intersections were required to be path-connected).
@@ -2493,7 +2550,7 @@ Note, however, that the ``background square'' involving $\pi_1(U\cap V),\pi_1(U)
     \begin{center}
         \includegraphics[scale=1]{figures/kernel of Phi.pdf}
     \end{center}
-    
+
     See \cite[Thm.~1.20]{Hatcher} for more details of the proof.
 \end{proof}
 
@@ -2502,15 +2559,15 @@ The conditions on path-connectedness of intersections and on the basepoint seem 
 \begin{defn}[Groupoid]\index{Groupoid}
     A groupoid is a set with a unary ``inversion'' map $x\mapsto x^{-1}$ and a partial (i.e., not necessarily defined for any pair of elements) associative binary ``multiplication'' operation $(x,y)\mapsto x\bullet y$. It is associative in the sense that if both $x\bullet y$ and $y\bullet z$ exist, then both $(x\bullet y)\bullet z$ and $x\bullet (y\bullet z)$ exist and coincide. It is also required that $x\bullet x^{-1}$ and $x^{-1}\bullet x$ exist, and that, if $x\bullet y$ exists, then $x\bullet y\bullet y^{-1}=x$ and $x^{-1}\bullet x\bullet y=y$.
 
-   As a consequence of these axioms, $(x^{-1})^{-1}=x$ and $(x\bullet y)^{-1}=y^{-1}\bullet x^{-1}$. Intuitively, groupoids can be thought of as groups with many identities, where only elements belonging to the same identity (which is the case if $x\bullet x^{-1}=x\bullet x^{-1}$) can be multiplied. 
-    
+   As a consequence of these axioms, $(x^{-1})^{-1}=x$ and $(x\bullet y)^{-1}=y^{-1}\bullet x^{-1}$. Intuitively, groupoids can be thought of as groups with many identities, where $x\bullet y$ is defined only when the ``right identity'' of $x$ matches the ``left identity'' of $y$, i.e., $x^{-1}\bullet x=y\bullet y^{-1}$. 
+
     An equivalent definition is that a groupoid is a category where all morphisms are invertible (i.e., isomorphisms). The objects of this category are the ``identities'' of the groupoid. A group is then simply a groupoid with a single object. The category of groupoids is denoted $\mathsf{Grpd}$.
 \end{defn}
 
 Free products of groupoids can be constructed in the same way as for groups -- as strings of ``words'' $g_1^{\epsilon_1} \cdots g_n^{\epsilon_n}$ where each product $g_i^{\epsilon_i}\bullet g_{i+1}^{\epsilon_{i+1}}$ must exist and insertions of substrings of the form $gg^{-1}$ produce an equivalent string. These free products have the same universal property and are therefore the pushouts in $\mathsf{Grpd}$.
 
 \begin{defn}[Fundamental groupoid]\index{Fundamental groupoid}
-    Given a topological space $X$, let $\Pi(X)$ (also denoted $\Pi_1(X)$) be the category whose objects are points of $X$ and the morphisms $\mathrm{Mor}(x,y)$ are the homotopy equivalence classes of paths $\gamma:[0,1]\to X$ such that $\gamma(0)=x, \gamma(1)=y$. Since continuous images of homotopic paths are homotopic, we have a functor $\Pi:\mathsf{Top}\to \mathsf{Grpd}$.
+    Given a topological space $X$, let $\Pi(X)$ (also denoted $\Pi_1(X)$) be the category whose objects are points of $X$ and the morphisms $\mathrm{Mor}(x,y)$ are the homotopy classes (relative to the endpoints) of paths $\gamma:[0,1]\to X$ such that $\gamma(0)=x, \gamma(1)=y$. Since continuous images of homotopic paths are homotopic, we have a functor $\Pi:\mathsf{Top}\to \mathsf{Grpd}$.
 \end{defn}
 Notice that the set of endomorphisms of any $x\in X$ viewed as an object in $\Pi(X)$ is exactly the group $\pi_1(X,x)$. Moreover, it's not difficult to check that homotopies of continuous maps in $\mathsf{Top}$ induce natural transformations of the corresponding $\Pi$-functors.
 \begin{prop}
@@ -2531,7 +2588,7 @@ Notice that the set of endomorphisms of any $x\in X$ viewed as an object in $\Pi
     Now we must define $\wt{\eta}$ on morphisms in $\Pi(X)$, i.e., paths. If a path $\gamma$ connecting $x$ to $y$ lies entirely in a particular $U_\alpha$, we again have only one choice: $\wt{\eta}([\gamma])=\eta_\alpha([\gamma])$. This is consistent (independent of $\alpha$) since $\mathscr{U}$ is closed under finite intersections.
 
     Now, any path $\gamma$ is the composite of finitely many paths $\gamma_i$, each of which lies in a single $U_{\alpha_i}$. Therefore we must define $\wt{\eta}([\gamma])=\wt{\eta}([\gamma_1])\bullet \cdots \bullet \wt{\eta}([\gamma_n])$. 
-    
+
     Clearly this definition will give the required unique morphism $\wt{\eta}$, provided that it is indeed well defined, i.e., respects the equivalence relation between paths. Thus suppose we have two equivalent paths $\gamma_0\sim \gamma_1$. The equivalence is given by a homotopy $\gamma_t$ through paths with the same fixed endpoints. This homotopy is a map defined on the square $[0,1]\times[0,1]$. We may subdivide the square into subsquares, each of which is mapped entirely into one of the $U_\alpha$'s. We may further choose this subdivision so that the resulting subdivision of $[0,1]\times\{0\}$ refines the subdivision used to decompose $\gamma_0$ into segments as above, and similarly for $\gamma_1$ and the resulting decomposition of $[0,1]\times \{1\}$. We see that the relation $[\gamma_0]=[\gamma_1]$ in $\Pi(X)$ is a consequence of a finite number of relations, each of which holds in one of the $\Pi(U_\alpha)$'s. Therefore $\wt{\eta}([\gamma_0])=\wt{\eta}([\gamma_1])$. This confirms that $\wt{\eta}$ is well defined and satisfies the universal property for pushouts.    
 \end{proof}
 From this, one can use an ``abstract nonsense'' argument to re-derive the original version of the theorem for the functor $\pi_1(-,x_0)$, see~\cite[\S 2.7]{May}.
@@ -2539,21 +2596,20 @@ From this, one can use an ``abstract nonsense'' argument to re-derive the origin
 The following is a straightforward consequence of the Seifert-van~Kampen Theorem in the ``limit'' where the overlap between the sets turns into a single point. We omit the proof.
 
 \begin{cor}[Fundamental group of a wedge sum {{\cite[Thm.~10.7]{LeeTop}}}]
-    Suppose $x_\alpha$ is a \emph{nondegenerate basepoint}\index{Nondegenerate basepoint} for $X_\alpha$ (i.e., $x_\alpha$ has a neighborhood which admits a strong deformation retraction into $x_\alpha$). Then the basepoint of $\bigvee_{\alpha }X_\alpha$ is nondegenerate and the fundamental group of this wedge sum is isomorphic to the free product $\ast_{\alpha}\pi_\alpha(X_\alpha)$.
+    Suppose $x_\alpha$ is a \emph{nondegenerate basepoint}\index{Nondegenerate basepoint} for $X_\alpha$ (i.e., $x_\alpha$ has a neighborhood which admits a strong deformation retraction into $x_\alpha$). Then the basepoint of $\bigvee_{\alpha }X_\alpha$ is nondegenerate and the fundamental group of this wedge sum is isomorphic to the free product $\ast_{\alpha}\pi_1(X_\alpha)$.
 \end{cor}
-
 
 \begin{example}
 \begin{enumerate}
-    \item The shape $\ominus$ is a deformation retract of the figure 8, which itself is just the wedge sum $\bbS^1\vee \bbS^1$, so their fundamental groups are all $\bbZ\ast\bbZ$.
+    \item The shape $\ominus$ and the figure 8 (which is just the wedge sum $\bbS^1\vee \bbS^1$) are both deformation retracts of the plane with two points removed, so their fundamental groups are all $\bbZ\ast\bbZ$. Note that neither of the two shapes is homeomorphic to a subspace of the other: 8 has a point where four arcs meet, while $\ominus$ has two points where three arcs meet. Instead, $\ominus\to 8$ is the quotient map that collapses the middle bar to a point.
     \item The last example can be generalized to compute $\pi_1$ of an arbitrary connected graph. The result is just the free group generated by the set of ``elementary'' cycles in the graph. More precisely, the number of generators equals the number of all edges of the graph minus the number of edges in a maximal spanning tree of the graph (i.e., a maximal subgraph without cycles).
 \end{enumerate}
 \end{example}
 
-\begin{xca}{{{\cite[Exercise 10-1]{LeeTop}}}}
+\begin{xca}[{{\cite[Exercise 10-1]{LeeTop}}}]
     Use the Seifert-van~Kampen theorem to give another proof that $\bbS^n$ is simply connected when $n \geq 2$.
 \end{xca}
-\begin{xca}{{{\cite[Excercise 10-5]{LeeTop}}}}
+\begin{xca}[{{\cite[Exercise 10-5]{LeeTop}}}]
     Compute the fundamental group of $\bbR^3$ with the three coordinate axes removed. \emph{Hint:} this space is homotopy equivalent to the 2-sphere with six points removed.
 \end{xca}
 \begin{xca}[Projective plane]\index{Projective plane}\label{RP2 exercise}
@@ -2568,27 +2624,24 @@ The following is a straightforward consequence of the Seifert-van~Kampen Theorem
     \caption{Construction of the projective plane out of a disk. Adding a hole to this surface creates a crosscap, which is homeomorphic to a M\"obius band, see Exercises~\ref{RP2 exercise} and \ref{crosscap exercise}.}
     \label{fig:crosscap}
 \end{figure}
-\begin{example}{{{\cite[Exercise III.3]{Bredon}}}}
+\begin{xca}[{{\cite[Exercise III.3]{Bredon}}}]
     Consider an annulus. Identify antipodal points on the outer circle. Also identify antipodal points on the inner circle. Calculate the fundamental group of this surface. Is it homeomorphic to any of the orientable compact surfaces? \emph{Hint:} taking $U$ and $V$ to be overlapping annular neighborhoods of the two boundaries of the annulus, the generator of $\pi_1(U\cap V)$ is mapped to the square of the generator in $\pi_1(U)$ and similarly in $\pi_1(V)$; therefore $\pi_1(U\cup V)=\langle a,b\mid a^2=b^2\rangle$.
-\end{example}
+\end{xca}
 \begin{xca}[{{\cite[Exercise 1.20]{Hatcher}}}]
     Let $X$ be the subspace of $\bbR^2$ that is the union of the circles $C_n$ of radius $n$ and center $(n, 0)$ for $n = 1, 2, \ldots$. Show that $\pi_1( X )$ is the free group $\ast_n \pi_1( C_n )$, the same as for the infinite wedge sum $\bigvee_{i=1}^\infty \bbS^1$. Show that $X$ and $\bigvee_{i=1}^\infty \bbS^1$ are in fact homotopy equivalent, but not homeomorphic.
 \end{xca}
 
 \begin{example}[Hawaiian earring {{\cite[Example~1.25]{Hatcher}}}]\label{hawaiian earring}
-    Let $X$ be the subspace of $\bbR^2$ that is the union of the circles $C_n$ of radius $1/n$ and center $(1/n, 0)$ for $n = 1, 2, \ldots$. Initially this space can be mistaken for the infinite wedge sum $\bigvee_{i=1}^\infty \bbS^1$, but in fact it has a much larger fundamental group. This is because in the topology induced from $\bbR^2$ it is possible for a continuous loop $\gamma[0,1]\to X$ to cover an infinite number of circles $C_n$ at once, unlike in the case of the wedge sum. As a result, $\pi_1(X)$ can be mapped surjectively onto the infinite direct product group $\prod_{n=1}^\infty \bbZ$, which is uncountably large. 
+    Let $X$ be the subspace of $\bbR^2$ that is the union of the circles $C_n$ of radius $1/n$ and center $(1/n, 0)$ for $n = 1, 2, \ldots$. Initially this space can be mistaken for the infinite wedge sum $\bigvee_{i=1}^\infty \bbS^1$, but in fact it has a much larger fundamental group. This is because in the topology induced from $\bbR^2$ it is possible for a continuous loop $\gamma:[0,1]\to X$ to cover an infinite number of circles $C_n$ at once, unlike in the case of the wedge sum. As a result, $\pi_1(X)$ can be mapped surjectively onto the infinite direct product group $\prod_{n=1}^\infty \bbZ$, which is uncountably large. 
 \end{example}
 
 \begin{example}[Torus knots {{\cite[Example~1.24]{Hatcher}}}]
-    For relatively prime integers $m,n$, the \emph{torus knot}\index{Torus knots}\index{Knot!torus} $K=K_{m,n}\subset \bbR^3$ is the image of the embedding $f:\bbS^1\to \bbS^1\times \bbS^1\cong \bbT^2\subset\bbR^3$ given by $f(z)=(z^m,z^n)$ ($z=\rme^{2\rmi\pi t}$), where the torus $T$ is embedded in space in the standard way. Let us compute $\pi_1(\bbR^3\setminus K)$. First, we can safely replace $\bbR^3$ with its compactification $\bbS^3$ by adding ``a point at infinity''. This isomorphism follows from the Seifert-van~Kampen theorem. Now we may decompose $\bbS^3\setminus \bbT^2$ into two open solid tori $U,V$. Let $C$ be an open tubular neighborhood of $T\setminus K$. Then $U\cup C$ and $V\cup C$ form an open covering of $\bbS^3\setminus K$ with a path connected intersection. The fundamental groups of $U\cup C$, $V\cup C$, and the intersection $C$ are all isomorphic to $\bbZ$ and generated by loops $x,y,z$, respectively. The inclusions of $C$ into $V\cup C$ or $U\cup C$ map $z$ to $x^m$ or $y^n$. Therefore $\pi_1(\bbS^3\setminus K)=\langle x,y\mid x^m=y^n\rangle$. The center of this group is the subgroup generated by the element $x^m=y^n$, and the factor by the center is exactly $\bbZ_m\ast\bbZ_n$. By commuting all powers of $x^m$ through to the left, the elements of this group can be uniquely represented by strings of the form $x^{mk}y^{l_0}x^{k_1}y^{l_1}x^{k_2}y^{l_2}\cdots$ where $k\in\bbZ$, $k_i\in {0,\ldots,m}$ and $l_i\in\{0,\ldots,n\}$.
+    For relatively prime integers $m,n$, the \emph{torus knot}\index{Torus knots}\index{Knot!torus} $K=K_{m,n}\subset \bbR^3$ is the image of the embedding $f:\bbS^1\to \bbS^1\times \bbS^1\cong \bbT^2\subset\bbR^3$ given by $f(z)=(z^m,z^n)$ ($z=\rme^{2\rmi\pi t}$), where the torus $\bbT^2$ is embedded in space in the standard way. Let us compute $\pi_1(\bbR^3\setminus K)$. First, we can safely replace $\bbR^3$ with its compactification $\bbS^3$ by adding ``a point at infinity''. This isomorphism follows from the Seifert-van~Kampen theorem. Now we may decompose $\bbS^3\setminus \bbT^2$ into two open solid tori $U,V$. Let $C$ be an open tubular neighborhood of $\bbT^2\setminus K$. Then $U\cup C$ and $V\cup C$ form an open covering of $\bbS^3\setminus K$ with a path connected intersection. The fundamental groups of $U\cup C$, $V\cup C$, and the intersection $C$ are all isomorphic to $\bbZ$ and generated by loops $x,y,z$, respectively. The inclusions of $C$ into $V\cup C$ or $U\cup C$ map $z$ to $x^m$ or $y^n$. Therefore $\pi_1(\bbS^3\setminus K)=\langle x,y\mid x^m=y^n\rangle$. The center of this group is the subgroup generated by the element $x^m=y^n$, and the factor by the center is exactly $\bbZ_m\ast\bbZ_n$. By commuting all powers of $x^m$ through to the left, the elements of this group can be uniquely represented by strings of the form $x^{mk}w$, where $k\in\bbZ$ and $w$ is an alternating word $\cdots x^{k_1}y^{l_1}x^{k_2}y^{l_2}\cdots$ (possibly empty, and starting and ending with either letter) with $k_i\in\{1,\ldots,m-1\}$ and $l_i\in\{1,\ldots,n-1\}$.
 \end{example}
 
 \begin{example}[Lens spaces {{\cite[Exercise III.10]{Bredon}}}]\label{example Lens space bredon}
-    Let $X=(\bbD^2\times \bbS^1)\sqcup_f (\bbD^2\times \bbS^1)$ be the gluing of two solid tori along the map $f:\bbS^1\times \bbS^1\to \bbS^1\times \bbS^1$ induced from the linear map $\bbR^2\to\bbR^2$ given by an integer matrix $\begin{pmatrix}a&b\\c&d\end{pmatrix}$. The fundamental group of a solid torus are generated by one generator, call it $\gamma_1$ and $\gamma_2$ for the two solid tori correspondingly; in addition, the two solid tori overlap by a space that deformation retracts onto a torus $\bbT^2$ whose fundamental group is generated by two simple generators $\alpha$ and $\beta$; assuming $a\neq 0$, by Seifert-van~Kampen, from one inclusion we have the mappings $\alpha\mapsto\gamma_1$ and $\beta\mapsto e$, whereas from the other we get $\alpha\mapsto \gamma_2^d$ and $\beta\mapsto \gamma_2^c$. The resulting identification $\gamma_1\sim \gamma_2^d$ simply allows us to drop $\gamma_1$ from the list of generators. Thus $\pi_1(X)$ is the cyclic group $\langle \gamma_2\mid \gamma_2^c\rangle=\bbZ_c$. Note that the case $a=0$ is special -- in that case $\pi_1(X)=\bbZ$. If the matrix of $f$ is invertible (which is true iff $\det f=\pm1$) and is parametrized as $\begin{pmatrix}q&(qq'-1)/p\\p&q'\end{pmatrix}$, the resulting space is the so called \emph{lens space}\index{Lens spaces} $L(p;q)$ with fundamental group $\bbZ_p$. We have $L(1;0)=\bbS^3$ ($f=\id$) and $L(2;1)=\RP^3$ ($f=-\id$).
+    Let $X=(\bbD^2\times \bbS^1)\sqcup_f (\bbD^2\times \bbS^1)$ be the gluing of two solid tori $V_1,V_2$ along a homeomorphism $f:\partial V_1\to\partial V_2$ of their boundary tori, induced from the linear map $\bbR^2\to\bbR^2$ given by an integer matrix $\begin{pmatrix}a&b\\c&d\end{pmatrix}$ with $ad-bc=\pm1$. On each boundary torus let $\alpha$ be the \emph{longitude} $\{\mathrm{pt}\}\times\bbS^1$ and $\beta$ the \emph{meridian} $\partial\bbD^2\times\{\mathrm{pt}\}$, and use the convention that the columns of the matrix are the images of $\alpha$ and $\beta$: $f_\ast\alpha=a\alpha+c\beta$, $f_\ast\beta=b\alpha+d\beta$. The fundamental group of $V_i$ is generated by its core circle $\gamma_i$, so that $\alpha\mapsto\gamma_i$ and $\beta\mapsto e$ under the inclusion of $\partial V_i$; the two solid tori overlap (after thickening) in a space that deformation retracts onto the torus $\partial V_1$, with $\pi_1=\langle\alpha,\beta\rangle\cong\bbZ^2$. By Seifert-van~Kampen, the inclusion into $V_1$ gives $\alpha\mapsto\gamma_1$, $\beta\mapsto e$, whereas the inclusion into $V_2$ (through $f$) gives $\alpha\mapsto\gamma_2^a$, $\beta\mapsto \gamma_2^b$. The relation $\gamma_1=\gamma_2^a$ simply allows us to drop $\gamma_1$ from the list of generators. Thus $\pi_1(X)$ is the cyclic group $\langle \gamma_2\mid \gamma_2^b\rangle=\bbZ_{\lvert b\rvert}$: the order of the group is the number of times the meridian of $V_1$ winds along the core of $V_2$. The case $b=0$ is special -- then $\pi_1(X)=\bbZ$; for example, $f=\pm\id$ produces $\bbS^2\times\bbS^1$. Parametrizing the matrix as $\begin{pmatrix}q&p\\(qq'-1)/p&q'\end{pmatrix}$, the resulting space is the so called \emph{lens space}\index{Lens spaces} $L(p;q)$ with fundamental group $\bbZ_p$. We have $L(1;0)=\bbS^3$ (from $f=\begin{psmallmatrix}0&1\\-1&0\end{psmallmatrix}$, which swaps meridians and longitudes) and $L(2;1)=\RP^3$ (from $f=\begin{psmallmatrix}1&2\\0&1\end{psmallmatrix}$).
 \end{example}
-
-
-
 
 
 \clearpage
@@ -2769,7 +2822,7 @@ First we note that on $\bbR^n$ there exist bump functions, i.e., for any point $
 Now, any manifold $M$ can be covered by a locally finite collection of coordinate balls $(U_\alpha,\varphi_\alpha)$. Let $\eta_\alpha$ be a bump function that equals $0$ outside of the ball $\wh{U}_\alpha\subset \bbR^n$. Then define the smooth functions
 \[f_\alpha =\begin{cases} \eta_\alpha\circ\varphi_\alpha, & \text{on }U_\alpha, \\ 0, & \text{on }M\setminus U_\alpha.\end{cases}\]
 Finally, we normalize this collection of functions by defining
-\[\chi_\alpha(x)=\frac{f_\alpha(x)}{\sum_\alpha f_\alpha (x).}\]
+\[\chi_\alpha(x)=\frac{f_\alpha(x)}{\sum_\beta f_\beta (x)}.\]
 This expression is well-defined because the sum in the denominator is finite for every fixed $x$. These functions have the following properties:
 \begin{enumerate}
     \item $\chi_\alpha\in C^\infty(M)$,
@@ -2808,7 +2861,7 @@ This expression is well-defined because the sum in the denominator is finite for
     Every smooth manifold has an exhaustion function.
 \end{prop}
 \begin{proof}
-    Let $\{V_\alpha\}$ be a countable open covering by precompact sets and $\{\chi_\i\}_{i=1}^\infty$ a subordinate \gls{pou}. Define $f(x)=\sum_{n=1}^\infty n\cdot \chi_n(x)$. 
+    Let $\{V_\alpha\}$ be a countable open covering by precompact sets and $\{\chi_i\}_{i=1}^\infty$ a subordinate \gls{pou}. Define $f(x)=\sum_{n=1}^\infty n\cdot \chi_n(x)$. 
 
     Clearly $f^{-1}((-\infty,c])\subset \bigcup_{i=1}^{[c]+1}\widebar{V_i}$, which is a compact set.
 \end{proof}
@@ -3254,7 +3307,7 @@ We will now show that smooth submersions, as defined in Definition~\ref{def imme
     For the backward direction, let $m\in M$ and find a local section $\sigma$ such that $m\in \sigma(U)$. Then $m=\sigma(q)$ for some $q\in N$ and $\pi\circ\sigma=\id_U$. Therefore, by taking the differential, $\pi_{\ast m} \sigma_{\ast q}=\id_{\T_q N}$, which implies that $\pi_\ast$ is surjective.
 \end{proof}
     
-Next, we would like to find the smooth analog for the concept of a quotient map. Recall that a \emph{topological quotient map} is a surjective, strongly continuous map (i.e., $V$ is open iff $f^{-1}(V)$ is open). Openness implies strong continuity, thus open surjective maps are necessarily quotient maps, but not every topological quotient map is open (e.g., the gluing $\bbD^n\slash \partial \bbD^n$ of the boundary of a ball that gives a sphere is not open). In fact, a surjective continuous map $q$ is a quotient map iff it takes open sets that are unions of fibers of $q$ to open sets. However, these subtleties turns out to be irrelevant in the smooth case as the natural smooth analogs of surjective continuous maps, \emph{submersions}, turn out to be open by the following proposition.
+Next, we would like to find the smooth analog for the concept of a quotient map. Recall that a \emph{topological quotient map} is a continuous surjection onto a space with the final topology (i.e., $V$ is open iff $f^{-1}(V)$ is open). For a continuous surjection, openness implies this property, thus open surjective maps are necessarily quotient maps, but not every topological quotient map is open (e.g., the gluing $\bbD^n\slash \partial \bbD^n$ of the boundary of a ball that gives a sphere is not open). In fact, a surjective continuous map $q$ is a quotient map iff it takes open sets that are unions of fibers of $q$ to open sets. However, these subtleties turns out to be irrelevant in the smooth case as the natural smooth analogs of surjective continuous maps, \emph{submersions}, turn out to be open by the following proposition.
 
 \begin{prop}\label{thm submersions are open quotient maps}
     Any smooth surjective submersion is an open topological quotient map.
@@ -3340,7 +3393,7 @@ In other words, the total space $E$ is locally isomorphic to parts of $M$, but t
 
 For now we consider arbitrary covering spaces, not just smooth ones.
 
-\begin{lem}[Lebesque Lemma]\index{Lemma!Lebesque}\label{Lebesque lemma}
+\begin{lem}[Lebesgue Lemma]\index{Lemma!Lebesgue}\label{Lebesque lemma}
     Let $X$ be a compact metric space and let $\{U_\alpha\}_\alpha$ be an open covering of $X$. Then there exists a constant $ \delta >0$ such that any subset $A\subset X$ of diameter $\mathrm{diam} (A)<\delta$ is contained in $U_\alpha$ for some $\alpha$.
 \end{lem}
 \begin{proof}
@@ -3350,14 +3403,14 @@ For now we consider arbitrary covering spaces, not just smooth ones.
     Let $W$ be a topological space and let $\{U_\alpha\}_\alpha$ be an open covering of $W\times I$ (where $I=[0,1]$).  Then for any $w\in W$ there is a neighborhood $N\subset W$ of $w$ and a positive integer $n$ such that $N\times [i/n, (i+1)/n]\subset U_\alpha$ for some $\alpha$, for each $0\leq i <n$.
 \end{lem}
 \begin{proof}
-    $\{w\}\times I$ can be covered by a finite refinement of $\{U_\alpha\}_\alpha$ of the form $\{N_i\times V_i\}_i$ by compactness of $I$. The Lebesque Lemma~\ref{Lebesque lemma} implies the existence of $n$ such that $[i/n,(i+1)/n]$ is contained in one of the $V_j$. Now take $N=\bigcap_i N_i$.
+    $\{w\}\times I$ can be covered by a finite refinement of $\{U_\alpha\}_\alpha$ of the form $\{N_i\times V_i\}_i$ by compactness of $I$. The Lebesgue Lemma~\ref{Lebesque lemma} implies the existence of $n$ such that $[i/n,(i+1)/n]$ is contained in one of the $V_j$. Now take $N=\bigcap_i N_i$.
 \end{proof}
 
 \begin{thm}[Path Lifting Property]\index{Path lifting property}\label{Path lifting property}\index{Path Lifting Property}
     Consider a topological covering space $E\overset{\pi}{\to}M$ and let $\gamma:[0,1]\to M$ be a path in $M$. Given a point $m$ in the fiber above $\gamma(0)$, there is a unique path $\wt{\gamma}:[0,1]\to E$ such that $\wt{\gamma}(0)=m$ and $\pi\circ\wt{\gamma}=\gamma$. We call $\wt{\gamma}$ the \emph{lift} of $\gamma$ based at $m$.\index{Lift of a path}
 \end{thm}
 \begin{proof}
-    By the Lebesque Lemma, there is an $n$ such that each $\gamma([i/n,(i+1)/n])$ lies in an elementary set. Then we can lift by induction in $i$ on each elementary set using the local homeomorphism. At each stage of the induction, the list is already defined at the left-hand endpoint, leading to uniqueness since it singles out a connected component in the preimage of the elementary set.
+    By the Lebesgue Lemma, there is an $n$ such that each $\gamma([i/n,(i+1)/n])$ lies in an elementary set. Then we can lift by induction in $i$ on each elementary set using the local homeomorphism. At each stage of the induction, the list is already defined at the left-hand endpoint, leading to uniqueness since it singles out a connected component in the preimage of the elementary set.
 \end{proof}
 This property is a characteristic property of covering maps and is key in many applications of this theory, such as complex analysis, where the Riemann surfaces of analytic functions are obtained via analytic continuation along paths in the complex plane. The uniqueness of analytic continuation is what guarantees the existence of such a covering map. In fact, the lifting property can be used to define the notion of a covering map.
 
@@ -3401,17 +3454,17 @@ All of these properties of covering maps w.r.t.\ homotopies allow us to pass ins
 As a consequence of Corollary~\ref{cor 3.9 Bredon} we now know several spaces having nontrivial fundamental groups: the circle, the Klein bottle, and the projective plane. Let us start with the circle.
 
 \begin{defn}[Degree on a circle]\index{Degree}
-    Consider the covering space of $\bbS^1$ defined by the exponential map $p:\bbR \to \bbS^1$, $p(t)=\rme^{2\pi\rmi t}$. Let $\gamma :I\to \bbS^1$ be a loop based at $1\in \bbS^1$. Let $\wt\gamma :I\to \bbR $ be a lifting of $\gamma$ such that $\wt\gamma(0)=0$. Then $\wt\gamma(1)=n\in p^{-1}(\{1\})=\bbZ$. By Corollary~\ref{cor 3.5 Bredon}, $n$ depends only on the homotopy class $[\gamma]\in\pi_1(\bbS^1)$. This integer $n$ is called the degree of $\gamma$ and we write $n=\mathrm{deg}(f)$.
+    Consider the covering space of $\bbS^1$ defined by the exponential map $p:\bbR \to \bbS^1$, $p(t)=\rme^{2\pi\rmi t}$. Let $\gamma :I\to \bbS^1$ be a loop based at $1\in \bbS^1$. Let $\wt\gamma :I\to \bbR $ be a lifting of $\gamma$ such that $\wt\gamma(0)=0$. Then $\wt\gamma(1)=n\in p^{-1}(\{1\})=\bbZ$. By Corollary~\ref{cor 3.5 Bredon}, $n$ depends only on the homotopy class $[\gamma]\in\pi_1(\bbS^1)$. This integer $n$ is called the degree of $\gamma$ and we write $n=\mathrm{deg}(\gamma)$ (cf.\ the elementary definition given in \S\ref{sec: fundamental group}).
 \end{defn}
 \begin{thm}[Fundamental group of the circle]\label{pi_1 of the circle thm}
-    $\mathrm{deg}: \pi_1(\bbS^1)\to \bbZ$ is an isomorphism.
+    $\mathrm{deg}: \pi_1(\bbS^1)\to \bbZ$ is an isomorphism. (This was already shown by hand in Theorem~\ref{thm pi1 of circle elementary}; here we rederive it from the general theory of coverings.)
 \end{thm}
 \begin{proof}
     First we show that $\mathrm{deg}$ is a homomorphism. Given two loops $\beta,\gamma:I\to \bbS^1$ and their lifts $\wt \beta,\wt\gamma$ both starting at $0\in\bbR $, we have $\wt{\beta}(1)=\mathrm{deg}(\beta)=n$ and  $\wt{\gamma}(1)=\mathrm{deg}(\gamma)=m$. Define $\wt{\gamma}'(t)=\wt{\gamma}(t)+n$. Then $\wt{\gamma}'(0)=\wt{\beta}(1)$, so $\wt{\beta}\bullet \wt{\gamma}'$ is defined, covers $\beta\bullet\gamma$, and $\wt{\beta}\bullet \wt{\gamma}'(1)=\wt{\gamma}'(1)=\wt{\gamma}(1)+n=m+n$, as claimed.
 
     Second, $\mathrm{deg}$ is surjective since a path from $0$ to $n$ in $\bbR $ maps to a loop in $\bbS^1$ of degree $n$ by definition.
 
-    Third, we sow that $\mathrm{deg}$ is a monomorphism by showing its kernel is zero. Suppose $\gamma:I\to \bbS^1$ has degree $0$. Then, for a lifting $\wt\gamma$ we have $\wt\gamma(1)=0=\wt\gamma(0)$ so that $\wt\gamma$ is a loop and represents an element $\wt{\gamma}\in\pi_1(\bbR ,0)=1$, since $\bbR $ is contractible. Thus $[\gamma]=p_\ast([\wt\gamma])=p_\ast (1)=1$.
+    Third, we show that $\mathrm{deg}$ is a monomorphism by showing its kernel is zero. Suppose $\gamma:I\to \bbS^1$ has degree $0$. Then, for a lifting $\wt\gamma$ we have $\wt\gamma(1)=0=\wt\gamma(0)$ so that $\wt\gamma$ is a loop and represents an element $\wt{\gamma}\in\pi_1(\bbR ,0)=1$, since $\bbR $ is contractible. Thus $[\gamma]=p_\ast([\wt\gamma])=p_\ast (1)=1$.
 \end{proof}
 
 
