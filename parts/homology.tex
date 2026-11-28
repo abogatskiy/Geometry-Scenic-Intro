@@ -1924,13 +1924,15 @@ The \gls{mv} sequence, and excision more generally, allows for inductive computa
      We use induction in the dimension of the sphere. $\wt{\rmH}_0(\bbS^0)\cong\bbZ$ since $\bbS^0$ is two points. For $m>0$ we have $\wt{\rmH}_m(\bbS^0)=H_i(\bbS^0)\cong H_i(\ast)\oplus H_i(\ast)=0$. This proves the statement for $n=0$. Now to go from $n$ to $n+1$, we first note that $\wt{\rmH}_0(\bbS^{n+1})=0$ because $\bbS^{n+1}$ is connected, and for $m>0$, $\wt{\rmH}_{m}(\bbS^{n+1})=\wt{\rmH}_{m-1}(\bbS^n)$ by the Suspension Theorem. By induction, if $m=n+1$, then this is isomorphic to $\bbZ$, otherwise zero.
 \end{proof}
 
-\begin{cor}[Brouwer's fixed point theorem]\index{Theorem!Brouwer's fixed point}
+\begin{cor}[Brouwer's fixed point theorem]\index{Theorem!Brouwer's fixed point}\label{cor Brouwer homology}
     $\partial \bbD^n$ is not a retract of $\bbD^n$ (i.e., no continuous map $\bbD^n\to \partial \bbD^n$ that restricts to identity on the boundary). Hence every map $f:\bbD^n\to \bbD^n$ has a fixed point.
 \end{cor}
 \begin{proof}
      If $r:\bbD^n\to \partial \bbD^n$ is a retraction, then $r\circ i=\id$ for $i:\partial \bbD^n\hookrightarrow \bbD^n$ the inclusion map. The composition $\wt{\rmH}_{n-1}(\partial \bbD^n)\overset{i_\ast}\to \wt{\rmH}_{n-1}(\bbD^n)\overset{r_\ast}\to \wt{\rmH}_{n-1}(\partial \bbD^n)$ is then the identity on $\wt{\rmH}_{n-1}(\partial \bbD^n)\cong \bbZ$. But $i_\ast$ and $r_\ast$ are both zero since $\wt{\rmH}_{n-1}(\bbD^n)=0$, which leads to a contradiction.
      
      An existence of a map $f:\bbD^n\to \bbD^n$ with no fixed points would let us construct a retraction by drawing the straight ray from $f(x)$ to $x$ for all $x$ in the ball and picking its intersection with the boundary as the image of $x$ (this acts as the identity on the boundary).
+
+     For an analytic proof based on Sard's theorem, see Corollary~\ref{cor Brouwer smooth}.
 \end{proof}
 
 
@@ -1944,11 +1946,13 @@ The \gls{mv} sequence, and excision more generally, allows for inductive computa
      Reduced homology is the same as homology relative to a base point, so the result follows from the long exact sequence for $(X,A)=\left(\bigsqcup_\alpha X_\alpha, \bigsqcup_\alpha \{x_\alpha\}\right)$.
 \end{proof}
 
-\begin{cor}[Invariance of dimension]
+\begin{cor}[Invariance of dimension]\label{cor invariance of dimension}
     If nonempty open sets $U\subset \bbR^m$ and $V\subset \bbR^n$ are homeomorphic, then $m=n$.
 \end{cor}
 \begin{proof}
      For $x\in U$, we have $\rmH_k(U,U\setminus \{x\})\cong \rmH_k(\bbR^m,\bbR^m\setminus \{x\})$ by excision. From the long exact sequence for the pair $(\bbR^m,\bbR^m\setminus\{x\})$ we get $\rmH_k(\bbR^m,\bbR^m\setminus\{x\})\cong \wt{\rmH}_{k-1}(\bbR^m\setminus\{x\})$. Since $\bbR^m\setminus\{x\}$ deformation retracts onto the sphere $\bbS^{m-1}$, we have $\rmH_k(U,U\setminus\{x\})$ is $\bbZ$ for $k=m$ and zero otherwise. By the same reasoning $\rmH_k(V,V\setminus\{y\})$ is $\bbZ$ for $k=n$ and zero otherwise. A homeomorphism must induce an isomorphism between these homologies (where $y$ is the image of $x$), therefore $m=n$.
+
+     For $\min(m,n)\leq2$, an elementary proof was given in Proposition~\ref{prop invariance of dimension}.
 \end{proof}
 
 

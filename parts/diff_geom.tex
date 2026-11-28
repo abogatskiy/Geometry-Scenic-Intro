@@ -1077,7 +1077,7 @@ The following is an exercise.
 
 
 
-\section{Tangent bundle}
+\section{Tangent bundle}\label{sec tangent bundle}
 
 \begin{defn}[Tangent bundle]\index{Tangent bundle}
     Let $M$ be a manifold with a smooth atlas $\{(U_\alpha,\varphi_\alpha)\}$. Its tangent bundle $\T M$ is defined as the disjoint union of tangent spaces as fibers $\T M=\sqcup_{m\in M} \T_m M$, with the structure of a smooth \gls{vb} specified by the \gls{vb} atlas consisting of the push-forwards $\{(\restr{\T M}{U_\alpha},(\varphi_\alpha)_\ast\}$. Indeed, since $\varphi_\alpha:U_\alpha\to \wh U_\alpha \subset \bbR^m$ are diffeomorphisms, we have diffeomorphisms $(\varphi_\alpha)_\ast:\restr{\T M}{U_\alpha}\to \wh U_\alpha\times \bbR^m$, which are indeed local trivializations for the bundle. The linear structure induced on fibers agrees with the one we have constructed previously on every tangent space.
@@ -2262,7 +2262,7 @@ Recall that Lie derivatives of functions satisfy $\Lie_{F_\ast X}F_\ast f=F_\ast
     An algebra with a distinguished derivation is called a \emph{differential algebra}.\index{Differential algebra}
 \end{defn}
 
-Clearly any Lie derivative $\Lie_X, X\in\fX(M)$, is a derivation on the algebra of functions $C^\infty(M)$, because it is a directional derivative in local coordinates.
+Clearly any Lie derivative $\Lie_X, X\in\fX(M)$, is a derivation on the algebra of functions $C^\infty(M)$, because it is a directional derivative in local coordinates. (Derivations \emph{at a point}, which describe tangent vectors, were discussed in \S\ref{sec tangent spaces}.)
 Moreover, any derivation $D$ on $C^\infty(M)$ satisfies $D(1)=0$, because
 \[D(1)=D(1^2)=D(1)\cdot 1+1\cdot D(1)=2\cdot D(1).\]
 Finally, the set of all Lie derivatives $\{\Lie_X\}_{X\in\fX(M)}$ is a $C^\infty(M)$-module:
@@ -2282,7 +2282,7 @@ The space of all $\bbR $-linear derivations on the algebra $C^\infty(M)$ is isom
     First of all, $\theta$ is local, i.e., if $h$ vanishes on a neighborhood $V\mathring{\subset} M$ of $p\in V$, then $\theta(h)(p)=0$. Indeed, if $\chi$ is a bump function equal to $1$ around $p$ and zero outside of $V$, then $h=(1-\chi)h$ and
     \[\theta(h)(p)=(\theta(1-\chi))\cdot h(p)+\theta(h)\cdot (1-\chi(p))=0.\]
 
-    Pick a local chart at $p$, $\varphi:U\to\wh{U}\subset\bbR^n$. Let $\bf{x}\in\wh{U}$, $\bf{a}=\varphi(p)$, $f\in C^\infty(M)$, then 
+    Pick a local chart at $p$, $\varphi:U\to\wh{U}\subset\bbR^n$. Let $\bf{x}\in\wh{U}$, $\bf{a}=\varphi(p)$, $f\in C^\infty(M)$. Then, by Hadamard's Lemma~\ref{lem Hadamard}, 
     \[(\varphi_\ast f)(\bf{x})=(\varphi_\ast f)(\bf{a})+\sum_{j=1}^n (x^j-a^j)\int_0^1 \frac{\partial(\varphi_\ast f)}{\partial x^j} (\bf{a}+t(\bf{x}-\bf{a}))\dd t\]
     on some neighborhood of $\bf{a}$.
     Therefore, for $u\in U$,
@@ -3278,10 +3278,10 @@ Exercise.
 
 \begin{defn}
     Let $M$ and $M'$ be oriented smooth manifolds with chosen volume forms $\sfv$, $\sfv'$, respectively. For a smooth map $f:M\to M'$, we define its determinant w.r.t.\ these volume forms by the equality
-    \[f^\ast \sfv'=\left(\det_{\sfv,\sfv'}f\right)\cdot \sfv.\]
+    \[f^\ast \sfv'=\left(\det\nolimits_{\sfv,\sfv'}f\right)\cdot \sfv.\]
     We will usually suppress the dependence on the volume forms. Clearly, $f$ is orientation-preserving iff $\det f>0$ everywhere, and $f$ is a local diffeomorphism iff $\det f\neq 0$.
 
-    This determinant is still multiplicative: $\det_{\sfv,\sfv''}(f\circ g)(p)=(\det_{\sfv,\sfv'} f)(g(p))\cdot \det_{\sfv',\sfv''} g(p)$ for maps $M\overset{f}{\to}M'\overset{g}{\to}M''$.
+    This determinant is still multiplicative: $\det\nolimits_{\sfv,\sfv''}(f\circ g)(p)=(\det\nolimits_{\sfv,\sfv'} f)(g(p))\cdot \det\nolimits_{\sfv',\sfv''} g(p)$ for maps $M\overset{f}{\to}M'\overset{g}{\to}M''$.
 \end{defn}
 
 Tensor bundles are not the only ``natural bundles'', i.e., bundles whose structure is completely determined by the base manifold $M$. The orientation bundle belongs to this class. The following definition provides a few other common examples.
